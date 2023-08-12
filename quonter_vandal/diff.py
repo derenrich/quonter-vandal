@@ -13,7 +13,7 @@ class StatementValue:
     @staticmethod
     def extract_pid(a: Tag) -> str:
         # check if it's a link
-        if a.name == "a":
+        if a.name == "a" and a.attrs["title"].startswith("P"):
             # get the title
             title = a.attrs["title"]
             pid = title.split(":")[-1]
@@ -33,7 +33,7 @@ class StatementValue:
         raise Exception("Expected a QID in the link")
 
     @staticmethod
-    def extract_value(a: PageElement) -> Self:
+    def extract_value(a: PageElement, wrapped=False) -> Self:
         if type(a) == Tag:
             if "wb-time-details" in a.attrs.get("class", []):
                 return StatementTimeValue(a.text)
@@ -51,14 +51,31 @@ class StatementValue:
                     elif links[0].attrs["href"].startswith("/wiki/Q"):
                         # internal property link
                         return StatementItemValue(StatementValue.extract_qid(links[0]))
-                    else:
-                        raise Exception("Not implemented yet")
+                    elif "hreflang" in links[0].attrs:
+                        return StatementInternalLinkValue(links[0].attrs["href"], links[0].text, links[0].attrs["hreflang"])
+                    elif "extiw" in links[0].attrs.get("class", []):
+                        return StatementFileLink(links[0].attrs["href"], links[0].text)
                 else:
-                    # handle this later
-                    raise Exception("Not implemented yet")
-        else:
-            # handle this later
-            raise Exception("Not implemented yet")
+                    monolingual_text = a.find("span", class_="wb-monolingualtext-value")
+                    if type(monolingual_text) == Tag:
+                        return StatementMonolingualTextValue(monolingual_text.text, monolingual_text.attrs["lang"])
+                    somevalue = a.find("span", class_="wikibase-snakview-variation-somevaluesnak")
+                    if somevalue:
+                        return StatementSpecialValue("somevalue")
+                    novalue = a.find("span", class_="wikibase-snakview-variation-novaluesnak")
+                    if novalue:
+                        return StatementSpecialValue("novalue")
+                    missing_value = a.find("span", class_="wb-entity-undefinedinfo")
+                    if missing_value:
+                        return StatementSpecialValue("missing")
+        
+        if not wrapped:
+            # try again but wrapped in a span
+            wrapped_tag = BeautifulSoup(f"<span>{a}</span>", "html.parser").span
+            if wrapped_tag:
+                return StatementValue.extract_value(wrapped_tag, True)
+        
+        raise Exception(f"Not implemented yet for value: {a}")
 
 
 @dataclass
@@ -86,6 +103,10 @@ class RankChangeStatement(StatementType):
     pid: str
 
 @dataclass
+class SitelinkChangeStatement(StatementType):
+    lang: str
+
+@dataclass
 class QualifierChangeStatement(StatementType):
     pid: str
     value: StatementValue
@@ -93,11 +114,16 @@ class QualifierChangeStatement(StatementType):
 @dataclass
 class ReferenceChangeStatement(StatementType):
     pid: str
-    qid: str
+    value: StatementValue
 
 @dataclass
 class StatementStringValue(StatementValue):
     value: str
+
+@dataclass 
+class StatementMonolingualTextValue(StatementValue):
+    value: str
+    lang: str
 
 @dataclass
 class StatementTimeValue(StatementValue):
@@ -108,6 +134,16 @@ class StatementExternalLinkValue(StatementValue):
     href: str
     text: str
 
+@dataclass
+class StatementInternalLinkValue(StatementValue):
+    href: str
+    text: str
+    lang: str
+
+@dataclass
+class StatementFileLink(StatementValue):
+    href: str
+    text: str
 
 @dataclass
 class StatementSpecialValue(StatementValue):
@@ -146,7 +182,7 @@ class StatementQualifierValue(StatementValue):
         links = tag.find_all("a")
         pid = StatementValue.extract_pid(links[0])
         if len(links) > 1:
-            value = StatementValue.extract_pid(links[1])
+            value = StatementValue.extract_qid(links[1])
             return StatementQualifierValue(pid, StatementItemValue(value))
         else:
             # likely unknown or no value
@@ -168,6 +204,9 @@ class Statement:
 
     @classmethod
     def from_span(cls, span: Tag) -> Self:
+        """
+        Parses a statement from a span tag with a colon delimited prop/value pair
+        """
         # get first link in span
         link = span.find("a")
         if link and type(link) == Tag:
@@ -176,7 +215,6 @@ class Statement:
         else:
             raise Exception("Expected a link in the span")
 
-        
         if link.next_sibling:
             if link.next_sibling.text.strip() == ":":
                 # look at the 2nd value after the link because there's a separating colon
@@ -196,8 +234,12 @@ class ReferenceValue(StatementValue):
     @classmethod
     def from_div(cls, div: Tag) -> Self:
         statements = []
-        for span in div.find_all("span"):
-            statements.append(Statement.from_span(span))
+        inner_div = div.find("ins", class_="diffchange-inline") or div.find("del", class_="diffchange-inline")
+        if not inner_div or type(inner_div) != Tag:
+            raise Exception("reference block missing references")
+        else:
+            for span in inner_div.find_all("span", recursive=False):
+                statements.append(Statement.from_span(span))
         return ReferenceValue(statements)
 
 @dataclass
@@ -234,6 +276,12 @@ class Change:
                 old_value = ReferenceValue.from_div(old) if old else None
                 new_value = ReferenceValue.from_div(new) if new else None
                 return Change(statement_type, old_value, new_value)
+            
+            case SitelinkChangeStatement(lang):
+                old_value = StatementValue.extract_value(old) if old else None
+                new_value = StatementValue.extract_value(new) if new else None
+
+                return Change(statement_type, old_value, new_value)
             case None:
                 raise Exception("unk statement type")
                 pass
@@ -263,14 +311,24 @@ class Change:
             return QualifierChangeStatement(statement.field.pid, statement.value)  
         elif field.text.startswith("Property") and field.text.endswith("reference"):
             links = field.find_all("a")
+            span = field.find("span")
+            details = field.find(class_="wb-details")
             if type(links[0]) == Tag:
                 pid = StatementValue.extract_pid(links[0])
-                qid = StatementValue.extract_qid(links[1])
-                return ReferenceChangeStatement(pid, qid)
+                if len(links) == 2:
+                    # ok we have two links so the second one is the qid or an external link
+                    value = StatementValue.extract_value(links[1])
+                elif details and type(details) == Tag:
+                    value = StatementValue.extract_value(details)
+                elif span and type(span) == Tag:
+                    value = StatementValue.extract_value(span)
+                else:
+                    # ok we have a value in the text so we need to strip the colon
+                    data_child = list(field.children)[2]
+                    value = StatementValue.extract_value(data_child)
+                return ReferenceChangeStatement(pid, value)
             else:
                 raise Exception("Expected a tag for the main pid")
-
-
         elif field.text.startswith("Property"):
             link = field.find("a")
             if type(link) == Tag:
@@ -278,6 +336,13 @@ class Change:
                 title = link.attrs["title"]
                 pid = title.split(":")[-1]
                 return RegularStatement(pid)
+        elif field.text.startswith("links"):
+            args = field.text.split("/")
+            lang = args[1].strip()
+            if len(args) == 4 and args[2].strip() == "badges":
+                return SitelinkChangeStatement(lang)
+            if len(args) == 3 and args[2].strip() == "name":
+                return SitelinkChangeStatement(lang)
         # unknown field type
         raise Exception("Unknown field type: " + field.text)
 
@@ -300,7 +365,8 @@ class DiffStateMachine:
         self.changes: List[Change] = []
 
 
-    def process_row(self, col1: Optional[Any], col2: Optional[Any], col3: Optional[Any], col4: Optional[Any]) -> Optional[Change]:
+    def process_row(self, row: Tag, col1: Optional[Any], col2: Optional[Any], col3: Optional[Any], col4: Optional[Any]) -> Optional[Change]:
+        # yeah these col columns aren't used anymore really and we could replace it all with the row now that we know about the classnames
         emit = False
 
         if self._cur_field == None:
@@ -308,8 +374,13 @@ class DiffStateMachine:
             self._cur_new = None
             self._cur_old = None
         else:
-            self._cur_old = col2
-            self._cur_new = col4
+            cur_old = row.findChild("td", {"class": "diff-deletedline"})
+            if type(cur_old) == Tag:
+                self._cur_old = cur_old
+            cur_new = row.findChild("td", {"class": "diff-addedline"})
+            if type(cur_new) == Tag:
+                self._cur_new= cur_new
+
             emit = True
 
         if emit:
@@ -317,7 +388,6 @@ class DiffStateMachine:
             cur_old_str = self._cur_old.text if self._cur_old else None
             cur_new_start = self._cur_new.text if self._cur_new else None
             change = Change.from_html(self._cur_field, self._cur_old, self._cur_new)
-            #change = Change(self._cur_field, cur_old_str, self._cur_old, cur_new_start, self._cur_new)
             self._cur_field = None
             self._cur_old = None
             self._cur_new = None
@@ -369,11 +439,11 @@ class ItemDiffer:
                 previous_text_present = previous.get_text().strip() != ""
                 result_text_present = result.get_text().strip() != ""
                 if previous_text_present and result_text_present:
-                    sm.process_row(previous, None, result, None)
+                    sm.process_row(r, previous, None, result, None)
                 elif previous_text_present:
-                    sm.process_row(previous, None, None, None)
+                    sm.process_row(r, previous, None, None, None)
                 elif result_text_present:
-                    sm.process_row(None, None, result, None)
+                    sm.process_row(r, None, None, result, None)
                 else:
                     # unexpected result
                     raise Exception("Invalid diff row. Two columns, but both empty")
@@ -392,10 +462,10 @@ class ItemDiffer:
 
                 if previous_colspan == '2' and previous_text.strip() == "":
                     # no previous exists
-                    sm.process_row(None, None, mid, result)
+                    sm.process_row(r, None, None, mid, result)
                 elif result_colspan == '2' and result_text.strip() == "":
                     # no previous exists
-                    sm.process_row(previous, mid, None, None)
+                    sm.process_row(r, previous, mid, None, None)
                 else:
                     # unexpected result
                     raise Exception("Invalid diff row. Three columns, but not colspan.")
@@ -406,7 +476,7 @@ class ItemDiffer:
                 mid1_text = mid1.get_text()
                 mid2_text = mid2.get_text()
                 result_text = result.get_text()
-                sm.process_row(previous, mid1, mid2, result)
+                sm.process_row(r, previous, mid1, mid2, result)
             else:
                 # error condition
                 raise Exception("Invalid diff row. Not 2 or 3 columns.")
