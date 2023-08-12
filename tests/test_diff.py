@@ -102,6 +102,7 @@ def test_add_qualifier_and_rank_diff():
 
 
 def test_wwwyzzerdd_diff():
+    # https://www.wikidata.org/w/index.php?title=XXX&diff=1942024562&oldid=1851566554
     revid = 1942024562
     oldid = 1851566554
     diff = get_diff(oldid, revid).changes()
@@ -123,3 +124,52 @@ def test_wwwyzzerdd_diff():
             ReferenceChangeStatement(pid='P135', qid="Q30325066"))
     assert add_movement_reference.old is None
     assert type(add_movement_reference.new) is ReferenceValue
+    assert add_movement_reference.new == ReferenceValue([
+        Statement(RegularStatement('P143'), StatementItemValue(value='Q328')),
+        Statement(RegularStatement('P813'),
+                  StatementTimeValue("28 July 2023")),
+        Statement(RegularStatement('P4656'), StatementExternalLinkValue(
+            "https://en.wikipedia.org/w/index.php?title=Lucian_Wintrich&oldid=1163978108"))
+    ])
+
+    add_employer = diff.changes[3]
+    assert (add_employer.field == RegularStatement(pid='P108'))
+    assert (add_employer.old == None)
+    assert (add_employer.new == StatementItemValue(value='Q30589935'))
+
+    add_employer_rank = diff.changes[4]
+    assert (add_employer_rank.field == RankChangeStatement(pid='P108'))
+    assert (add_employer_rank.old == None)
+    assert (add_employer_rank.new == "normal")
+
+    add_employer_reference = diff.changes[5]
+    assert (add_employer_reference.field ==
+            ReferenceChangeStatement(pid='P108', qid="Q30589935"))
+    assert add_employer_reference.old is None
+    assert type(add_employer_reference.new) is ReferenceValue
+    assert add_employer_reference.new == ReferenceValue([
+        Statement(RegularStatement('P143'), StatementItemValue(value='Q328')),
+        Statement(RegularStatement('P813'),
+                  StatementTimeValue("28 July 2023")),
+        Statement(RegularStatement('P4656'), StatementExternalLinkValue(
+            "https://en.wikipedia.org/w/index.php?title=Lucian_Wintrich&oldid=1163978108#cite_note-:11-3"))
+    ])
+
+    add_orientation = diff.changes[6]
+    assert (add_orientation.field == RegularStatement(pid='P91'))
+    assert (add_orientation.old == None)
+    assert (add_orientation.new == StatementItemValue(value='Q6636'))
+
+    add_orientation_rank = diff.changes[7]
+    assert (add_orientation_rank.field == RankChangeStatement(pid='P91'))
+    assert (add_orientation_rank.old == None)
+    assert (add_orientation_rank.new == "normal")
+
+    add_orientation_reference = diff.changes[8]
+    assert add_orientation_reference.old is None
+    assert add_orientation_reference.new == ReferenceValue([
+        Statement(RegularStatement('P854'), StatementExternalLinkValue(
+            "https://www.dailydot.com/irl/conservative-queers-lgbtq-trump/")),
+        Statement(RegularStatement('P813'),
+                  StatementTimeValue("28 July 2023"))
+    ])

@@ -69,7 +69,6 @@ class StatementValue:
 
     @staticmethod
     def extract_value(a: PageElement) -> Self:
-
         if type(a) == Tag:
             if "wb-time-details" in a.attrs.get("class", []):
                 return StatementTimeValue(a.text)
