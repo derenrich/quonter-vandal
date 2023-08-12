@@ -217,3 +217,16 @@ def test_unk_qual():
     assert (add_unk_qual.old == None)
     assert (add_unk_qual.new == StatementQualifierValue(
         "P1013", StatementSpecialValue("somevalue")))
+
+
+def test_unk_value():
+    # https://www.wikidata.org/w/index.php?title=Q4115189&diff=1952251903&oldid=1952205143
+    revid = 1952251903
+    oldid = 1952205143
+    diff = get_diff(oldid, revid).changes()
+    assert diff.user == "BrokenSegue"
+    assert len(diff.changes) == 1
+    add_unk_value = diff.changes[0]
+    assert (add_unk_value.field == RegularStatement(pid='5021'))
+    assert (add_unk_value.old == None)
+    assert (add_unk_value.new == StatementSpecialValue("somevalue"))
