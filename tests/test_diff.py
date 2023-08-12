@@ -81,6 +81,7 @@ def test_label_and_alias_diff():
 
 
 def test_add_qualifier_and_rank_diff():
+    # https://www.wikidata.org/w/index.php?title=XXX&diff=1942162509&oldid=1934969781
     revid = 1942162509
     oldid = 1934969781
     diff = get_diff(oldid, revid).changes()
@@ -95,7 +96,7 @@ def test_add_qualifier_and_rank_diff():
     assert (rank_change.new == "preferred")
     qualifier_change = diff.changes[1]
     assert (qualifier_change.field ==
-            QualifierChangeStatement("P569"))
+            QualifierChangeStatement("P569", StatementStringValue("21 January 1956")))
     assert (qualifier_change.old == None)
     assert (qualifier_change.new == StatementQualifierValue(
         pid='P7452', value=StatementItemValue(value='Q71536040')))
@@ -129,6 +130,7 @@ def test_wwwyzzerdd_diff():
         Statement(RegularStatement('P813'),
                   StatementTimeValue("28 July 2023")),
         Statement(RegularStatement('P4656'), StatementExternalLinkValue(
+            "https://en.wikipedia.org/w/index.php?title=Lucian_Wintrich&oldid=1163978108",
             "https://en.wikipedia.org/w/index.php?title=Lucian_Wintrich&oldid=1163978108"))
     ])
 
@@ -152,6 +154,7 @@ def test_wwwyzzerdd_diff():
         Statement(RegularStatement('P813'),
                   StatementTimeValue("28 July 2023")),
         Statement(RegularStatement('P4656'), StatementExternalLinkValue(
+            "https://en.wikipedia.org/w/index.php?title=Lucian_Wintrich&oldid=1163978108#cite_note-:11-3",
             "https://en.wikipedia.org/w/index.php?title=Lucian_Wintrich&oldid=1163978108#cite_note-:11-3"))
     ])
 
@@ -169,7 +172,48 @@ def test_wwwyzzerdd_diff():
     assert add_orientation_reference.old is None
     assert add_orientation_reference.new == ReferenceValue([
         Statement(RegularStatement('P854'), StatementExternalLinkValue(
-            "https://www.dailydot.com/irl/conservative-queers-lgbtq-trump/")),
+            href="https://www.dailydot.com/irl/conservative-queers-lgbtq-trump/",
+            text="https://www.dailydot.com/irl/conservative-queers-lgbtq-trump/")),
         Statement(RegularStatement('P813'),
                   StatementTimeValue("28 July 2023"))
     ])
+
+
+def test_fennel():
+    # https://www.wikidata.org/w/index.php?title=Q121167625&diff=1946482672&oldid=1946481281
+    revid = 1946482672
+    oldid = 1946481281
+    diff = get_diff(oldid, revid).changes()
+    assert diff.user == "BrokenSegue"
+    assert len(diff.changes) == 12
+
+    add_business = diff.changes[0]
+    assert (add_business.field == RegularStatement(pid='P31'))
+    assert (add_business.old == None)
+    assert (add_business.new == StatementItemValue(value='Q4830453'))
+
+    add_business_rank = diff.changes[1]
+    assert (add_business_rank.field == RankChangeStatement(pid='P31'))
+    assert (add_business_rank.old == None)
+    assert (add_business_rank.new == "normal")
+
+    add_crunchbase = diff.changes[2]
+    assert (add_crunchbase.field == RegularStatement(pid='P2088'))
+    assert (add_crunchbase.old == None)
+    assert (add_crunchbase.new == StatementExternalLinkValue(
+        "https://www.crunchbase.com/organization/fennel-ai", "fennel-ai"))
+
+
+def test_unk_qual():
+    # https://www.wikidata.org/w/index.php?title=Q4115189&diff=1952202478&oldid=1952154007
+    revid = 1952202478
+    oldid = 1952154007
+    diff = get_diff(oldid, revid).changes()
+    assert diff.user == "BrokenSegue"
+    assert len(diff.changes) == 1
+    add_unk_qual = diff.changes[0]
+    assert (add_unk_qual.field == QualifierChangeStatement(
+        'P460', StatementItemValue(value='Q13406268')))
+    assert (add_unk_qual.old == None)
+    assert (add_unk_qual.new == StatementQualifierValue(
+        "P1013", StatementSpecialValue("somevalue")))

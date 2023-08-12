@@ -9,41 +9,6 @@ from enum import Enum
 
 
 @dataclass
-class StatementType:
-    pass
-
-@dataclass
-class Alias(StatementType):
-    lang: str
-
-@dataclass
-class Description(StatementType):
-    lang: str
-
-@dataclass
-class Label(StatementType):
-    lang: str
-
-@dataclass
-class RegularStatement(StatementType):
-    pid: str
-
-@dataclass
-class RankChangeStatement(StatementType):
-    pid: str
-
-@dataclass
-class QualifierChangeStatement(StatementType):
-    pid: str
-
-@dataclass
-class ReferenceChangeStatement(StatementType):
-    pid: str
-    qid: str
-
-
-
-@dataclass
 class StatementValue:
     @staticmethod
     def extract_pid(a: Tag) -> str:
@@ -74,22 +39,61 @@ class StatementValue:
                 return StatementTimeValue(a.text)
             elif a.name == "a":
                 if "external" in a.attrs.get("class", []):
-                    return StatementExternalLinkValue(a.text)
+                    return StatementExternalLinkValue(a.attrs['href'], a.text)
                 else:
                     return StatementItemValue(StatementValue.extract_qid(a))
             else:
                 links = a.find_all("a")
                 if links:
                     # either an external link, external identifier or a link to another item
-                    if links[0].attrs["href"].startswith("/wiki/Q"):
+                    if "external" in links[0].attrs.get("class", []):
+                        return StatementExternalLinkValue(links[0].attrs['href'], links[0].text)
+                    elif links[0].attrs["href"].startswith("/wiki/Q"):
                         # internal property link
                         return StatementItemValue(StatementValue.extract_qid(links[0]))
+                    else:
+                        raise Exception("Not implemented yet")
                 else:
                     # handle this later
                     raise Exception("Not implemented yet")
         else:
             # handle this later
             raise Exception("Not implemented yet")
+
+
+@dataclass
+class StatementType:
+    pass
+
+@dataclass
+class Alias(StatementType):
+    lang: str
+
+@dataclass
+class Description(StatementType):
+    lang: str
+
+@dataclass
+class Label(StatementType):
+    lang: str
+
+@dataclass
+class RegularStatement(StatementType):
+    pid: str
+
+@dataclass
+class RankChangeStatement(StatementType):
+    pid: str
+
+@dataclass
+class QualifierChangeStatement(StatementType):
+    pid: str
+    value: StatementValue
+
+@dataclass
+class ReferenceChangeStatement(StatementType):
+    pid: str
+    qid: str
 
 @dataclass
 class StatementStringValue(StatementValue):
@@ -101,8 +105,13 @@ class StatementTimeValue(StatementValue):
 
 @dataclass
 class StatementExternalLinkValue(StatementValue):
-    value: str
+    href: str
+    text: str
 
+
+@dataclass
+class StatementSpecialValue(StatementValue):
+    value: str
 
 @dataclass
 class StatementItemValue(StatementValue):
@@ -136,9 +145,22 @@ class StatementQualifierValue(StatementValue):
     def from_html(cls, tag: Tag) -> Self:
         links = tag.find_all("a")
         pid = StatementValue.extract_pid(links[0])
-        value = StatementValue.extract_pid(links[1])
-        return StatementQualifierValue(pid, StatementItemValue(value))
-
+        if len(links) > 1:
+            value = StatementValue.extract_pid(links[1])
+            return StatementQualifierValue(pid, StatementItemValue(value))
+        else:
+            # likely unknown or no value
+            # find span with class = "wikibase-snakview-variation-somevaluesnak"
+            span = tag.find("span", class_="wikibase-snakview-variation-somevaluesnak")
+            if span:
+                somevalue = StatementSpecialValue("somevalue")
+                return StatementQualifierValue(pid, somevalue)
+            span = tag.find("span", class_="wikibase-snakview-variation-novaluesnak")
+            if span:
+                novalue = StatementSpecialValue("novalue")
+                return StatementQualifierValue(pid, novalue)
+            raise Exception("Unknown qualifier value")
+        
 @dataclass
 class Statement:
     field: RegularStatement
@@ -154,8 +176,17 @@ class Statement:
         else:
             raise Exception("Expected a link in the span")
 
-        # look at the 3rd value because there's a separating colon
-        value = StatementValue.extract_value(list(span.children)[2])
+        
+        if link.next_sibling:
+            if link.next_sibling.text.strip() == ":":
+                # look at the 2nd value after the link because there's a separating colon
+                value = StatementValue.extract_value(list(link.next_siblings)[1])
+            else:
+                # ok it's just a string (maybe)
+                # oh god end this
+                value = StatementStringValue("/".join(link.next_sibling.text.strip()[1:].split("/")[0:-1]).strip())
+        else:
+            raise Exception("no second value in statement span")
         return Statement(field, value)
 
 @dataclass
@@ -204,6 +235,7 @@ class Change:
                 new_value = ReferenceValue.from_div(new) if new else None
                 return Change(statement_type, old_value, new_value)
             case None:
+                raise Exception("unk statement type")
                 pass
 
         return Change(statement_type, None, None)
@@ -227,14 +259,8 @@ class Change:
                 pid = title.split(":")[-1]
                 return RankChangeStatement(pid)
         elif field.text.startswith("Property") and field.text.endswith("qualifier"):
-            link = field.find("a")
-            if type(link) == Tag:
-                # get the title
-                title = link.attrs["title"]
-                pid = title.split(":")[-1]
-            else:
-                raise Exception("Expected a tag for the main pid")
-            return QualifierChangeStatement(pid)  
+            statement = Statement.from_span(field)
+            return QualifierChangeStatement(statement.field.pid, statement.value)  
         elif field.text.startswith("Property") and field.text.endswith("reference"):
             links = field.find_all("a")
             if type(links[0]) == Tag:
