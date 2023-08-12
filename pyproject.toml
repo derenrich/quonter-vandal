@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "quonter-vandal"
+version = "0.1.0"
+description = ""
+authors = ["Daniel Erenrich <daniel@erenrich.net>"]
+readme = "README.md"
+packages = [{include = "quonter_vandal"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+beautifulsoup4 = "^4.12.2"
+lxml = "^4.9.2"
+requests = "^2.31.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
