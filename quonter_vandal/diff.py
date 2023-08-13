@@ -37,11 +37,6 @@ class StatementValue:
         if type(a) == Tag:
             if "wb-time-details" in a.attrs.get("class", []):
                 return StatementTimeValue.from_block(a)
-            elif a.name == "a":
-                if "external" in a.attrs.get("class", []):
-                    return StatementExternalLinkValue(a.attrs['href'], a.text)
-                else:
-                    return StatementItemValue(StatementValue.extract_qid(a))
             else:
                 links = a.find_all("a")
                 if links:
@@ -73,6 +68,11 @@ class StatementValue:
                         return StatementTimeValue.from_block(date_block)
                     if a.find(class_="wb-quantity-details"):
                         return StatementQuantityValue.from_block(a)
+                    
+                    # so stirng type has no special class or formatting
+                    diffchange = a.find(class_="diffchange-inline")
+                    if diffchange and type(diffchange.next_element) == Tag and diffchange.next_element.name == "span":
+                        return StatementStringValue(diffchange.next_element.text)
         
         if not wrapped:
             # try again but wrapped in a span
@@ -207,23 +207,10 @@ class StatementQualifierValue(StatementValue):
 
     @classmethod
     def from_html(cls, tag: Tag) -> Self:
-        links = tag.find_all("a")
-        pid = StatementValue.extract_pid(links[0])
-        if len(links) > 1:
-            value = StatementValue.extract_qid(links[1])
-            return StatementQualifierValue(pid, StatementItemValue(value))
-        else:
-            # likely unknown or no value
-            # find span with class = "wikibase-snakview-variation-somevaluesnak"
-            span = tag.find("span", class_="wikibase-snakview-variation-somevaluesnak")
-            if span:
-                somevalue = StatementSpecialValue("somevalue")
-                return StatementQualifierValue(pid, somevalue)
-            span = tag.find("span", class_="wikibase-snakview-variation-novaluesnak")
-            if span:
-                novalue = StatementSpecialValue("novalue")
-                return StatementQualifierValue(pid, novalue)
-            raise Exception("Unknown qualifier value")
+        statement = Statement.from_span(tag)
+        if type(statement.field) == RegularStatement:
+            return StatementQualifierValue(statement.field.pid, statement.value)
+        raise Exception("shouldn't get here")
         
 @dataclass
 class Statement:

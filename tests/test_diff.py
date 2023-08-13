@@ -406,6 +406,36 @@ def test_quantity_statement():
     assert quantity_change.new == StatementQuantityValue("13")
 
 
+def test_string_change():
+    # https://www.wikidata.org/w/index.php?title=1874928741&diff=1874928741&oldid=1846303619
+    revid = 1874928741
+    oldid = 1846303619
+    diff = get_diff(oldid, revid).changes()
+    assert diff.user == "186.67.40.154"
+    assert len(diff.changes) == 8
+
+    pseudonym_change = diff.changes[3]
+    assert pseudonym_change.field == RegularStatement('P742')
+    assert pseudonym_change.old == StatementStringValue("Américo")
+    assert pseudonym_change.new == StatementStringValue("Pancho")
+
+    birhtname_change = diff.changes[4]
+    assert birhtname_change.field == RegularStatement('P1477')
+    assert birhtname_change.old == StatementMonolingualTextValue(
+        "Domingo Johnny Vega Urzúa", "es")
+    assert birhtname_change.new == StatementMonolingualTextValue(
+        "Francisco Vera", "es")
+
+
+def test_date_qualifier_change():
+    # https://www.wikidata.org/w/index.php?title=1874928741&diff=1921063976&oldid=1913859487
+    revid = 1921063976
+    oldid = 1913859487
+    diff = get_diff(oldid, revid).changes()
+    assert diff.user == "190.202.238.19"
+    assert len(diff.changes) == 6
+
+
 DIFFS = [
     [1712195941, 1800024197],
     [1346145867, 1800031456],
@@ -514,4 +544,4 @@ DIFFS = [
 def test_bulk():
     for (i, j) in DIFFS:
         print(i, j)
-        # get_diff(i, j).changes()
+        get_diff(i, j).changes()
