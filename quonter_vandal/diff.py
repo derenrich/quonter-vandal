@@ -69,7 +69,7 @@ class StatementValue:
                     if a.find(class_="wb-quantity-details"):
                         return StatementQuantityValue.from_block(a)
                     
-                    # so stirng type has no special class or formatting
+                    # so string type has no special class or formatting
                     diffchange = a.find(class_="diffchange-inline")
                     if diffchange and type(diffchange.next_element) == Tag and diffchange.next_element.name == "span":
                         return StatementStringValue(diffchange.next_element.text)
@@ -338,9 +338,10 @@ class Change:
                 elif span and type(span) == Tag:
                     value = StatementValue.extract_value(span)
                 else:
-                    # ok we have a value in the text so we need to strip the colon
-                    data_child = list(field.children)[2]
-                    value = StatementValue.extract_value(data_child)
+                    # we have a value in the text so we need to strip the colon and trailing slash
+                    text_data = list(field.children)[2].text.strip()[1:]
+                    text_data = "/".join(text_data.split("/")[0:-1]).strip()
+                    value = StatementStringValue(text_data)
                 return ReferenceChangeStatement(pid, value)
             else:
                 raise Exception("Expected a tag for the main pid")

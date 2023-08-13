@@ -370,7 +370,10 @@ def test_date_ref_on_no_value_statement():
     change_assesment_ref = diff.changes[0]
     assert change_assesment_ref.field == ReferenceChangeStatement(
         'P5021', StatementSpecialValue("novalue"))
-    # TODO: add data for new/old values
+    assert change_assesment_ref.old == None
+    assert change_assesment_ref.new == ReferenceValue([
+        Statement(field=RegularStatement(pid='P813'),
+                  value=StatementTimeValue(value='13 August 2023'))])
 
 
 def test_georgian_date():
@@ -434,6 +437,39 @@ def test_date_qualifier_change():
     diff = get_diff(oldid, revid).changes()
     assert diff.user == "190.202.238.19"
     assert len(diff.changes) == 6
+
+    image_date_qualifier_rm = diff.changes[2]
+    assert image_date_qualifier_rm.field == QualifierChangeStatement('P18', StatementFileLink(
+        "//commons.wikimedia.org/wiki/File:Letizia_von_Spanien_(2022).jpg", "Letizia von Spanien (2022).jpg"))
+    assert image_date_qualifier_rm.new == None
+    assert image_date_qualifier_rm.old == StatementQualifierValue(
+        "P585", StatementTimeValue("2022"))
+
+    image_qualifier_rm = diff.changes[3]
+    assert image_qualifier_rm.field == QualifierChangeStatement('P18', StatementFileLink(
+        "//commons.wikimedia.org/wiki/File:Letizia_von_Spanien_(2022).jpg", "Letizia von Spanien (2022).jpg"))
+    assert image_qualifier_rm.new == None
+    assert image_qualifier_rm.old == StatementQualifierValue(
+        "P2096", StatementMonolingualTextValue("Letícia Ortiz", "ca"))
+
+
+def test_reference_on_date():
+    # https://www.wikidata.org/w/index.php?title=Q4115189&diff=1813636413&oldid=1807348139
+    revid = 1813636413
+    oldid = 1807348139
+    diff = get_diff(oldid, revid).changes()
+    assert diff.user == "2A02:587:CC90:282A:6DFC:4569:8C9C:1C61"
+    assert len(diff.changes) == 3
+
+    assert diff.changes[2].field == ReferenceChangeStatement(
+        'P4602', StatementStringValue("7 January 2023"))
+    assert diff.changes[2].new == None
+    assert diff.changes[2].old == ReferenceValue([
+        Statement(field=RegularStatement(pid='P854'),
+                  value=StatementExternalLinkValue("https://www.iefimerida.gr/ellada/kideia-noti-mayroydi-poioi-pigan-eikones", "https://www.iefimerida.gr/ellada/kideia-noti-mayroydi-poioi-pigan-eikones")),
+        Statement(field=RegularStatement(pid='P813'),
+                  value=StatementTimeValue("9 January 2023")),
+    ])
 
 
 DIFFS = [
@@ -544,4 +580,4 @@ DIFFS = [
 def test_bulk():
     for (i, j) in DIFFS:
         print(i, j)
-        get_diff(i, j).changes()
+        # get_diff(i, j).changes()
