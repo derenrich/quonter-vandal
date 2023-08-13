@@ -43,6 +43,11 @@ class StatementValue:
                     # units are linked so first check if it's a united piece of data
                     if a.find(class_="wb-quantity-details"):
                         return StatementQuantityValue.from_block(a)
+                    # globes are linked so next check if it's a globe coordinate
+                    globe_block = a.find(class_="wb-globe-details")
+                    if globe_block and type(globe_block) == Tag:
+                        return StatementGlobeCoordinateValue.from_block(a)
+
                     # either an external link, external identifier or a link to another item
                     elif "external" in links[0].attrs.get("class", []):
                         return StatementExternalLinkValue(links[0].attrs['href'], links[0].text)
@@ -71,7 +76,6 @@ class StatementValue:
                         return StatementTimeValue.from_block(date_block)
                     if a.find(class_="wb-quantity-details"):
                         return StatementQuantityValue.from_block(a)
-                    
                     # so string type has no special class or formatting
                     diffchange = a.find(class_="diffchange-inline")
                     if diffchange and type(diffchange.next_element) == Tag and diffchange.next_element.name == "span":
@@ -183,6 +187,18 @@ class StatementQuantityValue(StatementValue):
         if quantity_rendered:
             return StatementQuantityValue(quantity_rendered.text)
         raise Exception("Unkown quantity format")
+
+
+@dataclass
+class StatementGlobeCoordinateValue(StatementValue):
+    coord: str
+
+    @staticmethod
+    def from_block(block: Tag) -> Self:
+        globe_coordinate = block.find(class_="wb-globe-details")
+        if globe_coordinate:
+            return StatementGlobeCoordinateValue(globe_coordinate.text)
+        raise Exception("Unkown globe coordinate format")
 
 @dataclass
 class StatementNumberValue(StatementValue):
