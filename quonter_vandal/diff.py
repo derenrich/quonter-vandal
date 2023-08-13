@@ -40,8 +40,11 @@ class StatementValue:
             else:
                 links = a.find_all("a")
                 if links:
+                    # units are linked so first check if it's a united piece of data
+                    if a.find(class_="wb-quantity-details"):
+                        return StatementQuantityValue.from_block(a)
                     # either an external link, external identifier or a link to another item
-                    if "external" in links[0].attrs.get("class", []):
+                    elif "external" in links[0].attrs.get("class", []):
                         return StatementExternalLinkValue(links[0].attrs['href'], links[0].text)
                     elif links[0].attrs["href"].startswith("/wiki/Q"):
                         # internal property link
@@ -314,17 +317,17 @@ class Change:
         elif field.text.startswith("label"):
             _, lang = field.text.split("/")
             return Label(lang.strip())
-        elif field.text.startswith("Property") and field.text.endswith("rank"):
+        elif field.text.startswith("Property") and field.text.endswith("/ rank"):
             link = field.find("a")
             if type(link) == Tag:
                 # get the title
                 title = link.attrs["title"]
                 pid = title.split(":")[-1]
                 return RankChangeStatement(pid)
-        elif field.text.startswith("Property") and field.text.endswith("qualifier"):
+        elif field.text.startswith("Property") and field.text.endswith("/ qualifier"):
             statement = Statement.from_span(field)
             return QualifierChangeStatement(statement.field.pid, statement.value)  
-        elif field.text.startswith("Property") and field.text.endswith("reference"):
+        elif field.text.startswith("Property") and field.text.endswith("/ reference"):
             links = field.find_all("a")
             span = field.find("span")
             details = field.find(class_="wb-details")

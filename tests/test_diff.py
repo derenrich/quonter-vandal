@@ -472,6 +472,28 @@ def test_reference_on_date():
     ])
 
 
+def test_amount_with_units():
+    # https://www.wikidata.org/w/index.php?title=Q4115189&diff=1897073502&oldid=1788346432
+    revid = 1897073502
+    oldid = 1788346432
+    diff = get_diff(oldid, revid).changes()
+    assert diff.user == "80.11.85.7"
+    assert len(diff.changes) == 1
+
+    assert diff.changes[0].field == RegularStatement('P2130')
+    assert diff.changes[0].new == StatementQuantityValue("10 euro")
+    assert diff.changes[0].old == StatementQuantityValue("18 bee")
+
+
+def test_property_ends_in_rank():
+    # https://www.wikidata.org/w/index.php?title=Q1515445&diff=1803826490&oldid=1703741037
+    revid = 1803826490
+    oldid = 1703741037
+    diff = get_diff(oldid, revid).changes()
+    assert diff.user == "93.176.133.171"
+    assert len(diff.changes) == 4
+
+
 DIFFS = [
     [1712195941, 1800024197],
     [1346145867, 1800031456],
@@ -580,4 +602,4 @@ DIFFS = [
 def test_bulk():
     for (i, j) in DIFFS:
         print(i, j)
-        # get_diff(i, j).changes()
+        get_diff(i, j).changes()
