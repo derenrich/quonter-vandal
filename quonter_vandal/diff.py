@@ -36,7 +36,7 @@ class StatementValue:
     def extract_value(a: PageElement, wrapped=False) -> Self:
         if type(a) == Tag:
             if "wb-time-details" in a.attrs.get("class", []):
-                return StatementTimeValue(a.text)
+                return StatementTimeValue.from_block(a)
             elif a.name == "a":
                 if "external" in a.attrs.get("class", []):
                     return StatementExternalLinkValue(a.attrs['href'], a.text)
@@ -68,6 +68,11 @@ class StatementValue:
                     missing_value = a.find("span", class_="wb-entity-undefinedinfo")
                     if missing_value:
                         return StatementSpecialValue("missing")
+                    date_block = a.find(class_="wb-time-details")
+                    if date_block and type(date_block) == Tag:
+                        return StatementTimeValue.from_block(date_block)
+                    if a.find(class_="wb-quantity-details"):
+                        return StatementQuantityValue.from_block(a)
         
         if not wrapped:
             # try again but wrapped in a span
@@ -129,6 +134,18 @@ class StatementMonolingualTextValue(StatementValue):
 class StatementTimeValue(StatementValue):
     value: str
 
+    @staticmethod
+    def from_block(block: Tag) -> Self:
+        next_element = block.next_element
+        if next_element:
+            date_string = next_element.text
+            # get calendar name
+            calendar_name = block.find(class_="wb-calendar-name")
+            if calendar_name:
+                date_string += " " + calendar_name.text
+            return StatementTimeValue(date_string)
+        raise Exception("Unkown date format")
+    
 @dataclass
 class StatementExternalLinkValue(StatementValue):
     href: str
@@ -152,6 +169,17 @@ class StatementSpecialValue(StatementValue):
 @dataclass
 class StatementItemValue(StatementValue):
     value: str
+
+@dataclass
+class StatementQuantityValue(StatementValue):
+    rendered_value: str
+
+    @staticmethod
+    def from_block(block: Tag) -> Self:
+        quantity_rendered = block.find(class_="wb-quantity-rendered")
+        if quantity_rendered:
+            return StatementQuantityValue(quantity_rendered.text)
+        raise Exception("Unkown quantity format")
 
 @dataclass
 class StatementNumberValue(StatementValue):

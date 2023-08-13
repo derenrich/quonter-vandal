@@ -370,6 +370,40 @@ def test_date_ref_on_no_value_statement():
     change_assesment_ref = diff.changes[0]
     assert change_assesment_ref.field == ReferenceChangeStatement(
         'P5021', StatementSpecialValue("novalue"))
+    # TODO: add data for new/old values
+
+
+def test_georgian_date():
+    # https://www.wikidata.org/w/index.php?title=Q114233325&diff=1801067965&oldid=1766849620
+    revid = 1801067965
+    oldid = 1766849620
+    diff = get_diff(oldid, revid).changes()
+    assert diff.user == "74.12.222.39"
+    assert len(diff.changes) == 1
+    change_georgian_date = diff.changes[0]
+    assert change_georgian_date.field == RegularStatement('P569')
+    assert change_georgian_date.old == StatementTimeValue("29 August 188")
+    assert change_georgian_date.new == StatementTimeValue(
+        "29 August 1888 Gregorian")
+
+
+def test_quantity_statement():
+    # https://www.wikidata.org/w/index.php?title=Q114233325&diff=1856453216&oldid=1774447242
+    revid = 1856453216
+    oldid = 1774447242
+    diff = get_diff(oldid, revid).changes()
+    assert diff.user == "176.12.82.139"
+    assert len(diff.changes) == 5
+
+    death_date_change = diff.changes[0]
+    assert death_date_change.field == RegularStatement('P570')
+    assert death_date_change.old == StatementTimeValue("1646")
+    assert death_date_change.new == StatementTimeValue("2050")
+
+    quantity_change = diff.changes[4]
+    assert quantity_change.field == RegularStatement('P1971')
+    assert quantity_change.old == StatementQuantityValue("4")
+    assert quantity_change.new == StatementQuantityValue("13")
 
 
 DIFFS = [
