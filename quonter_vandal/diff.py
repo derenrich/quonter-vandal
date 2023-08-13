@@ -107,6 +107,10 @@ class Label(StatementType):
     lang: str
 
 @dataclass
+class Redirect(StatementType):
+    pass
+
+@dataclass
 class RegularStatement(StatementType):
     pid: str
 
@@ -316,9 +320,18 @@ class Change:
                 new_value = StatementValue.extract_value(new) if new else None
 
                 return Change(statement_type, old_value, new_value)
+            case Redirect():
+                old_value = StatementStringValue(old.text) if old else None
+                new_value = StatementStringValue(new.text) if new else None
+
+                return Change(statement_type, old_value, new_value)
+
             case None:
+                raise Exception("statement type is none")
+            case _:
                 raise Exception("unk statement type")
-                pass
+            
+
 
         return Change(statement_type, None, None)
 
@@ -378,6 +391,8 @@ class Change:
                 return SitelinkChangeStatement(lang)
             if len(args) == 3 and args[2].strip() == "name":
                 return SitelinkChangeStatement(lang)
+        elif field.text == "redirect":
+            return Redirect()
         # unknown field type
         raise Exception("Unknown field type: " + field.text)
 
