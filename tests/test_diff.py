@@ -676,6 +676,20 @@ def test_formula_usage():
     )
 
 
+def test_property_usage():
+    # https://www.wikidata.org/w/index.php?title=Q4115189&diff=1953446623&oldid=1953446518
+    revid = 1953446623
+    oldid = 1953446518
+    diff = get_diff(oldid, revid).changes()
+    assert len(diff.changes) == 4
+    for c in diff.changes:
+        assert c.old == None
+    assert diff.changes[0].field == RegularStatement('P2368')
+    assert diff.changes[0].new == StatementPropertyValue('P1889')
+    assert diff.changes[2].field == QualifierChangeStatement(
+        'P2368', StatementPropertyValue('P1889'))
+
+
 DIFFS = [
     [1799817913, 1800002446],
     [1799720965, 1800002423],

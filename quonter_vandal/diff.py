@@ -41,6 +41,16 @@ class StatementValue:
         # throw error
         raise Exception("Expected a QID in the link")
 
+    @staticmethod
+    def extract_property(a: Tag) -> str:
+        # check if it's a link
+        if a.name == "a" and a.attrs["title"].startswith("Property:"):
+            # get the title
+            return a.attrs["title"].split(':')[1]
+        # throw error
+        raise Exception("Expected a Property ID in the link")
+
+
 
     @staticmethod
     def extract_value(a: PageElement, wrapped=False) -> Self:
@@ -62,8 +72,11 @@ class StatementValue:
                     elif "external" in links[0].attrs.get("class", []):
                         return StatementExternalLinkValue(links[0].attrs['href'], links[0].text)
                     elif links[0].attrs["href"].startswith("/wiki/Q"):
-                        # internal property link
+                        # internal qid link
                         return StatementItemValue(StatementValue.extract_qid(links[0]))
+                    elif links[0].attrs["href"].startswith("/wiki/Property:P"):
+                        # internal pid link
+                        return StatementPropertyValue(StatementValue.extract_pid(links[0]))
                     elif links[0].attrs["href"].startswith("/wiki/Lexeme:L"):
                         return StatementLexemeValue(StatementValue.extract_lexeme(links[0]))
                     elif "hreflang" in links[0].attrs:
@@ -206,6 +219,11 @@ class StatementItemValue(StatementValue):
 @dataclass
 class StatementLexemeValue(StatementValue):
     value: str
+
+@dataclass
+class StatementPropertyValue(StatementValue):
+    value: str
+
 
 @dataclass
 class StatementMathValue(StatementValue):
