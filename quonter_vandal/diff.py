@@ -31,6 +31,16 @@ class StatementValue:
             return qid
         # throw error
         raise Exception("Expected a QID in the link")
+    
+    @staticmethod
+    def extract_lexeme(a: Tag) -> str:
+        # check if it's a link
+        if a.name == "a" and a.attrs["title"].startswith("L"):
+            # get the title
+            return a.attrs["title"].split(':')[0]
+        # throw error
+        raise Exception("Expected a QID in the link")
+
 
     @staticmethod
     def extract_value(a: PageElement, wrapped=False) -> Self:
@@ -54,6 +64,8 @@ class StatementValue:
                     elif links[0].attrs["href"].startswith("/wiki/Q"):
                         # internal property link
                         return StatementItemValue(StatementValue.extract_qid(links[0]))
+                    elif links[0].attrs["href"].startswith("/wiki/Lexeme:L"):
+                        return StatementLexemeValue(StatementValue.extract_lexeme(links[0]))
                     elif "hreflang" in links[0].attrs:
                         return StatementInternalLinkValue(links[0].attrs["href"], links[0].text, links[0].attrs["hreflang"])
                     elif "extiw" in links[0].attrs.get("class", []):
@@ -183,6 +195,10 @@ class StatementSpecialValue(StatementValue):
 
 @dataclass
 class StatementItemValue(StatementValue):
+    value: str
+
+@dataclass
+class StatementLexemeValue(StatementValue):
     value: str
 
 @dataclass
