@@ -310,7 +310,7 @@ class Change:
                 new_value = StatementQualifierValue.from_html(new) if new else None
                 return Change(statement_type, old_value, new_value)
             
-            case ReferenceChangeStatement(pid, qid):
+            case ReferenceChangeStatement(pid, value):
                 old_value = ReferenceValue.from_div(old) if old else None
                 new_value = ReferenceValue.from_div(new) if new else None
                 return Change(statement_type, old_value, new_value)
@@ -358,7 +358,7 @@ class Change:
             return QualifierChangeStatement(statement.field.pid, statement.value)  
         elif field.text.startswith("Property") and field.text.endswith("/ reference"):
             links = field.find_all("a")
-            span = field.find("span")
+            span = field.find("span", class_="wikibase-snakview-variation-novaluesnak") or field.find("span", class_="wikibase-snakview-variation-somevaluesnak")
             details = field.find(class_="wb-details")
             if type(links[0]) == Tag:
                 pid = StatementValue.extract_pid(links[0])
@@ -371,7 +371,7 @@ class Change:
                     value = StatementValue.extract_value(span)
                 else:
                     # we have a value in the text so we need to strip the colon and trailing slash
-                    text_data = list(field.children)[2].text.strip()[1:]
+                    text_data = "".join([c.text for c in list(field.children)[2:]])[1:].strip()
                     text_data = "/".join(text_data.split("/")[0:-1]).strip()
                     value = StatementStringValue(text_data)
                 return ReferenceChangeStatement(pid, value)
@@ -443,9 +443,13 @@ class DiffStateMachine:
             self._cur_new = None
             self.changes.append(change)
 
+class NoSuchDiffException(Exception):
+    pass
 
 class ItemDiffer:
     def __init__(self, diff_json: dict):
+        if 'compare' not in diff_json:
+            raise NoSuchDiffException("Invalid ItemDiff. Missing `compare`")
         compare: Optional[dict] = diff_json['compare']
         if not compare:
             raise Exception("Invalid ItemDiff. Missing `compare`")
@@ -536,11 +540,15 @@ class ItemDiffer:
 
 
 
-def get_diff(from_rev_id: int, to_rev_id: int) -> ItemDiffer:
+def get_diff(from_rev_id: int, to_rev_id: int) -> Optional[ItemDiffer]:
     URL = f"https://www.wikidata.org/w/api.php?action=compare&prop=user|diff|title|rel|ids&format=json&fromrev={from_rev_id}&torev={to_rev_id}"
     resp = requests.get(URL)
-    return ItemDiffer(resp.json())
+    try:
+        return ItemDiffer(resp.json())
+    except NoSuchDiffException:
+        return None
 
 if __name__ == "__main__":
     res = get_diff(1916986831, 1916992133)
-    print(res.changes())
+    if res:
+        print(res.changes())
