@@ -71,6 +71,9 @@ class StatementValue:
                     elif "extiw" in links[0].attrs.get("class", []):
                         return StatementFileLink(links[0].attrs["href"], links[0].text)
                 else:
+                    math = a.find("math")
+                    if type(math) == Tag:
+                        return StatementMathValue.from_block(math)
                     external_id = a.find("span", class_="wb-external-id")
                     if type(external_id) == Tag:
                         # it's an external identifier that lacks a url
@@ -200,6 +203,16 @@ class StatementItemValue(StatementValue):
 @dataclass
 class StatementLexemeValue(StatementValue):
     value: str
+
+@dataclass
+class StatementMathValue(StatementValue):
+    value: str
+
+    @staticmethod
+    def from_block(math: Tag) -> Self:
+        if 'alttext' in math.attrs:
+            return StatementMathValue(math.attrs['alttext'])
+        raise Exception("Unkown math format")
 
 @dataclass
 class StatementQuantityValue(StatementValue):
@@ -380,6 +393,7 @@ class Change:
             links = field.find_all("a")
             span = field.find("span", class_="wikibase-snakview-variation-novaluesnak") or field.find("span", class_="wikibase-snakview-variation-somevaluesnak")
             details = field.find(class_="wb-details")
+            math = field.find("math")
             if type(links[0]) == Tag:
                 pid = StatementValue.extract_pid(links[0])
                 if len(links) == 2:
@@ -389,6 +403,8 @@ class Change:
                     value = StatementValue.extract_value(details)
                 elif span and type(span) == Tag:
                     value = StatementValue.extract_value(span)
+                elif type(math) == Tag:
+                    value = StatementValue.extract_value(math)
                 else:
                     # we have a value in the text so we need to strip the colon and trailing slash
                     text_data = "".join([c.text for c in list(field.children)[2:]])[1:].strip()

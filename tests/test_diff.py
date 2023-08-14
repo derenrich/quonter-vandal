@@ -590,6 +590,45 @@ def test_lexeme_usage():
         pid='P6254', value=StatementLexemeValue(value='L312259'))
 
 
+def test_geoshape_usage():
+    # https://www.wikidata.org/w/index.php?title=Q4115189&diff=1953423760&oldid=1953415294
+    revid = 1953423760
+    oldid = 1953415294
+    diff = get_diff(oldid, revid).changes()
+    assert len(diff.changes) == 4
+    for c in diff.changes:
+        assert c.old == None
+    assert diff.changes[2].field == QualifierChangeStatement(
+        'P3896', StatementFileLink(
+            "https://commons.wikimedia.org/wiki/Data:ROCEEH/Gravettian.map", "Data:ROCEEH/Gravettian.map")
+    )
+    assert diff.changes[3].field == ReferenceChangeStatement(
+        'P3896', StatementFileLink(
+            "https://commons.wikimedia.org/wiki/Data:ROCEEH/Gravettian.map", "Data:ROCEEH/Gravettian.map")
+    )
+
+
+def test_formula_usage():
+    # https://www.wikidata.org/w/index.php?title=Q4115189&diff=1953425917&oldid=1953423760
+    revid = 1953425917
+    oldid = 1953423760
+    diff = get_diff(oldid, revid).changes()
+    assert len(diff.changes) == 4
+    for c in diff.changes:
+        assert c.old == None
+    assert diff.changes[0].field == RegularStatement('P2534')
+    assert diff.changes[0].new == StatementMathValue(
+        '{\\displaystyle a^{2}+b^{2}=c^{2}}')
+    assert diff.changes[2].field == QualifierChangeStatement(
+        'P2534', StatementMathValue('{\\displaystyle a^{2}+b^{2}=c^{2}}'))
+    assert diff.changes[3].field == ReferenceChangeStatement(
+        'P2534', StatementMathValue('{\\displaystyle a^{2}+b^{2}=c^{2}}'))
+    assert diff.changes[3].new == ReferenceValue(
+        [Statement(RegularStatement('P2534'), StatementMathValue(
+            '{\\displaystyle a^{4}+b^{4}=c^{4}}'))]
+    )
+
+
 DIFFS = [
     [1799817913, 1800002446],
     [1799720965, 1800002423],
