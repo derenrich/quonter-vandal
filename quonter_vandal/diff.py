@@ -71,6 +71,9 @@ class StatementValue:
                     elif "extiw" in links[0].attrs.get("class", []):
                         return StatementFileLink(links[0].attrs["href"], links[0].text)
                 else:
+                    music = a.find(class_="wb-musical-notation-details") or a.find("div",class_="mw-ext-score")
+                    if type(music) == Tag:
+                        return StatementMusicValue.from_block(music)
                     math = a.find("math")
                     if type(math) == Tag:
                         return StatementMathValue.from_block(math)
@@ -213,6 +216,22 @@ class StatementMathValue(StatementValue):
         if 'alttext' in math.attrs:
             return StatementMathValue(math.attrs['alttext'])
         raise Exception("Unkown math format")
+
+@dataclass
+class StatementMusicValue(StatementValue):
+    value: Optional[str]
+
+    @staticmethod
+    def from_block(div: Tag) -> Self:
+        if "wb-musical-notation-details" in div.attrs.get("class", []) or "mw-ext-score" in div.attrs.get("class", []):
+            img = div.find("img")
+            if type(img) == Tag:
+                return StatementMusicValue(img.attrs["alt"])
+            else:
+                # if the music fails to compile
+                return StatementMusicValue(None)
+        raise Exception("Unkown music format")
+
 
 @dataclass
 class StatementQuantityValue(StatementValue):

@@ -590,6 +590,53 @@ def test_lexeme_usage():
         pid='P6254', value=StatementLexemeValue(value='L312259'))
 
 
+def test_form_usage():
+    # https://www.wikidata.org/w/index.php?title=Q4115189&diff=1953435688&oldid=1953425917
+    revid = 1953435688
+    oldid = 1953425917
+    diff = get_diff(oldid, revid).changes()
+    assert len(diff.changes) == 4
+    for c in diff.changes:
+        assert c.old == None
+
+    assert diff.changes[0].field == RegularStatement('P5189')
+    assert diff.changes[1].field == RankChangeStatement('P5189')
+    assert diff.changes[2].field == QualifierChangeStatement(
+        pid='P5189', value=StatementLexemeValue(value='L452382-F1'))
+    assert diff.changes[2].new == StatementQualifierValue(
+        'P5189', StatementLexemeValue(value='L54611-F1'))
+    assert diff.changes[3].field == ReferenceChangeStatement(
+        pid='P5189', value=StatementLexemeValue(value='L452382-F1'))
+
+
+def test_music_usage():
+    # https://www.wikidata.org/w/index.php?title=Q4115189&diff=1953439427&oldid=1953435688
+    revid = 1953439427
+    oldid = 1953435688
+    diff = get_diff(oldid, revid).changes()
+    assert len(diff.changes) == 4
+    for c in diff.changes:
+        assert c.old == None
+    assert diff.changes[0].field == RegularStatement('P6604')
+    assert diff.changes[2].field == QualifierChangeStatement(
+        pid='P6604', value=StatementMusicValue("\\relative c' { c d e f | g2 g | a4 a a a | g1 |}"))
+
+
+def test_table_usage():
+    # https://www.wikidata.org/w/index.php?title=Q4115189&diff=1953444806&oldid=1953439427
+    revid = 1953444806
+    oldid = 1953439427
+    diff = get_diff(oldid, revid).changes()
+    assert len(diff.changes) == 4
+    for c in diff.changes:
+        assert c.old == None
+    assert diff.changes[0].field == RegularStatement('P4045')
+    assert diff.changes[2].field == QualifierChangeStatement(
+        'P4045', StatementFileLink(
+            "https://commons.wikimedia.org/wiki/Data:FileMediaExt.tab", "Data:FileMediaExt.tab")
+    )
+
+
 def test_geoshape_usage():
     # https://www.wikidata.org/w/index.php?title=Q4115189&diff=1953423760&oldid=1953415294
     revid = 1953423760
