@@ -553,6 +553,25 @@ def test_metre_diff():
     assert diff.changes[4].new == None
 
 
+def test_ext_id_without_link():
+    # https://www.wikidata.org/w/index.php?title=Q67011165&diff=1853463165&oldid=1844960481
+    revid = 1853463165
+    oldid = 1844960481
+    diff = get_diff(oldid, revid).changes()
+    assert diff.user == "82.210.51.60"
+    assert len(diff.changes) == 3
+
+    assert diff.changes[0].field == RegularStatement('P27')
+    assert diff.changes[0].old == StatementItemValue("Q142")
+    assert diff.changes[0].new == StatementItemValue("Q880")
+
+    assert diff.changes[2].field == QualifierChangeStatement(
+        'P106', StatementItemValue("Q937857"))
+    assert diff.changes[2].old == None
+    assert diff.changes[2].new == StatementQualifierValue(
+        "P8601", StatementExternalLinkValue(None, "madrid"))
+
+
 DIFFS = [
     [1584339357, 1826384284],
     [1809179591, 1826414363],
@@ -1562,7 +1581,7 @@ def test_bulk():
     import time
     for (i, j) in DIFFS:
         print(i, j)
-        diff = None  # get_diff(i, j)
+        diff = get_diff(i, j)
         if diff:
             diff.changes()
-        # time.sleep(1)
+        time.sleep(0.5)

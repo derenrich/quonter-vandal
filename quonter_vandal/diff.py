@@ -59,6 +59,10 @@ class StatementValue:
                     elif "extiw" in links[0].attrs.get("class", []):
                         return StatementFileLink(links[0].attrs["href"], links[0].text)
                 else:
+                    external_id = a.find("span", class_="wb-external-id")
+                    if type(external_id) == Tag:
+                        # it's an external identifier that lacks a url
+                        return StatementExternalLinkValue(None, external_id.text)
                     monolingual_text = a.find("span", class_="wb-monolingualtext-value")
                     if type(monolingual_text) == Tag:
                         return StatementMonolingualTextValue(monolingual_text.text, monolingual_text.attrs["lang"])
@@ -159,7 +163,7 @@ class StatementTimeValue(StatementValue):
     
 @dataclass
 class StatementExternalLinkValue(StatementValue):
-    href: str
+    href: Optional[str]
     text: str
 
 @dataclass
