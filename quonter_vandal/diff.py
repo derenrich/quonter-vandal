@@ -1,11 +1,11 @@
 from dataclasses import dataclass
-import requests
+import aiohttp
+import asyncio
 from typing import Optional, Self, Union, Any, List, Dict
-from quonter_vandal.revision_listing import get_revisions
+from quonter_vandal.revision_listing import Revision, async_get_revisions
 from bs4 import BeautifulSoup
 from bs4.element import Tag, PageElement
 from enum import Enum
-
 
 
 @dataclass
@@ -20,7 +20,7 @@ class StatementValue:
             return pid
         # throw error
         raise Exception("Expected a tag for the main pid")
-    
+
     @staticmethod
     def extract_qid(a: Tag) -> str:
         # check if it's a link
@@ -31,7 +31,7 @@ class StatementValue:
             return qid
         # throw error
         raise Exception("Expected a QID in the link")
-    
+
     @staticmethod
     def extract_lexeme(a: Tag) -> str:
         # check if it's a link
@@ -49,8 +49,6 @@ class StatementValue:
             return a.attrs["title"].split(':')[1]
         # throw error
         raise Exception("Expected a Property ID in the link")
-
-
 
     @staticmethod
     def extract_value(a: PageElement, wrapped=False) -> Self:
@@ -84,7 +82,8 @@ class StatementValue:
                     elif "extiw" in links[0].attrs.get("class", []):
                         return StatementFileLink(links[0].attrs["href"], links[0].text)
                 else:
-                    music = a.find(class_="wb-musical-notation-details") or a.find("div",class_="mw-ext-score")
+                    music = a.find(
+                        class_="wb-musical-notation-details") or a.find("div", class_="mw-ext-score")
                     if type(music) == Tag:
                         return StatementMusicValue.from_block(music)
                     math = a.find("math")
@@ -94,16 +93,20 @@ class StatementValue:
                     if type(external_id) == Tag:
                         # it's an external identifier that lacks a url
                         return StatementExternalLinkValue(None, external_id.text)
-                    monolingual_text = a.find("span", class_="wb-monolingualtext-value")
+                    monolingual_text = a.find(
+                        "span", class_="wb-monolingualtext-value")
                     if type(monolingual_text) == Tag:
                         return StatementMonolingualTextValue(monolingual_text.text, monolingual_text.attrs["lang"])
-                    somevalue = a.find("span", class_="wikibase-snakview-variation-somevaluesnak")
+                    somevalue = a.find(
+                        "span", class_="wikibase-snakview-variation-somevaluesnak")
                     if somevalue:
                         return StatementSpecialValue("somevalue")
-                    novalue = a.find("span", class_="wikibase-snakview-variation-novaluesnak")
+                    novalue = a.find(
+                        "span", class_="wikibase-snakview-variation-novaluesnak")
                     if novalue:
                         return StatementSpecialValue("novalue")
-                    missing_value = a.find("span", class_="wb-entity-undefinedinfo")
+                    missing_value = a.find(
+                        "span", class_="wb-entity-undefinedinfo")
                     if missing_value:
                         return StatementSpecialValue("missing")
                     date_block = a.find(class_="wb-time-details")
@@ -115,13 +118,14 @@ class StatementValue:
                     diffchange = a.find(class_="diffchange-inline")
                     if diffchange and type(diffchange.next_element) == Tag and diffchange.next_element.name == "span":
                         return StatementStringValue(diffchange.next_element.text)
-        
+
         if not wrapped:
             # try again but wrapped in a span
-            wrapped_tag = BeautifulSoup(f"<span>{a}</span>", "html.parser").span
+            wrapped_tag = BeautifulSoup(
+                f"<span>{a}</span>", "html.parser").span
             if wrapped_tag:
                 return StatementValue.extract_value(wrapped_tag, True)
-        
+
         raise Exception(f"Not implemented yet for value: {a}")
 
 
@@ -129,52 +133,64 @@ class StatementValue:
 class StatementType:
     pass
 
+
 @dataclass
 class Alias(StatementType):
     lang: str
+
 
 @dataclass
 class Description(StatementType):
     lang: str
 
+
 @dataclass
 class Label(StatementType):
     lang: str
+
 
 @dataclass
 class Redirect(StatementType):
     pass
 
+
 @dataclass
 class RegularStatement(StatementType):
     pid: str
+
 
 @dataclass
 class RankChangeStatement(StatementType):
     pid: str
 
+
 @dataclass
 class SitelinkChangeStatement(StatementType):
     lang: str
+
 
 @dataclass
 class QualifierChangeStatement(StatementType):
     pid: str
     value: StatementValue
 
+
 @dataclass
 class ReferenceChangeStatement(StatementType):
     pid: str
     value: StatementValue
 
+
 @dataclass
 class StatementStringValue(StatementValue):
     value: str
 
-@dataclass 
+
+@dataclass
 class StatementMonolingualTextValue(StatementValue):
     value: str
     lang: str
+
 
 @dataclass
 class StatementTimeValue(StatementValue):
@@ -191,11 +207,13 @@ class StatementTimeValue(StatementValue):
                 date_string += " " + calendar_name.text
             return StatementTimeValue(date_string)
         raise Exception("Unkown date format")
-    
+
+
 @dataclass
 class StatementExternalLinkValue(StatementValue):
     href: Optional[str]
     text: str
+
 
 @dataclass
 class StatementInternalLinkValue(StatementValue):
@@ -203,22 +221,27 @@ class StatementInternalLinkValue(StatementValue):
     text: str
     lang: str
 
+
 @dataclass
 class StatementFileLink(StatementValue):
     href: str
     text: str
 
+
 @dataclass
 class StatementSpecialValue(StatementValue):
     value: str
+
 
 @dataclass
 class StatementItemValue(StatementValue):
     value: str
 
+
 @dataclass
 class StatementLexemeValue(StatementValue):
     value: str
+
 
 @dataclass
 class StatementPropertyValue(StatementValue):
@@ -234,6 +257,7 @@ class StatementMathValue(StatementValue):
         if 'alttext' in math.attrs:
             return StatementMathValue(math.attrs['alttext'])
         raise Exception("Unkown math format")
+
 
 @dataclass
 class StatementMusicValue(StatementValue):
@@ -274,9 +298,11 @@ class StatementGlobeCoordinateValue(StatementValue):
             return StatementGlobeCoordinateValue(globe_coordinate.text)
         raise Exception("Unkown globe coordinate format")
 
+
 @dataclass
 class StatementNumberValue(StatementValue):
     value: int | float
+
 
 @dataclass
 class StatementRankValue(StatementValue):
@@ -293,6 +319,7 @@ class StatementRankValue(StatementValue):
         else:
             raise Exception("Unknown rank: " + s)
 
+
 @dataclass
 class StatementQualifierValue(StatementValue):
     pid: str
@@ -304,7 +331,8 @@ class StatementQualifierValue(StatementValue):
         if type(statement.field) == RegularStatement:
             return StatementQualifierValue(statement.field.pid, statement.value)
         raise Exception("shouldn't get here")
-        
+
+
 @dataclass
 class Statement:
     field: RegularStatement
@@ -326,14 +354,17 @@ class Statement:
         if link.next_sibling:
             if link.next_sibling.text.strip() == ":":
                 # look at the 2nd value after the link because there's a separating colon
-                value = StatementValue.extract_value(list(link.next_siblings)[1])
+                value = StatementValue.extract_value(
+                    list(link.next_siblings)[1])
             else:
                 # ok it's just a string (maybe)
                 # oh god end this
-                value = StatementStringValue("/".join(link.next_sibling.text.strip()[1:].split("/")[0:-1]).strip())
+                value = StatementStringValue(
+                    "/".join(link.next_sibling.text.strip()[1:].split("/")[0:-1]).strip())
         else:
             raise Exception("no second value in statement span")
         return Statement(field, value)
+
 
 @dataclass
 class ReferenceValue(StatementValue):
@@ -342,13 +373,15 @@ class ReferenceValue(StatementValue):
     @classmethod
     def from_div(cls, div: Tag) -> Self:
         statements = []
-        inner_div = div.find("ins", class_="diffchange-inline") or div.find("del", class_="diffchange-inline")
+        inner_div = div.find(
+            "ins", class_="diffchange-inline") or div.find("del", class_="diffchange-inline")
         if not inner_div or type(inner_div) != Tag:
             raise Exception("reference block missing references")
         else:
             for span in inner_div.find_all("span", recursive=False):
                 statements.append(Statement.from_span(span))
         return ReferenceValue(statements)
+
 
 @dataclass
 class Change:
@@ -371,20 +404,24 @@ class Change:
                 return Change(statement_type, old_value, new_value)
 
             case RankChangeStatement(pid):
-                old_value = StatementRankValue.from_string(old.text) if old else None
-                new_value = StatementRankValue.from_string(new.text) if new else None
+                old_value = StatementRankValue.from_string(
+                    old.text) if old else None
+                new_value = StatementRankValue.from_string(
+                    new.text) if new else None
                 return Change(statement_type, old_value, new_value)
-            
+
             case QualifierChangeStatement(pid):
-                old_value = StatementQualifierValue.from_html(old) if old else None
-                new_value = StatementQualifierValue.from_html(new) if new else None
+                old_value = StatementQualifierValue.from_html(
+                    old) if old else None
+                new_value = StatementQualifierValue.from_html(
+                    new) if new else None
                 return Change(statement_type, old_value, new_value)
-            
+
             case ReferenceChangeStatement(pid, value):
                 old_value = ReferenceValue.from_div(old) if old else None
                 new_value = ReferenceValue.from_div(new) if new else None
                 return Change(statement_type, old_value, new_value)
-            
+
             case SitelinkChangeStatement(lang):
                 old_value = StatementValue.extract_value(old) if old else None
                 new_value = StatementValue.extract_value(new) if new else None
@@ -400,8 +437,6 @@ class Change:
                 raise Exception("statement type is none")
             case _:
                 raise Exception("unk statement type")
-            
-
 
         return Change(statement_type, None, None)
 
@@ -425,10 +460,11 @@ class Change:
                 return RankChangeStatement(pid)
         elif field.text.startswith("Property") and field.text.endswith("/ qualifier"):
             statement = Statement.from_span(field)
-            return QualifierChangeStatement(statement.field.pid, statement.value)  
+            return QualifierChangeStatement(statement.field.pid, statement.value)
         elif field.text.startswith("Property") and field.text.endswith("/ reference"):
             links = field.find_all("a")
-            span = field.find("span", class_="wikibase-snakview-variation-novaluesnak") or field.find("span", class_="wikibase-snakview-variation-somevaluesnak")
+            span = field.find("span", class_="wikibase-snakview-variation-novaluesnak") or field.find(
+                "span", class_="wikibase-snakview-variation-somevaluesnak")
             details = field.find(class_="wb-details")
             math = field.find("math")
             if type(links[0]) == Tag:
@@ -444,7 +480,8 @@ class Change:
                     value = StatementValue.extract_value(math)
                 else:
                     # we have a value in the text so we need to strip the colon and trailing slash
-                    text_data = "".join([c.text for c in list(field.children)[2:]])[1:].strip()
+                    text_data = "".join([c.text for c in list(field.children)[2:]])[
+                        1:].strip()
                     text_data = "/".join(text_data.split("/")[0:-1]).strip()
                     value = StatementStringValue(text_data)
                 return ReferenceChangeStatement(pid, value)
@@ -469,6 +506,7 @@ class Change:
         # unknown field type
         raise Exception("Unknown field type: " + field.text)
 
+
 @dataclass
 class Diff:
     user: str
@@ -476,6 +514,7 @@ class Diff:
     changes: List[Change]
     comments: List[str]
     tags: List[List[str]]
+
 
 class DiffStateMachine:
     def __init__(self) -> None:
@@ -486,7 +525,6 @@ class DiffStateMachine:
         # the new value of the field
         self._cur_new: Optional[Tag] = None
         self.changes: List[Change] = []
-
 
     def process_row(self, row: Tag, col1: Optional[Any], col2: Optional[Any], col3: Optional[Any], col4: Optional[Any]) -> Optional[Change]:
         # yeah these col columns aren't used anymore really and we could replace it all with the row now that we know about the classnames
@@ -502,35 +540,47 @@ class DiffStateMachine:
                 self._cur_old = cur_old
             cur_new = row.findChild("td", {"class": "diff-addedline"})
             if type(cur_new) == Tag:
-                self._cur_new= cur_new
+                self._cur_new = cur_new
 
             emit = True
 
         if emit:
-            assert(self._cur_field != None)
+            assert (self._cur_field != None)
             cur_old_str = self._cur_old.text if self._cur_old else None
             cur_new_start = self._cur_new.text if self._cur_new else None
-            change = Change.from_html(self._cur_field, self._cur_old, self._cur_new)
+            change = Change.from_html(
+                self._cur_field, self._cur_old, self._cur_new)
             self._cur_field = None
             self._cur_old = None
             self._cur_new = None
             self.changes.append(change)
 
+
 class NoSuchDiffException(Exception):
     pass
 
+
 class ItemDiffer:
-    def __init__(self, diff_json: dict):
+    fromrevid: str
+    torevid: str
+    title: str
+    user: str
+    _diff: str
+    _revisions: List[Revision]
+
+    @classmethod
+    async def create(cls, diff_json: dict, session: aiohttp.ClientSession) -> Self:
         if 'compare' not in diff_json:
             raise NoSuchDiffException("Invalid ItemDiff. Missing `compare`")
         compare: Optional[dict] = diff_json['compare']
         if not compare:
             raise Exception("Invalid ItemDiff. Missing `compare`")
-        
-        self.fromrevid = compare['fromrevid']
-        self.torevid = compare['torevid']
 
-        if self.fromrevid >= self.torevid:
+        differ = ItemDiffer()
+        differ.fromrevid = compare['fromrevid']
+        differ.torevid = compare['torevid']
+
+        if differ.fromrevid >= differ.torevid:
             raise Exception("Invalid ItemDiff. fromrevid >= torevid")
 
         fromns = compare['fromns']
@@ -538,14 +588,15 @@ class ItemDiffer:
         fromid = compare['fromid']
         toid = compare['toid']
         fromtitle = compare['fromtitle']
-        totitle = compare['totitle']    
+        totitle = compare['totitle']
         if fromns != tons or fromid != toid or fromtitle != totitle:
             raise Exception("Invalid ItemDiff. Not same item.")
         touser = compare['touser']
-        self.title: str = fromtitle
-        self.user: str = touser
-        self._diff: str = compare['*']
-        self._revisions = get_revisions(self.title, self.torevid, self.fromrevid)
+        differ.title = fromtitle
+        differ.user = touser
+        differ._diff = compare['*']
+        differ._revisions = await async_get_revisions(differ.title, differ.torevid, differ.fromrevid, session)
+        return differ
 
     def get_url(self) -> str:
         return f"https://www.wikidata.org/w/index.php?title=XXX&diff={self.torevid}&oldid={self.fromrevid}"
@@ -573,7 +624,8 @@ class ItemDiffer:
                     sm.process_row(r, None, None, result, None)
                 else:
                     # unexpected result
-                    raise Exception("Invalid diff row. Two columns, but both empty")
+                    raise Exception(
+                        "Invalid diff row. Two columns, but both empty")
 
             elif len(tds) == 3:
                 # three column
@@ -595,7 +647,8 @@ class ItemDiffer:
                     sm.process_row(r, previous, mid, None, None)
                 else:
                     # unexpected result
-                    raise Exception("Invalid diff row. Three columns, but not colspan.")
+                    raise Exception(
+                        "Invalid diff row. Three columns, but not colspan.")
             elif len(tds) == 4:
                 # four column
                 previous, mid1, mid2, result = tds
@@ -608,18 +661,23 @@ class ItemDiffer:
                 # error condition
                 raise Exception("Invalid diff row. Not 2 or 3 columns.")
 
-
         return Diff(self.user, self.title, sm.changes, comments, tags)
 
 
+def get_diff(from_rev_id: int, to_rev_id: int, loop: Optional[asyncio.AbstractEventLoop] = None) -> Optional[ItemDiffer]:
+    if not loop:
+        loop = asyncio.get_event_loop()
+    return loop.run_until_complete(async_get_diff(from_rev_id, to_rev_id))
 
-def get_diff(from_rev_id: int, to_rev_id: int) -> Optional[ItemDiffer]:
-    URL = f"https://www.wikidata.org/w/api.php?action=compare&prop=user|diff|title|rel|ids&format=json&fromrev={from_rev_id}&torev={to_rev_id}"
-    resp = requests.get(URL)
-    try:
-        return ItemDiffer(resp.json())
-    except NoSuchDiffException:
-        return None
+
+async def async_get_diff(from_rev_id: int, to_rev_id: int, session: Optional[aiohttp.ClientSession] = None) -> Optional[ItemDiffer]:
+    async with aiohttp.ClientSession() as session:
+        URL = f"https://www.wikidata.org/w/api.php?action=compare&prop=user|diff|title|rel|ids&format=json&fromrev={from_rev_id}&torev={to_rev_id}"
+        resp = await session.get(URL)
+        try:
+            return await ItemDiffer.create(await resp.json(), session)
+        except NoSuchDiffException:
+            return None
 
 if __name__ == "__main__":
     res = get_diff(1916986831, 1916992133)
