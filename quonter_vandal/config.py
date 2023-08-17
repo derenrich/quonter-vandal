@@ -8,5 +8,6 @@ language_preferences = [
     'es',
     'ru',
     'it',
-    'pt'
+    'pt',
+    'nl'
 ]
