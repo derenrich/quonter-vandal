@@ -1,0 +1,138 @@
+interactions:
+- request:
+    body: null
+    headers: {}
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=compare&prop=user%7Cdiff%7Ctitle%7Crel%7Cids&format=json&fromrev=1803785463&torev=1808526599
+  response:
+    body:
+      string: '{"compare":{"fromid":2816483,"fromrevid":1803785463,"fromns":0,"fromtitle":"Q2944654","fromuser":"195.221.59.157","fromuserid":0,"toid":2816483,"torevid":1808526599,"tons":0,"totitle":"Q2944654","touser":"195.221.59.157","touserid":0,"prev":1551253346,"next":1839085025,"*":"<tr><td
+        colspan=\"2\" class=\"diff-lineno\">Property / <a title=\"Property:P625\"
+        href=\"/wiki/Property:P625\">coordinate location</a></td><td colspan=\"2\"
+        class=\"diff-lineno\">Property / <a title=\"Property:P625\" href=\"/wiki/Property:P625\">coordinate
+        location</a></td></tr><tr><td class=\"diff-marker\" data-marker=\"\u2212\"></td><td
+        class=\"diff-deletedline\"><div><del class=\"diffchange diffchange-inline\"><span><b
+        class=\"wb-details wb-globe-details wb-globe-rendered\">47\u00b0 16'' 48\",
+        -1\u00b0 52'' 48\"</b><table class=\"wb-details wb-globe-details\"><tr><th
+        class=\"wb-globe-latitude\">Latitude</th><td class=\"wb-globe-latitude\">47.2759</td></tr><tr><th
+        class=\"wb-globe-longitude\">Longitude</th><td class=\"wb-globe-longitude\">-1.87785</td></tr><tr><th
+        class=\"wb-globe-precision\">Precision</th><td class=\"wb-globe-precision\">0.01</td></tr><tr><th
+        class=\"wb-globe-globe\">Globe</th><td class=\"wb-globe-globe\"><a href=\"http://www.wikidata.org/entity/Q2\">Earth</a></td></tr></table></span></del></div></td><td
+        class=\"diff-marker\" data-marker=\"+\"></td><td class=\"diff-addedline\"><div><ins
+        class=\"diffchange diffchange-inline\"><span><b class=\"wb-details wb-globe-details
+        wb-globe-rendered\">47\u00b0 0'' 48\", -6\u00b0 52'' 48\"</b><table class=\"wb-details
+        wb-globe-details\"><tr><th class=\"wb-globe-latitude\">Latitude</th><td class=\"wb-globe-latitude\">47.013333333333</td></tr><tr><th
+        class=\"wb-globe-longitude\">Longitude</th><td class=\"wb-globe-longitude\">-6.88</td></tr><tr><th
+        class=\"wb-globe-precision\">Precision</th><td class=\"wb-globe-precision\">0.00027777777777778</td></tr><tr><th
+        class=\"wb-globe-globe\">Globe</th><td class=\"wb-globe-globe\"><a href=\"http://www.wikidata.org/entity/Q2\">Earth</a></td></tr></table></span></ins></div></td></tr>"}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 17 Aug 2023 04:51:31 GMT
+      Server:
+      - mw2403.codfw.wmnet
+      Set-Cookie:
+      - WMF-Last-Access=17-Aug-2023;Path=/;HttpOnly;secure;Expires=Mon, 18 Sep 2023
+        00:00:00 GMT
+      - WMF-Last-Access-Global=17-Aug-2023;Path=/;Domain=.wikidata.org;HttpOnly;secure;Expires=Mon,
+        18 Sep 2023 00:00:00 GMT
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; Path=/; secure; Domain=.wikidata.org
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie,Authorization
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Cookie:
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; NetworkProbeLimit=0.001; WMF-Last-Access=17-Aug-2023;
+        WMF-Last-Access-Global=17-Aug-2023
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=query&prop=revisions&titles=Q2944654&rvprop=timestamp%7Cuser%7Ccomment%7Ctags&rvstartid=1808526599&rvendid=1803785463&format=json
+  response:
+    body:
+      string: '{"batchcomplete":"","query":{"pages":{"2816483":{"pageid":2816483,"ns":0,"title":"Q2944654","revisions":[{"user":"195.221.59.157","anon":"","timestamp":"2023-01-10T13:04:29Z","comment":"/*
+        wbsetclaim-update:2||1 */ [[Property:P625]]: 47\u00b00''48\"N, 6\u00b052''48\"W","tags":["new
+        editor changing statement","mw-reverted","wikidata-ui"]},{"user":"195.221.59.157","anon":"","timestamp":"2023-01-05T15:00:31Z","comment":"/*
+        wbsetclaim-update:2||1 */ [[Property:P571]]: 1967","tags":["new editor changing
+        statement","wikidata-ui"]}]}}}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Length:
+      - '533'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 17 Aug 2023 04:51:31 GMT
+      Server:
+      - mw2396.codfw.wmnet
+      Set-Cookie:
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie,Authorization
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+version: 1

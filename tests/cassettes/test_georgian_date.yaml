@@ -1,0 +1,142 @@
+interactions:
+- request:
+    body: null
+    headers: {}
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=compare&prop=user%7Cdiff%7Ctitle%7Crel%7Cids&format=json&fromrev=1766849620&torev=1801067965
+  response:
+    body:
+      string: '{"compare":{"fromid":76570745,"fromrevid":1766849620,"fromns":0,"fromtitle":"Q77091439","fromuser":"132.219.132.2","fromuserid":0,"toid":76570745,"torevid":1801067965,"tons":0,"totitle":"Q77091439","touser":"74.12.222.39","touserid":0,"prev":1588605887,"next":1883135171,"*":"<tr><td
+        colspan=\"2\" class=\"diff-lineno\">Property / <a title=\"Property:P569\"
+        href=\"/wiki/Property:P569\">date of birth</a></td><td colspan=\"2\" class=\"diff-lineno\">Property
+        / <a title=\"Property:P569\" href=\"/wiki/Property:P569\">date of birth</a></td></tr><tr><td
+        class=\"diff-marker\" data-marker=\"\u2212\"></td><td class=\"diff-deletedline\"><div><del
+        class=\"diffchange diffchange-inline\"><span><b class=\"wb-details wb-time-details
+        wb-time-rendered\">29 August 188</b><table class=\"wb-details wb-time-details\"><tr><th
+        class=\"wb-time-isotime\">Timestamp</th><td class=\"wb-time-isotime\">+0188-08-29T00:00:00Z</td></tr><tr><th
+        class=\"wb-time-timezone\">Timezone</th><td class=\"wb-time-timezone\">+00:00</td></tr><tr><th
+        class=\"wb-time-calendar\">Calendar</th><td class=\"wb-time-calendar\">Julian</td></tr><tr><th
+        class=\"wb-time-precision\">Precision</th><td class=\"wb-time-precision\">1
+        day</td></tr><tr><th class=\"wb-time-before\">Before</th><td class=\"wb-time-before\">0</td></tr><tr><th
+        class=\"wb-time-after\">After</th><td class=\"wb-time-after\">0</td></tr></table></span></del></div></td><td
+        class=\"diff-marker\" data-marker=\"+\"></td><td class=\"diff-addedline\"><div><ins
+        class=\"diffchange diffchange-inline\"><span><b class=\"wb-details wb-time-details
+        wb-time-rendered\">29 August 1888<sup class=\"wb-calendar-name\">Gregorian</sup></b><table
+        class=\"wb-details wb-time-details\"><tr><th class=\"wb-time-isotime\">Timestamp</th><td
+        class=\"wb-time-isotime\">+1888-08-29T00:00:00Z</td></tr><tr><th class=\"wb-time-timezone\">Timezone</th><td
+        class=\"wb-time-timezone\">+00:00</td></tr><tr><th class=\"wb-time-calendar\">Calendar</th><td
+        class=\"wb-time-calendar\">Gregorian</td></tr><tr><th class=\"wb-time-precision\">Precision</th><td
+        class=\"wb-time-precision\">1 day</td></tr><tr><th class=\"wb-time-before\">Before</th><td
+        class=\"wb-time-before\">0</td></tr><tr><th class=\"wb-time-after\">After</th><td
+        class=\"wb-time-after\">0</td></tr></table></span></ins></div></td></tr>"}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '588'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 17 Aug 2023 04:51:29 GMT
+      Server:
+      - mw2370.codfw.wmnet
+      Set-Cookie:
+      - WMF-Last-Access=17-Aug-2023;Path=/;HttpOnly;secure;Expires=Mon, 18 Sep 2023
+        00:00:00 GMT
+      - WMF-Last-Access-Global=17-Aug-2023;Path=/;Domain=.wikidata.org;HttpOnly;secure;Expires=Mon,
+        18 Sep 2023 00:00:00 GMT
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; Path=/; secure; Domain=.wikidata.org
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie,Authorization
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Cookie:
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; NetworkProbeLimit=0.001; WMF-Last-Access=17-Aug-2023;
+        WMF-Last-Access-Global=17-Aug-2023
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=query&prop=revisions&titles=Q77091439&rvprop=timestamp%7Cuser%7Ccomment%7Ctags&rvstartid=1801067965&rvendid=1766849620&format=json
+  response:
+    body:
+      string: '{"batchcomplete":"","query":{"pages":{"76570745":{"pageid":76570745,"ns":0,"title":"Q77091439","revisions":[{"user":"74.12.222.39","anon":"","timestamp":"2023-01-02T17:31:21Z","comment":"/*
+        wbsetclaim-update:2||1 */ [[Property:P569]]: 29 August 1888","tags":["new
+        editor changing statement","mw-reverted","wikidata-ui"]},{"user":"132.219.132.2","anon":"","timestamp":"2022-11-07T19:17:22Z","comment":"/*
+        wbsetclaim-update:2||1 */ [[Property:P569]]: 29 August 188","tags":["new editor
+        changing statement","mw-reverted","wikidata-ui"]}]}}}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Length:
+      - '538'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 17 Aug 2023 04:51:29 GMT
+      Server:
+      - mw2356.codfw.wmnet
+      Set-Cookie:
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie,Authorization
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+version: 1

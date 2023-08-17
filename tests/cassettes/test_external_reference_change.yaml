@@ -1,0 +1,180 @@
+interactions:
+- request:
+    body: null
+    headers: {}
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=compare&prop=user%7Cdiff%7Ctitle%7Crel%7Cids&format=json&fromrev=1711288204&torev=1800955256
+  response:
+    body:
+      string: '{"compare":{"fromid":6624230,"fromrevid":1711288204,"fromns":0,"fromtitle":"Q6777283","fromuser":"511KeV","fromuserid":4791574,"toid":6624230,"torevid":1800955256,"tons":0,"totitle":"Q6777283","touser":"146.196.34.28","touserid":0,"prev":1574766064,"next":1824537310,"*":"<tr><td
+        colspan=\"2\" class=\"diff-lineno\">Property / <a title=\"Property:P2566\"
+        href=\"/wiki/Property:P2566\">ECHA Substance Infocard ID</a></td><td colspan=\"2\"
+        class=\"diff-lineno\">Property / <a title=\"Property:P2566\" href=\"/wiki/Property:P2566\">ECHA
+        Substance Infocard ID</a></td></tr><tr><td class=\"diff-marker\" data-marker=\"\u2212\"></td><td
+        class=\"diff-deletedline\"><div><del class=\"diffchange diffchange-inline\"><span><a
+        class=\"wb-external-id external\" href=\"https://echa.europa.eu/substance-information/-/substanceinfo/100.009.176\"
+        rel=\"nofollow\">100.009.176</a></span></del></div></td><td class=\"diff-marker\"
+        data-marker=\"+\"></td><td class=\"diff-addedline\"><div><ins class=\"diffchange
+        diffchange-inline\"><span><a class=\"wb-external-id external\" href=\"https://echa.europa.eu/substance-information/-/substanceinfo/27.902005\"
+        rel=\"nofollow\">27.902005</a></span></ins></div></td></tr><tr><td colspan=\"2\"
+        class=\"diff-lineno\"></td><td colspan=\"2\" class=\"diff-lineno\">Property
+        / <a title=\"Property:P2566\" href=\"/wiki/Property:P2566\">ECHA Substance
+        Infocard ID</a>: <a class=\"wb-external-id external\" href=\"https://echa.europa.eu/substance-information/-/substanceinfo/27.902005\"
+        rel=\"nofollow\">27.902005</a> / reference</td></tr><tr><td colspan=\"2\">\u00a0</td><td
+        class=\"diff-marker\" data-marker=\"+\"></td><td class=\"diff-addedline\"><div><ins
+        class=\"diffchange diffchange-inline\"><span><a title=\"Property:P248\" href=\"/wiki/Property:P248\">stated
+        in</a>: <a title=\"Q59911453\" href=\"/wiki/Q59911453\">ECHA Substance Infocard
+        database</a></span><br><span><a title=\"Property:P2566\" href=\"/wiki/Property:P2566\">ECHA
+        Substance Infocard ID</a>: <a class=\"wb-external-id external\" href=\"https://echa.europa.eu/substance-information/-/substanceinfo/27.902005\"
+        rel=\"nofollow\">27.902005</a></span><br><span><a title=\"Property:P813\"
+        href=\"/wiki/Property:P813\">retrieved</a>: <b class=\"wb-details wb-time-details
+        wb-time-rendered\">27 December 2018</b><table class=\"wb-details wb-time-details\"><tr><th
+        class=\"wb-time-isotime\">Timestamp</th><td class=\"wb-time-isotime\">+2018-12-27T00:00:00Z</td></tr><tr><th
+        class=\"wb-time-timezone\">Timezone</th><td class=\"wb-time-timezone\">+00:00</td></tr><tr><th
+        class=\"wb-time-calendar\">Calendar</th><td class=\"wb-time-calendar\">Gregorian</td></tr><tr><th
+        class=\"wb-time-precision\">Precision</th><td class=\"wb-time-precision\">1
+        day</td></tr><tr><th class=\"wb-time-before\">Before</th><td class=\"wb-time-before\">0</td></tr><tr><th
+        class=\"wb-time-after\">After</th><td class=\"wb-time-after\">0</td></tr></table></span><br><span><a
+        title=\"Property:P1476\" href=\"/wiki/Property:P1476\">title</a>: <span lang=\"en\"
+        class=\"wb-monolingualtext-value\">2,4-dinitro-1-naphthol</span> <span class=\"wb-monolingualtext-language-name\"
+        dir=\"auto\">(English)</span></span><br><span><a title=\"Property:P1683\"
+        href=\"/wiki/Property:P1683\">quotation</a>: <span lang=\"en\" class=\"wb-monolingualtext-value\">CAS
+        no.: 605-69-6</span> <span class=\"wb-monolingualtext-language-name\" dir=\"auto\">(English)</span></span></ins></div></td></tr><tr><td
+        colspan=\"2\" class=\"diff-lineno\">Property / <a title=\"Property:P2566\"
+        href=\"/wiki/Property:P2566\">ECHA Substance Infocard ID</a>: <a class=\"wb-external-id
+        external\" href=\"https://echa.europa.eu/substance-information/-/substanceinfo/100.009.176\"
+        rel=\"nofollow\">100.009.176</a> / reference</td><td colspan=\"2\" class=\"diff-lineno\"></td></tr><tr><td
+        class=\"diff-marker\" data-marker=\"\u2212\"></td><td class=\"diff-deletedline\"><div><del
+        class=\"diffchange diffchange-inline\"><span><a title=\"Property:P248\" href=\"/wiki/Property:P248\">stated
+        in</a>: <a title=\"Q59911453\" href=\"/wiki/Q59911453\">ECHA Substance Infocard
+        database</a></span><br><span><a title=\"Property:P2566\" href=\"/wiki/Property:P2566\">ECHA
+        Substance Infocard ID</a>: <a class=\"wb-external-id external\" href=\"https://echa.europa.eu/substance-information/-/substanceinfo/100.009.176\"
+        rel=\"nofollow\">100.009.176</a></span><br><span><a title=\"Property:P813\"
+        href=\"/wiki/Property:P813\">retrieved</a>: <b class=\"wb-details wb-time-details
+        wb-time-rendered\">27 December 2018</b><table class=\"wb-details wb-time-details\"><tr><th
+        class=\"wb-time-isotime\">Timestamp</th><td class=\"wb-time-isotime\">+2018-12-27T00:00:00Z</td></tr><tr><th
+        class=\"wb-time-timezone\">Timezone</th><td class=\"wb-time-timezone\">+00:00</td></tr><tr><th
+        class=\"wb-time-calendar\">Calendar</th><td class=\"wb-time-calendar\">Gregorian</td></tr><tr><th
+        class=\"wb-time-precision\">Precision</th><td class=\"wb-time-precision\">1
+        day</td></tr><tr><th class=\"wb-time-before\">Before</th><td class=\"wb-time-before\">0</td></tr><tr><th
+        class=\"wb-time-after\">After</th><td class=\"wb-time-after\">0</td></tr></table></span><br><span><a
+        title=\"Property:P1476\" href=\"/wiki/Property:P1476\">title</a>: <span lang=\"en\"
+        class=\"wb-monolingualtext-value\">2,4-dinitro-1-naphthol</span> <span class=\"wb-monolingualtext-language-name\"
+        dir=\"auto\">(English)</span></span><br><span><a title=\"Property:P1683\"
+        href=\"/wiki/Property:P1683\">quotation</a>: <span lang=\"en\" class=\"wb-monolingualtext-value\">CAS
+        no.: 605-69-6</span> <span class=\"wb-monolingualtext-language-name\" dir=\"auto\">(English)</span></span></del></div></td><td
+        colspan=\"2\">\u00a0</td></tr>"}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 17 Aug 2023 04:51:28 GMT
+      Server:
+      - mw2437.codfw.wmnet
+      Set-Cookie:
+      - WMF-Last-Access=17-Aug-2023;Path=/;HttpOnly;secure;Expires=Mon, 18 Sep 2023
+        00:00:00 GMT
+      - WMF-Last-Access-Global=17-Aug-2023;Path=/;Domain=.wikidata.org;HttpOnly;secure;Expires=Mon,
+        18 Sep 2023 00:00:00 GMT
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; Path=/; secure; Domain=.wikidata.org
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie,Authorization
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Cookie:
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; NetworkProbeLimit=0.001; WMF-Last-Access=17-Aug-2023;
+        WMF-Last-Access-Global=17-Aug-2023
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=query&prop=revisions&titles=Q6777283&rvprop=timestamp%7Cuser%7Ccomment%7Ctags&rvstartid=1800955256&rvendid=1711288204&format=json
+  response:
+    body:
+      string: '{"batchcomplete":"","query":{"pages":{"6624230":{"pageid":6624230,"ns":0,"title":"Q6777283","revisions":[{"user":"146.196.34.28","anon":"","timestamp":"2023-01-02T15:09:50Z","comment":"/*
+        wbsetclaim-update:2||1 */ [[Property:P2566]]: 27.902005","tags":["new editor
+        changing statement","mw-reverted","wikidata-ui"]},{"user":"146.196.34.28","anon":"","timestamp":"2023-01-02T15:09:28Z","comment":"/*
+        wbsetclaim-update:2||1|2 */ [[Property:P2566]]: 100.009.176","tags":["new
+        editor changing statement","mw-reverted","wikidata-ui"]},{"user":"511KeV","timestamp":"2022-08-23T14:29:38Z","comment":"/*
+        wbsetdescription-add:1|ks */ \u06a9\u06cc\u0656\u0645\u06cc\u0672\u06cc\u06cc
+        \u0645\u064f\u0631\u064e\u06a9\u064e\u0628, [[:toollabs:quickstatements/#/batch/96080|batch
+        #96080]]","tags":["OAuth CID: 1776"]}]}}}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Length:
+      - '807'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 17 Aug 2023 04:51:28 GMT
+      Server:
+      - mw2372.codfw.wmnet
+      Set-Cookie:
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie,Authorization
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+version: 1

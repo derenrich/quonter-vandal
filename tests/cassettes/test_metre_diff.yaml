@@ -1,0 +1,176 @@
+interactions:
+- request:
+    body: null
+    headers: {}
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=compare&prop=user%7Cdiff%7Ctitle%7Crel%7Cids&format=json&fromrev=1794231076&torev=1846325831
+  response:
+    body:
+      string: '{"compare":{"fromid":20144956,"fromrevid":1794231076,"fromns":0,"fromtitle":"Q18613182","fromuser":"Alhaj
+        Darajaati","fromuserid":4644815,"toid":20144956,"torevid":1846325831,"tons":0,"totitle":"Q18613182","touser":"109.20.19.85","touserid":0,"prev":1776358022,"next":1860401189,"*":"<tr><td
+        colspan=\"2\" class=\"diff-lineno\">aliases / fr / 0</td><td colspan=\"2\"
+        class=\"diff-lineno\">aliases / fr / 0</td></tr><tr><td colspan=\"2\">\u00a0</td><td
+        class=\"diff-marker\" data-marker=\"+\"></td><td class=\"diff-addedline\"><div><ins
+        class=\"diffchange diffchange-inline\">Vienois</ins></div></td></tr><tr><td
+        colspan=\"2\" class=\"diff-lineno\">Property / <a title=\"Property:P2048\"
+        href=\"/wiki/Property:P2048\">height</a></td><td colspan=\"2\" class=\"diff-lineno\"></td></tr><tr><td
+        class=\"diff-marker\" data-marker=\"\u2212\"></td><td class=\"diff-deletedline\"><div><del
+        class=\"diffchange diffchange-inline\"><span><b class=\"wb-details wb-quantity-details
+        wb-quantity-rendered\">1.76 metre</b><table class=\"wb-details wb-quantity-details\"><tr><th
+        class=\"wb-quantity-amount\">Amount</th><td class=\"wb-quantity-amount\">1.76
+        metre</td></tr><tr><th class=\"wb-quantity-unit\">Unit</th><td class=\"wb-quantity-unit\"><a
+        href=\"http://www.wikidata.org/entity/Q11573\">metre</a></td></tr></table></span></del></div></td><td
+        colspan=\"2\">\u00a0</td></tr><tr><td colspan=\"2\" class=\"diff-lineno\">Property
+        / <a title=\"Property:P2048\" href=\"/wiki/Property:P2048\">height</a>: 1.76
+        <span class=\"wb-unit\">metre</span> / rank</td><td colspan=\"2\" class=\"diff-lineno\"></td></tr><tr><td
+        class=\"diff-marker\" data-marker=\"\u2212\"></td><td class=\"diff-deletedline\"><div><del
+        class=\"diffchange diffchange-inline\"><span>Normal rank</span></del></div></td><td
+        colspan=\"2\">\u00a0</td></tr><tr><td colspan=\"2\" class=\"diff-lineno\">Property
+        / <a title=\"Property:P2048\" href=\"/wiki/Property:P2048\">height</a>: 1.76
+        <span class=\"wb-unit\">metre</span> / reference</td><td colspan=\"2\" class=\"diff-lineno\"></td></tr><tr><td
+        class=\"diff-marker\" data-marker=\"\u2212\"></td><td class=\"diff-deletedline\"><div><del
+        class=\"diffchange diffchange-inline\"><span><a title=\"Property:P854\" href=\"/wiki/Property:P854\">reference
+        URL</a>: <a rel=\"nofollow\" class=\"external free\" href=\"https://bodysize.org/fr/vianney/\">https://bodysize.org/fr/vianney/</a></span></del></div></td><td
+        colspan=\"2\">\u00a0</td></tr><tr><td colspan=\"2\" class=\"diff-lineno\">Property
+        / <a title=\"Property:P2067\" href=\"/wiki/Property:P2067\">mass</a></td><td
+        colspan=\"2\" class=\"diff-lineno\"></td></tr><tr><td class=\"diff-marker\"
+        data-marker=\"\u2212\"></td><td class=\"diff-deletedline\"><div><del class=\"diffchange
+        diffchange-inline\"><span><b class=\"wb-details wb-quantity-details wb-quantity-rendered\">75
+        kilogram</b><table class=\"wb-details wb-quantity-details\"><tr><th class=\"wb-quantity-amount\">Amount</th><td
+        class=\"wb-quantity-amount\">75 kilogram</td></tr><tr><th class=\"wb-quantity-unit\">Unit</th><td
+        class=\"wb-quantity-unit\"><a href=\"http://www.wikidata.org/entity/Q11570\">kilogram</a></td></tr></table></span></del></div></td><td
+        colspan=\"2\">\u00a0</td></tr><tr><td colspan=\"2\" class=\"diff-lineno\">Property
+        / <a title=\"Property:P2067\" href=\"/wiki/Property:P2067\">mass</a>: 75 <span
+        class=\"wb-unit\">kilogram</span> / rank</td><td colspan=\"2\" class=\"diff-lineno\"></td></tr><tr><td
+        class=\"diff-marker\" data-marker=\"\u2212\"></td><td class=\"diff-deletedline\"><div><del
+        class=\"diffchange diffchange-inline\"><span>Normal rank</span></del></div></td><td
+        colspan=\"2\">\u00a0</td></tr><tr><td colspan=\"2\" class=\"diff-lineno\">Property
+        / <a title=\"Property:P2067\" href=\"/wiki/Property:P2067\">mass</a>: 75 <span
+        class=\"wb-unit\">kilogram</span> / reference</td><td colspan=\"2\" class=\"diff-lineno\"></td></tr><tr><td
+        class=\"diff-marker\" data-marker=\"\u2212\"></td><td class=\"diff-deletedline\"><div><del
+        class=\"diffchange diffchange-inline\"><span><a title=\"Property:P854\" href=\"/wiki/Property:P854\">reference
+        URL</a>: <a rel=\"nofollow\" class=\"external free\" href=\"https://bodysize.org/fr/vianney/\">https://bodysize.org/fr/vianney/</a></span></del></div></td><td
+        colspan=\"2\">\u00a0</td></tr>"}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 17 Aug 2023 04:51:32 GMT
+      Server:
+      - mw2399.codfw.wmnet
+      Set-Cookie:
+      - WMF-Last-Access=17-Aug-2023;Path=/;HttpOnly;secure;Expires=Mon, 18 Sep 2023
+        00:00:00 GMT
+      - WMF-Last-Access-Global=17-Aug-2023;Path=/;Domain=.wikidata.org;HttpOnly;secure;Expires=Mon,
+        18 Sep 2023 00:00:00 GMT
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; Path=/; secure; Domain=.wikidata.org
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie,Authorization
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Cookie:
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; NetworkProbeLimit=0.001; WMF-Last-Access=17-Aug-2023;
+        WMF-Last-Access-Global=17-Aug-2023
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=query&prop=revisions&titles=Q18613182&rvprop=timestamp%7Cuser%7Ccomment%7Ctags&rvstartid=1846325831&rvendid=1794231076&format=json
+  response:
+    body:
+      string: '{"batchcomplete":"","query":{"pages":{"20144956":{"pageid":20144956,"ns":0,"title":"Q18613182","revisions":[{"user":"109.20.19.85","anon":"","timestamp":"2023-03-06T22:09:24Z","comment":"/*
+        wbremoveclaims-remove:1| */ [[Property:P2067]]: 265 kilogram","tags":["new
+        editor removing statement","mw-reverted","wikidata-ui"]},{"user":"109.20.19.85","anon":"","timestamp":"2023-03-06T22:08:09Z","comment":"/*
+        wbremoveclaims-remove:1| */ [[Property:P2048]]: 2.5 metre","tags":["new editor
+        removing statement","mw-reverted","wikidata-ui"]},{"user":"82.64.234.225","anon":"","timestamp":"2023-03-04T20:31:05Z","comment":"/*
+        wbeditentity-update-languages-short:0||fr */","tags":["mobile edit","mobile
+        web edit","mw-reverted","wikidata-ui","termbox"]},{"user":"194.78.25.130","anon":"","timestamp":"2023-03-03T15:00:12Z","comment":"/*
+        wbsetclaim-update:2||1 */ [[Property:P2048]]: 2.5 metre","tags":["new editor
+        changing statement","mw-reverted","wikidata-ui"]},{"user":"92.173.136.153","anon":"","timestamp":"2023-02-28T14:38:07Z","comment":"/*
+        wbsetclaim-update:2||1 */ [[Property:P2048]]: 5 metre","tags":["new editor
+        changing statement","mw-reverted","wikidata-ui"]},{"user":"92.173.136.153","anon":"","timestamp":"2023-02-28T14:37:00Z","comment":"/*
+        wbsetclaim-update:2||1 */ [[Property:P2067]]: 265 kilogram","tags":["new editor
+        changing statement","mw-reverted","wikidata-ui"]},{"user":"Alhaj Darajaati","timestamp":"2022-12-22T15:09:06Z","comment":"/*
+        wbsetdescription-add:1|dag */ French yiliyiina \u014bun ny\u025b doo, [[:toollabs:quickstatements/#/batch/107254|batch
+        #107254]]","tags":["OAuth CID: 1776"]}]}}}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 17 Aug 2023 04:51:32 GMT
+      Server:
+      - mw2304.codfw.wmnet
+      Set-Cookie:
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie,Authorization
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+version: 1

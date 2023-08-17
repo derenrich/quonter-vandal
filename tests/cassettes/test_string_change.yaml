@@ -1,0 +1,212 @@
+interactions:
+- request:
+    body: null
+    headers: {}
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=compare&prop=user%7Cdiff%7Ctitle%7Crel%7Cids&format=json&fromrev=1846303619&torev=1874928741
+  response:
+    body:
+      string: '{"compare":{"fromid":299722,"fromrevid":1846303619,"fromns":0,"fromtitle":"Q311523","fromuser":"Roshkara","fromuserid":5480019,"toid":299722,"torevid":1874928741,"tons":0,"totitle":"Q311523","touser":"186.67.40.154","touserid":0,"prev":1825818807,"next":1874990492,"*":"<tr><td
+        colspan=\"2\" class=\"diff-lineno\">Property / <a title=\"Property:P569\"
+        href=\"/wiki/Property:P569\">date of birth</a></td><td colspan=\"2\" class=\"diff-lineno\">Property
+        / <a title=\"Property:P569\" href=\"/wiki/Property:P569\">date of birth</a></td></tr><tr><td
+        class=\"diff-marker\" data-marker=\"\u2212\"></td><td class=\"diff-deletedline\"><div><del
+        class=\"diffchange diffchange-inline\"><span><b class=\"wb-details wb-time-details
+        wb-time-rendered\">24 December 1977</b><table class=\"wb-details wb-time-details\"><tr><th
+        class=\"wb-time-isotime\">Timestamp</th><td class=\"wb-time-isotime\">+1977-12-24T00:00:00Z</td></tr><tr><th
+        class=\"wb-time-timezone\">Timezone</th><td class=\"wb-time-timezone\">+00:00</td></tr><tr><th
+        class=\"wb-time-calendar\">Calendar</th><td class=\"wb-time-calendar\">Gregorian</td></tr><tr><th
+        class=\"wb-time-precision\">Precision</th><td class=\"wb-time-precision\">1
+        day</td></tr><tr><th class=\"wb-time-before\">Before</th><td class=\"wb-time-before\">0</td></tr><tr><th
+        class=\"wb-time-after\">After</th><td class=\"wb-time-after\">0</td></tr></table></span></del></div></td><td
+        class=\"diff-marker\" data-marker=\"+\"></td><td class=\"diff-addedline\"><div><ins
+        class=\"diffchange diffchange-inline\"><span><b class=\"wb-details wb-time-details
+        wb-time-rendered\">24 December 990</b><table class=\"wb-details wb-time-details\"><tr><th
+        class=\"wb-time-isotime\">Timestamp</th><td class=\"wb-time-isotime\">+0990-12-24T00:00:00Z</td></tr><tr><th
+        class=\"wb-time-timezone\">Timezone</th><td class=\"wb-time-timezone\">+00:00</td></tr><tr><th
+        class=\"wb-time-calendar\">Calendar</th><td class=\"wb-time-calendar\">Julian</td></tr><tr><th
+        class=\"wb-time-precision\">Precision</th><td class=\"wb-time-precision\">1
+        day</td></tr><tr><th class=\"wb-time-before\">Before</th><td class=\"wb-time-before\">0</td></tr><tr><th
+        class=\"wb-time-after\">After</th><td class=\"wb-time-after\">0</td></tr></table></span></ins></div></td></tr><tr><td
+        colspan=\"2\" class=\"diff-lineno\">Property / <a title=\"Property:P27\" href=\"/wiki/Property:P27\">country
+        of citizenship</a></td><td colspan=\"2\" class=\"diff-lineno\">Property /
+        <a title=\"Property:P27\" href=\"/wiki/Property:P27\">country of citizenship</a></td></tr><tr><td
+        class=\"diff-marker\" data-marker=\"\u2212\"></td><td class=\"diff-deletedline\"><div><del
+        class=\"diffchange diffchange-inline\"><span><a title=\"Q298\" href=\"/wiki/Q298\">Chile</a></span></del></div></td><td
+        class=\"diff-marker\" data-marker=\"+\"></td><td class=\"diff-addedline\"><div><ins
+        class=\"diffchange diffchange-inline\"><span><a title=\"Q790\" href=\"/wiki/Q790\">Haiti</a></span></ins></div></td></tr><tr><td
+        colspan=\"2\" class=\"diff-lineno\">Property / <a title=\"Property:P18\" href=\"/wiki/Property:P18\">image</a></td><td
+        colspan=\"2\" class=\"diff-lineno\">Property / <a title=\"Property:P18\" href=\"/wiki/Property:P18\">image</a></td></tr><tr><td
+        class=\"diff-marker\" data-marker=\"\u2212\"></td><td class=\"diff-deletedline\"><div><del
+        class=\"diffchange diffchange-inline\"><span><a class=\"extiw\" href=\"//commons.wikimedia.org/wiki/File:Am%C3%A9rico.jpg\">Am\u00e9rico.jpg</a></span></del></div></td><td
+        class=\"diff-marker\" data-marker=\"+\"></td><td class=\"diff-addedline\"><div><ins
+        class=\"diffchange diffchange-inline\"><span><a class=\"extiw\" href=\"//commons.wikimedia.org/wiki/File:Th%C3%A9odore_G%C3%A9ricault_-_Portrait_of_a_Negro_-_1952-11_-_Albright%E2%80%93Knox_Art_Gallery.tiff\">Th\u00e9odore
+        G\u00e9ricault - Portrait of a Negro - 1952-11 - Albright\u2013Knox Art Gallery.tiff</a></span></ins></div></td></tr><tr><td
+        colspan=\"2\" class=\"diff-lineno\">Property / <a title=\"Property:P742\"
+        href=\"/wiki/Property:P742\">pseudonym</a></td><td colspan=\"2\" class=\"diff-lineno\">Property
+        / <a title=\"Property:P742\" href=\"/wiki/Property:P742\">pseudonym</a></td></tr><tr><td
+        class=\"diff-marker\" data-marker=\"\u2212\"></td><td class=\"diff-deletedline\"><div><del
+        class=\"diffchange diffchange-inline\"><span>Am\u00e9rico</span></del></div></td><td
+        class=\"diff-marker\" data-marker=\"+\"></td><td class=\"diff-addedline\"><div><ins
+        class=\"diffchange diffchange-inline\"><span>Pancho</span></ins></div></td></tr><tr><td
+        colspan=\"2\" class=\"diff-lineno\">Property / <a title=\"Property:P1477\"
+        href=\"/wiki/Property:P1477\">birth name</a></td><td colspan=\"2\" class=\"diff-lineno\">Property
+        / <a title=\"Property:P1477\" href=\"/wiki/Property:P1477\">birth name</a></td></tr><tr><td
+        class=\"diff-marker\" data-marker=\"\u2212\"></td><td class=\"diff-deletedline\"><div><del
+        class=\"diffchange diffchange-inline\"><span><span lang=\"es\" class=\"wb-monolingualtext-value\">Domingo
+        Johnny Vega Urz\u00faa</span> <span class=\"wb-monolingualtext-language-name\"
+        dir=\"auto\">(Spanish)</span></span></del></div></td><td class=\"diff-marker\"
+        data-marker=\"+\"></td><td class=\"diff-addedline\"><div><ins class=\"diffchange
+        diffchange-inline\"><span><span lang=\"es\" class=\"wb-monolingualtext-value\">Francisco
+        Vera</span> <span class=\"wb-monolingualtext-language-name\" dir=\"auto\">(Spanish)</span></span></ins></div></td></tr><tr><td
+        colspan=\"2\" class=\"diff-lineno\">Property / <a title=\"Property:P26\" href=\"/wiki/Property:P26\">spouse</a></td><td
+        colspan=\"2\" class=\"diff-lineno\">Property / <a title=\"Property:P26\" href=\"/wiki/Property:P26\">spouse</a></td></tr><tr><td
+        class=\"diff-marker\" data-marker=\"\u2212\"></td><td class=\"diff-deletedline\"><div><del
+        class=\"diffchange diffchange-inline\"><span><a title=\"Q109272724\" href=\"/wiki/Q109272724\">Teresa
+        \u00d3rdenes</a></span></del></div></td><td class=\"diff-marker\" data-marker=\"+\"></td><td
+        class=\"diff-addedline\"><div><ins class=\"diffchange diffchange-inline\"><span><a
+        title=\"Q184224\" href=\"/wiki/Q184224\">brown rat</a></span></ins></div></td></tr><tr><td
+        colspan=\"2\" class=\"diff-lineno\">Property / <a title=\"Property:P22\" href=\"/wiki/Property:P22\">father</a></td><td
+        colspan=\"2\" class=\"diff-lineno\">Property / <a title=\"Property:P22\" href=\"/wiki/Property:P22\">father</a></td></tr><tr><td
+        class=\"diff-marker\" data-marker=\"\u2212\"></td><td class=\"diff-deletedline\"><div><del
+        class=\"diffchange diffchange-inline\"><span><a title=\"Q109277269\" href=\"/wiki/Q109277269\">Melvin
+        Am\u00e9rico Vega Cadima</a></span></del></div></td><td class=\"diff-marker\"
+        data-marker=\"+\"></td><td class=\"diff-addedline\"><div><ins class=\"diffchange
+        diffchange-inline\"><span><a title=\"Q87523330\" href=\"/wiki/Q87523330\">\u2026</a></span></ins></div></td></tr><tr><td
+        colspan=\"2\" class=\"diff-lineno\">Property / <a title=\"Property:P551\"
+        href=\"/wiki/Property:P551\">residence</a></td><td colspan=\"2\" class=\"diff-lineno\">Property
+        / <a title=\"Property:P551\" href=\"/wiki/Property:P551\">residence</a></td></tr><tr><td
+        class=\"diff-marker\" data-marker=\"\u2212\"></td><td class=\"diff-deletedline\"><div><del
+        class=\"diffchange diffchange-inline\"><span><a title=\"Q8652\" href=\"/wiki/Q8652\">Miami</a></span></del></div></td><td
+        class=\"diff-marker\" data-marker=\"+\"></td><td class=\"diff-addedline\"><div><ins
+        class=\"diffchange diffchange-inline\"><span><a title=\"Q200934\" href=\"/wiki/Q200934\">Tom\u00e9</a></span></ins></div></td></tr>"}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 17 Aug 2023 04:51:29 GMT
+      Server:
+      - mw2356.codfw.wmnet
+      Set-Cookie:
+      - WMF-Last-Access=17-Aug-2023;Path=/;HttpOnly;secure;Expires=Mon, 18 Sep 2023
+        00:00:00 GMT
+      - WMF-Last-Access-Global=17-Aug-2023;Path=/;Domain=.wikidata.org;HttpOnly;secure;Expires=Mon,
+        18 Sep 2023 00:00:00 GMT
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; Path=/; secure; Domain=.wikidata.org
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie,Authorization
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Cookie:
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; NetworkProbeLimit=0.001; WMF-Last-Access=17-Aug-2023;
+        WMF-Last-Access-Global=17-Aug-2023
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=query&prop=revisions&titles=Q311523&rvprop=timestamp%7Cuser%7Ccomment%7Ctags&rvstartid=1874928741&rvendid=1846303619&format=json
+  response:
+    body:
+      string: '{"continue":{"rvcontinue":"20230306211106|1846303619","continue":"||"},"query":{"pages":{"299722":{"pageid":299722,"ns":0,"title":"Q311523","revisions":[{"user":"186.67.40.154","anon":"","timestamp":"2023-04-14T15:43:59Z","comment":"/*
+        wbsetclaim-update:2||1 */ [[Property:P22]]: [[Q87523330]]","tags":["new editor
+        changing statement","mw-reverted","wikidata-ui"]},{"user":"186.67.40.154","anon":"","timestamp":"2023-04-14T15:43:46Z","comment":"/*
+        wbsetclaim-update:2||1 */ [[Property:P26]]: [[Q184224]]","tags":["new editor
+        changing statement","mw-reverted","wikidata-ui"]},{"user":"186.67.40.154","anon":"","timestamp":"2023-04-14T15:43:07Z","comment":"/*
+        wbsetclaim-update:2||1 */ [[Property:P22]]: [[Q104837753]]","tags":["new editor
+        changing statement","mw-reverted","wikidata-ui"]},{"user":"186.67.40.154","anon":"","timestamp":"2023-04-14T15:42:58Z","comment":"/*
+        wbsetclaim-update:2||1 */ [[Property:P569]]: 24 December 990","tags":["new
+        editor changing statement","mw-reverted","wikidata-ui"]},{"user":"186.67.40.154","anon":"","timestamp":"2023-04-14T15:42:16Z","comment":"/*
+        wbsetclaim-update:2||1 */ [[Property:P27]]: [[Q790]]","tags":["new editor
+        changing statement","mw-reverted","wikidata-ui"]},{"user":"186.67.40.154","anon":"","timestamp":"2023-04-14T15:41:56Z","comment":"/*
+        wbsetclaim-update:2||1 */ [[Property:P551]]: [[Q200934]]","tags":["new editor
+        changing statement","mw-reverted","wikidata-ui"]},{"user":"186.67.40.154","anon":"","timestamp":"2023-04-14T15:41:28Z","comment":"/*
+        wbsetclaim-update:2||1 */ [[Property:P742]]: Pancho","tags":["new editor changing
+        statement","mw-reverted","wikidata-ui"]},{"user":"186.67.40.154","anon":"","timestamp":"2023-04-14T15:41:27Z","comment":"/*
+        wbsetclaim-update:2||1 */ [[Property:P1477]]: Francisco Vera","tags":["new
+        editor changing statement","mw-reverted","wikidata-ui"]},{"user":"186.67.40.154","anon":"","timestamp":"2023-04-14T15:40:57Z","comment":"/*
+        wbsetclaim-update:2||1 */ [[Property:P1477]]: Francisco Javier Vera","tags":["new
+        editor changing statement","mw-reverted","wikidata-ui"]},{"user":"186.67.40.154","anon":"","timestamp":"2023-04-14T15:40:11Z","comment":"/*
+        wbsetclaim-update:2||1 */ [[Property:P18]]: Th\u00e9odore G\u00e9ricault -
+        Portrait of a Negro - 1952-11 - Albright\u2013Knox Art Gallery.tiff","tags":["new
+        editor changing statement","mw-reverted","wikidata-ui"]}]}}}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '2'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 17 Aug 2023 04:51:29 GMT
+      Server:
+      - mw2354.codfw.wmnet
+      Set-Cookie:
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie,Authorization
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+version: 1
