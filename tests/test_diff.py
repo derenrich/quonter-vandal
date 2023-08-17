@@ -3,8 +3,10 @@ import time
 import gzip
 from quonter_vandal.diff import *
 from pytest_asyncio.plugin import *
+import pytest
 
 
+@pytest.mark.vcr()
 def test_alias_add_diff():
     revid = 1942074309
     oldid = 1942074306
@@ -22,6 +24,7 @@ def test_alias_add_diff():
             "legal challenge to Executive Order 13769")
 
 
+@pytest.mark.vcr()
 def test_description_add_diff():
     revid = 1942048859
     oldid = 1938660715
@@ -40,6 +43,7 @@ def test_description_add_diff():
             "U.S. government-led effort to fight antisemitism")
 
 
+@pytest.mark.vcr()
 def test_label_change_diff():
     revid = 1942074306
     oldid = 1419596909
@@ -58,6 +62,7 @@ def test_label_change_diff():
             "legal challenges to the Trump travel ban")
 
 
+@pytest.mark.vcr()
 def test_label_and_alias_diff():
     revid = 1942074309
     oldid = 1419596909
@@ -84,6 +89,7 @@ def test_label_and_alias_diff():
     assert (alias_change.old == None)
 
 
+@pytest.mark.vcr()
 def test_add_qualifier_and_rank_diff():
     # https://www.wikidata.org/w/index.php?title=XXX&diff=1942162509&oldid=1934969781
     revid = 1942162509
@@ -106,6 +112,7 @@ def test_add_qualifier_and_rank_diff():
         pid='P7452', value=StatementItemValue(value='Q71536040')))
 
 
+@pytest.mark.vcr()
 def test_wwwyzzerdd_diff():
     # https://www.wikidata.org/w/index.php?title=XXX&diff=1942024562&oldid=1851566554
     revid = 1942024562
@@ -183,6 +190,7 @@ def test_wwwyzzerdd_diff():
     ])
 
 
+@pytest.mark.vcr()
 def test_fennel():
     # https://www.wikidata.org/w/index.php?title=Q121167625&diff=1946482672&oldid=1946481281
     revid = 1946482672
@@ -208,6 +216,7 @@ def test_fennel():
         "https://www.crunchbase.com/organization/fennel-ai", "fennel-ai"))
 
 
+@pytest.mark.vcr()
 def test_unk_qual():
     # https://www.wikidata.org/w/index.php?title=Q4115189&diff=1952202478&oldid=1952154007
     revid = 1952202478
@@ -223,6 +232,7 @@ def test_unk_qual():
         "P1013", StatementSpecialValue("somevalue")))
 
 
+@pytest.mark.vcr()
 def test_unk_value():
     # https://www.wikidata.org/w/index.php?title=Q4115189&diff=1952251903&oldid=1952205143
     revid = 1952251903
@@ -241,6 +251,7 @@ def test_unk_value():
     assert (add_unk_rank.new == "normal")
 
 
+@pytest.mark.vcr()
 def test_no_value():
     # https://www.wikidata.org/w/index.php?title=Q4115189&diff=1952663526&oldid=1952481644
     revid = 1952663526
@@ -259,6 +270,7 @@ def test_no_value():
     assert (add_unk_rank.new == "deprecated")
 
 
+@pytest.mark.vcr()
 def test_badges_change():
     # https://www.wikidata.org/w/index.php?title=Q4115189&diff=1952667555&oldid=1952667492
     revid = 1952667555
@@ -291,6 +303,7 @@ def test_badges_change():
     assert (rm_featured_portal_badge.new == None)
 
 
+@pytest.mark.vcr()
 def test_sitelink_change():
     # https://www.wikidata.org/w/index.php?title=Q110970851&curid=105981221&diff=1952555904&oldid=1866394894
     revid = 1952555904
@@ -305,6 +318,7 @@ def test_sitelink_change():
         "https://tk.wikipedia.org/wiki/Buharany%C5%88_gabawy", "Buharanyň gabawy", 'tk'))
 
 
+@pytest.mark.vcr()
 def test_external_reference_change():
     # https://www.wikidata.org/w/index.php?title=Q110970851&curid=105981221&diff=1800955256&oldid=1711288204
     revid = 1800955256
@@ -364,6 +378,7 @@ def test_external_reference_change():
     assert (change_infocard_ref.new == None)
 
 
+@pytest.mark.vcr()
 def test_date_ref_on_no_value_statement():
     # https://www.wikidata.org/w/index.php?title=Q4115189&diff=1952763643&oldid=1952667555
     revid = 1952763643
@@ -380,6 +395,7 @@ def test_date_ref_on_no_value_statement():
                   value=StatementTimeValue(value='13 August 2023'))])
 
 
+@pytest.mark.vcr()
 def test_georgian_date():
     # https://www.wikidata.org/w/index.php?title=Q114233325&diff=1801067965&oldid=1766849620
     revid = 1801067965
@@ -394,6 +410,7 @@ def test_georgian_date():
         "29 August 1888 Gregorian")
 
 
+@pytest.mark.vcr()
 def test_quantity_statement():
     # https://www.wikidata.org/w/index.php?title=Q114233325&diff=1856453216&oldid=1774447242
     revid = 1856453216
@@ -413,6 +430,7 @@ def test_quantity_statement():
     assert quantity_change.new == StatementQuantityValue("13")
 
 
+@pytest.mark.vcr()
 def test_string_change():
     # https://www.wikidata.org/w/index.php?title=1874928741&diff=1874928741&oldid=1846303619
     revid = 1874928741
@@ -434,6 +452,7 @@ def test_string_change():
         "Francisco Vera", "es")
 
 
+@pytest.mark.vcr()
 def test_date_qualifier_change():
     # https://www.wikidata.org/w/index.php?title=1874928741&diff=1921063976&oldid=1913859487
     revid = 1921063976
@@ -457,6 +476,7 @@ def test_date_qualifier_change():
         "P2096", StatementMonolingualTextValue("Letícia Ortiz", "ca"))
 
 
+@pytest.mark.vcr()
 def test_reference_on_date():
     # https://www.wikidata.org/w/index.php?title=Q4115189&diff=1813636413&oldid=1807348139
     revid = 1813636413
@@ -476,6 +496,7 @@ def test_reference_on_date():
     ])
 
 
+@pytest.mark.vcr()
 def test_amount_with_units():
     # https://www.wikidata.org/w/index.php?title=Q4115189&diff=1897073502&oldid=1788346432
     revid = 1897073502
@@ -489,6 +510,7 @@ def test_amount_with_units():
     assert diff.changes[0].old == StatementQuantityValue("18 bee")
 
 
+@pytest.mark.vcr()
 def test_property_ends_in_rank():
     # https://www.wikidata.org/w/index.php?title=Q1515445&diff=1803826490&oldid=1703741037
     revid = 1803826490
@@ -498,6 +520,7 @@ def test_property_ends_in_rank():
     assert len(diff.changes) == 4
 
 
+@pytest.mark.vcr()
 def test_coord_change():
     # https://www.wikidata.org/w/index.php?title=Q114233325&diff=1808526599&oldid=1803785463
     revid = 1808526599
@@ -513,6 +536,7 @@ def test_coord_change():
         "47° 0' 48\", -6° 52' 48\"")
 
 
+@pytest.mark.vcr()
 def test_redirect_change():
     # https://www.wikidata.org/w/index.php?title=1814194280&diff=1814194280&oldid=1714064841
     revid = 1814194280
@@ -526,6 +550,7 @@ def test_redirect_change():
     assert redirect_change.new == None
 
 
+@pytest.mark.vcr()
 def test_no_such_diff():
     # https://www.wikidata.org/w/index.php?title=1814194280&diff=1838236382&oldid=1747008787
     revid = 1838236382
@@ -534,6 +559,7 @@ def test_no_such_diff():
     assert diff == None
 
 
+@pytest.mark.vcr()
 def test_metre_diff():
     # https://www.wikidata.org/w/index.php?title=1814194280&diff=1846325831&oldid=1794231076
     revid = 1846325831
@@ -557,6 +583,7 @@ def test_metre_diff():
     assert diff.changes[4].new == None
 
 
+@pytest.mark.vcr()
 def test_ext_id_without_link():
     # https://www.wikidata.org/w/index.php?title=Q67011165&diff=1853463165&oldid=1844960481
     revid = 1853463165
@@ -576,6 +603,7 @@ def test_ext_id_without_link():
         "P8601", StatementExternalLinkValue(None, "madrid"))
 
 
+@pytest.mark.vcr()
 def test_lexeme_usage():
     # https://www.wikidata.org/w/index.php?title=Q4115189&diff=1953415294&oldid=1952843189
     revid = 1953415294
@@ -594,6 +622,7 @@ def test_lexeme_usage():
         pid='P6254', value=StatementLexemeValue(value='L312259'))
 
 
+@pytest.mark.vcr()
 def test_form_usage():
     # https://www.wikidata.org/w/index.php?title=Q4115189&diff=1953435688&oldid=1953425917
     revid = 1953435688
@@ -613,6 +642,7 @@ def test_form_usage():
         pid='P5189', value=StatementLexemeValue(value='L452382-F1'))
 
 
+@pytest.mark.vcr()
 def test_music_usage():
     # https://www.wikidata.org/w/index.php?title=Q4115189&diff=1953439427&oldid=1953435688
     revid = 1953439427
@@ -626,6 +656,7 @@ def test_music_usage():
         pid='P6604', value=StatementMusicValue("\\relative c' { c d e f | g2 g | a4 a a a | g1 |}"))
 
 
+@pytest.mark.vcr()
 def test_table_usage():
     # https://www.wikidata.org/w/index.php?title=Q4115189&diff=1953444806&oldid=1953439427
     revid = 1953444806
@@ -641,6 +672,7 @@ def test_table_usage():
     )
 
 
+@pytest.mark.vcr()
 def test_geoshape_usage():
     # https://www.wikidata.org/w/index.php?title=Q4115189&diff=1953423760&oldid=1953415294
     revid = 1953423760
@@ -659,6 +691,7 @@ def test_geoshape_usage():
     )
 
 
+@pytest.mark.vcr()
 def test_formula_usage():
     # https://www.wikidata.org/w/index.php?title=Q4115189&diff=1953425917&oldid=1953423760
     revid = 1953425917
@@ -680,6 +713,7 @@ def test_formula_usage():
     )
 
 
+@pytest.mark.vcr()
 def test_property_usage():
     # https://www.wikidata.org/w/index.php?title=Q4115189&diff=1953446623&oldid=1953446518
     revid = 1953446623
@@ -695,8 +729,6 @@ def test_property_usage():
 
 
 # curl -s -H 'Accept: application/json'  https://stream.wikimedia.org/v2/stream/recentchange | jq 'select(.meta.domain == "www.wikidata.org")' | jq .revision -c > wikidata_revisions.jsonl
-
-
 def test_bulk():
     c = 0
     return

@@ -1,6 +1,8 @@
 from quonter_vandal.revision_listing import get_revisions
+import pytest
 
 
+@pytest.mark.vcr()
 def test_get_revisions():
     title = "Q28587782"
     rvstartid = 1942074309
