@@ -77,7 +77,7 @@ class LookupEntities:
             result = await self.session.get(params)
             entity_results: Dict[str, Any] = result['entities']
             for qid, data in entity_results.items():
-                assert data["type"] == "item"
+                assert data["type"] == "item" or data['type'] == 'property'
                 assert data["id"] == qid
                 labels = data["labels"]
                 label = None

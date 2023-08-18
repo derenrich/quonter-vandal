@@ -670,8 +670,12 @@ def get_diff(from_rev_id: int, to_rev_id: int, loop: Optional[asyncio.AbstractEv
     return loop.run_until_complete(async_get_diff(from_rev_id, to_rev_id))
 
 
-async def async_get_diff(from_rev_id: int, to_rev_id: int, session: Optional[aiohttp.ClientSession] = None) -> Optional[ItemDiffer]:
-    async with aiohttp.ClientSession() as session:
+async def async_get_diff(from_rev_id: int, to_rev_id: int, default_session: Optional[aiohttp.ClientSession] = None) -> Optional[ItemDiffer]:
+    if not default_session:
+        session = aiohttp.ClientSession()
+    else:
+        session = default_session
+    async with session as session:
         URL = f"https://www.wikidata.org/w/api.php?action=compare&prop=user|diff|title|rel|ids&format=json&fromrev={from_rev_id}&torev={to_rev_id}"
         resp = await session.get(URL)
         try:
