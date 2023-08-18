@@ -11,7 +11,7 @@ async def test_lookup():
                                  user_agent='Quonter Vandal')
     lookup = LookupEntities(session)
     entities = await lookup.lookup_entities(
-        set(['Q42', 'Q5', 'Q3712743', 'Q2994625']), 4)
+        set(['Q42', 'Q5', 'Q3712743', 'Q2994625']))
 
     assert entities['Q42'].label == 'Douglas Adams'
     assert entities['Q42'].label_lang == 'en'
