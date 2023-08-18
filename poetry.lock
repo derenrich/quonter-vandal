@@ -558,6 +558,17 @@ aiohttp = "*"
 requests = "*"
 
 [[package]]
+name = "mypy-extensions"
+version = "1.0.0"
+description = "Type system extensions for programs checked with the mypy type checker."
+optional = false
+python-versions = ">=3.5"
+files = [
+    {file = "mypy_extensions-1.0.0-py3-none-any.whl", hash = "sha256:4392f6c0eb8a5668a69e23d168ffa70f0be9ccfd32b5cc2d26a34ae5b844552d"},
+    {file = "mypy_extensions-1.0.0.tar.gz", hash = "sha256:75dbf8955dc00442a438fc4d0666508a9a97b6bd41aa2f0ffe9d2f2725af0782"},
+]
+
+[[package]]
 name = "packaging"
 version = "23.1"
 description = "Core utilities for Python packages"
@@ -684,6 +695,23 @@ files = [
     {file = "PyYAML-6.0.1-cp39-cp39-win_amd64.whl", hash = "sha256:510c9deebc5c0225e8c96813043e62b680ba2f9c50a08d3724c7f28a747d1486"},
     {file = "PyYAML-6.0.1.tar.gz", hash = "sha256:bfdf460b1736c775f2ba9f6a92bca30bc2095067b8a9d77876d1fad6cc3b4a43"},
 ]
+
+[[package]]
+name = "qwikidata"
+version = "0.4.2"
+description = "Manipulate Wikidata Objects."
+optional = false
+python-versions = ">=3.5"
+files = [
+    {file = "qwikidata-0.4.2.tar.gz", hash = "sha256:8ea9bb8c2824e782c581b7e1caeea980d6b63439b433191eeceeed4076b94991"},
+]
+
+[package.dependencies]
+mypy-extensions = "*"
+requests = "*"
+
+[package.extras]
+dev = ["pre-commit", "pytest", "pytest-cov", "sphinx", "sphinx_autodoc_typehints", "sphinx_rtd_theme"]
 
 [[package]]
 name = "requests"
@@ -924,4 +952,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "fa0c104d0ae0fe44e8218876e9844820d961c8e90b223b63a88730fce9050b61"
+content-hash = "771bc520cb1b2a69536db083aeec2bb151688155899086a427b9a3b190f98be9"
