@@ -1,0 +1,379 @@
+interactions:
+- request:
+    body: null
+    headers: {}
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=compare&prop=user%7Cdiff%7Ctitle%7Crel%7Cids&format=json&fromrev=1903569755&torev=1956762765
+  response:
+    body:
+      string: '{"compare":{"fromid":112853519,"fromrevid":1903569755,"fromns":0,"fromtitle":"Q118347644","fromuser":"92.184.112.117","fromuserid":0,"toid":112853519,"torevid":1956762765,"tons":0,"totitle":"Q118347644","touser":"92.184.107.241","touserid":0,"prev":1898433145,"*":"<tr><td
+        colspan=\"2\" class=\"diff-lineno\"></td><td colspan=\"2\" class=\"diff-lineno\">Property
+        / <a title=\"Property:P40\" href=\"/wiki/Property:P40\">child</a></td></tr><tr><td
+        colspan=\"2\">\u00a0</td><td class=\"diff-marker\" data-marker=\"+\"></td><td
+        class=\"diff-addedline\"><div><ins class=\"diffchange diffchange-inline\"><span><a
+        title=\"Q121633519\" href=\"/wiki/Q121633519\">Am\u00e9lie Armogathe</a></span></ins></div></td></tr><tr><td
+        colspan=\"2\" class=\"diff-lineno\"></td><td colspan=\"2\" class=\"diff-lineno\">Property
+        / <a title=\"Property:P40\" href=\"/wiki/Property:P40\">child</a>: <a title=\"Q121633519\"
+        href=\"/wiki/Q121633519\">Am\u00e9lie Armogathe</a> / rank</td></tr><tr><td
+        colspan=\"2\">\u00a0</td><td class=\"diff-marker\" data-marker=\"+\"></td><td
+        class=\"diff-addedline\"><div><ins class=\"diffchange diffchange-inline\"><span>Normal
+        rank</span></ins></div></td></tr><tr><td colspan=\"2\" class=\"diff-lineno\"></td><td
+        colspan=\"2\" class=\"diff-lineno\">Property / <a title=\"Property:P40\" href=\"/wiki/Property:P40\">child</a>:
+        <a title=\"Q121633519\" href=\"/wiki/Q121633519\">Am\u00e9lie Armogathe</a>
+        / reference</td></tr><tr><td colspan=\"2\">\u00a0</td><td class=\"diff-marker\"
+        data-marker=\"+\"></td><td class=\"diff-addedline\"><div><ins class=\"diffchange
+        diffchange-inline\"><span><a title=\"Property:P854\" href=\"/wiki/Property:P854\">reference
+        URL</a>: <a rel=\"nofollow\" class=\"external free\" href=\"https://gw.geneanet.org/wujekvero2?n=armogathe&amp;oc=&amp;p=joseph\">https://gw.geneanet.org/wujekvero2?n=armogathe&amp;oc=&amp;p=joseph</a></span></ins></div></td></tr>"}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '494'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 19 Aug 2023 20:53:00 GMT
+      Server:
+      - mw2370.codfw.wmnet
+      Set-Cookie:
+      - WMF-Last-Access=19-Aug-2023;Path=/;HttpOnly;secure;Expires=Wed, 20 Sep 2023
+        12:00:00 GMT
+      - WMF-Last-Access-Global=19-Aug-2023;Path=/;Domain=.wikidata.org;HttpOnly;secure;Expires=Wed,
+        20 Sep 2023 12:00:00 GMT
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; Path=/; secure; Domain=.wikidata.org
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie,Authorization
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Cookie:
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; NetworkProbeLimit=0.001; WMF-Last-Access=19-Aug-2023;
+        WMF-Last-Access-Global=19-Aug-2023
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=query&prop=revisions&titles=Q118347644&rvprop=timestamp%7Cuser%7Ccomment%7Ctags&rvstartid=1956762765&rvendid=1903569755&format=json
+  response:
+    body:
+      string: '{"batchcomplete":"","query":{"pages":{"112853519":{"pageid":112853519,"ns":0,"title":"Q118347644","revisions":[{"user":"92.184.107.241","anon":"","timestamp":"2023-08-19T20:30:44Z","comment":"/*
+        wbsetclaim-create:2||1 */ [[Property:P40]]: [[Q121633519]]","tags":["wikidata-ui"]},{"user":"92.184.112.117","anon":"","timestamp":"2023-05-27T20:29:10Z","comment":"/*
+        wbsetclaim-create:2||1 */ [[Property:P570]]: unknown value","tags":["wikidata-ui"]}]}}}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Length:
+      - '451'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 19 Aug 2023 20:53:00 GMT
+      Server:
+      - mw2422.codfw.wmnet
+      Set-Cookie:
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie,Authorization
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      User-Agent:
+      - Quonter Vandal
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=P40%7CP854%7CQ121633519&props=labels%7Cdescriptions&languages=en%7Cde%7Cfr%7Ces%7Cru%7Cit%7Cpt%7Cnl&format=json
+  response:
+    body:
+      string: '{"entities":{"P40":{"type":"property","datatype":"wikibase-item","id":"P40","labels":{"de":{"language":"de","value":"Kind"},"en":{"language":"en","value":"child"},"fr":{"language":"fr","value":"enfant"},"it":{"language":"it","value":"figlio"},"ru":{"language":"ru","value":"\u0434\u0435\u0442\u0438"},"es":{"language":"es","value":"hijo
+        o hija"},"nl":{"language":"nl","value":"kind"},"pt":{"language":"pt","value":"descend\u00eancia"}},"descriptions":{"de":{"language":"de","value":"Kind
+        der Person"},"fr":{"language":"fr","value":"lien familial direct indiquant
+        que l''objet du lien est un fils ou une fille du sujet (ind\u00e9pendamment
+        de son \u00e2ge)"},"it":{"language":"it","value":"grado di parentela"},"es":{"language":"es","value":"familiar
+        descendiente en primer grado de parentesco"},"pt":{"language":"pt","value":"um
+        ou mais filhos do sujeito"},"nl":{"language":"nl","value":"kind van deze persoon"},"ru":{"language":"ru","value":"\u0434\u0435\u0442\u0438
+        \u044d\u0442\u043e\u0433\u043e \u0447\u0435\u043b\u043e\u0432\u0435\u043a\u0430"},"en":{"language":"en","value":"subject
+        has object as child. Do not use for stepchildren\u2014use \"relative\" (P1038),
+        qualified with \"type of kinship\" (P1039)"}}},"P854":{"type":"property","datatype":"url","id":"P854","labels":{"es":{"language":"es","value":"direcci\u00f3n
+        web de la referencia"},"fr":{"language":"fr","value":"URL de la r\u00e9f\u00e9rence"},"it":{"language":"it","value":"URL
+        di riferimento"},"nl":{"language":"nl","value":"URL voor bron"},"pt":{"language":"pt","value":"endere\u00e7o
+        eletr\u00f3nico da refer\u00eancia"},"de":{"language":"de","value":"URL der
+        Fundstelle"},"ru":{"language":"ru","value":"URL-\u0441\u0441\u044b\u043b\u043a\u0430
+        \u043d\u0430 \u0438\u0441\u0442\u043e\u0447\u043d\u0438\u043a"},"en":{"language":"en","value":"reference
+        URL"}},"descriptions":{"fr":{"language":"fr","value":"devrait \u00eatre d\u00e9fini
+        pour les URL des documents web utilis\u00e9s comme r\u00e9f\u00e9rence"},"it":{"language":"it","value":"deve
+        essere utilizzato per gli URL di internet come riferimenti"},"pt":{"language":"pt","value":"endere\u00e7o
+        eletr\u00f3nico onde a refer\u00eancia est\u00e1 depositada"},"de":{"language":"de","value":"Internetadresse
+        f\u00fcr Quellenangaben. Benutze P4656 f\u00fcr Interwiki-Links"},"nl":{"language":"nl","value":"bedoeld
+        voor websiteadressen bij bronnen"},"ru":{"language":"ru","value":"\u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442\u0441\u044f
+        \u0434\u043b\u044f URL (\u0430\u0434\u0440\u0435\u0441\u0430 \u0432\u0435\u0431-\u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b)
+        \u0432 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u0435 \u0438\u0441\u0442\u043e\u0447\u043d\u0438\u043a\u0430"},"en":{"language":"en","value":"should
+        be used for Internet URLs as references. Use \"Wikimedia import URL\" (P4656)
+        for imports from WMF sites"},"es":{"language":"es","value":"debe usarse para
+        enlaces web que se utilizan como referencia"}}},"Q121633519":{"type":"item","id":"Q121633519","labels":{"en":{"language":"en","value":"Am\u00e9lie
+        Armogathe"}},"descriptions":{}}},"success":1}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 19 Aug 2023 20:53:00 GMT
+      Server:
+      - mw2328.codfw.wmnet
+      Set-Cookie:
+      - WMF-Last-Access=19-Aug-2023;Path=/;HttpOnly;secure;Expires=Wed, 20 Sep 2023
+        12:00:00 GMT
+      - WMF-Last-Access-Global=19-Aug-2023;Path=/;Domain=.wikidata.org;HttpOnly;secure;Expires=Wed,
+        20 Sep 2023 12:00:00 GMT
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; Path=/; secure; Domain=.wikidata.org
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie,Authorization
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      User-Agent:
+      - Quonter Vandal
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=query&prop=revisions&rvprop=content%7Cids&titles=Q118347644&rvstartid=1903569755&format=json&rvslots=main&rvlimit=1
+  response:
+    body:
+      string: '{"continue":{"rvcontinue":"20230518085738|1898433145","continue":"||"},"query":{"pages":{"112853519":{"pageid":112853519,"ns":0,"title":"Q118347644","revisions":[{"revid":1903569755,"parentid":1898433145,"slots":{"main":{"contentmodel":"wikibase-item","contentformat":"application/json","*":"{\"type\":\"item\",\"id\":\"Q118347644\",\"labels\":{\"en\":{\"language\":\"en\",\"value\":\"David
+        Maum\\u00e9jean\"}},\"descriptions\":[],\"aliases\":[],\"claims\":{\"P31\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P31\",\"hash\":\"ad7d38a03cdd40cdc373de0dc4e7b7fcbccb31d9\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":5,\"id\":\"Q5\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"id\":\"Q118347644$f6ef2f9c-41fb-829b-c575-7d185e2890bd\",\"rank\":\"normal\"}],\"P21\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P21\",\"hash\":\"85ad4b1c7348f7a5aac521135040d74e91fb5939\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":6581097,\"id\":\"Q6581097\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"id\":\"Q118347644$a947cf01-45fa-90fa-02c4-fc868f31d7c9\",\"rank\":\"normal\"}],\"P39\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P39\",\"hash\":\"d982acf8ab75130dbe2720b6ff41317af77dade3\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":65466624,\"id\":\"Q65466624\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"qualifiers\":{\"P582\":[{\"snaktype\":\"value\",\"property\":\"P582\",\"hash\":\"8bc4d8a19d767d12d3397bcb4b335b448ce47d7e\",\"datavalue\":{\"value\":{\"time\":\"+1919-00-00T00:00:00Z\",\"timezone\":0,\"before\":0,\"after\":0,\"precision\":9,\"calendarmodel\":\"http:\\/\\/www.wikidata.org\\/entity\\/Q1985727\"},\"type\":\"time\"}}],\"P580\":[{\"snaktype\":\"value\",\"property\":\"P580\",\"hash\":\"fc982c597fff226f45eb431ca41e441ae164c0e5\",\"datavalue\":{\"value\":{\"time\":\"+1912-00-00T00:00:00Z\",\"timezone\":0,\"before\":0,\"after\":0,\"precision\":9,\"calendarmodel\":\"http:\\/\\/www.wikidata.org\\/entity\\/Q1985727\"},\"type\":\"time\"}}]},\"qualifiers-order\":[\"P582\",\"P580\"],\"id\":\"Q118347644$3ee3d330-4894-6c5b-74c4-98cb2e85fad4\",\"rank\":\"normal\",\"references\":[{\"hash\":\"08696d06fbcc920cd8577991ec272c95b7dca1fc\",\"snaks\":{\"P854\":[{\"snaktype\":\"value\",\"property\":\"P854\",\"hash\":\"e98aed657ecd35e22908273866039bbc40342bc7\",\"datavalue\":{\"value\":\"https:\\/\\/brozer.fr\\/telearchives\\/#depot_collections.php?d=62&r=63592&c=64325&fn=113\",\"type\":\"string\"}}]},\"snaks-order\":[\"P854\"]}]},{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P39\",\"hash\":\"ef953ed166a816b241bc17d5e77742ab387b17e2\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":118313875,\"id\":\"Q118313875\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"qualifiers\":{\"P580\":[{\"snaktype\":\"value\",\"property\":\"P580\",\"hash\":\"26de8627027486e2646d856226a875376bd91720\",\"datavalue\":{\"value\":{\"time\":\"+1919-00-00T00:00:00Z\",\"timezone\":0,\"before\":0,\"after\":0,\"precision\":9,\"calendarmodel\":\"http:\\/\\/www.wikidata.org\\/entity\\/Q1985727\"},\"type\":\"time\"}}],\"P582\":[{\"snaktype\":\"value\",\"property\":\"P582\",\"hash\":\"a7a94714d7a119cdba565f9e64b0bfe454a0e373\",\"datavalue\":{\"value\":{\"time\":\"+1929-00-00T00:00:00Z\",\"timezone\":0,\"before\":0,\"after\":0,\"precision\":9,\"calendarmodel\":\"http:\\/\\/www.wikidata.org\\/entity\\/Q1985727\"},\"type\":\"time\"}}],\"P1366\":[{\"snaktype\":\"value\",\"property\":\"P1366\",\"hash\":\"673b7fb58dd286f183997609a22568b6bf940eb3\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":118342659,\"id\":\"Q118342659\"},\"type\":\"wikibase-entityid\"}}],\"P1365\":[{\"snaktype\":\"somevalue\",\"property\":\"P1365\",\"hash\":\"88ba35b3848d02504dfc83e16d64bd1bcbad8cdb\"}]},\"qualifiers-order\":[\"P580\",\"P582\",\"P1366\",\"P1365\"],\"id\":\"Q118347644$382a93c6-48f8-124e-792d-798b4aebf6e0\",\"rank\":\"normal\",\"references\":[{\"hash\":\"8aeea61561ef2ae2fbe008e0f0d4c86f27b60447\",\"snaks\":{\"P854\":[{\"snaktype\":\"value\",\"property\":\"P854\",\"hash\":\"a27bae30e3a9e146cef2f8b1de61e9f1a3bee14b\",\"datavalue\":{\"value\":\"https:\\/\\/brozer.fr\\/telearchives\\/#depot_collections.php?d=62&r=63592&c=64325&fn=31\",\"type\":\"string\"}}]},\"snaks-order\":[\"P854\"]}]}],\"P735\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P735\",\"hash\":\"00753eb958253c68845500350937765f9870ca4d\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":18057751,\"id\":\"Q18057751\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"id\":\"Q118347644$A176E1C1-FF32-4B9D-B421-B9EBC9C0B9C7\",\"rank\":\"normal\"}],\"P570\":[{\"mainsnak\":{\"snaktype\":\"somevalue\",\"property\":\"P570\",\"hash\":\"47120b7358ae3d3ae5f0762e83028363c1caef4a\"},\"type\":\"statement\",\"id\":\"Q118347644$4358a2e5-4102-e677-60b9-38ac0cef8cf2\",\"rank\":\"normal\"}]},\"sitelinks\":[]}"}}}]}}}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 19 Aug 2023 20:53:00 GMT
+      Server:
+      - mw2285.codfw.wmnet
+      Set-Cookie:
+      - WMF-Last-Access=19-Aug-2023;Path=/;HttpOnly;secure;Expires=Wed, 20 Sep 2023
+        12:00:00 GMT
+      - WMF-Last-Access-Global=19-Aug-2023;Path=/;Domain=.wikidata.org;HttpOnly;secure;Expires=Wed,
+        20 Sep 2023 12:00:00 GMT
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; Path=/; secure; Domain=.wikidata.org
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie,Authorization
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Cookie:
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; NetworkProbeLimit=0.001; WMF-Last-Access=19-Aug-2023;
+        WMF-Last-Access-Global=19-Aug-2023
+      User-Agent:
+      - Quonter Vandal
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q18057751%7CQ5%7CQ6581097&props=labels%7Cdescriptions&languages=en%7Cde%7Cfr%7Ces%7Cru%7Cit%7Cpt%7Cnl&format=json
+  response:
+    body:
+      string: '{"entities":{"Q18057751":{"type":"item","id":"Q18057751","labels":{"en":{"language":"en","value":"David"},"fr":{"language":"fr","value":"David"},"ru":{"language":"ru","value":"\u0414\u0430\u0432\u0438\u0434
+        / \u0414\u044d(\u0439)\u0432\u0438\u0434"},"nl":{"language":"nl","value":"David"},"it":{"language":"it","value":"David"},"de":{"language":"de","value":"David"},"pt":{"language":"pt","value":"David"},"es":{"language":"es","value":"David"}},"descriptions":{"de":{"language":"de","value":"m\u00e4nnlicher
+        Vorname"},"en":{"language":"en","value":"male given name"},"es":{"language":"es","value":"nombre
+        masculino"},"fr":{"language":"fr","value":"pr\u00e9nom masculin"},"it":{"language":"it","value":"prenome
+        maschile"},"nl":{"language":"nl","value":"mannelijke voornaam"},"pt":{"language":"pt","value":"nome
+        pr\u00f3prio masculino"},"ru":{"language":"ru","value":"\u043c\u0443\u0436\u0441\u043a\u043e\u0435
+        \u043b\u0438\u0447\u043d\u043e\u0435 \u0438\u043c\u044f - David"}}},"Q5":{"type":"item","id":"Q5","labels":{"en":{"language":"en","value":"human"},"fr":{"language":"fr","value":"\u00eatre
+        humain"},"ru":{"language":"ru","value":"\u0447\u0435\u043b\u043e\u0432\u0435\u043a"},"it":{"language":"it","value":"umano"},"de":{"language":"de","value":"Mensch"},"es":{"language":"es","value":"ser
+        humano"},"pt":{"language":"pt","value":"ser humano"},"nl":{"language":"nl","value":"mens"}},"descriptions":{"en":{"language":"en","value":"any
+        member of Homo sapiens, unique extant species of the genus Homo, from embryo
+        to adult"},"fr":{"language":"fr","value":"individu appartenant \u00e0 l\u2019esp\u00e8ce
+        Homo sapiens, la seule esp\u00e8ce restante du genre Homo \u2013 distinct
+        de \u00ab humain fictif \u00bb et de \u00ab humain possiblement fictif \u00bb"},"de":{"language":"de","value":"h\u00f6heres
+        S\u00e4ugetier aus der Ordnung der Primaten"},"es":{"language":"es","value":"nombre
+        com\u00fan de Homo sapiens, \u00fanica especie existente del g\u00e9nero Homo"},"it":{"language":"it","value":"nome
+        comune della specie Homo sapiens, l''unica esistente del genere Homo"},"nl":{"language":"nl","value":"tweevoetige
+        primatensoort uit de familie van de hominidae"},"ru":{"language":"ru","value":"\u043e\u0431\u0449\u0435\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0435
+        \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u043e, \u043e\u0431\u043b\u0430\u0434\u0430\u044e\u0449\u0435\u0435
+        \u0440\u0430\u0437\u0443\u043c\u043e\u043c \u0438 \u0441\u043e\u0437\u043d\u0430\u043d\u0438\u0435\u043c;
+        \u0441\u0443\u0431\u044a\u0435\u043a\u0442, \u043e\u0442\u043d\u043e\u0441\u044f\u0449\u0438\u0439\u0441\u044f
+        \u043a \u0432\u0438\u0434\u0443 \u0427\u0435\u043b\u043e\u0432\u0435\u043a
+        \u0440\u0430\u0437\u0443\u043c\u043d\u044b\u0439"},"pt":{"language":"pt","value":"\u00fanica
+        subesp\u00e9cie ainda existente do g\u00e9nero Homo"}}},"Q6581097":{"type":"item","id":"Q6581097","labels":{"fr":{"language":"fr","value":"masculin"},"es":{"language":"es","value":"masculino"},"it":{"language":"it","value":"maschio"},"pt":{"language":"pt","value":"masculino"},"ru":{"language":"ru","value":"\u043c\u0443\u0436\u0441\u043a\u043e\u0439
+        \u043f\u043e\u043b"},"nl":{"language":"nl","value":"mannelijk"},"de":{"language":"de","value":"m\u00e4nnlich"},"en":{"language":"en","value":"male"}},"descriptions":{"es":{"language":"es","value":"sexo
+        o g\u00e9nero humano"},"fr":{"language":"fr","value":"\u00e9l\u00e9ment \u00e0
+        utiliser dans P21 (\u00ab sexe ou genre \u00bb) pour signifier que la personne
+        est de sexe masculin"},"it":{"language":"it","value":"essere umano di sesso
+        maschile (da usare con la propriet\u00e0:P21 \"sesso o genere\")"},"pt":{"language":"pt","value":"pessoa
+        que \u00e9 do sexo masculino (usar com a propriedade P21 para indicar o sexo
+        ou g\u00e9nero)"},"nl":{"language":"nl","value":"persoon van het mannelijk
+        geslacht, te gebruiken met P21 (sekse)"},"de":{"language":"de","value":"Mensch
+        mit m\u00e4nnlichem Geschlecht (Verwendung mit P21)"},"ru":{"language":"ru","value":"\u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442\u0441\u044f
+        \u0432 \u0441\u0432\u043e\u0439\u0441\u0442\u0432\u0435 P21 (\u043f\u043e\u043b
+        \u0447\u0435\u043b\u043e\u0432\u0435\u043a\u0430)"},"en":{"language":"en","value":"to
+        be used in \"sex or gender\" (P21) to indicate that the human subject is a
+        male or \"semantic gender\" (P10339) to indicate that a word refers to a male
+        person"}}}},"success":1}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 19 Aug 2023 20:53:00 GMT
+      Server:
+      - mw2320.codfw.wmnet
+      Set-Cookie:
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie,Authorization
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+version: 1
