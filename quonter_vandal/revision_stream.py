@@ -1,6 +1,6 @@
 import asyncio
 from dataclasses import dataclass
-from typing import Any, Callable, Optional, Self
+from typing import Any, Awaitable, Callable, Optional, Self
 import aiohttp
 from aiohttp import client_exceptions
 from quonter_vandal.diff_grouper import Timestamped
@@ -64,19 +64,27 @@ class AsyncRetryingSseClient:
         self._client_iter = None
         return self
 
+    async def _reconnect(self):
+        try:
+            self._client_iter = await self.client.__aenter__()
+            return self._client_iter
+        except (ConnectionError, asyncio.TimeoutError, client_exceptions.ClientPayloadError, OSError):
+            await asyncio.sleep(2)
+            return await self._reconnect()
+
     async def __anext__(self):
         if not self._client_iter:
-            self._client_iter = await self.client.__aenter__()
+            self._client_iter = await self._reconnect()
         try:
             n = await anext(self._client_iter)
             return n
-        except (asyncio.TimeoutError, client_exceptions.ClientPayloadError, OSError):
+        except (ConnectionError, asyncio.TimeoutError, client_exceptions.ClientPayloadError, OSError):
             print("iteration fail; reconnect")
-            await asyncio.sleep(1)
+            await asyncio.sleep(2)
             await self.client.__aexit__(None, None, None)
             self.client = EventSource(
                 self._url, last_event_id=self.client.last_event_id)
-            self._client_iter = await self.client.__aenter__()
+            self._client_iter = await self._reconnect()
             return await anext(self)
 
 
@@ -91,15 +99,19 @@ def filter_event(event_json):
         event_json.get('patrolled') is False
 
 
-async def event_loop(config: StreamConfig, callback: Callable[[StreamEvent], Any]) -> None:
+async def event_loop(config: StreamConfig, callback: Callable[[StreamEvent], Awaitable[Any]]) -> None:
+    print("starting event loop for revision stream")
     t = time.time()
     client = AsyncRetryingSseClient()
     async for event in client:
         event_json = json.loads(event.data)
         stream_event = StreamEvent.from_json(event_json)
         if filter_event(event_json):
-            callback(stream_event)
+            await callback(stream_event)
 
+
+async def printer(x):
+    print(x)
 
 if __name__ == "__main__":
     import sys
@@ -108,4 +120,4 @@ if __name__ == "__main__":
                                     user_agent='Quonter Vandal')
     session = aiohttp.ClientSession()
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(event_loop(StreamConfig(True), lambda x: print(x)))
+    loop.run_until_complete(event_loop(StreamConfig(True),  printer))

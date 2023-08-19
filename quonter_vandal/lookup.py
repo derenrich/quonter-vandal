@@ -213,8 +213,10 @@ class LookupItemAtRevision:
                     if entity_info:
                         claims_out[prop_name].append(entity_info)
                 else:
-                    claims_out[prop_name].append(
-                        claim.mainsnak.datavalue.value)
+                    if claim.mainsnak.datavalue is not None:
+                        # ignore unknown or missing values
+                        claims_out[prop_name].append(
+                            claim.mainsnak.datavalue.value)
 
         return RevisionContent(
             label=lang_out,

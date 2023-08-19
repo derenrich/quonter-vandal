@@ -5,6 +5,7 @@ import asyncio
 from quonter_vandal.diff import *
 from quonter_vandal.lookup import LookupItemAtRevision, EntityInfo, LookupEntities, RevisionContent
 from dataclasses import dataclass
+from itertools import chain
 
 
 @dataclass
@@ -161,10 +162,12 @@ class DocumentMaker:
                 bucket.add_qid(qid)
             case ReferenceValue(statements):
                 for statement in statements:
-                    value_bucket = self._get_items_from_values(statement.value)
+                    if statement.value:
+                        value_bucket = self._get_items_from_values(
+                            statement.value)
+                        bucket += value_bucket
                     statement_bucket = self._get_items_from_statement(
                         statement.field)
-                    bucket += value_bucket
                     bucket += statement_bucket
 
             case _:
@@ -262,7 +265,11 @@ class DocumentMaker:
 
     def _diff_to_document(self, diff: Diff, qid_map: Mapping[str, EntityInfo]) -> str:
         docs = []
-        docs.append(f"Comment: {diff.comments}")
+        # docs.append(f"Comment: {diff.comments}")
+        tags = list(filter(lambda x: 'OAuth' not in x,
+                    set(chain.from_iterable(diff.tags))))
+        if tags:
+            docs.append(f"Tags: {'/'.join(tags)}")
         for c in diff.changes:
             field = c.field
             old_value = c.old
@@ -293,8 +300,7 @@ class DocumentMaker:
                 docs.append(f"{field_doc}: added '{new_doc}'")
         return "\n".join(docs)
 
-    async def make_document(self, start_rev: int, end_rev: int) -> Optional[str]:
-
+    async def make_document_data(self, start_rev: int, end_rev: int) -> Any:
         # first get the diff
         differ = await async_get_diff(start_rev, end_rev, self._session)
         if not differ:
@@ -306,18 +312,26 @@ class DocumentMaker:
         # now get the names of the qids/pids in the diff
         qid_pid_info_await = self._get_qid_map_for_diff(diff)
         # get the state of the item before the diff
-        prior_data_await = self._lookup.lookup_item_at_revision(qid, start_rev)
+        prior_data_await = self._lookup.lookup_item_at_revision(
+            qid, start_rev)
 
         qid_pid_info, prior_data = await asyncio.gather(qid_pid_info_await, prior_data_await)
 
         if not prior_data:
             raise Exception(
                 f"Failed to get data for diff {start_rev} -> {end_rev}")
+        return qid_pid_info, prior_data, diff
 
-        diff_doc = self._diff_to_document(diff, qid_pid_info)
-        item_doc = self._revision_content_to_document(prior_data)
-        print(f"Item\n====\n{item_doc}\n\nEdit\n====\n{diff_doc}")
-        return ""
+    async def make_document(self, start_rev: int, end_rev: int) -> Optional[str]:
+        try:
+            qid_pid_info, prior_data, diff = await self.make_document_data(start_rev, end_rev)
+            diff_doc = self._diff_to_document(diff, qid_pid_info)
+            item_doc = self._revision_content_to_document(prior_data)
+            print(f"Item\n====\n{item_doc}\n\nEdit\n====\n{diff_doc}")
+            return ""
+        except Exception as e:
+            print(f"Failed to make document for {start_rev} -> {end_rev}: {e}")
+            return None
 
 
 if __name__ == "__main__":
@@ -347,3 +361,5 @@ if __name__ == "__main__":
     #            lookup = loop.run_until_complete(
     #                dm.make_document(int(oldif), int(newdif)))
     #            print(lookup)
+
+    from revision_stream import RevisionStream

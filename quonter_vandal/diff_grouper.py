@@ -1,5 +1,6 @@
 import asyncio
 from dataclasses import dataclass
+import dataclasses
 from typing import Any, Awaitable, Callable, List, Mapping, TypeVar, Generic
 from collections import defaultdict
 import time
@@ -23,16 +24,25 @@ class DiffGrouper(Generic[T]):
         self._eject_delay = eject_delay
         self._loop_task = loop.create_task(self._main_loop())
 
+    async def status(self) -> dict[str, List[dict]]:
+        async with self._lock:
+            return {k: [dataclasses.asdict(i) for i in v] for k, v in self._buffer.items()}
+
     async def _main_loop(self):
         while True:
             async with self._lock:
-                wipe_list = []
-                for key, q in self._buffer.items():
-                    if len(q) > 0 and self._time() - q[-1].timestamp > self._eject_delay:
-                        await self._eject_fn(q)
-                        wipe_list.append(key)
-                for key in wipe_list:
-                    del self._buffer[key]
+                try:
+                    wipe_list = []
+                    for key, q in self._buffer.items():
+                        if len(q) > 0 and ((self._time() - q[-1].timestamp) > self._eject_delay):
+                            await self._eject_fn(q)
+                            wipe_list.append(key)
+                    for key in wipe_list:
+                        del self._buffer[key]
+                except Exception as e:
+                    import traceback
+                    print("fail?", e)
+                    print(traceback.format_exc())
             await asyncio.sleep(1)
 
     def _time(self):
