@@ -102,8 +102,8 @@ def test_add_qualifier_and_rank_diff():
     assert len(diff.changes) == 2
     rank_change = diff.changes[0]
     assert (rank_change.field == RankChangeStatement("P569"))
-    assert (rank_change.old == "normal")
-    assert (rank_change.new == "preferred")
+    assert (rank_change.old == StatementRankValue("normal"))
+    assert (rank_change.new == StatementRankValue("preferred"))
     qualifier_change = diff.changes[1]
     assert (qualifier_change.field ==
             QualifierChangeStatement("P569", StatementStringValue("21 January 1956")))
@@ -129,7 +129,7 @@ def test_wwwyzzerdd_diff():
     add_movement_rank = diff.changes[1]
     assert (add_movement_rank.field == RankChangeStatement(pid='P135'))
     assert (add_movement_rank.old == None)
-    assert (add_movement_rank.new == "normal")
+    assert (add_movement_rank.new == StatementRankValue("normal"))
 
     add_movement_reference = diff.changes[2]
     assert (add_movement_reference.field ==
@@ -153,7 +153,7 @@ def test_wwwyzzerdd_diff():
     add_employer_rank = diff.changes[4]
     assert (add_employer_rank.field == RankChangeStatement(pid='P108'))
     assert (add_employer_rank.old == None)
-    assert (add_employer_rank.new == "normal")
+    assert (add_employer_rank.new == StatementRankValue("normal"))
 
     add_employer_reference = diff.changes[5]
     assert (add_employer_reference.field ==
@@ -177,7 +177,7 @@ def test_wwwyzzerdd_diff():
     add_orientation_rank = diff.changes[7]
     assert (add_orientation_rank.field == RankChangeStatement(pid='P91'))
     assert (add_orientation_rank.old == None)
-    assert (add_orientation_rank.new == "normal")
+    assert (add_orientation_rank.new == StatementRankValue("normal"))
 
     add_orientation_reference = diff.changes[8]
     assert add_orientation_reference.old is None
@@ -207,7 +207,7 @@ def test_fennel():
     add_business_rank = diff.changes[1]
     assert (add_business_rank.field == RankChangeStatement(pid='P31'))
     assert (add_business_rank.old == None)
-    assert (add_business_rank.new == "normal")
+    assert (add_business_rank.new == StatementRankValue("normal"))
 
     add_crunchbase = diff.changes[2]
     assert (add_crunchbase.field == RegularStatement(pid='P2088'))
@@ -248,7 +248,7 @@ def test_unk_value():
     add_unk_rank = diff.changes[1]
     assert (add_unk_rank.field == RankChangeStatement(pid='P5021'))
     assert (add_unk_rank.old == None)
-    assert (add_unk_rank.new == "normal")
+    assert (add_unk_rank.new == StatementRankValue("normal"))
 
 
 @pytest.mark.vcr()
@@ -266,8 +266,8 @@ def test_no_value():
 
     add_unk_rank = diff.changes[1]
     assert (add_unk_rank.field == RankChangeStatement(pid='P5021'))
-    assert (add_unk_rank.old == "normal")
-    assert (add_unk_rank.new == "deprecated")
+    assert (add_unk_rank.old == StatementRankValue("normal"))
+    assert (add_unk_rank.new == StatementRankValue("deprecated"))
 
 
 @pytest.mark.vcr()

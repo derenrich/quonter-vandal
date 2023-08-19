@@ -138,15 +138,17 @@ class LookupItemAtRevision:
 
         content = json.loads(revisions[0]['slots']['main']['*'])
 
-        for pid, claims in content['claims'].items():
-            for claim in claims:
-                datatype = prop_datatypes.get(pid, "wikibase-item")
-                claim['mainsnak']['datatype'] = datatype
-                if 'qualifiers' in claim:
-                    del claim['qualifiers']
-                    del claim['qualifiers-order']
-                if 'references' in claim:
-                    del claim['references']
+        # clean out the bad stuff that won't parse for some reason
+        if content['claims']:
+            for pid, claims in content.get('claims', {}).items():
+                for claim in claims:
+                    datatype = prop_datatypes.get(pid, "wikibase-item")
+                    claim['mainsnak']['datatype'] = datatype
+                    if 'qualifiers' in claim:
+                        del claim['qualifiers']
+                        del claim['qualifiers-order']
+                    if 'references' in claim:
+                        del claim['references']
 
         item = WikidataItem(content)
 

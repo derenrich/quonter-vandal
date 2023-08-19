@@ -311,11 +311,11 @@ class StatementRankValue(StatementValue):
     @classmethod
     def from_string(cls, s: str) -> Self:
         if s == "Normal rank":
-            return "normal"
+            return StatementRankValue("normal")
         elif s == "Deprecated rank":
-            return "deprecated"
+            return StatementRankValue("deprecated")
         elif s == "Preferred rank":
-            return "preferred"
+            return StatementRankValue("preferred")
         else:
             raise Exception("Unknown rank: " + s)
 
@@ -675,13 +675,12 @@ async def async_get_diff(from_rev_id: int, to_rev_id: int, default_session: Opti
         session = aiohttp.ClientSession()
     else:
         session = default_session
-    async with session as session:
-        URL = f"https://www.wikidata.org/w/api.php?action=compare&prop=user|diff|title|rel|ids&format=json&fromrev={from_rev_id}&torev={to_rev_id}"
-        resp = await session.get(URL)
-        try:
-            return await ItemDiffer.create(await resp.json(), session)
-        except NoSuchDiffException:
-            return None
+    URL = f"https://www.wikidata.org/w/api.php?action=compare&prop=user|diff|title|rel|ids&format=json&fromrev={from_rev_id}&torev={to_rev_id}"
+    resp = await session.get(URL)
+    try:
+        return await ItemDiffer.create(await resp.json(), session)
+    except NoSuchDiffException:
+        return None
 
 if __name__ == "__main__":
     res = get_diff(1916986831, 1916992133)

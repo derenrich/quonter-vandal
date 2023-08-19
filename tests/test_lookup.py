@@ -60,3 +60,16 @@ async def test_make_revision_content():
         val.label for val in content.claims['subclass of']]
 
     assert 'part of' in content.claims
+
+
+@pytest.mark.vcr()
+@pytest.mark.asyncio
+async def test_empty():
+    session = mwapi.AsyncSession('https://www.wikidata.org',
+                                 user_agent='Quonter Vandal')
+    lookup = LookupItemAtRevision(session)
+    content = await lookup.lookup_item_at_revision('Q33310436', 1953971468)
+    assert content is not None
+    assert content.label is None
+    assert not content.aliases
+    assert not content.claims
