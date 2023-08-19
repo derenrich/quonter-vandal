@@ -3,6 +3,7 @@ from dataclasses import dataclass
 from typing import Any, Callable, Optional, Self
 import aiohttp
 from aiohttp import client_exceptions
+from quonter_vandal.diff_grouper import Timestamped
 from sse_client import EventSource
 import time
 import json
@@ -14,7 +15,7 @@ class StreamConfig:
 
 
 @dataclass
-class StreamEvent:
+class StreamEvent(Timestamped):
     wiki: str
     type: str
     namespace: int
