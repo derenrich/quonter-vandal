@@ -139,6 +139,8 @@ class DocumentMaker:
                 bucket += value_bucket
             case Redirect():
                 pass
+            case SitelinkChangeStatement(_):
+                pass
             case _:
                 raise Exception(f"Unknown statement type: {field}")
         return bucket
@@ -260,6 +262,7 @@ class DocumentMaker:
 
     def _diff_to_document(self, diff: Diff, qid_map: Mapping[str, EntityInfo]) -> str:
         docs = []
+        docs.append(f"Comment: {diff.comments}")
         for c in diff.changes:
             field = c.field
             old_value = c.old
@@ -333,13 +336,14 @@ if __name__ == "__main__":
     _, _, newdif, oldif = args.split("=")
     newdif = newdif.split("&")[0]
 
-    import gzip
-    import json
-    with gzip.open("logs.jsonl", "r") as f:
-        for line in f:
-            d = json.loads(line)
-            oldif = d['old']
-            newdif = d['new']
-            lookup = loop.run_until_complete(
-                dm.make_document(int(oldif), int(newdif)))
-            print(lookup)
+    # import gzip
+    # import json
+    # with gzip.open("logs.jsonl", "r") as f:
+    #    for line in f:
+    #        d = json.loads(line)
+    #        if d and 'old' in d and 'new' in d:
+    #            oldif = d['old']
+    #            newdif = d['new']
+    #            lookup = loop.run_until_complete(
+    #                dm.make_document(int(oldif), int(newdif)))
+    #            print(lookup)

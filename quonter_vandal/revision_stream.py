@@ -1,6 +1,6 @@
 import asyncio
 from dataclasses import dataclass
-from typing import Optional
+from typing import Any, Callable, Optional, Self
 import aiohttp
 from aiohttp import client_exceptions
 from sse_client import EventSource
@@ -11,6 +11,41 @@ import json
 @dataclass
 class StreamConfig:
     logFeatures: bool = False
+
+
+@dataclass
+class StreamEvent:
+    wiki: str
+    type: str
+    namespace: int
+    bot: bool
+    patrolled: bool
+    minor: bool
+    user: str
+    dt: str
+    comment: str
+    timestamp: int
+    rev_old: Optional[int]
+    rev_new: Optional[int]
+    title: str
+
+    @classmethod
+    def from_json(cls, json: dict) -> Self:
+        return cls(
+            wiki=json.get('wiki'),
+            type=json.get('type'),
+            namespace=json.get('namespace'),
+            bot=json.get('bot'),
+            patrolled=json.get('patrolled'),
+            minor=json.get('minor'),
+            user=json.get('user'),
+            dt=json.get('dt'),
+            comment=json.get('parsedcomment'),
+            timestamp=json.get('timestamp'),
+            title=json.get('title'),
+            rev_old=json.get('revision', {}).get('old'),
+            rev_new=json.get('revision', {}).get('new')
+        )
 
 
 loop = asyncio.get_event_loop()
@@ -55,17 +90,21 @@ def filter_event(event_json):
         event_json.get('patrolled') is False
 
 
-async def event_loop(config: StreamConfig) -> None:
+async def event_loop(config: StreamConfig, callback: Callable[[StreamEvent], Any]) -> None:
     t = time.time()
-    hits = 0
-    misses = 0
     client = AsyncRetryingSseClient()
     async for event in client:
         event_json = json.loads(event.data)
-        if not filter_event(event_json):
-            # print(".", end="", flush=True)
-            misses += 1
-        else:
-            if hits > 0 and hits % 100 == 0:
-                print(f"{hits} hits, {misses} misses in {time.time() - t} seconds")
-            hits += 1
+        stream_event = StreamEvent.from_json(event_json)
+        if filter_event(event_json):
+            callback(stream_event)
+
+
+if __name__ == "__main__":
+    import sys
+    import mwapi
+    mw_session = mwapi.AsyncSession('https://www.wikidata.org',
+                                    user_agent='Quonter Vandal')
+    session = aiohttp.ClientSession()
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(event_loop(StreamConfig(True), lambda x: print(x)))
