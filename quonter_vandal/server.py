@@ -47,7 +47,7 @@ def main():
         newid = edits[-1].rev_new
         if oldid and newid:
             res = dm.make_document(oldid, newid)
-            await res
+            print(await res)
 
     grouper = DiffGrouper(loop, handle_edit_group, 90)
 

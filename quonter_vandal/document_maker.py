@@ -275,8 +275,9 @@ class DocumentMaker:
         # docs.append(f"Comment: {diff.comments}")
         tags = list(filter(lambda x: 'OAuth' not in x and 'reverted' not in x,
                     set(chain.from_iterable(diff.tags))))
-        if tags:
-            docs.append(f"Tags: {'/'.join(tags)}")
+        # doesn't seem very helpful
+        # if tags:
+        #    docs.append(f"Tags: {'/'.join(tags)}")
         for c in diff.changes:
             field = c.field
             old_value = c.old
@@ -334,9 +335,8 @@ class DocumentMaker:
             qid_pid_info, prior_data, diff = await self.make_document_data(start_rev, end_rev)
             diff_doc = self._diff_to_document(diff, qid_pid_info)
             item_doc = self._revision_content_to_document(prior_data)
-            # print(f"Item\n====\n{item_doc}\n\nEdit\n====\n{diff_doc}")
-            print("p", end="", flush=True)
-            return ""
+            final_doc = f"Item\n====\n{item_doc}\n\nEdit\n====\n{diff_doc}"
+            return final_doc
         except Exception as e:
             print(f"Failed to make document for {start_rev} -> {end_rev}: {e}")
             return None
