@@ -78,7 +78,7 @@ class LookupEntities:
             entity_results: Dict[str, Any] = result['entities']
             for qid, data in entity_results.items():
                 assert data["type"] == "item" or data['type'] == 'property'
-                assert data["id"] == qid
+                # qid and data can differ if there is a redirect
                 labels = data["labels"]
                 label = None
                 label_lang = None

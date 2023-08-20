@@ -95,6 +95,13 @@ class DocumentMaker:
                 ", ".join([alias['label'] for alias in content.aliases])
             doc.append(alias_line)
 
+        if content.sitelinks:
+            doc.append("Sitelinks:")
+            if len(content.sitelinks) > 5:
+                content.sitelinks = content.sitelinks[:5]
+            for sitelink in content.sitelinks:
+                doc.append(f" {sitelink['lang_code']}:{sitelink['label']}")
+
         if content.claims:
             doc.append("Claims:")
             for prop, statements in content.claims.items():
@@ -266,7 +273,7 @@ class DocumentMaker:
     def _diff_to_document(self, diff: Diff, qid_map: Mapping[str, EntityInfo]) -> str:
         docs = []
         # docs.append(f"Comment: {diff.comments}")
-        tags = list(filter(lambda x: 'OAuth' not in x,
+        tags = list(filter(lambda x: 'OAuth' not in x and 'reverted' not in x,
                     set(chain.from_iterable(diff.tags))))
         if tags:
             docs.append(f"Tags: {'/'.join(tags)}")
@@ -327,7 +334,8 @@ class DocumentMaker:
             qid_pid_info, prior_data, diff = await self.make_document_data(start_rev, end_rev)
             diff_doc = self._diff_to_document(diff, qid_pid_info)
             item_doc = self._revision_content_to_document(prior_data)
-            print(f"Item\n====\n{item_doc}\n\nEdit\n====\n{diff_doc}")
+            # print(f"Item\n====\n{item_doc}\n\nEdit\n====\n{diff_doc}")
+            print("p", end="", flush=True)
             return ""
         except Exception as e:
             print(f"Failed to make document for {start_rev} -> {end_rev}: {e}")
