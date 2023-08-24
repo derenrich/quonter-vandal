@@ -1,4 +1,4 @@
-
+USER_AGENT = "Quonter Vandal"
 
 # the languages in the order of preference for fetching/displaying
 language_preferences = [
@@ -41,6 +41,35 @@ wikis = [
     'enwikisource',
     'commonswiki'
 ]
+
+wikis_to_url = {
+    'enwiki': 'https://en.wikipedia.org',
+    'dewiki': 'https://de.wikipedia.org',
+    'frwiki': 'https://fr.wikipedia.org',
+    'eswiki': 'https://es.wikipedia.org',
+    'ruwiki': 'https://ru.wikipedia.org',
+    'itwiki': 'https://it.wikipedia.org',
+    'ptwiki': 'https://pt.wikipedia.org',
+    'nlwiki': 'https://nl.wikipedia.org',
+    'jawiki': 'https://ja.wikipedia.org',
+    'plwiki': 'https://pl.wikipedia.org',
+    'viwiki': 'https://vi.wikipedia.org',
+    'zhwiki': 'https://zh.wikipedia.org',
+    'arwiki': 'https://ar.wikipedia.org',
+    'svwiki': 'https://sv.wikipedia.org',
+    'cebwiki': 'https://ceb.wikipedia.org',
+    'svwiki': 'https://sv.wikipedia.org',
+    'fawiki': 'https://fa.wikipedia.org',
+    'shwiki': 'https://sh.wikipedia.org',
+    'kowiki': 'https://ko.wikipedia.org',
+    'trwiki': 'https://tr.wikipedia.org',
+    'nowiki': 'https://no.wikipedia.org',
+    'enwikiquote': 'https://en.wikiquote.org',
+    'itwikiquote': 'https://it.wikiquote.org',
+    'plwikiquote': 'https://pl.wikiquote.org',
+    'enwikisource': 'https://en.wikisource.org',
+    'commonswiki': 'https://commons.wikimedia.org'
+}
 
 props = {
     'P31': 'instance of',

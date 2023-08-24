@@ -78,7 +78,7 @@ class LookupEntities:
             entity_results: Dict[str, Any] = result['entities']
             for qid, data in entity_results.items():
                 assert data["type"] == "item" or data['type'] == 'property'
-                # qid and data can differ if there is a redirect
+                # qid and data['id'] can differ if there is a redirect
                 labels = data["labels"]
                 label = None
                 label_lang = None
@@ -108,7 +108,7 @@ class LookupItemAtRevision:
     def __init__(self, session: mwapi.AsyncSession):
         self.session = session
 
-    async def lookup_item_at_revision(self, qid: str, revision_id: int) -> Optional[Any]:
+    async def lookup_item_at_revision(self, qid: str, revision_id: int) -> Optional[RevisionContent]:
         """
         Lookup an item at a given revision.
 

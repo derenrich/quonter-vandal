@@ -42,6 +42,7 @@ def main():
     config = StreamConfig(logFeatures=True)
 
     async def handle_edit_group(edits: List[StreamEvent]):
+        print(edits)
         assert len(edits) > 0
         oldid = edits[0].rev_old
         newid = edits[-1].rev_new
@@ -49,10 +50,11 @@ def main():
             res = dm.make_document(oldid, newid)
             print(await res)
 
-    grouper = DiffGrouper(loop, handle_edit_group, 90)
+    grouper = DiffGrouper(loop, handle_edit_group, 1)
 
     async def handle_diff(diff: StreamEvent):
         print(".", end="", flush=True)
+        print(diff)
         await grouper.add(diff)
 
     async def handle_grouper_status(request):

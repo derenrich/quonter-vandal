@@ -7,6 +7,8 @@ from quonter_vandal.lookup import LookupItemAtRevision, EntityInfo, LookupEntiti
 from dataclasses import dataclass
 from itertools import chain
 
+from quonter_vandal.wiki_summary import get_summary
+
 
 @dataclass
 class QidPidBucket:
@@ -235,9 +237,9 @@ class DocumentMaker:
             case StatementQualifierValue(pid, value):
                 return f"{qid_map[pid].label} for {self._statement_value_to_string(value, qid_map)}"
             case StatementPropertyValue(pid):
-                return f"{qid_map[pid].label}"
+                return f"{qid_map[pid].label} ({qid_map[pid].description})"
             case StatementItemValue(qid):
-                return f"{qid_map[qid].label}"
+                return f"{qid_map[qid].label} ({qid_map[qid].description})"
             case StatementQuantityValue(quantity):
                 return f"{quantity}"
             case StatementMonolingualTextValue(text, lang):
@@ -246,11 +248,11 @@ class DocumentMaker:
                 return f"{text} in {lang}"
             case StatementInternalLinkValue(href, text, lang):
                 if lang == "en":
-                    return f"({text})[{href}]"
-                return f"({text})[{href}] in {lang}"
+                    return f"[{text}]({href})"
+                return f"[{text}]({href}) in {lang}"
             case StatementFileLink(href, text) | StatementExternalLinkValue(href, text):
                 if href and href != text:
-                    return f"({text})[{href}]"
+                    return f"[{text}]({href})"
                 else:
                     return f"{text}"
             case StatementMathValue(val) | StatementTimeValue(val) | StatementStringValue(val) | \
@@ -312,7 +314,8 @@ class DocumentMaker:
         # first get the diff
         differ = await async_get_diff(start_rev, end_rev, self._session)
         if not differ:
-            return None
+            raise Exception(
+                f"Failed to get data for diff {start_rev} -> {end_rev} (no differ)")
         diff = differ.changes()
 
         qid = diff.title
@@ -325,20 +328,34 @@ class DocumentMaker:
 
         qid_pid_info, prior_data = await asyncio.gather(qid_pid_info_await, prior_data_await)
 
+        if prior_data:
+            try:
+                summary = await get_summary(prior_data)
+            except:
+                summary = None
+        else:
+            summary = None
+
         if not prior_data:
             raise Exception(
                 f"Failed to get data for diff {start_rev} -> {end_rev}")
-        return qid_pid_info, prior_data, diff
+        return qid_pid_info, prior_data, diff, summary
 
     async def make_document(self, start_rev: int, end_rev: int) -> Optional[str]:
         try:
-            qid_pid_info, prior_data, diff = await self.make_document_data(start_rev, end_rev)
+            qid_pid_info, prior_data, diff, summary = await self.make_document_data(start_rev, end_rev)
             diff_doc = self._diff_to_document(diff, qid_pid_info)
+            if summary:
+                summary_doc = f"\nSnippet ({summary.wiki})\n====\n {summary.snippet}\n"
+            else:
+                summary_doc = ""
             item_doc = self._revision_content_to_document(prior_data)
-            final_doc = f"Item\n====\n{item_doc}\n\nEdit\n====\n{diff_doc}"
+            final_doc = f"Item\n====\n{item_doc}\n{summary_doc}\nEdit\n====\n{diff_doc}"
             return final_doc
         except Exception as e:
+            import traceback
             print(f"Failed to make document for {start_rev} -> {end_rev}: {e}")
+            traceback.print_exc()
             return None
 
 

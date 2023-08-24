@@ -21,16 +21,19 @@ def main(changes: list[Tuple[int, int]], outfile: str):
     out = []
     for (oldid, newid) in tqdm.tqdm(changes[0:1000]):
         # print(f"Old: {oldid}, New: {newid}\n")
-        res = loop.run_until_complete(dm.make_document(oldid, newid))
-        out.append({"fromrevid": oldid, "torevid": newid, "doc": res})
+        try:
+            res = loop.run_until_complete(dm.make_document(oldid, newid))
+            out.append({"fromrevid": oldid, "torevid": newid, "doc": res})
+        except:
+            pass
     pickle.dump(out, open(outfile, "wb"))
 
 
 if __name__ == "__main__":
     # dat = pickle.load(open("diffs_grouped_vandalous.2.pkl", "rb"))
-    INFILE = "diffs_grouped_admin.pkl"
-    OUTFILE = "diffs_with_docs_admin.pkl"
-    dat = pickle.load(open("diffs_grouped_admin.pkl", "rb"))
+    INFILE = "diffs_grouped_vandalous.2.pkl"
+    OUTFILE = "diffs_with_docs_vandalous.pkl"
+    dat = pickle.load(open(INFILE, "rb"))
     print(len(dat))
 
     changes = []
