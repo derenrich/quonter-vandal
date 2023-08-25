@@ -43,7 +43,11 @@ class DocumentMaker:
 
     @classmethod
     def _render_time(cls, time: Mapping[str, Any]) -> str:
-        y, m, d = time['time'].split("T")[0].strip().split("-")
+        # handle negative dates
+        if time['time'][0] == '-':
+            _, y, m, d = time['time'].split("T")[0].strip().split("-")
+        else:
+            y, m, d = time['time'].split("T")[0].strip().split("-")
         y = y[1:]
         prec = time['precision']
 
