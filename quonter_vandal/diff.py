@@ -167,6 +167,7 @@ class RankChangeStatement(StatementType):
 @dataclass
 class SitelinkChangeStatement(StatementType):
     lang: str
+    badge: Optional[str] = None
 
 
 @dataclass
@@ -422,7 +423,7 @@ class Change:
                 new_value = ReferenceValue.from_div(new) if new else None
                 return Change(statement_type, old_value, new_value)
 
-            case SitelinkChangeStatement(lang):
+            case SitelinkChangeStatement(lang, badge):
                 old_value = StatementValue.extract_value(old) if old else None
                 new_value = StatementValue.extract_value(new) if new else None
 
@@ -498,7 +499,7 @@ class Change:
             args = field.text.split("/")
             lang = args[1].strip()
             if len(args) == 4 and args[2].strip() == "badges":
-                return SitelinkChangeStatement(lang)
+                return SitelinkChangeStatement(lang, "badge")
             if len(args) == 3 and args[2].strip() == "name":
                 return SitelinkChangeStatement(lang)
         elif field.text == "redirect":

@@ -574,4 +574,172 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: null
+    headers:
+      Cookie:
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; NetworkProbeLimit=0.001; WMF-Last-Access=18-Aug-2023;
+        WMF-Last-Access-Global=18-Aug-2023
+      User-Agent:
+      - Quonter Vandal
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q110551885%7CQ1156970%7CQ164509%7CQ215627%7CQ26401003%7CQ42762%7CQ55983715%7CQ8425&props=labels%7Cdescriptions&languages=en%7Cde%7Cfr%7Ces%7Cru%7Cit%7Cpt%7Cnl%7Car&format=json
+  response:
+    body:
+      string: '{"entities":{"Q110551885":{"type":"item","id":"Q110551885","labels":{"en":{"language":"en","value":"mammal"},"fr":{"language":"fr","value":"mammif\u00e8re"},"ar":{"language":"ar","value":"\u0627\u0644\u062d\u064a\u0648\u0627\u0646
+        \u0627\u0644\u062b\u062f\u064a\u064a"},"de":{"language":"de","value":"S\u00e4ugetier"},"es":{"language":"es","value":"mam\u00edfero"},"it":{"language":"it","value":"mammifero"},"nl":{"language":"nl","value":"zoogdier"},"pt":{"language":"pt","value":"mam\u00edfero"},"ru":{"language":"ru","value":"\u043c\u043b\u0435\u043a\u043e\u043f\u0438\u0442\u0430\u044e\u0449\u0435\u0435"}},"descriptions":{"en":{"language":"en","value":"vertebrate
+        animals in which the young are nourished with milk from special mammary glands
+        of the mother"},"de":{"language":"de","value":"Wirbeltiere, bei denen die
+        Jungen mit Milch aus speziellen Brustdr\u00fcsen der Mutter ern\u00e4hrt werden"},"es":{"language":"es","value":"animales
+        vertebrados en los que las cr\u00edas se alimentan con leche de gl\u00e1ndulas
+        mamarias especiales de la madre"},"fr":{"language":"fr","value":"animaux vert\u00e9br\u00e9s
+        dont les jeunes sont nourris avec du lait provenant de glandes mammaires sp\u00e9ciales
+        de la m\u00e8re"},"it":{"language":"it","value":"animali vertebrati in cui
+        i piccoli vengono nutriti con il latte di speciali ghiandole mammarie della
+        madre"},"nl":{"language":"nl","value":"gewervelde dieren waarbij de jongen
+        worden gevoed met melk uit speciale borstklieren van de moeder"},"pt":{"language":"pt","value":"animais
+        vertebrados em que os jovens s\u00e3o nutridos com leite de gl\u00e2ndulas
+        mam\u00e1rias especiais da m\u00e3e"},"ar":{"language":"ar","value":"\u0627\u0644\u062d\u064a\u0648\u0627\u0646\u0627\u062a
+        \u0627\u0644\u0641\u0642\u0627\u0631\u064a\u0629 \u0627\u0644\u062a\u064a
+        \u064a\u062a\u063a\u0630\u0649 \u0635\u063a\u0627\u0631\u0647\u0627 \u0628\u0627\u0644\u062d\u0644\u064a\u0628
+        \u0645\u0646 \u0627\u0644\u063a\u062f\u062f \u0627\u0644\u062b\u062f\u064a\u064a\u0629
+        \u0627\u0644\u062e\u0627\u0635\u0629 \u0644\u0644\u0623\u0645"},"ru":{"language":"ru","value":"\u043f\u043e\u0437\u0432\u043e\u043d\u043e\u0447\u043d\u044b\u0435
+        \u0436\u0438\u0432\u043e\u0442\u043d\u044b\u0435, \u0443 \u043a\u043e\u0442\u043e\u0440\u044b\u0445
+        \u0434\u0435\u0442\u0435\u043d\u044b\u0448\u0438 \u043f\u0438\u0442\u0430\u044e\u0442\u0441\u044f
+        \u043c\u043e\u043b\u043e\u043a\u043e\u043c \u0438\u0437 \u043e\u0441\u043e\u0431\u044b\u0445
+        \u043c\u043e\u043b\u043e\u0447\u043d\u044b\u0445 \u0436\u0435\u043b\u0435\u0437
+        \u043c\u0430\u0442\u0435\u0440\u0438"}}},"Q1156970":{"type":"item","id":"Q1156970","labels":{"de":{"language":"de","value":"Menschheit"},"nl":{"language":"nl","value":"mensheid"},"en":{"language":"en","value":"humanity"},"it":{"language":"it","value":"umanit\u00e0"},"es":{"language":"es","value":"humanidad"},"pt":{"language":"pt","value":"humanidade"},"fr":{"language":"fr","value":"humanit\u00e9"},"ar":{"language":"ar","value":"\u0628\u0634\u0631\u064a\u0629"},"ru":{"language":"ru","value":"\u0447\u0435\u043b\u043e\u0432\u0435\u0447\u0435\u0441\u0442\u0432\u043e"}},"descriptions":{"en":{"language":"en","value":"total
+        world population of humans"},"es":{"language":"es","value":"conjunto total
+        de los seres humanos"},"pt":{"language":"pt","value":"conjunto total da popula\u00e7\u00e3o
+        humana mundial"},"fr":{"language":"fr","value":"ensemble des \u00eatres humains"},"de":{"language":"de","value":"Gesamtheit
+        der Menschen"},"nl":{"language":"nl","value":"alle mensen van verleden, heden
+        en toekomst te zamen; het mens-zijn"},"it":{"language":"it","value":"insieme
+        degli esseri umani"},"ru":{"language":"ru","value":"\u0441\u043e\u0432\u043e\u043a\u0443\u043f\u043d\u043e\u0441\u0442\u044c
+        \u0432\u0441\u0435\u0445 \u043b\u044e\u0434\u0435\u0439"}}},"Q164509":{"type":"item","id":"Q164509","labels":{"es":{"language":"es","value":"omn\u00edvoro"},"ar":{"language":"ar","value":"\u0642\u0627\u0631\u062a"},"nl":{"language":"nl","value":"omnivoor"},"pt":{"language":"pt","value":"omn\u00edvoro"},"ru":{"language":"ru","value":"\u0432\u0441\u0435\u044f\u0434\u043d\u043e\u0435
+        \u0436\u0438\u0432\u043e\u0442\u043d\u043e\u0435"},"fr":{"language":"fr","value":"omnivore"},"it":{"language":"it","value":"onnivoro"},"de":{"language":"de","value":"Allesfresser"},"en":{"language":"en","value":"omnivore"}},"descriptions":{"en":{"language":"en","value":"organism
+        consuming a variety of foods, usually including both plants and animals as
+        diet"},"es":{"language":"es","value":"animal que se alimenta tanto de animales
+        como de plantas"},"nl":{"language":"nl","value":"diersoort die gewoonlijk
+        zowel dierlijk als plantaardig voedsel eet"},"de":{"language":"de","value":"Organismen,
+        die sowohl pflanzliche als auch tierische Nahrung zu sich nehmen"},"pt":{"language":"pt","value":"organismo
+        que consome de forma indiferenciada alimentos de origem animal ou vegetal"},"fr":{"language":"fr","value":"organisme
+        consommant indiff\u00e9remment des aliments de toute origine (animale, v\u00e9g\u00e9tale,
+        fongique ou bact\u00e9rienne)"},"it":{"language":"it","value":"organismo che
+        si nutre di una vasta gamma di alimenti, sia di origine vegetale che animale"},"ar":{"language":"ar","value":"\u0643\u0627\u0626\u0646
+        \u062d\u064a \u064a\u062a\u063a\u0630\u0649 \u0639\u0644\u0649 \u0627\u0644\u0645\u0648\u0627\u062f
+        \u0627\u0644\u062d\u064a\u0648\u0627\u0646\u064a\u0629 \u0648\u0627\u0644\u0646\u0628\u0627\u062a\u064a\u0629"}}},"Q215627":{"type":"item","id":"Q215627","labels":{"es":{"language":"es","value":"persona"},"it":{"language":"it","value":"persona"},"de":{"language":"de","value":"Person"},"ar":{"language":"ar","value":"\u0634\u062e\u0635"},"ru":{"language":"ru","value":"\u043b\u0438\u0447\u043d\u043e\u0441\u0442\u044c"},"en":{"language":"en","value":"person"},"fr":{"language":"fr","value":"personne"},"nl":{"language":"nl","value":"persoon"},"pt":{"language":"pt","value":"pessoa"}},"descriptions":{"de":{"language":"de","value":"Individuum
+        mit bestimmten F\u00e4higkeiten und Eigenschaften"},"en":{"language":"en","value":"being
+        that has certain capacities or attributes constituting personhood (avoid use
+        with P31; use Q5 for humans)"},"it":{"language":"it","value":"individuo con
+        una coscienza e identit\u00e0 (da non utilizzare per \"istanza di\" [P31],
+        usare invece \"umano\" [Q5])"},"fr":{"language":"fr","value":"individu ou
+        entit\u00e9 ayant certaines capacit\u00e9s et attributs constitutifs d\u2019une
+        personnalit\u00e9 (les \u00e9l\u00e9ments se rapportant \u00e0 un \u00eatre
+        humain particulier doivent utiliser \u00ab\u202f\u00eatre humain\u202f\u00bb
+        [Q5] comme \u00ab\u202fnature de l\u2019\u00e9l\u00e9ment\u202f\u00bb [P31])."},"es":{"language":"es","value":"individuo
+        con ciertas capacidades o atributos que constituyen una personalidad"},"pt":{"language":"pt","value":"indiv\u00edduo
+        com uma consci\u00eancia e identidade"},"ru":{"language":"ru","value":"\u0447\u0435\u043b\u043e\u0432\u0435\u043a
+        (\u0440\u0435\u0430\u043b\u044c\u043d\u044b\u0439 \u0438\u043b\u0438 \u0432\u044b\u043c\u044b\u0448\u043b\u0435\u043d\u043d\u044b\u0439)
+        \u0441\u043e \u0441\u0432\u043e\u0438\u043c\u0438 \u0438\u043d\u0434\u0438\u0432\u0438\u0434\u0443\u0430\u043b\u044c\u043d\u044b\u043c\u0438
+        \u043e\u0441\u043e\u0431\u0435\u043d\u043d\u043e\u0441\u0442\u044f\u043c\u0438
+        \u0441 \u0441\u043e\u0446\u0438\u043e\u043a\u0443\u043b\u044c\u0442\u0443\u0440\u043d\u043e\u0439
+        \u0442\u043e\u0447\u043a\u0438 \u0437\u0440\u0435\u043d\u0438\u044f"},"nl":{"language":"nl","value":"individu
+        met bepaalde capaciteiten of eigenschappen (vermijd gebruik met P31; gebruik
+        Q5 voor mensen)"},"ar":{"language":"ar","value":"\u0643\u0627\u0626\u0646
+        \u0644\u062f\u064a\u0647 \u0642\u062f\u0631\u0627\u062a \u0623\u0648 \u0635\u0641\u0627\u062a
+        \u0645\u0639\u064a\u0646\u0629 \u0645\u062b\u0644 \u0627\u0644\u0639\u0642\u0644
+        \u0623\u0648 \u0627\u0644\u0645\u0646\u0637\u0642 \u0623\u0648 \u0627\u0644\u0625\u062f\u0631\u0627\u0643
+        \u0623\u0648 \u0627\u0644\u0623\u062e\u0644\u0627\u0642 \u0623\u0648 \u0627\u0644\u0648\u0639\u064a
+        \u0623\u0648 \u0627\u0644\u0648\u0639\u064a \u0627\u0644\u0630\u0627\u062a\u064a"}}},"Q26401003":{"type":"item","id":"Q26401003","labels":{"de":{"language":"de","value":"individuelles
+        Tier"},"fr":{"language":"fr","value":"animal individuel"},"en":{"language":"en","value":"individual
+        animal"},"es":{"language":"es","value":"animal individual"},"nl":{"language":"nl","value":"individueel
+        dier"},"ru":{"language":"ru","value":"\u0437\u043d\u0430\u043c\u0435\u043d\u0438\u0442\u043e\u0435
+        \u0436\u0438\u0432\u043e\u0442\u043d\u043e\u0435"},"it":{"language":"it","value":"animale
+        famoso"},"ar":{"language":"ar","value":"\u062d\u064a\u0648\u0627\u0646 \u0641\u0631\u062f"}},"descriptions":{"en":{"language":"en","value":"singular
+        named exemplar of an animal (e.g., the gorilla named Koko; the cat named Socks)"},"de":{"language":"de","value":"individuelles
+        Exemplar eines Tieres"}}},"Q42762":{"type":"item","id":"Q42762","labels":{"es":{"language":"es","value":"biosfera"},"ar":{"language":"ar","value":"\u0645\u062d\u064a\u0637
+        \u062d\u064a\u0648\u064a"},"nl":{"language":"nl","value":"biosfeer"},"pt":{"language":"pt","value":"biosfera"},"ru":{"language":"ru","value":"\u0431\u0438\u043e\u0441\u0444\u0435\u0440\u0430"},"fr":{"language":"fr","value":"biosph\u00e8re"},"it":{"language":"it","value":"biosfera"},"de":{"language":"de","value":"Biosph\u00e4re"},"en":{"language":"en","value":"biosphere"}},"descriptions":{"de":{"language":"de","value":"Raum
+        mit Leben auf einem Himmelsk\u00f6rper"},"en":{"language":"en","value":"global
+        sum of all ecosystems"},"ru":{"language":"ru","value":"\u043e\u0431\u043e\u043b\u043e\u0447\u043a\u0430
+        \u0417\u0435\u043c\u043b\u0438, \u0437\u0430\u0441\u0435\u043b\u0451\u043d\u043d\u0430\u044f
+        \u0436\u0438\u0432\u044b\u043c\u0438 \u043e\u0440\u0433\u0430\u043d\u0438\u0437\u043c\u0430\u043c\u0438"},"es":{"language":"es","value":"sistema
+        formado por el conjunto de los seres vivos del planeta Tierra y sus interrelaciones"},"fr":{"language":"fr","value":"totalit\u00e9
+        de tous les \u00e9cosyst\u00e8mes sur Terre"},"pt":{"language":"pt","value":"Biosfera"},"it":{"language":"it","value":"insieme
+        degli ecosistemi terrestri"},"nl":{"language":"nl","value":"de gezamenlijke
+        lagen van de aarde en de dampkring waarin leven mogelijk is"}}},"Q55983715":{"type":"item","id":"Q55983715","labels":{"en":{"language":"en","value":"organisms
+        known by a particular common name"},"ru":{"language":"ru","value":"\u0433\u0440\u0443\u043f\u043f\u0430
+        \u043e\u0440\u0433\u0430\u043d\u0438\u0437\u043c\u043e\u0432, \u0438\u0437\u0432\u0435\u0441\u0442\u043d\u0430\u044f
+        \u043f\u043e \u043d\u0430\u0440\u043e\u0434\u043d\u043e\u043c\u0443 \u043d\u0430\u0437\u0432\u0430\u043d\u0438\u044e"},"nl":{"language":"nl","value":"klasse
+        van organismen bekend onder \u00e9\u00e9n bepaalde gemeenschappelijke naam"},"it":{"language":"it","value":"classe
+        di organismi noti con un nome comune"},"pt":{"language":"pt","value":"classe
+        de organismos conhecido por um nome comum em particular"},"de":{"language":"de","value":"Organismen,
+        die unter einem bestimmten Trivialnamen bekannt sind"},"es":{"language":"es","value":"clase
+        de organismos conocidos por un nombre com\u00fan particular"},"fr":{"language":"fr","value":"groupe
+        d''organismes connu par un nom commun"},"ar":{"language":"ar","value":"\u0643\u0627\u0626\u0646\u0627\u062a
+        \u062d\u064a\u0629 \u0645\u0639\u0631\u0648\u0641\u0629 \u0628\u0627\u0633\u0645
+        \u0634\u0627\u0626\u0639"}},"descriptions":{"en":{"language":"en","value":"living
+        organism Wikidata metaclass"},"ar":{"language":"ar","value":"\u0635\u0646\u0641
+        \u0645\u064a\u062a\u0627 \u0648\u064a\u0643\u064a \u0628\u064a\u0627\u0646\u0627\u062a
+        \u062e\u0627\u0635 \u0628\u0627\u0644\u0643\u0627\u0626\u0646\u0627\u062a
+        \u0627\u0644\u062d\u064a\u064e\u0651\u0629"},"fr":{"language":"fr","value":"m\u00e9taclasse
+        Wikidata"},"es":{"language":"es","value":"metaclase de Wikidata"}}},"Q8425":{"type":"item","id":"Q8425","labels":{"en":{"language":"en","value":"society"},"de":{"language":"de","value":"Gesellschaft"},"it":{"language":"it","value":"societ\u00e0"},"es":{"language":"es","value":"sociedad"},"ar":{"language":"ar","value":"\u0627\u0644\u0645\u062c\u062a\u0645\u0639"},"fr":{"language":"fr","value":"soci\u00e9t\u00e9"},"nl":{"language":"nl","value":"maatschappij"},"pt":{"language":"pt","value":"sociedade"},"ru":{"language":"ru","value":"\u043e\u0431\u0449\u0435\u0441\u0442\u0432\u043e"}},"descriptions":{"en":{"language":"en","value":"group
+        of people related to each other through persistent relations"},"de":{"language":"de","value":"durch
+        unterschiedliche Merkmale zusammengefasste und abgegrenzte Anzahl von Personen"},"it":{"language":"it","value":"insieme
+        di individui dotati di diversi livelli di autonomia, relazione ed organizzazione
+        che, aggregandosi, interagiscono"},"es":{"language":"es","value":"agrupaci\u00f3n
+        de personas relacionadas las unas con las otras por puntos en com\u00fan"},"nl":{"language":"nl","value":"samenleving"},"fr":{"language":"fr","value":"ensemble
+        d''individus qui partagent des normes, des comportements et une culture"},"ru":{"language":"ru","value":"\u0441\u043e\u0432\u043e\u043a\u0443\u043f\u043d\u043e\u0441\u0442\u044c
+        \u0432\u0437\u0430\u0438\u043c\u043e\u0437\u0430\u0432\u0438\u0441\u0438\u043c\u044b\u0445
+        \u043b\u044e\u0434\u0435\u0439"},"pt":{"language":"pt","value":"grupo de pessoas
+        relacionadas entre si atrav\u00e9s de rela\u00e7\u00f5es persistentes"}}}},"success":1}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '2'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 25 Aug 2023 04:47:01 GMT
+      Server:
+      - mw2323.codfw.wmnet
+      Set-Cookie:
+      - WMF-Last-Access=25-Aug-2023;Path=/;HttpOnly;secure;Expires=Tue, 26 Sep 2023
+        00:00:00 GMT
+      - WMF-Last-Access-Global=25-Aug-2023;Path=/;Domain=.wikidata.org;HttpOnly;secure;Expires=Tue,
+        26 Sep 2023 00:00:00 GMT
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
 version: 1

@@ -41,7 +41,7 @@ if __name__ == "__main__":
     # dat = pickle.load(open(INFILE, "rb"))
 
     df = pd.read_csv("edits.csv")
-    print(df)
+    print(len(df))
 
     changes = []
     out = []

@@ -376,4 +376,204 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: null
+    headers:
+      Cookie:
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; NetworkProbeLimit=0.001; WMF-Last-Access=19-Aug-2023;
+        WMF-Last-Access-Global=19-Aug-2023
+      User-Agent:
+      - Quonter Vandal
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q18057751%7CQ5%7CQ6581097&props=labels%7Cdescriptions&languages=en%7Cde%7Cfr%7Ces%7Cru%7Cit%7Cpt%7Cnl%7Car&format=json
+  response:
+    body:
+      string: '{"entities":{"Q18057751":{"type":"item","id":"Q18057751","labels":{"en":{"language":"en","value":"David"},"fr":{"language":"fr","value":"David"},"ru":{"language":"ru","value":"\u0414\u0430\u0432\u0438\u0434
+        / \u0414\u044d(\u0439)\u0432\u0438\u0434"},"nl":{"language":"nl","value":"David"},"it":{"language":"it","value":"David"},"de":{"language":"de","value":"David"},"pt":{"language":"pt","value":"David"},"es":{"language":"es","value":"David"},"ar":{"language":"ar","value":"\u062f\u064a\u0641\u064a\u062f"}},"descriptions":{"ar":{"language":"ar","value":"\u0623\u0633\u0645
+        \u0645\u0630\u0643\u0631 \u0645\u0639\u0637\u0649 (David)"},"de":{"language":"de","value":"m\u00e4nnlicher
+        Vorname"},"en":{"language":"en","value":"male given name"},"es":{"language":"es","value":"nombre
+        masculino"},"fr":{"language":"fr","value":"pr\u00e9nom masculin"},"it":{"language":"it","value":"prenome
+        maschile"},"nl":{"language":"nl","value":"mannelijke voornaam"},"pt":{"language":"pt","value":"nome
+        pr\u00f3prio masculino"},"ru":{"language":"ru","value":"\u043c\u0443\u0436\u0441\u043a\u043e\u0435
+        \u043b\u0438\u0447\u043d\u043e\u0435 \u0438\u043c\u044f - David"}}},"Q5":{"type":"item","id":"Q5","labels":{"en":{"language":"en","value":"human"},"fr":{"language":"fr","value":"\u00eatre
+        humain"},"ru":{"language":"ru","value":"\u0447\u0435\u043b\u043e\u0432\u0435\u043a"},"it":{"language":"it","value":"umano"},"de":{"language":"de","value":"Mensch"},"es":{"language":"es","value":"ser
+        humano"},"pt":{"language":"pt","value":"ser humano"},"ar":{"language":"ar","value":"\u0625\u0646\u0633\u0627\u0646"},"nl":{"language":"nl","value":"mens"}},"descriptions":{"en":{"language":"en","value":"any
+        member of Homo sapiens, unique extant species of the genus Homo, from embryo
+        to adult"},"fr":{"language":"fr","value":"individu appartenant \u00e0 l\u2019esp\u00e8ce
+        Homo sapiens, la seule esp\u00e8ce restante du genre Homo \u2013 distinct
+        de \u00ab humain fictif \u00bb et de \u00ab humain possiblement fictif \u00bb"},"de":{"language":"de","value":"h\u00f6heres
+        S\u00e4ugetier aus der Ordnung der Primaten"},"es":{"language":"es","value":"nombre
+        com\u00fan de Homo sapiens, \u00fanica especie existente del g\u00e9nero Homo"},"it":{"language":"it","value":"nome
+        comune della specie Homo sapiens, l''unica esistente del genere Homo"},"nl":{"language":"nl","value":"tweevoetige
+        primatensoort uit de familie van de hominidae"},"ru":{"language":"ru","value":"\u043e\u0431\u0449\u0435\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0435
+        \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u043e, \u043e\u0431\u043b\u0430\u0434\u0430\u044e\u0449\u0435\u0435
+        \u0440\u0430\u0437\u0443\u043c\u043e\u043c \u0438 \u0441\u043e\u0437\u043d\u0430\u043d\u0438\u0435\u043c;
+        \u0441\u0443\u0431\u044a\u0435\u043a\u0442, \u043e\u0442\u043d\u043e\u0441\u044f\u0449\u0438\u0439\u0441\u044f
+        \u043a \u0432\u0438\u0434\u0443 \u0427\u0435\u043b\u043e\u0432\u0435\u043a
+        \u0440\u0430\u0437\u0443\u043c\u043d\u044b\u0439"},"pt":{"language":"pt","value":"\u00fanica
+        subesp\u00e9cie ainda existente do g\u00e9nero Homo"},"ar":{"language":"ar","value":"\u0627\u0644\u0627\u0633\u0645
+        \u0627\u0644\u0634\u0627\u0626\u0639 \u0644\u0644\u0625\u0646\u0633\u0627\u0646
+        \u0627\u0644\u0639\u0627\u0642\u0644\u060c \u0627\u0644\u0623\u0646\u0648\u0627\u0639
+        \u0627\u0644\u0641\u0631\u064a\u062f\u0629 \u0627\u0644\u0645\u0648\u062c\u0648\u062f\u0629
+        \u0645\u0646 \u062c\u0646\u0633 \u0627\u0644\u0625\u0646\u0633\u0627\u0646"}}},"Q6581097":{"type":"item","id":"Q6581097","labels":{"fr":{"language":"fr","value":"masculin"},"es":{"language":"es","value":"masculino"},"it":{"language":"it","value":"maschio"},"pt":{"language":"pt","value":"masculino"},"ru":{"language":"ru","value":"\u043c\u0443\u0436\u0441\u043a\u043e\u0439
+        \u043f\u043e\u043b"},"nl":{"language":"nl","value":"mannelijk"},"de":{"language":"de","value":"m\u00e4nnlich"},"ar":{"language":"ar","value":"\u0630\u0643\u0631"},"en":{"language":"en","value":"male"}},"descriptions":{"es":{"language":"es","value":"sexo
+        o g\u00e9nero humano"},"fr":{"language":"fr","value":"\u00e9l\u00e9ment \u00e0
+        utiliser dans P21 (\u00ab sexe ou genre \u00bb) pour signifier que la personne
+        est de sexe masculin"},"it":{"language":"it","value":"essere umano di sesso
+        maschile (da usare con la propriet\u00e0:P21 \"sesso o genere\")"},"pt":{"language":"pt","value":"pessoa
+        que \u00e9 do sexo masculino (usar com a propriedade P21 para indicar o sexo
+        ou g\u00e9nero)"},"nl":{"language":"nl","value":"persoon van het mannelijk
+        geslacht, te gebruiken met P21 (sekse)"},"de":{"language":"de","value":"Mensch
+        mit m\u00e4nnlichem Geschlecht (Verwendung mit P21)"},"ru":{"language":"ru","value":"\u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442\u0441\u044f
+        \u0432 \u0441\u0432\u043e\u0439\u0441\u0442\u0432\u0435 P21 (\u043f\u043e\u043b
+        \u0447\u0435\u043b\u043e\u0432\u0435\u043a\u0430)"},"ar":{"language":"ar","value":"\u0625\u0646\u0633\u0627\u0646
+        \u0630\u0643\u0631 (\u064a\u0633\u062a\u062e\u062f\u0645 \u0645\u0639 P21)"},"en":{"language":"en","value":"to
+        be used in \"sex or gender\" (P21) to indicate that the human subject is a
+        male or \"semantic gender\" (P10339) to indicate that a word refers to a male
+        person"}}}},"success":1}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 25 Aug 2023 04:47:00 GMT
+      Server:
+      - mw2326.codfw.wmnet
+      Set-Cookie:
+      - WMF-Last-Access=25-Aug-2023;Path=/;HttpOnly;secure;Expires=Tue, 26 Sep 2023
+        00:00:00 GMT
+      - WMF-Last-Access-Global=25-Aug-2023;Path=/;Domain=.wikidata.org;HttpOnly;secure;Expires=Tue,
+        26 Sep 2023 00:00:00 GMT
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      User-Agent:
+      - Quonter Vandal
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=P40%7CP854%7CQ121633519&props=labels%7Cdescriptions&languages=en%7Cde%7Cfr%7Ces%7Cru%7Cit%7Cpt%7Cnl%7Car&format=json
+  response:
+    body:
+      string: '{"entities":{"P40":{"type":"property","datatype":"wikibase-item","id":"P40","labels":{"de":{"language":"de","value":"Kind"},"en":{"language":"en","value":"child"},"fr":{"language":"fr","value":"enfant"},"it":{"language":"it","value":"figlio"},"ru":{"language":"ru","value":"\u0434\u0435\u0442\u0438"},"es":{"language":"es","value":"hijo
+        o hija"},"nl":{"language":"nl","value":"kind"},"pt":{"language":"pt","value":"descend\u00eancia"},"ar":{"language":"ar","value":"\u0627\u0644\u0627\u0628\u0646"}},"descriptions":{"de":{"language":"de","value":"Kind
+        der Person"},"fr":{"language":"fr","value":"lien familial direct indiquant
+        que l''objet du lien est un fils ou une fille du sujet (ind\u00e9pendamment
+        de son \u00e2ge)"},"it":{"language":"it","value":"grado di parentela"},"es":{"language":"es","value":"familiar
+        descendiente en primer grado de parentesco"},"pt":{"language":"pt","value":"um
+        ou mais filhos do sujeito"},"nl":{"language":"nl","value":"kind van deze persoon"},"ru":{"language":"ru","value":"\u0434\u0435\u0442\u0438
+        \u044d\u0442\u043e\u0433\u043e \u0447\u0435\u043b\u043e\u0432\u0435\u043a\u0430"},"ar":{"language":"ar","value":"\u0627\u0644\u0645\u0648\u0636\u0648\u0639
+        \u0644\u0647 \u0643\u0627\u0626\u0646 \u0643\u0637\u0641\u0644. \u0644\u0627
+        \u062a\u0633\u062a\u062e\u062f\u0645\u0647 \u0645\u0639 \u0623\u0648\u0644\u0627\u062f
+        \u0627\u0644\u0632\u0648\u062c / \u0627\u0644\u0632\u0648\u062c\u0629 - \u0627\u0633\u062a\u062e\u062f\u0645
+        \"\u0642\u0631\u064a\u0628\" (P1038) \u060c \u0645\u0624\u0647\u0644 \u0628\u0640
+        \"\u0646\u0648\u0639 \u0627\u0644\u0642\u0631\u0627\u0628\u0629\" (P1039)"},"en":{"language":"en","value":"subject
+        has object as child. Do not use for stepchildren\u2014use \"relative\" (P1038),
+        qualified with \"type of kinship\" (P1039)"}}},"P854":{"type":"property","datatype":"url","id":"P854","labels":{"es":{"language":"es","value":"direcci\u00f3n
+        web de la referencia"},"fr":{"language":"fr","value":"URL de la r\u00e9f\u00e9rence"},"it":{"language":"it","value":"URL
+        di riferimento"},"nl":{"language":"nl","value":"URL voor bron"},"pt":{"language":"pt","value":"endere\u00e7o
+        eletr\u00f3nico da refer\u00eancia"},"de":{"language":"de","value":"URL der
+        Fundstelle"},"ru":{"language":"ru","value":"URL-\u0441\u0441\u044b\u043b\u043a\u0430
+        \u043d\u0430 \u0438\u0441\u0442\u043e\u0447\u043d\u0438\u043a"},"ar":{"language":"ar","value":"\u0648\u0635\u0644\u0629
+        \u0645\u0631\u062c\u0639"},"en":{"language":"en","value":"reference URL"}},"descriptions":{"fr":{"language":"fr","value":"devrait
+        \u00eatre d\u00e9fini pour les URL des documents web utilis\u00e9s comme r\u00e9f\u00e9rence"},"it":{"language":"it","value":"deve
+        essere utilizzato per gli URL di internet come riferimenti"},"pt":{"language":"pt","value":"endere\u00e7o
+        eletr\u00f3nico onde a refer\u00eancia est\u00e1 depositada"},"de":{"language":"de","value":"Internetadresse
+        f\u00fcr Quellenangaben. Benutze P4656 f\u00fcr Interwiki-Links"},"nl":{"language":"nl","value":"bedoeld
+        voor websiteadressen bij bronnen"},"ru":{"language":"ru","value":"\u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442\u0441\u044f
+        \u0434\u043b\u044f URL (\u0430\u0434\u0440\u0435\u0441\u0430 \u0432\u0435\u0431-\u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b)
+        \u0432 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u0435 \u0438\u0441\u0442\u043e\u0447\u043d\u0438\u043a\u0430"},"ar":{"language":"ar","value":"\u064a\u062c\u0628
+        \u0623\u0646 \u062a\u0633\u062a\u062e\u062f\u0645 \u0644\u0639\u0646\u0627\u0648\u064a\u0646
+        \u0623\u0648 \u0648\u0635\u0644\u0627\u062a \u0627\u0644\u0625\u0646\u062a\u0631\u0646\u062a
+        \u0643\u0645\u0631\u0627\u062c\u0639"},"en":{"language":"en","value":"should
+        be used for Internet URLs as references. Use \"Wikimedia import URL\" (P4656)
+        for imports from WMF sites"},"es":{"language":"es","value":"debe usarse para
+        enlaces web que se utilizan como referencia"}}},"Q121633519":{"type":"item","id":"Q121633519","labels":{"en":{"language":"en","value":"Am\u00e9lie
+        Armogathe"}},"descriptions":{}}},"success":1}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 25 Aug 2023 04:47:00 GMT
+      Server:
+      - mw2292.codfw.wmnet
+      Set-Cookie:
+      - WMF-Last-Access=25-Aug-2023;Path=/;HttpOnly;secure;Expires=Tue, 26 Sep 2023
+        00:00:00 GMT
+      - WMF-Last-Access-Global=25-Aug-2023;Path=/;Domain=.wikidata.org;HttpOnly;secure;Expires=Tue,
+        26 Sep 2023 00:00:00 GMT
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; Path=/; secure; Domain=.wikidata.org
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
 version: 1

@@ -20,6 +20,7 @@ async def get_summary(revision_content: RevisionContent) -> SnippetResponse:
 
     title = None
     wiki_url = None
+    wiki = None
     for wiki in wikis:
         if wiki in sitelinks_by_langcode:
             title = sitelinks_by_langcode[wiki]
@@ -34,7 +35,7 @@ async def get_summary(revision_content: RevisionContent) -> SnippetResponse:
     params = {
         'action': 'query',
         'prop': 'extracts',
-        'exsentences': 2,
+        'exchars': 225,
         'explaintext': 'true',
         'exsectionformat': 'plain',
         'titles': [title]
@@ -54,4 +55,4 @@ async def get_summary(revision_content: RevisionContent) -> SnippetResponse:
     if page['title'] != title:
         # this shouldn't happen either
         raise Exception("Title returned doesn't match title requested.")
-    return SnippetResponse(page['extract'].strip(), wiki)
+    return SnippetResponse(page['extract'].strip() + "...", wiki)

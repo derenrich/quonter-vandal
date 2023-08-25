@@ -521,4 +521,306 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: null
+    headers:
+      User-Agent:
+      - Quonter Vandal
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=P1326%7CP569%7CP570&props=labels%7Cdescriptions&languages=en%7Cde%7Cfr%7Ces%7Cru%7Cit%7Cpt%7Cnl%7Car&format=json
+  response:
+    body:
+      string: '{"entities":{"P1326":{"type":"property","datatype":"time","id":"P1326","labels":{"en":{"language":"en","value":"latest
+        date"},"ru":{"language":"ru","value":"\u043d\u0435 \u043f\u043e\u0437\u0434\u043d\u0435\u0435"},"de":{"language":"de","value":"sp\u00e4testm\u00f6glicher
+        Zeitpunkt"},"fr":{"language":"fr","value":"date au plus tard"},"nl":{"language":"nl","value":"laatst
+        mogelijke datum"},"es":{"language":"es","value":"fecha m\u00e1s tard\u00eda"},"it":{"language":"it","value":"data
+        pi\u00f9 tarda"},"pt":{"language":"pt","value":"data mais recente"},"ar":{"language":"ar","value":"\u0623\u0628\u0639\u062f
+        \u062a\u0627\u0631\u064a\u062e \u0645\u0645\u0643\u0646"}},"descriptions":{"en":{"language":"en","value":"latest
+        possible time that something could have occurred. Use as qualifier for other
+        date properties"},"ru":{"language":"ru","value":"\u043d\u0430\u0438\u0431\u043e\u043b\u0435\u0435
+        \u043f\u043e\u0437\u0434\u043d\u044f\u044f \u0434\u0430\u0442\u0430, \u043a\u043e\u0433\u0434\u0430
+        \u0441\u043e\u0431\u044b\u0442\u0438\u0435 \u043c\u043e\u0433\u043b\u043e
+        \u0441\u043b\u0443\u0447\u0438\u0442\u044c\u0441\u044f"},"de":{"language":"de","value":"sp\u00e4testm\u00f6glicher
+        Zeitpunkt, zu dem etwas stattgefunden haben k\u00f6nnte (m\u00f6glicher Zeitpunkt
+        liegt davor)"},"fr":{"language":"fr","value":"date la plus tardive \u00e0
+        laquelle un \u00e9v\u00e9nement a pu ou pourrait se produire. Utiliser comme
+        qualificatif pour d''autres propri\u00e9t\u00e9s de date."},"nl":{"language":"nl","value":"laatst
+        mogelijke moment dat er iets zou kunnen hebben voorgedaan"},"es":{"language":"es","value":"fecha
+        m\u00e1s tard\u00eda posible en la que algo podr\u00eda haber ocurrido"},"it":{"language":"it","value":"data
+        oltre la quale non si ritiene possibile sia potuto occorrere un evento"}}},"P569":{"type":"property","datatype":"time","id":"P569","labels":{"fr":{"language":"fr","value":"date
+        de naissance"},"en":{"language":"en","value":"date of birth"},"de":{"language":"de","value":"Geburtsdatum"},"it":{"language":"it","value":"data
+        di nascita"},"nl":{"language":"nl","value":"geboortedatum"},"ru":{"language":"ru","value":"\u0434\u0430\u0442\u0430
+        \u0440\u043e\u0436\u0434\u0435\u043d\u0438\u044f"},"es":{"language":"es","value":"fecha
+        de nacimiento"},"pt":{"language":"pt","value":"data de nascimento"},"ar":{"language":"ar","value":"\u062a\u0627\u0631\u064a\u062e
+        \u0627\u0644\u0645\u064a\u0644\u0627\u062f"}},"descriptions":{"fr":{"language":"fr","value":"date
+        \u00e0 laquelle la personne est n\u00e9e"},"de":{"language":"de","value":"Datum,
+        an dem eine Person geboren wurde"},"en":{"language":"en","value":"date on
+        which the subject was born"},"es":{"language":"es","value":"fecha en la cual
+        naci\u00f3 el sujeto"},"it":{"language":"it","value":"data in cui il soggetto
+        \u00e8 nato"},"ru":{"language":"ru","value":"\u0434\u0435\u043d\u044c, \u043c\u0435\u0441\u044f\u0446,
+        \u0433\u043e\u0434, \u0432 \u043a\u043e\u0442\u043e\u0440\u044b\u0439 \u0441\u0443\u0431\u044a\u0435\u043a\u0442
+        \u0431\u044b\u043b \u0440\u043e\u0436\u0434\u0451\u043d"},"nl":{"language":"nl","value":"datum
+        waarop de persoon is geboren"},"pt":{"language":"pt","value":"data na qual
+        o sujeito nasceu"},"ar":{"language":"ar","value":"\u0627\u0644\u062a\u0627\u0631\u064a\u062e
+        \u0627\u0644\u0630\u064a \u0648\u0644\u062f \u0641\u064a\u0647 \u0647\u0630\u0627
+        \u0627\u0644\u0634\u062e\u0635 \u0623\u0648 \u0627\u0644\u0634\u064a\u0621"}}},"P570":{"type":"property","datatype":"time","id":"P570","labels":{"fr":{"language":"fr","value":"date
+        de mort"},"en":{"language":"en","value":"date of death"},"de":{"language":"de","value":"Sterbedatum"},"it":{"language":"it","value":"data
+        di morte"},"nl":{"language":"nl","value":"overlijdensdatum"},"ru":{"language":"ru","value":"\u0434\u0430\u0442\u0430
+        \u0441\u043c\u0435\u0440\u0442\u0438"},"es":{"language":"es","value":"fecha
+        de fallecimiento"},"pt":{"language":"pt","value":"data de morte"},"ar":{"language":"ar","value":"\u062a\u0627\u0631\u064a\u062e
+        \u0627\u0644\u0648\u0641\u0627\u0629"}},"descriptions":{"fr":{"language":"fr","value":"date
+        \u00e0 laquelle le sujet est mort"},"de":{"language":"de","value":"Datum,
+        an dem eine Person verstarb"},"en":{"language":"en","value":"date on which
+        the subject died"},"es":{"language":"es","value":"fecha en la cual falleci\u00f3
+        el sujeto"},"it":{"language":"it","value":"data in cui il soggetto \u00e8
+        morto"},"nl":{"language":"nl","value":"datum waarop de persoon is overleden"},"ru":{"language":"ru","value":"\u0434\u0435\u043d\u044c,
+        \u043c\u0435\u0441\u044f\u0446, \u0433\u043e\u0434, \u0432 \u043a\u043e\u0442\u043e\u0440\u044b\u0439
+        \u0441\u0443\u0431\u044a\u0435\u043a\u0442 \u0443\u043c\u0435\u0440"},"ar":{"language":"ar","value":"\u0627\u0644\u062a\u0627\u0631\u064a\u062e
+        \u0627\u0644\u0630\u064a \u062a\u0648\u0641\u064a \u0641\u064a\u0647 \u0647\u0630\u0627
+        \u0627\u0644\u0634\u062e\u0635 \u0623\u0648 \u0627\u0644\u0634\u064a\u0621"},"pt":{"language":"pt","value":"data
+        em que o sujeito morreu"}}}},"success":1}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 25 Aug 2023 04:47:00 GMT
+      Server:
+      - mw2328.codfw.wmnet
+      Set-Cookie:
+      - WMF-Last-Access=25-Aug-2023;Path=/;HttpOnly;secure;Expires=Tue, 26 Sep 2023
+        00:00:00 GMT
+      - WMF-Last-Access-Global=25-Aug-2023;Path=/;Domain=.wikidata.org;HttpOnly;secure;Expires=Tue,
+        26 Sep 2023 00:00:00 GMT
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; Path=/; secure; Domain=.wikidata.org
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Cookie:
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; NetworkProbeLimit=0.001; WMF-Last-Access=20-Aug-2023;
+        WMF-Last-Access-Global=20-Aug-2023
+      User-Agent:
+      - Quonter Vandal
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q1747689%7CQ5%7CQ6581097%7CQ97667506%7CQ98103687&props=labels%7Cdescriptions&languages=en%7Cde%7Cfr%7Ces%7Cru%7Cit%7Cpt%7Cnl%7Car&format=json
+  response:
+    body:
+      string: '{"entities":{"Q1747689":{"type":"item","id":"Q1747689","labels":{"en":{"language":"en","value":"Ancient
+        Rome"},"ru":{"language":"ru","value":"\u0414\u0440\u0435\u0432\u043d\u0438\u0439
+        \u0420\u0438\u043c"},"es":{"language":"es","value":"Antigua Roma"},"it":{"language":"it","value":"civilt\u00e0
+        romana"},"nl":{"language":"nl","value":"Oude Rome"},"pt":{"language":"pt","value":"Roma
+        Antiga"},"ar":{"language":"ar","value":"\u0631\u0648\u0645\u0627 \u0627\u0644\u0642\u062f\u064a\u0645\u0629"},"fr":{"language":"fr","value":"Rome
+        antique"},"de":{"language":"de","value":"R\u00f6misches Reich"}},"descriptions":{"en":{"language":"en","value":"country
+        that began growing on the Italian Peninsula from the 8th century BC"},"es":{"language":"es","value":"civilizaci\u00f3n
+        de la Antig\u00fcedad surgida de la expansi\u00f3n de Roma"},"it":{"language":"it","value":"civilt\u00e0
+        dell''evo antico incentrata sulla citt\u00e0 di Roma e da l\u00ec diffusasi
+        in Italia e nel Mediterraneo (VIII secolo a.C.-V secolo d.C.)"},"de":{"language":"de","value":"historischer
+        Staat"},"fr":{"language":"fr","value":"ancien \u00c9tat"},"nl":{"language":"nl","value":"rond
+        8e eeuw v.Chr. ontstane stadstaat in Latium, die het Middellandse Zeegebied
+        zou gaan domineren"},"ar":{"language":"ar","value":"\u062d\u0636\u0627\u0631\u0629
+        \u0627\u0646\u0628\u062b\u0642\u062a \u0639\u0646 \u0645\u062c\u062a\u0645\u0639
+        \u0632\u0631\u0627\u0639\u064a \u0635\u063a\u064a\u0631 \u0641\u064a \u0634\u0628\u0647
+        \u0627\u0644\u062c\u0632\u064a\u0631\u0629 \u0627\u0644\u0625\u064a\u0637\u0627\u0644\u064a\u0629"},"ru":{"language":"ru","value":"\u0446\u0438\u0432\u0438\u043b\u0438\u0437\u0430\u0446\u0438\u044f
+        \u0414\u0440\u0435\u0432\u043d\u0435\u0433\u043e \u043c\u0438\u0440\u0430"},"pt":{"language":"pt","value":"civiliza\u00e7\u00e3o
+        it\u00e1lica que surgiu no s\u00e9culo VIII a.c"}}},"Q5":{"type":"item","id":"Q5","labels":{"en":{"language":"en","value":"human"},"fr":{"language":"fr","value":"\u00eatre
+        humain"},"ru":{"language":"ru","value":"\u0447\u0435\u043b\u043e\u0432\u0435\u043a"},"it":{"language":"it","value":"umano"},"de":{"language":"de","value":"Mensch"},"es":{"language":"es","value":"ser
+        humano"},"pt":{"language":"pt","value":"ser humano"},"ar":{"language":"ar","value":"\u0625\u0646\u0633\u0627\u0646"},"nl":{"language":"nl","value":"mens"}},"descriptions":{"en":{"language":"en","value":"any
+        member of Homo sapiens, unique extant species of the genus Homo, from embryo
+        to adult"},"fr":{"language":"fr","value":"individu appartenant \u00e0 l\u2019esp\u00e8ce
+        Homo sapiens, la seule esp\u00e8ce restante du genre Homo \u2013 distinct
+        de \u00ab humain fictif \u00bb et de \u00ab humain possiblement fictif \u00bb"},"de":{"language":"de","value":"h\u00f6heres
+        S\u00e4ugetier aus der Ordnung der Primaten"},"es":{"language":"es","value":"nombre
+        com\u00fan de Homo sapiens, \u00fanica especie existente del g\u00e9nero Homo"},"it":{"language":"it","value":"nome
+        comune della specie Homo sapiens, l''unica esistente del genere Homo"},"nl":{"language":"nl","value":"tweevoetige
+        primatensoort uit de familie van de hominidae"},"ru":{"language":"ru","value":"\u043e\u0431\u0449\u0435\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0435
+        \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u043e, \u043e\u0431\u043b\u0430\u0434\u0430\u044e\u0449\u0435\u0435
+        \u0440\u0430\u0437\u0443\u043c\u043e\u043c \u0438 \u0441\u043e\u0437\u043d\u0430\u043d\u0438\u0435\u043c;
+        \u0441\u0443\u0431\u044a\u0435\u043a\u0442, \u043e\u0442\u043d\u043e\u0441\u044f\u0449\u0438\u0439\u0441\u044f
+        \u043a \u0432\u0438\u0434\u0443 \u0427\u0435\u043b\u043e\u0432\u0435\u043a
+        \u0440\u0430\u0437\u0443\u043c\u043d\u044b\u0439"},"pt":{"language":"pt","value":"\u00fanica
+        subesp\u00e9cie ainda existente do g\u00e9nero Homo"},"ar":{"language":"ar","value":"\u0627\u0644\u0627\u0633\u0645
+        \u0627\u0644\u0634\u0627\u0626\u0639 \u0644\u0644\u0625\u0646\u0633\u0627\u0646
+        \u0627\u0644\u0639\u0627\u0642\u0644\u060c \u0627\u0644\u0623\u0646\u0648\u0627\u0639
+        \u0627\u0644\u0641\u0631\u064a\u062f\u0629 \u0627\u0644\u0645\u0648\u062c\u0648\u062f\u0629
+        \u0645\u0646 \u062c\u0646\u0633 \u0627\u0644\u0625\u0646\u0633\u0627\u0646"}}},"Q6581097":{"type":"item","id":"Q6581097","labels":{"fr":{"language":"fr","value":"masculin"},"es":{"language":"es","value":"masculino"},"it":{"language":"it","value":"maschio"},"pt":{"language":"pt","value":"masculino"},"ru":{"language":"ru","value":"\u043c\u0443\u0436\u0441\u043a\u043e\u0439
+        \u043f\u043e\u043b"},"nl":{"language":"nl","value":"mannelijk"},"de":{"language":"de","value":"m\u00e4nnlich"},"ar":{"language":"ar","value":"\u0630\u0643\u0631"},"en":{"language":"en","value":"male"}},"descriptions":{"es":{"language":"es","value":"sexo
+        o g\u00e9nero humano"},"fr":{"language":"fr","value":"\u00e9l\u00e9ment \u00e0
+        utiliser dans P21 (\u00ab sexe ou genre \u00bb) pour signifier que la personne
+        est de sexe masculin"},"it":{"language":"it","value":"essere umano di sesso
+        maschile (da usare con la propriet\u00e0:P21 \"sesso o genere\")"},"pt":{"language":"pt","value":"pessoa
+        que \u00e9 do sexo masculino (usar com a propriedade P21 para indicar o sexo
+        ou g\u00e9nero)"},"nl":{"language":"nl","value":"persoon van het mannelijk
+        geslacht, te gebruiken met P21 (sekse)"},"de":{"language":"de","value":"Mensch
+        mit m\u00e4nnlichem Geschlecht (Verwendung mit P21)"},"ru":{"language":"ru","value":"\u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442\u0441\u044f
+        \u0432 \u0441\u0432\u043e\u0439\u0441\u0442\u0432\u0435 P21 (\u043f\u043e\u043b
+        \u0447\u0435\u043b\u043e\u0432\u0435\u043a\u0430)"},"ar":{"language":"ar","value":"\u0625\u0646\u0633\u0627\u0646
+        \u0630\u0643\u0631 (\u064a\u0633\u062a\u062e\u062f\u0645 \u0645\u0639 P21)"},"en":{"language":"en","value":"to
+        be used in \"sex or gender\" (P21) to indicate that the human subject is a
+        male or \"semantic gender\" (P10339) to indicate that a word refers to a male
+        person"}}},"Q97667506":{"type":"item","id":"Q97667506","labels":{"es":{"language":"es","value":"pol\u00edtico
+        de la Antigua Roma"},"en":{"language":"en","value":"Ancient Roman politician"},"it":{"language":"it","value":"politico
+        romano"},"fr":{"language":"fr","value":"homme politique de la Rome antique"},"ru":{"language":"ru","value":"\u043f\u043e\u043b\u0438\u0442\u0438\u043a
+        \u0414\u0440\u0435\u0432\u043d\u0435\u0433\u043e \u0420\u0438\u043c\u0430"},"nl":{"language":"nl","value":"Romeins
+        politicus"},"de":{"language":"de","value":"antiker r\u00f6mischer Politiker"}},"descriptions":{"es":{"language":"es","value":"ciudadano
+        romano involucrado en la pol\u00edtica de la ciudad"},"it":{"language":"it","value":"politico
+        dell''antica Roma"},"de":{"language":"de","value":"Politiker in dem R\u00f6mischen
+        K\u00f6nigreich, der R\u00f6mischen Republik oder dem R\u00f6mischen Kaiserreich"}}},"Q98103687":{"type":"item","id":"Q98103687","labels":{"es":{"language":"es","value":"militar
+        de la Antigua Roma"},"en":{"language":"en","value":"Ancient Roman military
+        personnel"},"fr":{"language":"fr","value":"militaire romain"},"it":{"language":"it","value":"militare
+        romano"},"ru":{"language":"ru","value":"\u0432\u043e\u0435\u043d\u043d\u044b\u0439
+        \u0414\u0440\u0435\u0432\u043d\u0435\u0433\u043e \u0420\u0438\u043c\u0430"},"nl":{"language":"nl","value":"Romeins
+        militair"},"de":{"language":"de","value":"antiker r\u00f6mischer Milit\u00e4r"}},"descriptions":{"es":{"language":"es","value":"ciudadano
+        romano que sirve en el Ej\u00e9rcito por tiempo limitado"},"fr":{"language":"fr","value":"militaire
+        de la Rome antique"},"en":{"language":"en","value":"military personnel of
+        the state of Rome"}}}},"success":1}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 25 Aug 2023 04:47:00 GMT
+      Server:
+      - mw2416.codfw.wmnet
+      Set-Cookie:
+      - WMF-Last-Access=25-Aug-2023;Path=/;HttpOnly;secure;Expires=Tue, 26 Sep 2023
+        00:00:00 GMT
+      - WMF-Last-Access-Global=25-Aug-2023;Path=/;Domain=.wikidata.org;HttpOnly;secure;Expires=Tue,
+        26 Sep 2023 00:00:00 GMT
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      User-Agent:
+      - Quonter Vandal
+    method: GET
+    uri: https://en.wikipedia.org/w/api.php?action=query&prop=extracts&exchars=225&explaintext=true&exsectionformat=plain&titles=Manius+Curius+Dentatus&format=json
+  response:
+    body:
+      string: '{"batchcomplete":"","query":{"pages":{"325562":{"pageid":325562,"ns":0,"title":"Manius
+        Curius Dentatus","extract":"Manius Curius Dentatus (died 270 BC) was a Roman
+        general and statesman noted for ending the Samnite War and for his military
+        exploits during the Pyrrhic War. According to Pliny, he was born with teeth,
+        thus earning the surname..."}}}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Length:
+      - '349'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 25 Aug 2023 04:47:00 GMT
+      Server:
+      - mw2417.codfw.wmnet
+      Set-Cookie:
+      - WMF-Last-Access=25-Aug-2023;Path=/;HttpOnly;secure;Expires=Tue, 26 Sep 2023
+        00:00:00 GMT
+      - WMF-Last-Access-Global=25-Aug-2023;Path=/;Domain=.wikipedia.org;HttpOnly;secure;Expires=Tue,
+        26 Sep 2023 00:00:00 GMT
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; Path=/; secure; Domain=.wikipedia.org
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
 version: 1

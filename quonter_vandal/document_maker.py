@@ -2,10 +2,12 @@ from typing import Mapping, Optional, Tuple, List
 import mwapi
 import aiohttp
 import asyncio
+from quonter_vandal.config import surpressed_qid_descriptions
 from quonter_vandal.diff import *
 from quonter_vandal.lookup import LookupItemAtRevision, EntityInfo, LookupEntities, RevisionContent
 from dataclasses import dataclass
 from itertools import chain
+
 
 from quonter_vandal.wiki_summary import get_summary
 
@@ -243,7 +245,10 @@ class DocumentMaker:
             case StatementPropertyValue(pid):
                 return f"{qid_map[pid].label} ({qid_map[pid].description})"
             case StatementItemValue(qid):
-                return f"{qid_map[qid].label} ({qid_map[qid].description})"
+                if qid not in surpressed_qid_descriptions:
+                    return f"{qid_map[qid].label} ({qid_map[qid].description})"
+                else:
+                    return f"{qid_map[qid].label}"
             case StatementQuantityValue(quantity):
                 return f"{quantity}"
             case StatementMonolingualTextValue(text, lang):
@@ -334,7 +339,9 @@ class DocumentMaker:
 
         if prior_data:
             try:
-                summary = await get_summary(prior_data)
+                summary = (await get_summary(prior_data))
+                if not summary.snippet:
+                    summary = None
             except:
                 summary = None
         else:
@@ -348,7 +355,11 @@ class DocumentMaker:
     async def make_document(self, start_rev: int, end_rev: int) -> Optional[str]:
         try:
             qid_pid_info, prior_data, diff, summary = await self.make_document_data(start_rev, end_rev)
+            if len(diff.changes) == 0:
+                # don't emit documents for null changes
+                return None
             diff_doc = self._diff_to_document(diff, qid_pid_info)
+            print(summary, )
             if summary:
                 summary_doc = f"\nSnippet ({summary.wiki})\n====\n {summary.snippet}\n"
             else:

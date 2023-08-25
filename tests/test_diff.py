@@ -279,26 +279,27 @@ def test_badges_change():
     assert diff.user == "BrokenSegue"
     assert len(diff.changes) == 4
     add_no_proof_badge = diff.changes[0]
-    assert (add_no_proof_badge.field == SitelinkChangeStatement(lang='dewiki'))
+    assert (add_no_proof_badge.field == SitelinkChangeStatement(
+        lang='dewiki', badge='badge'))
     assert (add_no_proof_badge.old == None)
     assert (add_no_proof_badge.new == StatementItemValue("Q20748091"))
 
     add_problematic_badge = diff.changes[1]
     assert (add_problematic_badge.field ==
-            SitelinkChangeStatement(lang='dewiki'))
+            SitelinkChangeStatement(lang='dewiki', badge='badge'))
     assert (add_problematic_badge.old == None)
     assert (add_problematic_badge.new == StatementItemValue("Q20748094"))
 
     rm_featured_list_badge = diff.changes[2]
     print(rm_featured_list_badge)
     assert (rm_featured_list_badge.field ==
-            SitelinkChangeStatement(lang='dewiki'))
+            SitelinkChangeStatement(lang='dewiki', badge='badge'))
     assert (rm_featured_list_badge.old == StatementItemValue("Q17506997"))
     assert (rm_featured_list_badge.new == None)
 
     rm_featured_portal_badge = diff.changes[3]
     assert (rm_featured_portal_badge.field ==
-            SitelinkChangeStatement(lang='dewiki'))
+            SitelinkChangeStatement(lang='dewiki', badge='badge'))
     assert (rm_featured_portal_badge.old == StatementItemValue("Q17580674"))
     assert (rm_featured_portal_badge.new == None)
 
