@@ -55,4 +55,4 @@ async def get_summary(revision_content: RevisionContent) -> SnippetResponse:
     if page['title'] != title:
         # this shouldn't happen either
         raise Exception("Title returned doesn't match title requested.")
-    return SnippetResponse(page['extract'].strip() + "...", wiki)
+    return SnippetResponse(page['extract'].strip(), wiki)
