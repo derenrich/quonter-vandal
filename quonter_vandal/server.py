@@ -5,34 +5,24 @@ from quonter_vandal.diff_grouper import DiffGrouper
 from quonter_vandal.document_maker import DocumentMaker
 import mwapi
 import aiohttp
-from aiohttp import web
+from fastapi import FastAPI
 import json
 import time
 
-
-async def handle(request):
-    name = request.match_info.get('name', "Anonymous")
-    text = "Hello, " + name
-    return web.Response(text=text)
+app = FastAPI()
 
 
-async def handle_time(request):
-    return web.Response(text=str(time.time()))
+@app.get("/")
+def read_root():
+    return {"Hello": "World"}
 
 
-app = web.Application()
-app.add_routes([web.get('/', handle),
-                web.get('/time', handle_time)])
+@app.get("/time")
+async def handle_time():
+    return {"time": time.time()}
 
 
-async def start_server(app: web.Application):
-    runner = web.AppRunner(app)
-    await runner.setup()
-    site = web.TCPSite(runner, 'localhost', 8080)
-    await site.start()
-
-
-def main():
+def start_service():
     mw_session = mwapi.AsyncSession('https://www.wikidata.org',
                                     user_agent='Quonter Vandal')
     session = aiohttp.ClientSession()
@@ -57,22 +47,15 @@ def main():
         print(".", end="", flush=True)
         await grouper.add(diff)
 
-    async def handle_grouper_status(request):
-        return web.Response(
-            text=json.dumps(await grouper.status()),
-            content_type="application/json"
-        )
-
-    app.add_routes([web.get('/groups', handle_grouper_status)])
+    @app.get("/groups")
+    async def handle_grouper_status():
+        return {
+            "groups": await grouper.status()
+        }
 
     diff_stream = event_loop(config, handle_diff)
 
-    server_task = loop.create_task(start_server(app))
     diff_stream_task = loop.create_task(diff_stream)
-    run_server_task = asyncio.gather(server_task, diff_stream_task)
-
-    loop.run_until_complete(run_server_task)
 
 
-if __name__ == "__main__":
-    main()
+start_service()
