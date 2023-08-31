@@ -7,7 +7,7 @@ PYTHON_BINARY = sys.executable
 
 # start the uvicorn server
 p = subprocess.Popen([PYTHON_BINARY, "-m", "uvicorn", "--port", "8001", "--host", "127.0.0.1", "quonter_vandal.server:app"],
-                     stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                     stdout=sys.stdout, stderr=sys.stderr)
 
 
 app = Flask(__name__)
