@@ -1,3 +1,3 @@
 #!/bin/bash
 
-poetry run uvicorn quonter_vandal.server:app
+poetry run flask --app quonter_vandal.server run
