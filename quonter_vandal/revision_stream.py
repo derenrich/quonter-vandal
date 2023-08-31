@@ -4,7 +4,7 @@ from typing import Any, Awaitable, Callable, Optional, Self
 import aiohttp
 from aiohttp import client_exceptions
 from quonter_vandal.diff_grouper import Timestamped
-from sse_client import EventSource
+from quonter_vandal.sse_client import EventSource
 import time
 import json
 
