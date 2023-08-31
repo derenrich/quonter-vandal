@@ -5,32 +5,30 @@ from quonter_vandal.diff_grouper import DiffGrouper
 from quonter_vandal.document_maker import DocumentMaker
 import mwapi
 import aiohttp
-from flask import Flask, jsonify, request
+from fastapi import FastAPI
 import json
 import time
-from threading import Thread
 
-app = Flask(__name__)
+app = FastAPI()
 
 
 @app.get("/")
 def read_root():
-    return jsonify({"Hello": "World"})
+    return {"Hello": "World"}
 
 
 @app.get("/time")
 async def handle_time():
-    return jsonify({"time": time.time()})
+    return {"time": time.time()}
 
 
 def start_service():
-    loop = asyncio.new_event_loop()
-    asyncio.set_event_loop(loop)
     mw_session = mwapi.AsyncSession('https://www.wikidata.org',
                                     user_agent='Quonter Vandal')
     session = aiohttp.ClientSession()
     dm = DocumentMaker(mw_session, session)
 
+    loop = asyncio.get_event_loop()
     config = StreamConfig(logFeatures=True)
 
     async def handle_edit_group(edits: List[StreamEvent]):
@@ -51,14 +49,13 @@ def start_service():
 
     @app.get("/groups")
     async def handle_grouper_status():
-        return jsonify({
+        return {
             "groups": await grouper.status()
-        })
+        }
 
     diff_stream = event_loop(config, handle_diff)
+
     diff_stream_task = loop.create_task(diff_stream)
-    loop.run_until_complete(diff_stream_task)
 
 
-t = Thread(target=start_service)
-t.start()
+start_service()
