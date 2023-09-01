@@ -4,9 +4,14 @@ from flask import Flask, request, Response
 import requests
 
 # this makes me sad
-which_python = subprocess.run(
-    "which python", shell=True, check=True, capture_output=True)
-PYTHON_BINARY = which_python.stdout.decode().strip()
+try:
+    which_python = subprocess.run(
+        "which python3", shell=True, check=True, capture_output=True)
+    PYTHON_BINARY = which_python.stdout.decode().strip()
+except subprocess.CalledProcessError:
+    # can't find python?
+    # assume we're running on toolforge
+    PYTHON_BINARY = "/data/project/qop/www/python/venv/bin/python"
 
 # start the uvicorn server
 p = subprocess.Popen([PYTHON_BINARY, "-m", "uvicorn", "--port", "8001", "--host", "127.0.0.1", "quonter_vandal.server:app"],
