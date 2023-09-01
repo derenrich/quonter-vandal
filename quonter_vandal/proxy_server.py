@@ -3,7 +3,10 @@ import subprocess
 from flask import Flask, request, Response
 import requests
 
-PYTHON_BINARY = sys.executable
+# this makes me sad
+which_python = subprocess.run(
+    "which python", shell=True, check=True, capture_output=True)
+PYTHON_BINARY = which_python.stdout.decode().strip()
 
 # start the uvicorn server
 p = subprocess.Popen([PYTHON_BINARY, "-m", "uvicorn", "--port", "8001", "--host", "127.0.0.1", "quonter_vandal.server:app"],
