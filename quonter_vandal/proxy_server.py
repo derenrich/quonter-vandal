@@ -6,7 +6,7 @@ import requests
 # this makes me sad
 try:
     which_python = subprocess.run(
-        "which python3", shell=True, check=True, capture_output=True)
+        "which python", shell=True, check=True, capture_output=True)
     PYTHON_BINARY = which_python.stdout.decode().strip()
 except subprocess.CalledProcessError:
     # can't find python?
