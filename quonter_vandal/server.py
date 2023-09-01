@@ -6,15 +6,18 @@ from quonter_vandal.document_maker import DocumentMaker
 import mwapi
 import aiohttp
 from fastapi import FastAPI
+from fastapi.responses import HTMLResponse
 import json
 import time
+from importlib.resources import files
 
 app = FastAPI()
 
 
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
+@app.get("/", response_class=HTMLResponse)
+async def handle_root():
+    html = files("quonter_vandal").joinpath("index.html").read_text()
+    return HTMLResponse(html)
 
 
 @app.get("/time")

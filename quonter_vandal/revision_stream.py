@@ -23,7 +23,6 @@ class StreamEvent(Timestamped):
     patrolled: bool
     minor: bool
     user: str
-    dt: str
     comment: str
     timestamp: int
     rev_old: Optional[int]
@@ -40,7 +39,6 @@ class StreamEvent(Timestamped):
             patrolled=json.get('patrolled'),
             minor=json.get('minor'),
             user=json.get('user'),
-            dt=json.get('dt'),
             comment=json.get('parsedcomment'),
             timestamp=json.get('timestamp'),
             title=json.get('title'),
