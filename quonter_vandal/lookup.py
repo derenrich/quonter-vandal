@@ -44,7 +44,7 @@ class RevisionContent:
     description: Any
     aliases: List[Any]
     sitelinks: List[Any]
-    claims: Mapping[str, List[EntityInfo] | dict | str]
+    claims: Mapping[str, List[EntityInfo | dict | str]]
 
 
 class LookupEntities:

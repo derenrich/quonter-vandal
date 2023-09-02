@@ -86,18 +86,17 @@ class AsyncRetryingSseClient:
             return await anext(self)
 
 
-def filter_event(event_json):
+def filter_event(event_json) -> bool:
     """
     Filter out events that we don't care about.
     """
     return event_json.get('wiki') == 'wikidatawiki' and \
         event_json.get('type') == 'edit' and \
         event_json.get('namespace') == 0 and \
-        event_json.get('bot') is False and \
-        event_json.get('patrolled') is False
+        event_json.get('bot') is False
 
 
-async def event_loop(config: StreamConfig, callback: Callable[[StreamEvent], Awaitable[Any]]) -> None:
+async def event_loop(config: StreamConfig, callback: Callable[[StreamEvent, bool], Awaitable[Any]]) -> None:
     print("starting event loop for revision stream")
     t = time.time()
     client = AsyncRetryingSseClient()
@@ -105,10 +104,10 @@ async def event_loop(config: StreamConfig, callback: Callable[[StreamEvent], Awa
         event_json = json.loads(event.data)
         stream_event = StreamEvent.from_json(event_json)
         if filter_event(event_json):
-            await callback(stream_event)
+            await callback(stream_event, stream_event.patrolled)
 
 
-async def printer(x):
+async def printer(x, filtered):
     print(x)
 
 if __name__ == "__main__":

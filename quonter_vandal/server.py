@@ -10,7 +10,10 @@ from fastapi.responses import HTMLResponse
 import json
 import time
 from importlib.resources import files
+import os
+from results_logger import ResultsLogger, LogLine
 
+TOOLFORGE_MODE = os.environ.get('TOOLFORGE', '0') == '1'
 app = FastAPI()
 
 
@@ -31,6 +34,10 @@ def start_service():
     session = aiohttp.ClientSession()
     dm = DocumentMaker(mw_session, session)
 
+    logger = None
+    if TOOLFORGE_MODE:
+        logger = ResultsLogger()
+
     loop = asyncio.get_event_loop()
     config = StreamConfig(logFeatures=True)
 
@@ -42,13 +49,17 @@ def start_service():
             res = dm.make_document(oldid, newid)
             doc = await res
             if doc:
-                print(doc)
+                if logger:
+                    log = LogLine(doc, oldid, newid, "", "")
+                    logger.log(log)
+                else:
+                    print(doc)
 
     grouper = DiffGrouper(loop, handle_edit_group, 240)
 
-    async def handle_diff(diff: StreamEvent):
+    async def handle_diff(diff: StreamEvent, filtered: bool):
         print(".", end="", flush=True)
-        await grouper.add(diff)
+        await grouper.add(diff, filtered)
 
     @app.get("/groups")
     async def handle_grouper_status():

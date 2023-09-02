@@ -2,6 +2,7 @@ import sys
 import subprocess
 from flask import Flask, request, Response
 import requests
+import os
 
 # this makes me sad
 try:
@@ -14,8 +15,10 @@ except subprocess.CalledProcessError:
     PYTHON_BINARY = "/data/project/qop/www/python/venv/bin/python"
 
 # start the uvicorn server
+server_env = os.environ.copy()
+server_env['TOOLFORGE'] = '1'
 p = subprocess.Popen([PYTHON_BINARY, "-m", "uvicorn", "--port", "8001", "--host", "127.0.0.1", "quonter_vandal.server:app"],
-                     stdout=sys.stdout, stderr=sys.stderr)
+                     stdout=sys.stdout, stderr=sys.stderr, env=server_env)
 
 
 app = Flask(__name__)

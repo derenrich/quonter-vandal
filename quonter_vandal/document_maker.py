@@ -5,6 +5,7 @@ import asyncio
 from quonter_vandal.config import surpressed_qid_descriptions
 from quonter_vandal.diff import *
 from quonter_vandal.lookup import LookupItemAtRevision, EntityInfo, LookupEntities, RevisionContent
+from quonter_vandal.util import clip_list
 from dataclasses import dataclass
 from itertools import chain
 
@@ -93,8 +94,7 @@ class DocumentMaker:
                     f"Label ({content.description['lang_code']}): {content.description['label']}")
 
         if content.aliases:
-            if len(content.aliases) > 5:
-                content.aliases = content.aliases[:5]
+            content.aliases = clip_list(content.aliases, 5)
             if content.aliases[0]['lang_code'] == "en":
                 alias_line = f"Aliases:"
             else:
@@ -105,8 +105,7 @@ class DocumentMaker:
 
         if content.sitelinks:
             doc.append("Sitelinks:")
-            if len(content.sitelinks) > 5:
-                content.sitelinks = content.sitelinks[:5]
+            content.sitelinks = clip_list(content.sitelinks, 5)
             for sitelink in content.sitelinks:
                 doc.append(f" {sitelink['lang_code']}:{sitelink['label']}")
 
@@ -115,7 +114,7 @@ class DocumentMaker:
             for prop, statements in content.claims.items():
                 if len(statements) > 1:
                     doc.append(f"{prop}:")
-                for e_info in statements:
+                for e_info in clip_list(statements, 7):
                     if len(statements) == 1:
                         line = f"{prop}: "
                     else:
@@ -359,13 +358,19 @@ class DocumentMaker:
                 # don't emit documents for null changes
                 return None
             diff_doc = self._diff_to_document(diff, qid_pid_info)
-            print(summary, )
-            if summary:
+
+            if summary and summary.snippet:
                 summary_doc = f"\nSnippet ({summary.wiki})\n====\n {summary.snippet}\n"
             else:
                 summary_doc = ""
+            if summary and summary.categories:
+                category_sub_doc = "\n".join(summary.categories)
+                category_doc = f"\nCategories ({summary.wiki})\n====\n{category_sub_doc}\n"
+            else:
+                category_doc = ""
+
             item_doc = self._revision_content_to_document(prior_data)
-            final_doc = f"Item\n====\n{item_doc}\n{summary_doc}\nEdit\n====\n{diff_doc}"
+            final_doc = f"Item\n====\n{item_doc}\n{summary_doc}\n{category_doc}\nEdit\n====\n{diff_doc}"
             return final_doc
         except Exception as e:
             import traceback

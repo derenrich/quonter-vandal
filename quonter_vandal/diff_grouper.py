@@ -48,12 +48,13 @@ class DiffGrouper(Generic[T]):
     def _time(self):
         return time.time()
 
-    async def add(self, item: T):
+    async def add(self, item: T, filtered: bool = False):
         async with self._lock:
             queue_ready = await self._check_user(item.title, item.user)
             if not queue_ready:
                 await self._surrender_key(item.title)
-            self._buffer[item.title].append(item)
+            if not filtered:
+                self._buffer[item.title].append(item)
 
     async def _check_user(self, title: str, user: str) -> bool:
         """

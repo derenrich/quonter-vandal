@@ -9,7 +9,23 @@ from quonter_vandal.config import wikis, wikis_to_url, USER_AGENT
 @dataclass
 class SnippetResponse:
     snippet: str
+    categories: list[str]
     wiki: str
+
+
+def filter_category(category: str) -> bool:
+    banned_substrings = [
+        "stub", "Stub", "Short description", "Wikidata", " sources", "Articles ", "British English", "Pages ",
+        " dates", "CS1", " dates ", "ISNI", "LCCN", "VIAF", "WorldCat", "Artigos", " pages", "Canadian English",
+        " bytes", "short description", "wayback", "All articles", "protected ", " articles", "American English",
+        "infobox", "navigational boxes", "taxon ID", "missing", "indexed", "plantilla", "Wikipedia:", "Page ",
+        "Wikipédia:", "Article "
+    ]
+
+    for substring in banned_substrings:
+        if substring in category:
+            return False
+    return True
 
 
 async def get_summary(revision_content: RevisionContent) -> SnippetResponse:
@@ -34,7 +50,8 @@ async def get_summary(revision_content: RevisionContent) -> SnippetResponse:
 
     params = {
         'action': 'query',
-        'prop': 'extracts',
+        'prop': 'extracts|categories',
+        'cllimit': 'max',
         'exchars': 225,
         'explaintext': 'true',
         'exsectionformat': 'plain',
@@ -55,4 +72,10 @@ async def get_summary(revision_content: RevisionContent) -> SnippetResponse:
     if page['title'] != title:
         # this shouldn't happen either
         raise Exception("Title returned doesn't match title requested.")
-    return SnippetResponse(page['extract'].strip(), wiki)
+
+    extract = page['extract'].strip()
+    # get categories and strip out the "Category:" prefix
+    categories = [":".join(c['title'].split(":")[1:])
+                  for c in page['categories']]
+    categories = [c for c in categories if filter_category(c)]
+    return SnippetResponse(extract, categories, wiki)

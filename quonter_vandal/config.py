@@ -1,4 +1,6 @@
-USER_AGENT = "Quonter Vandal"
+USER_AGENT = "Quonter Vandal /0.0 (https://qop.toolforge.org/)"
+
+DB_NAME = "s55536__qop"
 
 # the languages in the order of preference for fetching/displaying
 language_preferences = [
