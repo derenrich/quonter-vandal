@@ -1,7 +1,7 @@
 
 from dataclasses import dataclass
 import toolforge
-from config import DB_NAME
+from quonter_vandal.config import DB_NAME
 
 
 @dataclass

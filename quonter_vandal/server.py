@@ -11,7 +11,7 @@ import json
 import time
 from importlib.resources import files
 import os
-from results_logger import ResultsLogger, LogLine
+from quonter_vandal.results_logger import ResultsLogger, LogLine
 
 TOOLFORGE_MODE = os.environ.get('TOOLFORGE', '0') == '1'
 app = FastAPI()
