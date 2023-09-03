@@ -354,6 +354,17 @@ class DocumentMaker:
     async def make_document(self, start_rev: int, end_rev: int) -> Optional[str]:
         try:
             qid_pid_info, prior_data, diff, summary = await self.make_document_data(start_rev, end_rev)
+            doc = await self.make_document_from_data(start_rev, end_rev,
+                                                     qid_pid_info, prior_data, diff, summary)
+            return doc
+        except Exception as e:
+            import traceback
+            print(f"Failed to make document for {start_rev} -> {end_rev}: {e}")
+            traceback.print_exc()
+            return None
+
+    async def make_document_from_data(self, start_rev, end_rev, qid_pid_info, prior_data, diff, summary) -> Optional[str]:
+        try:
             if len(diff.changes) == 0:
                 # don't emit documents for null changes
                 return None

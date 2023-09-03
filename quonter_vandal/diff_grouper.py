@@ -2,6 +2,7 @@ import asyncio
 from dataclasses import dataclass
 import dataclasses
 from typing import Any, Awaitable, Callable, List, Mapping, TypeVar, Generic
+from quonter_vandal.config import IGNORED_QIDS
 from collections import defaultdict
 import time
 
@@ -49,6 +50,8 @@ class DiffGrouper(Generic[T]):
         return time.time()
 
     async def add(self, item: T, filtered: bool = False):
+        if item.title in IGNORED_QIDS:
+            return
         async with self._lock:
             queue_ready = await self._check_user(item.title, item.user)
             if not queue_ready:

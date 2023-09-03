@@ -1,5 +1,6 @@
 import asyncio
 from typing import List
+from quonter_vandal.classifier import Classifier
 from quonter_vandal.revision_stream import StreamEvent, StreamConfig, event_loop
 from quonter_vandal.diff_grouper import DiffGrouper
 from quonter_vandal.document_maker import DocumentMaker
@@ -33,6 +34,7 @@ def start_service():
                                     user_agent='Quonter Vandal')
     session = aiohttp.ClientSession()
     dm = DocumentMaker(mw_session, session)
+    classifier = Classifier()
 
     logger = None
     if TOOLFORGE_MODE:
@@ -49,11 +51,19 @@ def start_service():
             res = dm.make_document(oldid, newid)
             doc = await res
             if doc:
+                classification = await classifier.classify(doc)
                 if logger:
-                    log = LogLine(doc, oldid, newid, "", "")
-                    logger.log(log)
+                    if classification:
+                        label = str(
+                            classification.revert) if classification.revert is not None else ""
+                        log = LogLine(doc, oldid, newid,
+                                      classification.doc, label, "")
+                        logger.log(log)
+                    else:
+                        log = LogLine(doc, oldid, newid, "", "", "")
+                        logger.log(log)
                 else:
-                    print(doc)
+                    print(doc, "--->", classification)
 
     grouper = DiffGrouper(loop, handle_edit_group, 240)
 

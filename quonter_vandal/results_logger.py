@@ -9,7 +9,8 @@ class LogLine:
     document: str
     oldrevid: int
     currevid: int
-    prediction: str
+    prediction_doc: str
+    label: str
     data: str
 
 
@@ -20,6 +21,7 @@ CREATE OR REPLACE TABLE results (
     oldrevid INT NOT NULL,
     currevid INT NOT NULL,
     prediction VARCHAR(4096) NOT NULL,
+    label varchar(32) NOT NULL,
     data VARCHAR(4096) NOT NULL,
     PRIMARY KEY (id)
 );
@@ -34,10 +36,10 @@ class ResultsLogger:
         with self._tool_db.cursor() as cursor:
             cursor.execute(
                 """
-                INSERT INTO results (document, oldrevid, currevid, prediction, data)
-                VALUES (%s, %s, %s, %s, %s)
+                INSERT INTO results (document, oldrevid, currevid, prediction, data, label)
+                VALUES (%s, %s, %s, %s, %s, %s)
                 """,
                 (log_line.document, log_line.oldrevid,
-                 log_line.currevid, log_line.prediction, log_line.data)
+                 log_line.currevid, log_line.prediction_doc, log_line.data, log_line.label)
             )
         self._tool_db.commit()
