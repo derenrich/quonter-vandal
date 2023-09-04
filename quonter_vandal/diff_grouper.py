@@ -36,7 +36,10 @@ class DiffGrouper(Generic[T]):
                     wipe_list = []
                     for key, q in self._buffer.items():
                         if len(q) > 0 and ((self._time() - q[-1].timestamp) > self._eject_delay):
-                            await self._eject_fn(q)
+                            try:
+                                await self._eject_fn(q)
+                            except Exception as e:
+                                print("eject_fn failed", q, e)
                             wipe_list.append(key)
                     for key in wipe_list:
                         del self._buffer[key]

@@ -29,6 +29,7 @@ uvicorn = {extras = ["standard"], version = "^0.23.2"}
 fastapi = "^0.103.0"
 gunicorn = "^21.2.0"
 toolforge = "^6.0.0"
+aiolimiter = "^1.1.0"
 
 
 [tool.poetry.group.dev.dependencies]
