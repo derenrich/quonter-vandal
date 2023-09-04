@@ -25,7 +25,7 @@ app = Flask(__name__)
 
 
 @app.route('/', defaults={'path': ''})
-@app.route('/<path>')
+@app.route('/<path:path>')
 def redirect_to_API_HOST(path):
     res = requests.request(
         method=request.method,
