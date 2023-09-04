@@ -12,7 +12,8 @@ import json
 import time
 from importlib.resources import files
 import os
-from quonter_vandal.results_logger import ResultsLogger, LogLine
+from jinja2 import Template
+from quonter_vandal.results_logger import ResultsLogger, LogLine, ResultsFetcher
 
 TOOLFORGE_MODE = os.environ.get('TOOLFORGE', '0') == '1'
 app = FastAPI()
@@ -20,13 +21,20 @@ app = FastAPI()
 
 @app.get("/", response_class=HTMLResponse)
 async def handle_root():
-    html = files("quonter_vandal").joinpath("index.html").read_text()
-    return HTMLResponse(html)
+    html_template = Template(
+        files("quonter_vandal").joinpath("index.html").read_text())
+    return HTMLResponse(html_template.render())
 
 
 @app.get("/time")
 async def handle_time():
     return {"time": time.time()}
+
+if TOOLFORGE_MODE:
+    @app.get("/results")
+    async def handle_results():
+        fetcher = ResultsFetcher()
+        return await fetcher.fetch_vandalous(10, 0)
 
 
 def start_service():
@@ -51,7 +59,7 @@ def start_service():
             res = dm.make_document(oldid, newid)
             doc = await res
             if doc:
-                classification = await classifier.classify(doc)
+                classification = None  # await classifier.classify(doc)
                 if logger:
                     if classification:
                         label = str(
