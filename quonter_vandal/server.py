@@ -31,10 +31,10 @@ async def handle_time():
     return {"time": time.time()}
 
 if TOOLFORGE_MODE:
-    @app.get("/results")
-    async def handle_results():
+    @app.get("/results/{page_num}")
+    async def handle_results(page_num: int):
         fetcher = ResultsFetcher()
-        return await fetcher.fetch_vandalous(10, 0)
+        return fetcher.fetch_vandalous(10, page_num * 10)
 
 
 def start_service():
@@ -61,6 +61,9 @@ def start_service():
             if doc:
                 classification = None  # await classifier.classify(doc)
                 if logger:
+                    if len(doc) > 4096:
+                        print("===TOO LONG", len(doc))
+                        print(doc)
                     if classification:
                         label = str(
                             classification.revert) if classification.revert is not None else ""

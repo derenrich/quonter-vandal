@@ -57,6 +57,7 @@ class ResultsFetcher:
                 SELECT document, oldrevid, currevid, prediction, label, data
                 FROM results
                 WHERE label = 'True'
+                order by currevid desc
                 LIMIT %s
                 OFFSET %s
                 """,
