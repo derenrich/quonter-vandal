@@ -50,7 +50,7 @@ class ResultsFetcher:
     def __init__(self):
         self._tool_db = toolforge.toolsdb(DB_NAME)
 
-    def fetch_vandalous(self, limit: int, offset: int) -> List[LogLine]]:
+    def fetch_vandalous(self, limit: int, offset: int) -> List[LogLine]:
         with self._tool_db.cursor() as cursor:
             cursor.execute(
                 """
