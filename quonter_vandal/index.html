@@ -15,6 +15,41 @@
             }
         }
     </script>
+    <script>
+        function renderVandalism(edits) {
+            let vandalismDiv = $("div#vandalism");
+            let blocks = [];
+            for (let edit of edits) {
+
+                let iframe = document.createElement("iframe");
+                let header = document.createElement("h2");
+                let doc = document.createElement("pre");
+                header.innerText = `Predicted Vandalous Edit`;
+                header.className = "text-2xl";
+                let oldid = edit.oldrevid;
+                let curid = edit.currevid;
+                let rationale = edit.prediction_doc;
+
+                iframe.src = `https://www.wikidata.org/w/index.php?diff=${curid}&oldid=${oldid}`;
+                iframe.width = 1000;
+                iframe.height = 700;
+
+                doc.innerText = rationale;
+
+                let div = document.createElement("div");
+                div.append(header);
+                div.append(doc);
+                div.append(iframe);
+                blocks.push(div);
+            }
+            vandalismDiv.prepend(blocks);
+        }
+
+        let params = new URLSearchParams(window.location.search);
+        let page = params.get("page") || "1";
+        $.getJSON(`/results/${page}`, renderVandalism);
+
+    </script>
 </head>
 
 <body>
@@ -22,6 +57,11 @@
         <h1 class="text-3xl">
             Quonter Vandal
         </h1>
+    </div>
+    <div class="flex justify-center">
+        <div id="vandalism">
+
+        </div>
     </div>
 
 
