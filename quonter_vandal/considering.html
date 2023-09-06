@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+
+
+            }
+        }
+    </script>
+
+
+    <script>
+        function renderGroups(res) {
+            let groups = res.groups;
+            let editDiv = $("div#edits");
+            let blocks = [];
+
+            for (let group of Object.values(groups)) {
+                let length = group.length;
+                let first = group[0];
+                let last = group[length - 1];
+                let div = document.createElement("div");
+
+                let iframe = document.createElement("iframe");
+                let header = document.createElement("h2");
+                header.innerText = `Edit to ${first["title"]}`;
+                header.className = "text-2xl";
+                let oldid = first.rev_old;
+                let newid = last.rev_new;
+                iframe.src = `https://wikidata.org/w/index.php?diff=${newid}&oldid=${oldid}`;
+                iframe.width = 1000;
+                iframe.height = 700;
+                div.append(header);
+                div.append(iframe);
+                blocks.push(div);
+            }
+            console.log(blocks);
+            editDiv.prepend(blocks);
+        }
+
+        $.getJSON("/groups", renderGroups);
+    </script>
+</head>
+
+<body>
+    <div class="flex justify-center p-14">
+        <h1 class="text-3xl">
+            Quonter Vandal
+        </h1>
+    </div>
+    <div class="flex justify-center">
+        <div id="edits">
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -26,6 +26,13 @@ async def handle_root():
     return HTMLResponse(html_template.render())
 
 
+@app.get("/considering", response_class=HTMLResponse)
+async def handle_considering():
+    html_template = Template(
+        files("quonter_vandal").joinpath("considering.html").read_text())
+    return HTMLResponse(html_template.render())
+
+
 @app.get("/time")
 async def handle_time():
     return {"time": time.time()}
