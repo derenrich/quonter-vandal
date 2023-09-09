@@ -195,4 +195,181 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: null
+    headers:
+      User-Agent:
+      - Quonter Vandal
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q2994625%7CQ3712743%7CQ42%7CQ5&props=labels%7Cdescriptions&languages=en%7Cde%7Cfr%7Ces%7Cru%7Cit%7Cpt%7Cnl%7Car%7Cuk%7Cbn%7Csq%7Che%7Cko%7Cbg%7Csk%7Cvi%7Cel%7Csv%7Chu%7Cid%7Cast%7Cga%7Cpl%7Cth%7Cfa%7Cur%7Cmk%7Cbe%7Cml%7Ceu%7Czh-hant&format=json
+  response:
+    body:
+      string: '{"entities":{"Q2994625":{"type":"item","id":"Q2994625","labels":{"fr":{"language":"fr","value":"consistance"}},"descriptions":{}},"Q3712743":{"type":"item","id":"Q3712743","labels":{"it":{"language":"it","value":"Dom"},"es":{"language":"es","value":"Dom"}},"descriptions":{"es":{"language":"es","value":"T\u00edtulo
+        honor\u00edfico"},"it":{"language":"it","value":"trattamento d''onore"}}},"Q42":{"type":"item","id":"Q42","labels":{"en":{"language":"en","value":"Douglas
+        Adams"},"fr":{"language":"fr","value":"Douglas Adams"},"ru":{"language":"ru","value":"\u0414\u0443\u0433\u043b\u0430\u0441
+        \u0410\u0434\u0430\u043c\u0441"},"pl":{"language":"pl","value":"Douglas Adams"},"it":{"language":"it","value":"Douglas
+        Adams"},"es":{"language":"es","value":"Douglas Adams"},"pt":{"language":"pt","value":"Douglas
+        Adams"},"ko":{"language":"ko","value":"\ub354\uae00\ub7ec\uc2a4 \uc560\ub364\uc2a4"},"nl":{"language":"nl","value":"Douglas
+        Adams"},"el":{"language":"el","value":"\u039d\u03c4\u03ac\u03b3\u03ba\u03bb\u03b1\u03c2
+        \u0386\u03bd\u03c4\u03b1\u03bc\u03c2"},"ar":{"language":"ar","value":"\u062f\u0648\u063a\u0644\u0627\u0633
+        \u0622\u062f\u0645\u0632"},"be":{"language":"be","value":"\u0414\u0443\u0433\u043b\u0430\u0441
+        \u0410\u0434\u0430\u043c\u0441"},"bg":{"language":"bg","value":"\u0414\u044a\u0433\u043b\u0430\u0441
+        \u0410\u0434\u0430\u043c\u0441"},"fa":{"language":"fa","value":"\u062f\u0627\u06af\u0644\u0627\u0633
+        \u0622\u062f\u0627\u0645\u0632"},"ga":{"language":"ga","value":"Douglas Adams"},"he":{"language":"he","value":"\u05d3\u05d0\u05d2\u05dc\u05e1
+        \u05d0\u05d3\u05de\u05e1"},"hu":{"language":"hu","value":"Douglas Adams"},"id":{"language":"id","value":"Douglas
+        Adams"},"mk":{"language":"mk","value":"\u0414\u0430\u0433\u043b\u0430\u0441
+        \u0410\u0434\u0430\u043c\u0441"},"sk":{"language":"sk","value":"Douglas Adams"},"sq":{"language":"sq","value":"Douglas
+        Adams"},"sv":{"language":"sv","value":"Douglas Adams"},"uk":{"language":"uk","value":"\u0414\u0443\u0433\u043b\u0430\u0441
+        \u0410\u0434\u0430\u043c\u0441"},"vi":{"language":"vi","value":"Douglas Adams"},"zh-hant":{"language":"zh-hant","value":"\u9053\u683c\u62c9\u65af\u00b7\u4e9e\u7576\u65af"},"ur":{"language":"ur","value":"\u0688\u06af\u0644\u0633
+        \u0627\u06cc\u0688\u0645"},"eu":{"language":"eu","value":"Douglas Adams"},"de":{"language":"de","value":"Douglas
+        Adams"},"bn":{"language":"bn","value":"\u09a1\u0997\u09b2\u09be\u09b8 \u0985\u09cd\u09af\u09be\u09a1\u09be\u09ae\u09b8"},"ml":{"language":"ml","value":"\u0d21\u0d17\u0d4d\u0d32\u0d38\u0d4d
+        \u0d06\u0d21\u0d02\u0d38\u0d4d"},"ast":{"language":"ast","value":"Douglas
+        Adams"},"th":{"language":"th","value":"\u0e14\u0e31\u0e01\u0e25\u0e31\u0e2a
+        \u0e41\u0e2d\u0e14\u0e31\u0e21\u0e2a\u0e4c"}},"descriptions":{"en":{"language":"en","value":"English
+        science fiction writer and humourist"},"fr":{"language":"fr","value":"\u00e9crivain
+        de science-fiction et humoriste anglais"},"it":{"language":"it","value":"scrittore
+        e umorista britannico"},"de":{"language":"de","value":"britischer Science-Fiction-Autor
+        und Humorist"},"es":{"language":"es","value":"escritor y humorista brit\u00e1nico"},"ru":{"language":"ru","value":"\u0430\u043d\u0433\u043b\u0438\u0439\u0441\u043a\u0438\u0439
+        \u043f\u0438\u0441\u0430\u0442\u0435\u043b\u044c, \u0434\u0440\u0430\u043c\u0430\u0442\u0443\u0440\u0433
+        \u0438 \u0441\u0446\u0435\u043d\u0430\u0440\u0438\u0441\u0442, \u0430\u0432\u0442\u043e\u0440
+        \u0441\u0435\u0440\u0438\u0438 \u043a\u043d\u0438\u0433 \u00ab\u0410\u0432\u0442\u043e\u0441\u0442\u043e\u043f\u043e\u043c
+        \u043f\u043e \u0433\u0430\u043b\u0430\u043a\u0442\u0438\u043a\u0435\u00bb"},"zh-hant":{"language":"zh-hant","value":"\u82f1\u570b\u4f5c\u5bb6"},"sv":{"language":"sv","value":"brittisk
+        f\u00f6rfattare (1952\u20132001)"},"nl":{"language":"nl","value":"Engelse
+        schrijver (1952-2001)"},"pt":{"language":"pt","value":"escritor e comediante
+        brit\u00e2nico"},"pl":{"language":"pl","value":"brytyjski pisarz"},"vi":{"language":"vi","value":"nh\u00e0
+        v\u0103n v\u00e0 nh\u00e0 so\u1ea1n h\u00e0i k\u1ecbch ng\u01b0\u1eddi Anh
+        (1952-2001)"},"uk":{"language":"uk","value":"\u0431\u0440\u0438\u0442\u0430\u043d\u0441\u044c\u043a\u0438\u0439
+        \u043a\u043e\u043c\u0456\u0447\u043d\u0438\u0439 \u0440\u0430\u0434\u0456\u043e\u0434\u0440\u0430\u043c\u0430\u0442\u0443\u0440\u0433,
+        \u043f\u0438\u0441\u044c\u043c\u0435\u043d\u043d\u0438\u043a"},"hu":{"language":"hu","value":"angol
+        \u00edr\u00f3 \u00e9s humorista (1952\u20132001)"},"fa":{"language":"fa","value":"\u0641\u06cc\u0644\u0645\u0646\u0627\u0645\u0647\u200c\u0646\u0648\u06cc\u0633
+        \u0648 \u0646\u0648\u06cc\u0633\u0646\u062f\u0647 \u0628\u0631\u06cc\u062a\u0627\u0646\u06cc\u0627\u06cc\u06cc"},"mk":{"language":"mk","value":"\u0430\u043d\u0433\u043b\u0438\u0441\u043a\u0438
+        \u043f\u0438\u0441\u0430\u0442\u0435\u043b \u0438 \u0445\u0443\u043c\u043e\u0440\u0438\u0441\u0442"},"el":{"language":"el","value":"\u0386\u03b3\u03b3\u03bb\u03bf\u03c2
+        \u03c3\u03c5\u03b3\u03b3\u03c1\u03b1\u03c6\u03ad\u03b1\u03c2"},"bg":{"language":"bg","value":"\u0430\u043d\u0433\u043b\u0438\u0439\u0441\u043a\u0438
+        \u043f\u0438\u0441\u0430\u0442\u0435\u043b \u0438 \u0445\u0443\u043c\u043e\u0440\u0438\u0441\u0442"},"he":{"language":"he","value":"\u05e1\u05d5\u05e4\u05e8
+        \u05d5\u05d4\u05d5\u05de\u05d5\u05e8\u05d9\u05e1\u05d8\u05df \u05d1\u05e8\u05d9\u05d8\u05d9"},"ar":{"language":"ar","value":"\u0643\u0627\u062a\u0628
+        \u0625\u0646\u062c\u0644\u064a\u0632\u064a \u0641\u0643\u0627\u0647\u064a"},"eu":{"language":"eu","value":"idazle
+        eta umorista britaniarra"},"ko":{"language":"ko","value":"\uc601\uad6d\uc758
+        \uc791\uac00"},"th":{"language":"th","value":"\u0e19\u0e31\u0e01\u0e40\u0e02\u0e35\u0e22\u0e19\u0e41\u0e25\u0e30\u0e1c\u0e39\u0e49\u0e40\u0e25\u0e48\u0e32\u0e40\u0e23\u0e37\u0e48\u0e2d\u0e07\u0e2d\u0e32\u0e23\u0e21\u0e13\u0e4c\u0e02\u0e31\u0e19\u0e0a\u0e32\u0e27\u0e2d\u0e31\u0e07\u0e01\u0e24\u0e29"},"ast":{"language":"ast","value":"escritor
+        y humorista ingl\u00e9s"},"sq":{"language":"sq","value":"autor dhe humorist
+        anglez"},"sk":{"language":"sk","value":"anglick\u00fd spisovate\u013e"},"ml":{"language":"ml","value":"\u0d2c\u0d4d\u0d30\u0d3f\u0d1f\u0d4d\u0d1f\u0d40\u0d37\u0d4d
+        \u0d0e\u0d34\u0d41\u0d24\u0d4d\u0d24\u0d41\u0d15\u0d3e\u0d30\u0d28\u0d41\u0d02
+        \u0d39\u0d3e\u0d38\u0d4d\u0d2f\u0d38\u0d3e\u0d39\u0d3f\u0d24\u0d4d\u0d2f\u0d3e\u0d15\u0d3e\u0d30\u0d28\u0d41\u0d02"},"ga":{"language":"ga","value":"scr\u00edbhneoir
+        Sasanach"},"be":{"language":"be","value":"\u0430\u043d\u0433\u043b\u0456\u0439\u0441\u043a\u0456
+        \u043f\u0456\u0441\u044c\u043c\u0435\u043d\u043d\u0456\u043a"},"id":{"language":"id","value":"penulis
+        dan humoris asal Britania Raya (1952-2001)"},"bn":{"language":"bn","value":"\u0987\u0982\u09b0\u09c7\u099c
+        \u0995\u09b2\u09cd\u09aa\u09ac\u09bf\u099c\u09cd\u099e\u09be\u09a8 \u09b2\u09c7\u0996\u0995
+        \u0993 \u0995\u09cc\u09a4\u09c1\u0995\u09ac\u09bf\u09a6"}}},"Q5":{"type":"item","id":"Q5","labels":{"en":{"language":"en","value":"human"},"fr":{"language":"fr","value":"\u00eatre
+        humain"},"ru":{"language":"ru","value":"\u0447\u0435\u043b\u043e\u0432\u0435\u043a"},"it":{"language":"it","value":"umano"},"de":{"language":"de","value":"Mensch"},"pl":{"language":"pl","value":"cz\u0142owiek"},"es":{"language":"es","value":"ser
+        humano"},"zh-hant":{"language":"zh-hant","value":"\u4eba\u985e"},"pt":{"language":"pt","value":"ser
+        humano"},"ko":{"language":"ko","value":"\uc0ac\ub78c"},"ar":{"language":"ar","value":"\u0625\u0646\u0633\u0627\u0646"},"ast":{"language":"ast","value":"humanu"},"be":{"language":"be","value":"\u0447\u0430\u043b\u0430\u0432\u0435\u043a"},"bg":{"language":"bg","value":"\u0447\u043e\u0432\u0435\u043a"},"bn":{"language":"bn","value":"\u09ae\u09be\u09a8\u09c1\u09b7"},"el":{"language":"el","value":"\u03ac\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2"},"eu":{"language":"eu","value":"gizaki"},"fa":{"language":"fa","value":"\u0627\u0646\u0633\u0627\u0646"},"ga":{"language":"ga","value":"duine"},"he":{"language":"he","value":"\u05d0\u05d3\u05dd"},"hu":{"language":"hu","value":"ember"},"id":{"language":"id","value":"manusia"},"mk":{"language":"mk","value":"\u0447\u043e\u0432\u0435\u043a"},"ml":{"language":"ml","value":"\u0d2e\u0d28\u0d41\u0d37\u0d4d\u0d2f\u0d7b"},"nl":{"language":"nl","value":"mens"},"sk":{"language":"sk","value":"\u010dlovek"},"sq":{"language":"sq","value":"njeri"},"sv":{"language":"sv","value":"m\u00e4nniska"},"th":{"language":"th","value":"\u0e21\u0e19\u0e38\u0e29\u0e22\u0e4c"},"uk":{"language":"uk","value":"\u043b\u044e\u0434\u0438\u043d\u0430"},"ur":{"language":"ur","value":"\u0627\u0646\u0633\u0627\u0646"},"vi":{"language":"vi","value":"ng\u01b0\u1eddi"}},"descriptions":{"en":{"language":"en","value":"any
+        member of Homo sapiens, unique extant species of the genus Homo, from embryo
+        to adult"},"fr":{"language":"fr","value":"individu appartenant \u00e0 l\u2019esp\u00e8ce
+        Homo sapiens, la seule esp\u00e8ce restante du genre Homo \u2013 distinct
+        de \u00ab humain fictif \u00bb et de \u00ab humain possiblement fictif \u00bb"},"de":{"language":"de","value":"h\u00f6heres
+        S\u00e4ugetier aus der Ordnung der Primaten"},"pl":{"language":"pl","value":"nazwa
+        zwyczajowa Homo sapiens, unikalny nadal istniej\u0105cy gatunek rodzaju Homo"},"es":{"language":"es","value":"nombre
+        com\u00fan de Homo sapiens, \u00fanica especie existente del g\u00e9nero Homo"},"it":{"language":"it","value":"nome
+        comune della specie Homo sapiens, l''unica esistente del genere Homo"},"nl":{"language":"nl","value":"tweevoetige
+        primatensoort uit de familie van de hominidae"},"ko":{"language":"ko","value":"\uc601\uc7a5\ub958\uc758
+        \uc77c\uc885"},"hu":{"language":"hu","value":"a Hominidae csal\u00e1dba tartoz\u00f3
+        f\u0151eml\u0151sfaj, a Homo nem egyetlen jelenkori k\u00e9pvisel\u0151je"},"ru":{"language":"ru","value":"\u043e\u0431\u0449\u0435\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0435
+        \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u043e, \u043e\u0431\u043b\u0430\u0434\u0430\u044e\u0449\u0435\u0435
+        \u0440\u0430\u0437\u0443\u043c\u043e\u043c \u0438 \u0441\u043e\u0437\u043d\u0430\u043d\u0438\u0435\u043c;
+        \u0441\u0443\u0431\u044a\u0435\u043a\u0442, \u043e\u0442\u043d\u043e\u0441\u044f\u0449\u0438\u0439\u0441\u044f
+        \u043a \u0432\u0438\u0434\u0443 \u0427\u0435\u043b\u043e\u0432\u0435\u043a
+        \u0440\u0430\u0437\u0443\u043c\u043d\u044b\u0439"},"zh-hant":{"language":"zh-hant","value":"\u9748\u9577\u76ee\u4eba\u79d1\u4eba\u5c6c\u7684\u7269\u7a2e"},"he":{"language":"he","value":"\u05de\u05d9\u05df
+        \u05d1\u05e1\u05d5\u05d2 \u05d0\u05d3\u05dd"},"fa":{"language":"fa","value":"\u06af\u0648\u0646\u0647\u200c\u0627\u06cc
+        \u0627\u0632 \u067e\u0633\u062a\u0627\u0646\u062f\u0627\u0631\u0627\u0646"},"sv":{"language":"sv","value":"en
+        art av sl\u00e4ktet m\u00e4nniskor (Homo)"},"pt":{"language":"pt","value":"\u00fanica
+        subesp\u00e9cie ainda existente do g\u00e9nero Homo"},"uk":{"language":"uk","value":"\u0432\u0438\u0434
+        \u0440\u043e\u0434\u0443 \u041b\u044e\u0434\u0438 (Homo) \u0456\u0437 \u0440\u043e\u0434\u0438\u043d\u0438
+        \u0433\u043e\u043c\u0456\u043d\u0456\u0434 \u0432 \u0440\u044f\u0434\u0456
+        \u043f\u0440\u0438\u043c\u0430\u0442\u0456\u0432, \u0454\u0434\u0438\u043d\u0438\u0439
+        \u0437 \u043d\u0438\u043d\u0456 \u0456\u0441\u043d\u0443\u044e\u0447\u0438\u0445
+        \u0432 \u0442\u0435\u043f\u0435\u0440\u0456\u0448\u043d\u0456\u0439 \u0447\u0430\u0441"},"vi":{"language":"vi","value":"lo\u00e0i
+        duy nh\u1ea5t thu\u1ed9c chi Homo c\u00f2n t\u1ed3n t\u1ea1i thu\u1ed9c b\u1ed9
+        Linh Tr\u01b0\u1edfng"},"eu":{"language":"eu","value":"Hominidae familiako
+        animalia espeziea, bizirik dirauen Homo generoko espezie bakarra"},"bg":{"language":"bg","value":"\u043e\u0431\u0449\u043e\u043f\u0440\u0438\u0435\u0442\u043e\u0442\u043e
+        \u0438\u043c\u0435 \u043d\u0430 Homo sapiens, \u0435\u0434\u0438\u043d\u0441\u0442\u0432\u0435\u043d\u0438\u044f\u0442
+        \u043e\u0446\u0435\u043b\u044f\u043b \u043f\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u0438\u0442\u0435\u043b
+        \u043d\u0430 \u0440\u043e\u0434\u0430 Homo"},"id":{"language":"id","value":"nama
+        umum Homo sapiens, satu-satunya spesies genus Homo yang masih ada"},"ast":{"language":"ast","value":"primate
+        b\u00edpedu de la familia de los hom\u00ednidos, \u00fanicu sobreviviente
+        del x\u00e9neru Homo"},"ar":{"language":"ar","value":"\u0627\u0644\u0627\u0633\u0645
+        \u0627\u0644\u0634\u0627\u0626\u0639 \u0644\u0644\u0625\u0646\u0633\u0627\u0646
+        \u0627\u0644\u0639\u0627\u0642\u0644\u060c \u0627\u0644\u0623\u0646\u0648\u0627\u0639
+        \u0627\u0644\u0641\u0631\u064a\u062f\u0629 \u0627\u0644\u0645\u0648\u062c\u0648\u062f\u0629
+        \u0645\u0646 \u062c\u0646\u0633 \u0627\u0644\u0625\u0646\u0633\u0627\u0646"},"sk":{"language":"sk","value":"jedin\u00fd
+        \u017eij\u00faci druh rodu Homo"},"th":{"language":"th","value":"\u0e0a\u0e37\u0e48\u0e2d\u0e40\u0e23\u0e35\u0e22\u0e01\u0e02\u0e2d\u0e07\u0e42\u0e2e\u0e42\u0e21\u0e40\u0e0b\u0e40\u0e1b\u0e35\u0e22\u0e19\u0e2a\u0e4c
+        \u0e2a\u0e1b\u0e35\u0e0a\u0e35\u0e2a\u0e4c\u0e43\u0e19\u0e2a\u0e01\u0e38\u0e25\u0e42\u0e2e\u0e42\u0e21"},"ml":{"language":"ml","value":"\u0d39\u0d4b\u0d2e\u0d4b
+        \u0d0e\u0d28\u0d4d\u0d28 \u0d1c\u0d46\u0d28\u0d41\u0d38\u0d3f\u0d7d \u0d07\u0d28\u0d4d\u0d28\u0d4d
+        \u0d1c\u0d40\u0d35\u0d3f\u0d1a\u0d4d\u0d1a\u0d3f\u0d30\u0d3f\u0d15\u0d4d\u0d15\u0d41\u0d28\u0d4d\u0d28
+        \u0d0f\u0d15 \u0d1c\u0d40\u0d35\u0d3f\u0d2f\u0d3e\u0d23\u0d4d \u0d2e\u0d28\u0d41\u0d37\u0d4d\u0d2f\u0d7b"},"bn":{"language":"bn","value":"\u09ae\u09be\u09a8\u09ac
+        \u09b8\u09ae\u09be\u099c\u09c7\u09b0 \u098f\u0995\u099c\u09a8 \u09b8\u09a6\u09b8\u09cd\u09af
+        \u09b9\u09bf\u09b8\u09c7\u09ac\u09c7 \u09ae\u09be\u09a8\u09c1\u09b7, \u09b9\u09cb\u09ae\u09cb
+        \u09b8\u09c7\u09aa\u09bf\u09af\u09bc\u09c7\u09a8\u09cd\u09b8\u09c7\u09b0 \u09b8\u09be\u09a7\u09be\u09b0\u09a3
+        \u09a8\u09be\u09ae"},"sq":{"language":"sq","value":"Njeriu si nj\u00eb an\u00ebtar
+        i shoq\u00ebris\u00eb njer\u00ebzore; Emri i zakonsh\u00ebm i Homo sapiens,
+        specie unike ekzistuese t\u00eb gjinis\u00eb Homo"},"el":{"language":"el","value":"\u03b5\u03af\u03b4\u03bf\u03c2
+        \u03c4\u03b7\u03c2 \u03bf\u03b9\u03ba\u03bf\u03b3\u03ad\u03bd\u03b5\u03b9\u03b1\u03c2
+        Hominidae, \u03bc\u03bf\u03bd\u03b1\u03b4\u03b9\u03ba\u03cc \u03b5\u03c0\u03b9\u03b6\u03ce\u03bd
+        \u03b5\u03af\u03b4\u03bf\u03c2 \u03c4\u03bf\u03c5 \u03b3\u03ad\u03bd\u03bf\u03c5\u03c2
+        Homo"},"be":{"language":"be","value":"\u0430\u0441\u043e\u0431\u0430, \u0447\u0430\u043b\u0430\u0432\u0435\u043a
+        \u044f\u043a \u0447\u0430\u0441\u0442\u043a\u0430 \u0441\u0443\u043f\u043e\u043b\u044c\u043d\u0430\u0441\u0446\u0456,
+        \u0442\u0430\u043a\u0441\u0430\u043c\u0430 \u0430\u0433\u0443\u043b\u044c\u043d\u0430\u044f
+        \u043d\u0430\u0437\u0432\u0430 \u0434\u043b\u044f \u0431\u0456\u044f\u043b\u0430\u0433\u0456\u0447\u043d\u0430\u0433\u0430
+        \u0432\u0456\u0434\u0443 Homo sapiens"},"ga":{"language":"ga","value":"Ainm
+        coitianta d'' Homo sapiens,speiceas uath\u00fail ar marthain den gh\u00e9ineas
+        Homo, \u00f3 suth go duine f\u00e1sta"}}}},"success":1}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 09 Sep 2023 16:39:55 GMT
+      Server:
+      - mw2403.codfw.wmnet
+      Set-Cookie:
+      - WMF-Last-Access=09-Sep-2023;Path=/;HttpOnly;secure;Expires=Wed, 11 Oct 2023
+        12:00:00 GMT
+      - WMF-Last-Access-Global=09-Sep-2023;Path=/;Domain=.wikidata.org;HttpOnly;secure;Expires=Wed,
+        11 Oct 2023 12:00:00 GMT
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; Path=/; secure; Domain=.wikidata.org
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
 version: 1

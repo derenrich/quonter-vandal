@@ -58,4 +58,63 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: null
+    headers:
+      User-Agent:
+      - Quonter Vandal
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=query&prop=revisions&rvprop=content%7Cids&titles=Q33310436&rvstartid=1953971468&format=json&rvslots=main&rvlimit=1
+  response:
+    body:
+      string: '{"continue":{"rvcontinue":"20230814225356|1953971425","continue":"||"},"query":{"pages":{"34760130":{"pageid":34760130,"ns":0,"title":"Q33310436","revisions":[{"revid":1953971468,"parentid":1953971425,"slots":{"main":{"contentmodel":"wikibase-item","contentformat":"application/json","*":"{\"type\":\"item\",\"id\":\"Q33310436\",\"labels\":[],\"descriptions\":[],\"aliases\":[],\"claims\":[],\"sitelinks\":[]}"}}}]}}}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Length:
+      - '418'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 09 Sep 2023 16:39:56 GMT
+      Server:
+      - mw2403.codfw.wmnet
+      Set-Cookie:
+      - WMF-Last-Access=09-Sep-2023;Path=/;HttpOnly;secure;Expires=Wed, 11 Oct 2023
+        12:00:00 GMT
+      - WMF-Last-Access-Global=09-Sep-2023;Path=/;Domain=.wikidata.org;HttpOnly;secure;Expires=Wed,
+        11 Oct 2023 12:00:00 GMT
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; Path=/; secure; Domain=.wikidata.org
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
 version: 1

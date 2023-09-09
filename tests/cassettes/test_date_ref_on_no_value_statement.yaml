@@ -129,4 +129,134 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: null
+    headers: {}
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=compare&prop=user%7Cdiff%7Ctitle%7Crel%7Cids&format=json&fromrev=1952667555&torev=1952763643
+  response:
+    body:
+      string: '{"compare":{"fromid":4246474,"fromrevid":1952667555,"fromns":0,"fromtitle":"Q4115189","fromuser":"BrokenSegue","fromuserid":193966,"toid":4246474,"torevid":1952763643,"tons":0,"totitle":"Q4115189","touser":"BrokenSegue","touserid":193966,"prev":1952667492,"next":1952843189,"*":"<tr><td
+        colspan=\"2\" class=\"diff-lineno\"></td><td colspan=\"2\" class=\"diff-lineno\">Property
+        / <a title=\"Property:P5021\" href=\"/wiki/Property:P5021\">assessment</a>:
+        <span class=\"wikibase-snakview-variation-novaluesnak\">no value</span> /
+        reference</td></tr><tr><td colspan=\"2\">\u00a0</td><td class=\"diff-marker\"
+        data-marker=\"+\"></td><td class=\"diff-addedline\"><div><ins class=\"diffchange
+        diffchange-inline\"><span><a title=\"Property:P813\" href=\"/wiki/Property:P813\">retrieved</a>:
+        <b class=\"wb-details wb-time-details wb-time-rendered\">13 August 2023</b><table
+        class=\"wb-details wb-time-details\"><tr><th class=\"wb-time-isotime\">Timestamp</th><td
+        class=\"wb-time-isotime\">+2023-08-13T00:00:00Z</td></tr><tr><th class=\"wb-time-timezone\">Timezone</th><td
+        class=\"wb-time-timezone\">+00:00</td></tr><tr><th class=\"wb-time-calendar\">Calendar</th><td
+        class=\"wb-time-calendar\">Gregorian</td></tr><tr><th class=\"wb-time-precision\">Precision</th><td
+        class=\"wb-time-precision\">1 day</td></tr><tr><th class=\"wb-time-before\">Before</th><td
+        class=\"wb-time-before\">0</td></tr><tr><th class=\"wb-time-after\">After</th><td
+        class=\"wb-time-after\">0</td></tr></table></span></ins></div></td></tr>"}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '581'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 09 Sep 2023 16:39:17 GMT
+      Server:
+      - mw2330.codfw.wmnet
+      Set-Cookie:
+      - WMF-Last-Access=09-Sep-2023;Path=/;HttpOnly;secure;Expires=Wed, 11 Oct 2023
+        12:00:00 GMT
+      - WMF-Last-Access-Global=09-Sep-2023;Path=/;Domain=.wikidata.org;HttpOnly;secure;Expires=Wed,
+        11 Oct 2023 12:00:00 GMT
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; Path=/; secure; Domain=.wikidata.org
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Cookie:
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; NetworkProbeLimit=0.001; WMF-Last-Access=09-Sep-2023;
+        WMF-Last-Access-Global=09-Sep-2023
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=query&prop=revisions&titles=Q4115189&rvprop=timestamp%7Cuser%7Ccomment%7Ctags&rvstartid=1952763643&rvendid=1952667555&format=json
+  response:
+    body:
+      string: '{"batchcomplete":"","query":{"pages":{"4246474":{"pageid":4246474,"ns":0,"title":"Q4115189","revisions":[{"user":"BrokenSegue","timestamp":"2023-08-13T03:24:10Z","comment":"/*
+        wbsetclaim-update:2||1|1 */ [[Property:P5021]]: no value","tags":["mw-reverted","wikidata-ui"]},{"user":"BrokenSegue","timestamp":"2023-08-12T22:46:38Z","comment":"/*
+        wbsetsitelink-set-badges:1|dewiki */ [[Q20748091]], [[Q20748094]]","tags":["mw-reverted","wikidata-ui"]}]}}}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Length:
+      - '452'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 09 Sep 2023 16:39:17 GMT
+      Server:
+      - mw2374.codfw.wmnet
+      Set-Cookie:
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
 version: 1

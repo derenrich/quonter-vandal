@@ -205,4 +205,210 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: null
+    headers: {}
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=compare&prop=user%7Cdiff%7Ctitle%7Crel%7Cids&format=json&fromrev=1953423760&torev=1953425917
+  response:
+    body:
+      string: '{"compare":{"fromid":4246474,"fromrevid":1953423760,"fromns":0,"fromtitle":"Q4115189","fromuser":"BrokenSegue","fromuserid":193966,"toid":4246474,"torevid":1953425917,"tons":0,"totitle":"Q4115189","touser":"BrokenSegue","touserid":193966,"prev":1953415294,"next":1953435688,"*":"<tr><td
+        colspan=\"2\" class=\"diff-lineno\"></td><td colspan=\"2\" class=\"diff-lineno\">Property
+        / <a title=\"Property:P2534\" href=\"/wiki/Property:P2534\">defining formula</a></td></tr><tr><td
+        colspan=\"2\">\u00a0</td><td class=\"diff-marker\" data-marker=\"+\"></td><td
+        class=\"diff-addedline\"><div><ins class=\"diffchange diffchange-inline\"><span><h4
+        class=\"wb-details wb-math-details wb-math-rendered\"><span class=\"mwe-math-element\"><span
+        class=\"mwe-math-mathml-inline mwe-math-mathml-a11y\" style=\"display: none;\"><math
+        xmlns=\"http://www.w3.org/1998/Math/MathML\"  alttext=\"{\\displaystyle a^{2}+b^{2}=c^{2}}\">\n  <semantics>\n    <mrow
+        class=\"MJX-TeXAtom-ORD\">\n      <mstyle displaystyle=\"true\" scriptlevel=\"0\">\n        <msup>\n          <mi>a</mi>\n          <mrow
+        class=\"MJX-TeXAtom-ORD\">\n            <mn>2</mn>\n          </mrow>\n        </msup>\n        <mo>+</mo>\n        <msup>\n          <mi>b</mi>\n          <mrow
+        class=\"MJX-TeXAtom-ORD\">\n            <mn>2</mn>\n          </mrow>\n        </msup>\n        <mo>=</mo>\n        <msup>\n          <mi>c</mi>\n          <mrow
+        class=\"MJX-TeXAtom-ORD\">\n            <mn>2</mn>\n          </mrow>\n        </msup>\n      </mstyle>\n    </mrow>\n    <annotation
+        encoding=\"application/x-tex\">{\\displaystyle a^{2}+b^{2}=c^{2}}</annotation>\n  </semantics>\n</math></span><img
+        src=\"https://wikimedia.org/api/rest_v1/media/math/render/svg/7ef0a5a4b8ab98870ae5d6d7c7b4dfe3fb6612e2\"
+        class=\"mwe-math-fallback-image-inline\" aria-hidden=\"true\" style=\"vertical-align:
+        -0.505ex; width:12.336ex; height:2.843ex;\" alt=\"{\\displaystyle a^{2}+b^{2}=c^{2}}\"></span></h4><div
+        class=\"wb-details wb-math-details\"><code>a^2+b^2=c^2</code></div></span></ins></div></td></tr><tr><td
+        colspan=\"2\" class=\"diff-lineno\"></td><td colspan=\"2\" class=\"diff-lineno\">Property
+        / <a title=\"Property:P2534\" href=\"/wiki/Property:P2534\">defining formula</a>:
+        <span class=\"mwe-math-element\"><span class=\"mwe-math-mathml-inline mwe-math-mathml-a11y\"
+        style=\"display: none;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"  alttext=\"{\\displaystyle
+        a^{2}+b^{2}=c^{2}}\">\n  <semantics>\n    <mrow class=\"MJX-TeXAtom-ORD\">\n      <mstyle
+        displaystyle=\"true\" scriptlevel=\"0\">\n        <msup>\n          <mi>a</mi>\n          <mrow
+        class=\"MJX-TeXAtom-ORD\">\n            <mn>2</mn>\n          </mrow>\n        </msup>\n        <mo>+</mo>\n        <msup>\n          <mi>b</mi>\n          <mrow
+        class=\"MJX-TeXAtom-ORD\">\n            <mn>2</mn>\n          </mrow>\n        </msup>\n        <mo>=</mo>\n        <msup>\n          <mi>c</mi>\n          <mrow
+        class=\"MJX-TeXAtom-ORD\">\n            <mn>2</mn>\n          </mrow>\n        </msup>\n      </mstyle>\n    </mrow>\n    <annotation
+        encoding=\"application/x-tex\">{\\displaystyle a^{2}+b^{2}=c^{2}}</annotation>\n  </semantics>\n</math></span><img
+        src=\"https://wikimedia.org/api/rest_v1/media/math/render/svg/7ef0a5a4b8ab98870ae5d6d7c7b4dfe3fb6612e2\"
+        class=\"mwe-math-fallback-image-inline\" aria-hidden=\"true\" style=\"vertical-align:
+        -0.505ex; width:12.336ex; height:2.843ex;\" alt=\"{\\displaystyle a^{2}+b^{2}=c^{2}}\"></span>
+        / rank</td></tr><tr><td colspan=\"2\">\u00a0</td><td class=\"diff-marker\"
+        data-marker=\"+\"></td><td class=\"diff-addedline\"><div><ins class=\"diffchange
+        diffchange-inline\"><span>Normal rank</span></ins></div></td></tr><tr><td
+        colspan=\"2\" class=\"diff-lineno\"></td><td colspan=\"2\" class=\"diff-lineno\">Property
+        / <a title=\"Property:P2534\" href=\"/wiki/Property:P2534\">defining formula</a>:
+        <span class=\"mwe-math-element\"><span class=\"mwe-math-mathml-inline mwe-math-mathml-a11y\"
+        style=\"display: none;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"  alttext=\"{\\displaystyle
+        a^{2}+b^{2}=c^{2}}\">\n  <semantics>\n    <mrow class=\"MJX-TeXAtom-ORD\">\n      <mstyle
+        displaystyle=\"true\" scriptlevel=\"0\">\n        <msup>\n          <mi>a</mi>\n          <mrow
+        class=\"MJX-TeXAtom-ORD\">\n            <mn>2</mn>\n          </mrow>\n        </msup>\n        <mo>+</mo>\n        <msup>\n          <mi>b</mi>\n          <mrow
+        class=\"MJX-TeXAtom-ORD\">\n            <mn>2</mn>\n          </mrow>\n        </msup>\n        <mo>=</mo>\n        <msup>\n          <mi>c</mi>\n          <mrow
+        class=\"MJX-TeXAtom-ORD\">\n            <mn>2</mn>\n          </mrow>\n        </msup>\n      </mstyle>\n    </mrow>\n    <annotation
+        encoding=\"application/x-tex\">{\\displaystyle a^{2}+b^{2}=c^{2}}</annotation>\n  </semantics>\n</math></span><img
+        src=\"https://wikimedia.org/api/rest_v1/media/math/render/svg/7ef0a5a4b8ab98870ae5d6d7c7b4dfe3fb6612e2\"
+        class=\"mwe-math-fallback-image-inline\" aria-hidden=\"true\" style=\"vertical-align:
+        -0.505ex; width:12.336ex; height:2.843ex;\" alt=\"{\\displaystyle a^{2}+b^{2}=c^{2}}\"></span>
+        / qualifier</td></tr><tr><td colspan=\"2\">\u00a0</td><td class=\"diff-marker\"
+        data-marker=\"+\"></td><td class=\"diff-addedline\"><div><ins class=\"diffchange
+        diffchange-inline\"><span><a title=\"Property:P2534\" href=\"/wiki/Property:P2534\">defining
+        formula</a>: <h4 class=\"wb-details wb-math-details wb-math-rendered\"><span
+        class=\"mwe-math-element\"><span class=\"mwe-math-mathml-inline mwe-math-mathml-a11y\"
+        style=\"display: none;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"  alttext=\"{\\displaystyle
+        a^{3}+b^{3}=c^{3}}\">\n  <semantics>\n    <mrow class=\"MJX-TeXAtom-ORD\">\n      <mstyle
+        displaystyle=\"true\" scriptlevel=\"0\">\n        <msup>\n          <mi>a</mi>\n          <mrow
+        class=\"MJX-TeXAtom-ORD\">\n            <mn>3</mn>\n          </mrow>\n        </msup>\n        <mo>+</mo>\n        <msup>\n          <mi>b</mi>\n          <mrow
+        class=\"MJX-TeXAtom-ORD\">\n            <mn>3</mn>\n          </mrow>\n        </msup>\n        <mo>=</mo>\n        <msup>\n          <mi>c</mi>\n          <mrow
+        class=\"MJX-TeXAtom-ORD\">\n            <mn>3</mn>\n          </mrow>\n        </msup>\n      </mstyle>\n    </mrow>\n    <annotation
+        encoding=\"application/x-tex\">{\\displaystyle a^{3}+b^{3}=c^{3}}</annotation>\n  </semantics>\n</math></span><img
+        src=\"https://wikimedia.org/api/rest_v1/media/math/render/svg/17dd96f5cc57668090d79b04af47eec19a670492\"
+        class=\"mwe-math-fallback-image-inline\" aria-hidden=\"true\" style=\"vertical-align:
+        -0.505ex; width:12.336ex; height:2.843ex;\" alt=\"{\\displaystyle a^{3}+b^{3}=c^{3}}\"></span></h4><div
+        class=\"wb-details wb-math-details\"><code>a^3+b^3=c^3</code></div></span></ins></div></td></tr><tr><td
+        colspan=\"2\" class=\"diff-lineno\"></td><td colspan=\"2\" class=\"diff-lineno\">Property
+        / <a title=\"Property:P2534\" href=\"/wiki/Property:P2534\">defining formula</a>:
+        <span class=\"mwe-math-element\"><span class=\"mwe-math-mathml-inline mwe-math-mathml-a11y\"
+        style=\"display: none;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"  alttext=\"{\\displaystyle
+        a^{2}+b^{2}=c^{2}}\">\n  <semantics>\n    <mrow class=\"MJX-TeXAtom-ORD\">\n      <mstyle
+        displaystyle=\"true\" scriptlevel=\"0\">\n        <msup>\n          <mi>a</mi>\n          <mrow
+        class=\"MJX-TeXAtom-ORD\">\n            <mn>2</mn>\n          </mrow>\n        </msup>\n        <mo>+</mo>\n        <msup>\n          <mi>b</mi>\n          <mrow
+        class=\"MJX-TeXAtom-ORD\">\n            <mn>2</mn>\n          </mrow>\n        </msup>\n        <mo>=</mo>\n        <msup>\n          <mi>c</mi>\n          <mrow
+        class=\"MJX-TeXAtom-ORD\">\n            <mn>2</mn>\n          </mrow>\n        </msup>\n      </mstyle>\n    </mrow>\n    <annotation
+        encoding=\"application/x-tex\">{\\displaystyle a^{2}+b^{2}=c^{2}}</annotation>\n  </semantics>\n</math></span><img
+        src=\"https://wikimedia.org/api/rest_v1/media/math/render/svg/7ef0a5a4b8ab98870ae5d6d7c7b4dfe3fb6612e2\"
+        class=\"mwe-math-fallback-image-inline\" aria-hidden=\"true\" style=\"vertical-align:
+        -0.505ex; width:12.336ex; height:2.843ex;\" alt=\"{\\displaystyle a^{2}+b^{2}=c^{2}}\"></span>
+        / reference</td></tr><tr><td colspan=\"2\">\u00a0</td><td class=\"diff-marker\"
+        data-marker=\"+\"></td><td class=\"diff-addedline\"><div><ins class=\"diffchange
+        diffchange-inline\"><span><a title=\"Property:P2534\" href=\"/wiki/Property:P2534\">defining
+        formula</a>: <h4 class=\"wb-details wb-math-details wb-math-rendered\"><span
+        class=\"mwe-math-element\"><span class=\"mwe-math-mathml-inline mwe-math-mathml-a11y\"
+        style=\"display: none;\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"  alttext=\"{\\displaystyle
+        a^{4}+b^{4}=c^{4}}\">\n  <semantics>\n    <mrow class=\"MJX-TeXAtom-ORD\">\n      <mstyle
+        displaystyle=\"true\" scriptlevel=\"0\">\n        <msup>\n          <mi>a</mi>\n          <mrow
+        class=\"MJX-TeXAtom-ORD\">\n            <mn>4</mn>\n          </mrow>\n        </msup>\n        <mo>+</mo>\n        <msup>\n          <mi>b</mi>\n          <mrow
+        class=\"MJX-TeXAtom-ORD\">\n            <mn>4</mn>\n          </mrow>\n        </msup>\n        <mo>=</mo>\n        <msup>\n          <mi>c</mi>\n          <mrow
+        class=\"MJX-TeXAtom-ORD\">\n            <mn>4</mn>\n          </mrow>\n        </msup>\n      </mstyle>\n    </mrow>\n    <annotation
+        encoding=\"application/x-tex\">{\\displaystyle a^{4}+b^{4}=c^{4}}</annotation>\n  </semantics>\n</math></span><img
+        src=\"https://wikimedia.org/api/rest_v1/media/math/render/svg/c917fc9f023d0d5f83f22da8a2964ed0b0dcf62c\"
+        class=\"mwe-math-fallback-image-inline\" aria-hidden=\"true\" style=\"vertical-align:
+        -0.505ex; width:12.336ex; height:2.843ex;\" alt=\"{\\displaystyle a^{4}+b^{4}=c^{4}}\"></span></h4><div
+        class=\"wb-details wb-math-details\"><code>a^4+b^4=c^4</code></div></span></ins></div></td></tr>"}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 09 Sep 2023 16:39:25 GMT
+      Server:
+      - mw2289.codfw.wmnet
+      Set-Cookie:
+      - WMF-Last-Access=09-Sep-2023;Path=/;HttpOnly;secure;Expires=Wed, 11 Oct 2023
+        12:00:00 GMT
+      - WMF-Last-Access-Global=09-Sep-2023;Path=/;Domain=.wikidata.org;HttpOnly;secure;Expires=Wed,
+        11 Oct 2023 12:00:00 GMT
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; Path=/; secure; Domain=.wikidata.org
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Cookie:
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; NetworkProbeLimit=0.001; WMF-Last-Access=09-Sep-2023;
+        WMF-Last-Access-Global=09-Sep-2023
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=query&prop=revisions&titles=Q4115189&rvprop=timestamp%7Cuser%7Ccomment%7Ctags&rvstartid=1953425917&rvendid=1953423760&format=json
+  response:
+    body:
+      string: '{"batchcomplete":"","query":{"pages":{"4246474":{"pageid":4246474,"ns":0,"title":"Q4115189","revisions":[{"user":"BrokenSegue","timestamp":"2023-08-14T04:59:28Z","comment":"/*
+        wbsetclaim-create:2||1 */ [[Property:P2534]]: a^2+b^2=c^2","tags":["mw-reverted","wikidata-ui"]},{"user":"BrokenSegue","timestamp":"2023-08-14T04:53:49Z","comment":"/*
+        wbsetclaim-create:2||1 */ [[Property:P3896]]: Data:ROCEEH/Gravettian.map","tags":["mw-reverted","wikidata-ui"]}]}}}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '2'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Length:
+      - '460'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 09 Sep 2023 16:39:25 GMT
+      Server:
+      - mw2416.codfw.wmnet
+      Set-Cookie:
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
 version: 1

@@ -12,7 +12,30 @@ language_preferences = [
     'it',
     'pt',
     'nl',
-    'ar'
+    'ar',
+    'uk',
+    'bn',
+    'sq',
+    'he',
+    'ko',
+    'bg',
+    'sk',
+    'vi',
+    'el',
+    'sv',
+    'hu',
+    'id',
+    'ast',
+    'ga',
+    'pl',
+    'th',
+    'fa',
+    'ur',
+    'mk',
+    'be',
+    'ml',
+    'eu',
+    'zh-hant'
 ]
 
 

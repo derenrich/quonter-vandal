@@ -576,4 +576,547 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: null
+    headers: {}
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=compare&prop=user%7Cdiff%7Ctitle%7Crel%7Cids&format=json&fromrev=1903569755&torev=1956762765
+  response:
+    body:
+      string: '{"compare":{"fromid":112853519,"fromrevid":1903569755,"fromns":0,"fromtitle":"Q118347644","fromuser":"92.184.112.117","fromuserid":0,"toid":112853519,"torevid":1956762765,"tons":0,"totitle":"Q118347644","touser":"92.184.107.241","touserid":0,"prev":1898433145,"next":1968025223,"*":"<tr><td
+        colspan=\"2\" class=\"diff-lineno\"></td><td colspan=\"2\" class=\"diff-lineno\">Property
+        / <a title=\"Property:P40\" href=\"/wiki/Property:P40\">child</a></td></tr><tr><td
+        colspan=\"2\">\u00a0</td><td class=\"diff-marker\" data-marker=\"+\"></td><td
+        class=\"diff-addedline\"><div><ins class=\"diffchange diffchange-inline\"><span><a
+        title=\"Q121633519\" href=\"/wiki/Q121633519\">Am\u00e9lie Armogathe</a></span></ins></div></td></tr><tr><td
+        colspan=\"2\" class=\"diff-lineno\"></td><td colspan=\"2\" class=\"diff-lineno\">Property
+        / <a title=\"Property:P40\" href=\"/wiki/Property:P40\">child</a>: <a title=\"Q121633519\"
+        href=\"/wiki/Q121633519\">Am\u00e9lie Armogathe</a> / rank</td></tr><tr><td
+        colspan=\"2\">\u00a0</td><td class=\"diff-marker\" data-marker=\"+\"></td><td
+        class=\"diff-addedline\"><div><ins class=\"diffchange diffchange-inline\"><span>Normal
+        rank</span></ins></div></td></tr><tr><td colspan=\"2\" class=\"diff-lineno\"></td><td
+        colspan=\"2\" class=\"diff-lineno\">Property / <a title=\"Property:P40\" href=\"/wiki/Property:P40\">child</a>:
+        <a title=\"Q121633519\" href=\"/wiki/Q121633519\">Am\u00e9lie Armogathe</a>
+        / reference</td></tr><tr><td colspan=\"2\">\u00a0</td><td class=\"diff-marker\"
+        data-marker=\"+\"></td><td class=\"diff-addedline\"><div><ins class=\"diffchange
+        diffchange-inline\"><span><a title=\"Property:P854\" href=\"/wiki/Property:P854\">reference
+        URL</a>: <a rel=\"nofollow\" class=\"external free\" href=\"https://gw.geneanet.org/wujekvero2?n=armogathe&amp;oc=&amp;p=joseph\">https://gw.geneanet.org/wujekvero2?n=armogathe&amp;oc=&amp;p=joseph</a></span></ins></div></td></tr>"}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 09 Sep 2023 16:39:51 GMT
+      Server:
+      - mw2328.codfw.wmnet
+      Set-Cookie:
+      - WMF-Last-Access=09-Sep-2023;Path=/;HttpOnly;secure;Expires=Wed, 11 Oct 2023
+        12:00:00 GMT
+      - WMF-Last-Access-Global=09-Sep-2023;Path=/;Domain=.wikidata.org;HttpOnly;secure;Expires=Wed,
+        11 Oct 2023 12:00:00 GMT
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; Path=/; secure; Domain=.wikidata.org
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Cookie:
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; NetworkProbeLimit=0.001; WMF-Last-Access=09-Sep-2023;
+        WMF-Last-Access-Global=09-Sep-2023
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=query&prop=revisions&titles=Q118347644&rvprop=timestamp%7Cuser%7Ccomment%7Ctags&rvstartid=1956762765&rvendid=1903569755&format=json
+  response:
+    body:
+      string: '{"batchcomplete":"","query":{"pages":{"112853519":{"pageid":112853519,"ns":0,"title":"Q118347644","revisions":[{"user":"92.184.107.241","anon":"","timestamp":"2023-08-19T20:30:44Z","comment":"/*
+        wbsetclaim-create:2||1 */ [[Property:P40]]: [[Q121633519]]","tags":["wikidata-ui"]},{"user":"92.184.112.117","anon":"","timestamp":"2023-05-27T20:29:10Z","comment":"/*
+        wbsetclaim-create:2||1 */ [[Property:P570]]: unknown value","tags":["wikidata-ui"]}]}}}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Length:
+      - '451'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 09 Sep 2023 16:39:51 GMT
+      Server:
+      - mw2417.codfw.wmnet
+      Set-Cookie:
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      User-Agent:
+      - Quonter Vandal
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=query&prop=revisions&rvprop=content%7Cids&titles=Q118347644&rvstartid=1903569755&format=json&rvslots=main&rvlimit=1
+  response:
+    body:
+      string: '{"continue":{"rvcontinue":"20230518085738|1898433145","continue":"||"},"query":{"pages":{"112853519":{"pageid":112853519,"ns":0,"title":"Q118347644","revisions":[{"revid":1903569755,"parentid":1898433145,"slots":{"main":{"contentmodel":"wikibase-item","contentformat":"application/json","*":"{\"type\":\"item\",\"id\":\"Q118347644\",\"labels\":{\"en\":{\"language\":\"en\",\"value\":\"David
+        Maum\\u00e9jean\"}},\"descriptions\":[],\"aliases\":[],\"claims\":{\"P31\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P31\",\"hash\":\"ad7d38a03cdd40cdc373de0dc4e7b7fcbccb31d9\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":5,\"id\":\"Q5\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"id\":\"Q118347644$f6ef2f9c-41fb-829b-c575-7d185e2890bd\",\"rank\":\"normal\"}],\"P21\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P21\",\"hash\":\"85ad4b1c7348f7a5aac521135040d74e91fb5939\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":6581097,\"id\":\"Q6581097\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"id\":\"Q118347644$a947cf01-45fa-90fa-02c4-fc868f31d7c9\",\"rank\":\"normal\"}],\"P39\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P39\",\"hash\":\"d982acf8ab75130dbe2720b6ff41317af77dade3\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":65466624,\"id\":\"Q65466624\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"qualifiers\":{\"P582\":[{\"snaktype\":\"value\",\"property\":\"P582\",\"hash\":\"8bc4d8a19d767d12d3397bcb4b335b448ce47d7e\",\"datavalue\":{\"value\":{\"time\":\"+1919-00-00T00:00:00Z\",\"timezone\":0,\"before\":0,\"after\":0,\"precision\":9,\"calendarmodel\":\"http:\\/\\/www.wikidata.org\\/entity\\/Q1985727\"},\"type\":\"time\"}}],\"P580\":[{\"snaktype\":\"value\",\"property\":\"P580\",\"hash\":\"fc982c597fff226f45eb431ca41e441ae164c0e5\",\"datavalue\":{\"value\":{\"time\":\"+1912-00-00T00:00:00Z\",\"timezone\":0,\"before\":0,\"after\":0,\"precision\":9,\"calendarmodel\":\"http:\\/\\/www.wikidata.org\\/entity\\/Q1985727\"},\"type\":\"time\"}}]},\"qualifiers-order\":[\"P582\",\"P580\"],\"id\":\"Q118347644$3ee3d330-4894-6c5b-74c4-98cb2e85fad4\",\"rank\":\"normal\",\"references\":[{\"hash\":\"08696d06fbcc920cd8577991ec272c95b7dca1fc\",\"snaks\":{\"P854\":[{\"snaktype\":\"value\",\"property\":\"P854\",\"hash\":\"e98aed657ecd35e22908273866039bbc40342bc7\",\"datavalue\":{\"value\":\"https:\\/\\/brozer.fr\\/telearchives\\/#depot_collections.php?d=62&r=63592&c=64325&fn=113\",\"type\":\"string\"}}]},\"snaks-order\":[\"P854\"]}]},{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P39\",\"hash\":\"ef953ed166a816b241bc17d5e77742ab387b17e2\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":118313875,\"id\":\"Q118313875\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"qualifiers\":{\"P580\":[{\"snaktype\":\"value\",\"property\":\"P580\",\"hash\":\"26de8627027486e2646d856226a875376bd91720\",\"datavalue\":{\"value\":{\"time\":\"+1919-00-00T00:00:00Z\",\"timezone\":0,\"before\":0,\"after\":0,\"precision\":9,\"calendarmodel\":\"http:\\/\\/www.wikidata.org\\/entity\\/Q1985727\"},\"type\":\"time\"}}],\"P582\":[{\"snaktype\":\"value\",\"property\":\"P582\",\"hash\":\"a7a94714d7a119cdba565f9e64b0bfe454a0e373\",\"datavalue\":{\"value\":{\"time\":\"+1929-00-00T00:00:00Z\",\"timezone\":0,\"before\":0,\"after\":0,\"precision\":9,\"calendarmodel\":\"http:\\/\\/www.wikidata.org\\/entity\\/Q1985727\"},\"type\":\"time\"}}],\"P1366\":[{\"snaktype\":\"value\",\"property\":\"P1366\",\"hash\":\"673b7fb58dd286f183997609a22568b6bf940eb3\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":118342659,\"id\":\"Q118342659\"},\"type\":\"wikibase-entityid\"}}],\"P1365\":[{\"snaktype\":\"somevalue\",\"property\":\"P1365\",\"hash\":\"88ba35b3848d02504dfc83e16d64bd1bcbad8cdb\"}]},\"qualifiers-order\":[\"P580\",\"P582\",\"P1366\",\"P1365\"],\"id\":\"Q118347644$382a93c6-48f8-124e-792d-798b4aebf6e0\",\"rank\":\"normal\",\"references\":[{\"hash\":\"8aeea61561ef2ae2fbe008e0f0d4c86f27b60447\",\"snaks\":{\"P854\":[{\"snaktype\":\"value\",\"property\":\"P854\",\"hash\":\"a27bae30e3a9e146cef2f8b1de61e9f1a3bee14b\",\"datavalue\":{\"value\":\"https:\\/\\/brozer.fr\\/telearchives\\/#depot_collections.php?d=62&r=63592&c=64325&fn=31\",\"type\":\"string\"}}]},\"snaks-order\":[\"P854\"]}]}],\"P735\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P735\",\"hash\":\"00753eb958253c68845500350937765f9870ca4d\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":18057751,\"id\":\"Q18057751\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"id\":\"Q118347644$A176E1C1-FF32-4B9D-B421-B9EBC9C0B9C7\",\"rank\":\"normal\"}],\"P570\":[{\"mainsnak\":{\"snaktype\":\"somevalue\",\"property\":\"P570\",\"hash\":\"47120b7358ae3d3ae5f0762e83028363c1caef4a\"},\"type\":\"statement\",\"id\":\"Q118347644$4358a2e5-4102-e677-60b9-38ac0cef8cf2\",\"rank\":\"normal\"}]},\"sitelinks\":[]}"}}}]}}}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 09 Sep 2023 16:39:51 GMT
+      Server:
+      - mw2417.codfw.wmnet
+      Set-Cookie:
+      - WMF-Last-Access=09-Sep-2023;Path=/;HttpOnly;secure;Expires=Wed, 11 Oct 2023
+        12:00:00 GMT
+      - WMF-Last-Access-Global=09-Sep-2023;Path=/;Domain=.wikidata.org;HttpOnly;secure;Expires=Wed,
+        11 Oct 2023 12:00:00 GMT
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; Path=/; secure; Domain=.wikidata.org
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      User-Agent:
+      - Quonter Vandal
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=P40%7CP854%7CQ121633519&props=labels%7Cdescriptions&languages=en%7Cde%7Cfr%7Ces%7Cru%7Cit%7Cpt%7Cnl%7Car%7Cuk%7Cbn%7Csq%7Che%7Cko%7Cbg%7Csk%7Cvi%7Cel%7Csv%7Chu%7Cid%7Cast%7Cga%7Cpl%7Cth%7Cfa%7Cur%7Cmk%7Cbe%7Cml%7Ceu%7Czh-hant&format=json
+  response:
+    body:
+      string: '{"entities":{"P40":{"type":"property","datatype":"wikibase-item","id":"P40","labels":{"de":{"language":"de","value":"Kind"},"en":{"language":"en","value":"child"},"fr":{"language":"fr","value":"enfant"},"it":{"language":"it","value":"figlio"},"ru":{"language":"ru","value":"\u0434\u0435\u0442\u0438"},"zh-hant":{"language":"zh-hant","value":"\u5b50\u5973"},"hu":{"language":"hu","value":"gyermek"},"es":{"language":"es","value":"hijo
+        o hija"},"nl":{"language":"nl","value":"kind"},"he":{"language":"he","value":"\u05e6\u05d0\u05e6\u05d0"},"el":{"language":"el","value":"\u03c4\u03ad\u03ba\u03bd\u03bf"},"be":{"language":"be","value":"\u0434\u0437\u0456\u0446\u044f"},"pt":{"language":"pt","value":"descend\u00eancia"},"ko":{"language":"ko","value":"\uc790\ub140"},"pl":{"language":"pl","value":"dzieci"},"th":{"language":"th","value":"\u0e25\u0e39\u0e01"},"uk":{"language":"uk","value":"\u0434\u0438\u0442\u0438\u043d\u0430"},"fa":{"language":"fa","value":"\u0641\u0631\u0632\u0646\u062f"},"vi":{"language":"vi","value":"con
+        c\u00e1i"},"ar":{"language":"ar","value":"\u0627\u0644\u0627\u0628\u0646"},"sv":{"language":"sv","value":"barn"},"id":{"language":"id","value":"anak"},"bn":{"language":"bn","value":"\u09b8\u09a8\u09cd\u09a4\u09be\u09a8"},"ga":{"language":"ga","value":"p\u00e1iste"},"mk":{"language":"mk","value":"\u0434\u0435\u0442\u0435"},"sk":{"language":"sk","value":"die\u0165a"},"eu":{"language":"eu","value":"seme/alaba"},"bg":{"language":"bg","value":"\u0434\u0435\u0442\u0435"},"ml":{"language":"ml","value":"\u0d2e\u0d15\u0d4d\u0d15\u0d7e"},"ast":{"language":"ast","value":"f\u00edu/a"},"ur":{"language":"ur","value":"\u0627\u0648\u0644\u0627\u062f"},"sq":{"language":"sq","value":"f\u00ebmij\u00eb"}},"descriptions":{"de":{"language":"de","value":"Kind
+        der Person"},"fr":{"language":"fr","value":"lien familial direct indiquant
+        que l''objet du lien est un fils ou une fille du sujet (ind\u00e9pendamment
+        de son \u00e2ge)"},"it":{"language":"it","value":"grado di parentela"},"el":{"language":"el","value":"\u03c0\u03b1\u03b9\u03b4\u03af
+        \u03c4\u03bf\u03c5/\u03c4\u03b7\u03c2 \u03b5\u03af\u03bd\u03b1\u03b9 \u03bf/\u03b7
+        ..."},"he":{"language":"he","value":"\u05d9\u05dc\u05d3 \u05d0\u05d5 \u05d9\u05dc\u05d3\u05d4.
+        \u05d1\u05df/\u05d1\u05ea"},"es":{"language":"es","value":"familiar descendiente
+        en primer grado de parentesco"},"fa":{"language":"fa","value":"\u0641\u0631\u0632\u0646\u062f(\u0627\u0646)
+        \u0634\u062e\u0635"},"uk":{"language":"uk","value":"\u043e\u0441\u043e\u0431\u0430
+        \u043c\u0430\u0454 \u0434\u0438\u0442\u0438\u043d\u0443 \u0447\u0438 \u0434\u0456\u0442\u0435\u0439"},"sv":{"language":"sv","value":"subjektets
+        biologiska, foster- eller adoptivbarn"},"id":{"language":"id","value":"anak
+        dari subjek"},"pt":{"language":"pt","value":"um ou mais filhos do sujeito"},"nl":{"language":"nl","value":"kind
+        van deze persoon"},"ru":{"language":"ru","value":"\u0434\u0435\u0442\u0438
+        \u044d\u0442\u043e\u0433\u043e \u0447\u0435\u043b\u043e\u0432\u0435\u043a\u0430"},"th":{"language":"th","value":"\u0e04\u0e27\u0e32\u0e21\u0e2a\u0e31\u0e21\u0e1e\u0e31\u0e19\u0e18\u0e4c"},"ast":{"language":"ast","value":"el
+        suxetu tien esti oxetu como f\u00edu o f\u00eda"},"pl":{"language":"pl","value":"osoba
+        b\u0119d\u0105ca dzieckiem opisywanej postaci; \u0142\u0105czn\u0105 liczb\u0119
+        dzieci mo\u017cna poda\u0107 w P1971"},"eu":{"language":"eu","value":"subjektu
+        baten ondorengo biologikoa"},"ko":{"language":"ko","value":"\ud56d\ubaa9 \uc8fc\uc81c\uc778
+        \uc778\ubb3c\uc758 \uc790\ub140\ub4e4"},"sq":{"language":"sq","value":"subjekti
+        ka f\u00ebmij\u00eb biologjik ose bir\u00ebsim"},"hu":{"language":"hu","value":"az
+        illet\u0151 szem\u00e9ly (v\u00e9r szerinti) fia vagy l\u00e1nya, ha van r\u00f3la
+        elem"},"ar":{"language":"ar","value":"\u0627\u0644\u0645\u0648\u0636\u0648\u0639
+        \u0644\u0647 \u0643\u0627\u0626\u0646 \u0643\u0637\u0641\u0644. \u0644\u0627
+        \u062a\u0633\u062a\u062e\u062f\u0645\u0647 \u0645\u0639 \u0623\u0648\u0644\u0627\u062f
+        \u0627\u0644\u0632\u0648\u062c / \u0627\u0644\u0632\u0648\u062c\u0629 - \u0627\u0633\u062a\u062e\u062f\u0645
+        \"\u0642\u0631\u064a\u0628\" (P1038) \u060c \u0645\u0624\u0647\u0644 \u0628\u0640
+        \"\u0646\u0648\u0639 \u0627\u0644\u0642\u0631\u0627\u0628\u0629\" (P1039)"},"en":{"language":"en","value":"subject
+        has object as child. Do not use for stepchildren\u2014use \"relative\" (P1038),
+        qualified with \"type of kinship\" (P1039)"},"vi":{"language":"vi","value":"ch\u1ee7
+        th\u1ec3 c\u00f3 \u0111\u1ed1i t\u01b0\u1ee3ng l\u00e0 con. \u0110\u1eebng
+        d\u00f9ng cho con nu\u00f4i"},"ur":{"language":"ur","value":"\u0634\u062e\u0635\u06cc\u062a
+        \u06a9\u0627 \u062d\u0642\u06cc\u0642\u06cc \u0628\u06cc\u0679\u0627\u060c
+        \u0633\u0648\u062a\u06cc\u0644\u06d2 \u0628\u06cc\u0679\u06d2  \u06a9\u06d2
+        \u0644\u06cc\u06d2  \u06c1\u0631\u06af\u0632 \u0627\u0633\u062a\u0639\u0645\u0627\u0644
+        \u0646\u06c1 \u06a9\u0631\u06cc\u06ba"}}},"P854":{"type":"property","datatype":"url","id":"P854","labels":{"ko":{"language":"ko","value":"\ucc38\uace0\ud55c
+        URL"},"es":{"language":"es","value":"direcci\u00f3n web de la referencia"},"fr":{"language":"fr","value":"URL
+        de la r\u00e9f\u00e9rence"},"it":{"language":"it","value":"URL di riferimento"},"nl":{"language":"nl","value":"URL
+        voor bron"},"pt":{"language":"pt","value":"endere\u00e7o eletr\u00f3nico da
+        refer\u00eancia"},"de":{"language":"de","value":"URL der Fundstelle"},"ru":{"language":"ru","value":"URL-\u0441\u0441\u044b\u043b\u043a\u0430
+        \u043d\u0430 \u0438\u0441\u0442\u043e\u0447\u043d\u0438\u043a"},"sv":{"language":"sv","value":"referens\u2010URL"},"sk":{"language":"sk","value":"URL
+        referencie"},"pl":{"language":"pl","value":"odno\u015bnik (URL) do \u017ar\u00f3d\u0142a"},"bn":{"language":"bn","value":"\u09a4\u09a5\u09cd\u09af\u09b8\u09c2\u09a4\u09cd\u09b0\u09c7\u09b0
+        \u0987\u0989\u0986\u09b0\u098f\u09b2"},"hu":{"language":"hu","value":"forr\u00e1s
+        URL-je"},"mk":{"language":"mk","value":"URL"},"vi":{"language":"vi","value":"URL
+        ch\u00fa th\u00edch"},"be":{"language":"be","value":"URL"},"fa":{"language":"fa","value":"\u0646\u0634\u0627\u0646\u06cc
+        \u0627\u06cc\u0646\u062a\u0631\u0646\u062a\u06cc"},"el":{"language":"el","value":"URL
+        \u03c0\u03b7\u03b3\u03ae\u03c2"},"he":{"language":"he","value":"\u05db\u05ea\u05d5\u05d1\u05ea
+        URL \u05e9\u05dc \u05d4\u05de\u05e7\u05d5\u05e8"},"uk":{"language":"uk","value":"URL-\u043f\u043e\u0441\u0438\u043b\u0430\u043d\u043d\u044f
+        \u043d\u0430 \u0434\u0436\u0435\u0440\u0435\u043b\u043e"},"bg":{"language":"bg","value":"\u0443\u0435\u0431
+        \u0430\u0434\u0440\u0435\u0441 \u043d\u0430 \u0438\u0437\u0442\u043e\u0447\u043d\u0438\u043a"},"ast":{"language":"ast","value":"URL
+        de la referencia"},"ar":{"language":"ar","value":"\u0648\u0635\u0644\u0629
+        \u0645\u0631\u062c\u0639"},"id":{"language":"id","value":"situs rujukan"},"eu":{"language":"eu","value":"URL
+        erreferentzia"},"ur":{"language":"ur","value":"\u062d\u0648\u0627\u0644\u06c1
+        \u06cc\u0648 \u0622\u0631 \u0627\u06cc\u0644"},"th":{"language":"th","value":"\u0e22\u0e39\u0e2d\u0e32\u0e23\u0e4c\u0e41\u0e2d\u0e25\u0e17\u0e35\u0e48\u0e2d\u0e49\u0e32\u0e07\u0e2d\u0e34\u0e07"},"sq":{"language":"sq","value":"referenca
+        URL"},"ml":{"language":"ml","value":"\u0d05\u0d35\u0d32\u0d02\u0d2c \u0d2f\u0d42.\u0d06\u0d7c.\u0d0e\u0d7d."},"ga":{"language":"ga","value":"URL
+        tagartha"},"zh-hant":{"language":"zh-hant","value":"\u4f86\u6e90\u7db2\u5740"},"en":{"language":"en","value":"reference
+        URL"}},"descriptions":{"ko":{"language":"ko","value":"\uc774 \uc11c\uc220\uc744
+        \uc791\uc131\ud560 \ub54c \ucc38\uace0\ud55c \uc778\ud130\ub137 URL"},"fr":{"language":"fr","value":"devrait
+        \u00eatre d\u00e9fini pour les URL des documents web utilis\u00e9s comme r\u00e9f\u00e9rence"},"it":{"language":"it","value":"deve
+        essere utilizzato per gli URL di internet come riferimenti"},"pt":{"language":"pt","value":"endere\u00e7o
+        eletr\u00f3nico onde a refer\u00eancia est\u00e1 depositada"},"de":{"language":"de","value":"Internetadresse
+        f\u00fcr Quellenangaben. Benutze P4656 f\u00fcr Interwiki-Links"},"nl":{"language":"nl","value":"bedoeld
+        voor websiteadressen bij bronnen"},"pl":{"language":"pl","value":"u\u017cywany
+        do podawania adres\u00f3w internetowych jako \u017ar\u00f3de\u0142"},"hu":{"language":"hu","value":"hivatkoz\u00e1sk\u00e9nt
+        haszn\u00e1lt URL-c\u00edmekhez kell haszn\u00e1lni"},"fa":{"language":"fa","value":"\u0628\u0631\u0627\u06cc
+        \u0646\u0634\u0627\u0646\u06cc\u200c\u0647\u0627\u06cc \u0627\u06cc\u0646\u062a\u0631\u0646\u062a\u06cc
+        \u0628\u0647\u200c\u0639\u0646\u0648\u0627\u0646 \u0645\u0646\u0628\u0639
+        \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0634\u0648\u062f"},"el":{"language":"el","value":"\u03b3\u03b9\u03b1
+        \u03c7\u03c1\u03ae\u03c3\u03b7 \u03b4\u03b9\u03b5\u03c5\u03b8\u03cd\u03bd\u03c3\u03b5\u03c9\u03bd
+        URL \u03c9\u03c2 \u03c0\u03b7\u03b3\u03ad\u03c2"},"ru":{"language":"ru","value":"\u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442\u0441\u044f
+        \u0434\u043b\u044f URL (\u0430\u0434\u0440\u0435\u0441\u0430 \u0432\u0435\u0431-\u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b)
+        \u0432 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u0435 \u0438\u0441\u0442\u043e\u0447\u043d\u0438\u043a\u0430"},"sv":{"language":"sv","value":"anv\u00e4nds
+        f\u00f6r internetadresser som referenser"},"bg":{"language":"bg","value":"\u0438\u043d\u0442\u0435\u0440\u043d\u0435\u0442
+        \u0430\u0434\u0440\u0435\u0441 \u043d\u0430 \u0438\u0437\u0442\u043e\u0447\u043d\u0438\u043a"},"uk":{"language":"uk","value":"\u0430\u0434\u0440\u0435\u0441\u0430
+        \u0441\u0442\u043e\u0440\u0456\u043d\u043a\u0438-\u0434\u0436\u0435\u0440\u0435\u043b\u0430
+        \u0432 \u0406\u043d\u0442\u0435\u0440\u043d\u0435\u0442\u0456 (URL). \u0412\u0438\u043a\u043e\u0440\u0438\u0441\u0442\u043e\u0432\u0443\u0439\u0442\u0435
+        \"URL \u0441\u0442\u043e\u0440\u0456\u043d\u043a\u0438 \u0412\u0456\u043a\u0456\u043c\u0435\u0434\u0456\u0430\"
+        (P4656) \u0434\u043b\u044f \u0456\u043d\u0442\u0435\u0440\u0432\u0456\u043a\u0456-\u043f\u043e\u0441\u0438\u043b\u0430\u043d\u044c"},"ast":{"language":"ast","value":"tien
+        d''usase pa les URLs d''internet como referencies"},"id":{"language":"id","value":"dipergunakan
+        untuk Lokator Sumber Seragam (URL) yang dijadikan rujukan"},"eu":{"language":"eu","value":"URL
+        helbide bat  erreferentzia bezala erabiltzen denean"},"ar":{"language":"ar","value":"\u064a\u062c\u0628
+        \u0623\u0646 \u062a\u0633\u062a\u062e\u062f\u0645 \u0644\u0639\u0646\u0627\u0648\u064a\u0646
+        \u0623\u0648 \u0648\u0635\u0644\u0627\u062a \u0627\u0644\u0625\u0646\u062a\u0631\u0646\u062a
+        \u0643\u0645\u0631\u0627\u062c\u0639"},"th":{"language":"th","value":"URL
+        \u0e2d\u0e34\u0e19\u0e40\u0e17\u0e2d\u0e23\u0e4c\u0e40\u0e19\u0e47\u0e15\u0e17\u0e35\u0e48\u0e40\u0e1b\u0e47\u0e19\u0e41\u0e2b\u0e25\u0e48\u0e07\u0e2d\u0e49\u0e32\u0e07\u0e2d\u0e34\u0e07"},"sq":{"language":"sq","value":"duhet
+        t\u00eb p\u00ebrdoret p\u00ebr referencat me URL n\u00eb internet"},"en":{"language":"en","value":"should
+        be used for Internet URLs as references. Use \"Wikimedia import URL\" (P4656)
+        for imports from WMF sites"},"zh-hant":{"language":"zh-hant","value":"\u61c9\u8a72\u7528\u4f5c\u53c3\u8003\u8cc7\u6599\u7684\u7db2\u969b\u7db2\u8def\u4f4d\u5740\u3002\u8de8wiki\u9023\u7d50\u8acb\u6539\u7528P4656"},"es":{"language":"es","value":"debe
+        usarse para enlaces web que se utilizan como referencia"}}},"Q121633519":{"type":"item","id":"Q121633519","labels":{"en":{"language":"en","value":"Am\u00e9lie
+        Armogathe"}},"descriptions":{}}},"success":1}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 09 Sep 2023 16:39:51 GMT
+      Server:
+      - mw2366.codfw.wmnet
+      Set-Cookie:
+      - WMF-Last-Access=09-Sep-2023;Path=/;HttpOnly;secure;Expires=Wed, 11 Oct 2023
+        12:00:00 GMT
+      - WMF-Last-Access-Global=09-Sep-2023;Path=/;Domain=.wikidata.org;HttpOnly;secure;Expires=Wed,
+        11 Oct 2023 12:00:00 GMT
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; Path=/; secure; Domain=.wikidata.org
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Cookie:
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; NetworkProbeLimit=0.001; WMF-Last-Access=09-Sep-2023;
+        WMF-Last-Access-Global=09-Sep-2023
+      User-Agent:
+      - Quonter Vandal
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q18057751%7CQ5%7CQ6581097&props=labels%7Cdescriptions&languages=en%7Cde%7Cfr%7Ces%7Cru%7Cit%7Cpt%7Cnl%7Car%7Cuk%7Cbn%7Csq%7Che%7Cko%7Cbg%7Csk%7Cvi%7Cel%7Csv%7Chu%7Cid%7Cast%7Cga%7Cpl%7Cth%7Cfa%7Cur%7Cmk%7Cbe%7Cml%7Ceu%7Czh-hant&format=json
+  response:
+    body:
+      string: '{"entities":{"Q18057751":{"type":"item","id":"Q18057751","labels":{"en":{"language":"en","value":"David"},"fr":{"language":"fr","value":"David"},"ru":{"language":"ru","value":"\u0414\u0430\u0432\u0438\u0434
+        / \u0414\u044d(\u0439)\u0432\u0438\u0434"},"nl":{"language":"nl","value":"David"},"it":{"language":"it","value":"David"},"de":{"language":"de","value":"David"},"hu":{"language":"hu","value":"David"},"pl":{"language":"pl","value":"David"},"pt":{"language":"pt","value":"David"},"sv":{"language":"sv","value":"David"},"mk":{"language":"mk","value":"\u0414\u0430\u0432\u0438\u0434"},"es":{"language":"es","value":"David"},"uk":{"language":"uk","value":"\u0414\u0435\u0432\u0456\u0434"},"el":{"language":"el","value":"\u039d\u03c4\u03ad\u03b9\u03b2\u03b9\u03bd\u03c4"},"be":{"language":"be","value":"\u0414\u044d\u0432\u0456\u0434"},"ast":{"language":"ast","value":"David"},"eu":{"language":"eu","value":"David"},"ga":{"language":"ga","value":"David"},"vi":{"language":"vi","value":"David"},"sk":{"language":"sk","value":"David"},"id":{"language":"id","value":"David"},"ar":{"language":"ar","value":"\u062f\u064a\u0641\u064a\u062f"},"bn":{"language":"bn","value":"\u09a1\u09c7\u09ad\u09bf\u09a1"},"bg":{"language":"bg","value":"\u0414\u0430\u0432\u0438\u0434"},"fa":{"language":"fa","value":"\u062f\u06cc\u0648\u06cc\u062f"},"sq":{"language":"sq","value":"David"},"ko":{"language":"ko","value":"\ub2e4\ube44\ub4dc"},"he":{"language":"he","value":"\u05d3\u05d9\u05d9\u05d5\u05d5\u05d9\u05d3"},"ml":{"language":"ml","value":"\u0d21\u0d47\u0d35\u0d3f\u0d21\u0d4d"},"ur":{"language":"ur","value":"\u0688\u06cc\u0648\u0688"},"zh-hant":{"language":"zh-hant","value":"\u5927\u885b"}},"descriptions":{"ar":{"language":"ar","value":"\u0623\u0633\u0645
+        \u0645\u0630\u0643\u0631 \u0645\u0639\u0637\u0649 (David)"},"ast":{"language":"ast","value":"nome
+        mascul\u00edn"},"be":{"language":"be","value":"\u043c\u0443\u0436\u0447\u044b\u043d\u0441\u043a\u0430\u0435
+        \u0430\u0441\u0430\u0431\u0456\u0441\u0442\u0430\u0435 \u0456\u043c\u044f
+        (David)"},"bg":{"language":"bg","value":"\u043c\u044a\u0436\u043a\u043e \u0441\u043e\u0431\u0441\u0442\u0432\u0435\u043d\u043e
+        \u0438\u043c\u0435 (David)"},"bn":{"language":"bn","value":"\u09aa\u09cd\u09b0\u09a6\u09a4\u09cd\u09a4
+        \u09aa\u09c1\u09b0\u09c1\u09b7 \u09a8\u09be\u09ae (David)"},"de":{"language":"de","value":"m\u00e4nnlicher
+        Vorname"},"el":{"language":"el","value":"\u03b1\u03bd\u03b4\u03c1\u03b9\u03ba\u03cc
+        \u03cc\u03bd\u03bf\u03bc\u03b1 (David)"},"en":{"language":"en","value":"male
+        given name"},"es":{"language":"es","value":"nombre masculino"},"eu":{"language":"eu","value":"gizonezko
+        izena"},"fa":{"language":"fa","value":"\u0646\u0627\u0645 \u06a9\u0648\u0686\u06a9
+        \u0645\u0631\u062f\u0627\u0646\u0647 (David)"},"fr":{"language":"fr","value":"pr\u00e9nom
+        masculin"},"he":{"language":"he","value":"\u05e9\u05dd \u05e4\u05e8\u05d8\u05d9
+        \u05e9\u05dc \u05d2\u05d1\u05e8 (David)"},"hu":{"language":"hu","value":"f\u00e9rfi
+        keresztn\u00e9v"},"id":{"language":"id","value":"nama pemberian maskulin"},"it":{"language":"it","value":"prenome
+        maschile"},"ko":{"language":"ko","value":"\ub0a8\uc131\uc758 \uc774\ub984
+        (David)"},"mk":{"language":"mk","value":"\u043c\u0430\u0448\u043a\u043e \u043b\u0438\u0447\u043d\u043e
+        \u0438\u043c\u0435 (David)"},"nl":{"language":"nl","value":"mannelijke voornaam"},"pl":{"language":"pl","value":"imi\u0119
+        m\u0119skie"},"pt":{"language":"pt","value":"nome pr\u00f3prio masculino"},"ru":{"language":"ru","value":"\u043c\u0443\u0436\u0441\u043a\u043e\u0435
+        \u043b\u0438\u0447\u043d\u043e\u0435 \u0438\u043c\u044f - David"},"sk":{"language":"sk","value":"mu\u017esk\u00e9
+        meno"},"sq":{"language":"sq","value":"em\u00ebr mashkullor"},"sv":{"language":"sv","value":"mansnamn"},"th":{"language":"th","value":"\u0e0a\u0e37\u0e48\u0e2d\u0e1c\u0e39\u0e49\u0e0a\u0e32\u0e22
+        (David)"},"uk":{"language":"uk","value":"\u0447\u043e\u043b\u043e\u0432\u0456\u0447\u0435
+        \u043e\u0441\u043e\u0431\u043e\u0432\u0435 \u0456\u043c\u2019\u044f (David)"},"ur":{"language":"ur","value":"\u0645\u0631\u062f\u0627\u0646\u06c1
+        \u0630\u0627\u062a\u06cc \u0646\u0627\u0645"},"zh-hant":{"language":"zh-hant","value":"\u7537\u6027\u4eba\u540d
+        (David)"},"vi":{"language":"vi","value":"t\u00ean nam t\u00ednh"}}},"Q5":{"type":"item","id":"Q5","labels":{"en":{"language":"en","value":"human"},"fr":{"language":"fr","value":"\u00eatre
+        humain"},"ru":{"language":"ru","value":"\u0447\u0435\u043b\u043e\u0432\u0435\u043a"},"it":{"language":"it","value":"umano"},"de":{"language":"de","value":"Mensch"},"pl":{"language":"pl","value":"cz\u0142owiek"},"es":{"language":"es","value":"ser
+        humano"},"zh-hant":{"language":"zh-hant","value":"\u4eba\u985e"},"pt":{"language":"pt","value":"ser
+        humano"},"ko":{"language":"ko","value":"\uc0ac\ub78c"},"ar":{"language":"ar","value":"\u0625\u0646\u0633\u0627\u0646"},"ast":{"language":"ast","value":"humanu"},"be":{"language":"be","value":"\u0447\u0430\u043b\u0430\u0432\u0435\u043a"},"bg":{"language":"bg","value":"\u0447\u043e\u0432\u0435\u043a"},"bn":{"language":"bn","value":"\u09ae\u09be\u09a8\u09c1\u09b7"},"el":{"language":"el","value":"\u03ac\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2"},"eu":{"language":"eu","value":"gizaki"},"fa":{"language":"fa","value":"\u0627\u0646\u0633\u0627\u0646"},"ga":{"language":"ga","value":"duine"},"he":{"language":"he","value":"\u05d0\u05d3\u05dd"},"hu":{"language":"hu","value":"ember"},"id":{"language":"id","value":"manusia"},"mk":{"language":"mk","value":"\u0447\u043e\u0432\u0435\u043a"},"ml":{"language":"ml","value":"\u0d2e\u0d28\u0d41\u0d37\u0d4d\u0d2f\u0d7b"},"nl":{"language":"nl","value":"mens"},"sk":{"language":"sk","value":"\u010dlovek"},"sq":{"language":"sq","value":"njeri"},"sv":{"language":"sv","value":"m\u00e4nniska"},"th":{"language":"th","value":"\u0e21\u0e19\u0e38\u0e29\u0e22\u0e4c"},"uk":{"language":"uk","value":"\u043b\u044e\u0434\u0438\u043d\u0430"},"ur":{"language":"ur","value":"\u0627\u0646\u0633\u0627\u0646"},"vi":{"language":"vi","value":"ng\u01b0\u1eddi"}},"descriptions":{"en":{"language":"en","value":"any
+        member of Homo sapiens, unique extant species of the genus Homo, from embryo
+        to adult"},"fr":{"language":"fr","value":"individu appartenant \u00e0 l\u2019esp\u00e8ce
+        Homo sapiens, la seule esp\u00e8ce restante du genre Homo \u2013 distinct
+        de \u00ab humain fictif \u00bb et de \u00ab humain possiblement fictif \u00bb"},"de":{"language":"de","value":"h\u00f6heres
+        S\u00e4ugetier aus der Ordnung der Primaten"},"pl":{"language":"pl","value":"nazwa
+        zwyczajowa Homo sapiens, unikalny nadal istniej\u0105cy gatunek rodzaju Homo"},"es":{"language":"es","value":"nombre
+        com\u00fan de Homo sapiens, \u00fanica especie existente del g\u00e9nero Homo"},"it":{"language":"it","value":"nome
+        comune della specie Homo sapiens, l''unica esistente del genere Homo"},"nl":{"language":"nl","value":"tweevoetige
+        primatensoort uit de familie van de hominidae"},"ko":{"language":"ko","value":"\uc601\uc7a5\ub958\uc758
+        \uc77c\uc885"},"hu":{"language":"hu","value":"a Hominidae csal\u00e1dba tartoz\u00f3
+        f\u0151eml\u0151sfaj, a Homo nem egyetlen jelenkori k\u00e9pvisel\u0151je"},"ru":{"language":"ru","value":"\u043e\u0431\u0449\u0435\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0435
+        \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u043e, \u043e\u0431\u043b\u0430\u0434\u0430\u044e\u0449\u0435\u0435
+        \u0440\u0430\u0437\u0443\u043c\u043e\u043c \u0438 \u0441\u043e\u0437\u043d\u0430\u043d\u0438\u0435\u043c;
+        \u0441\u0443\u0431\u044a\u0435\u043a\u0442, \u043e\u0442\u043d\u043e\u0441\u044f\u0449\u0438\u0439\u0441\u044f
+        \u043a \u0432\u0438\u0434\u0443 \u0427\u0435\u043b\u043e\u0432\u0435\u043a
+        \u0440\u0430\u0437\u0443\u043c\u043d\u044b\u0439"},"zh-hant":{"language":"zh-hant","value":"\u9748\u9577\u76ee\u4eba\u79d1\u4eba\u5c6c\u7684\u7269\u7a2e"},"he":{"language":"he","value":"\u05de\u05d9\u05df
+        \u05d1\u05e1\u05d5\u05d2 \u05d0\u05d3\u05dd"},"fa":{"language":"fa","value":"\u06af\u0648\u0646\u0647\u200c\u0627\u06cc
+        \u0627\u0632 \u067e\u0633\u062a\u0627\u0646\u062f\u0627\u0631\u0627\u0646"},"sv":{"language":"sv","value":"en
+        art av sl\u00e4ktet m\u00e4nniskor (Homo)"},"pt":{"language":"pt","value":"\u00fanica
+        subesp\u00e9cie ainda existente do g\u00e9nero Homo"},"uk":{"language":"uk","value":"\u0432\u0438\u0434
+        \u0440\u043e\u0434\u0443 \u041b\u044e\u0434\u0438 (Homo) \u0456\u0437 \u0440\u043e\u0434\u0438\u043d\u0438
+        \u0433\u043e\u043c\u0456\u043d\u0456\u0434 \u0432 \u0440\u044f\u0434\u0456
+        \u043f\u0440\u0438\u043c\u0430\u0442\u0456\u0432, \u0454\u0434\u0438\u043d\u0438\u0439
+        \u0437 \u043d\u0438\u043d\u0456 \u0456\u0441\u043d\u0443\u044e\u0447\u0438\u0445
+        \u0432 \u0442\u0435\u043f\u0435\u0440\u0456\u0448\u043d\u0456\u0439 \u0447\u0430\u0441"},"vi":{"language":"vi","value":"lo\u00e0i
+        duy nh\u1ea5t thu\u1ed9c chi Homo c\u00f2n t\u1ed3n t\u1ea1i thu\u1ed9c b\u1ed9
+        Linh Tr\u01b0\u1edfng"},"eu":{"language":"eu","value":"Hominidae familiako
+        animalia espeziea, bizirik dirauen Homo generoko espezie bakarra"},"bg":{"language":"bg","value":"\u043e\u0431\u0449\u043e\u043f\u0440\u0438\u0435\u0442\u043e\u0442\u043e
+        \u0438\u043c\u0435 \u043d\u0430 Homo sapiens, \u0435\u0434\u0438\u043d\u0441\u0442\u0432\u0435\u043d\u0438\u044f\u0442
+        \u043e\u0446\u0435\u043b\u044f\u043b \u043f\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u0438\u0442\u0435\u043b
+        \u043d\u0430 \u0440\u043e\u0434\u0430 Homo"},"id":{"language":"id","value":"nama
+        umum Homo sapiens, satu-satunya spesies genus Homo yang masih ada"},"ast":{"language":"ast","value":"primate
+        b\u00edpedu de la familia de los hom\u00ednidos, \u00fanicu sobreviviente
+        del x\u00e9neru Homo"},"ar":{"language":"ar","value":"\u0627\u0644\u0627\u0633\u0645
+        \u0627\u0644\u0634\u0627\u0626\u0639 \u0644\u0644\u0625\u0646\u0633\u0627\u0646
+        \u0627\u0644\u0639\u0627\u0642\u0644\u060c \u0627\u0644\u0623\u0646\u0648\u0627\u0639
+        \u0627\u0644\u0641\u0631\u064a\u062f\u0629 \u0627\u0644\u0645\u0648\u062c\u0648\u062f\u0629
+        \u0645\u0646 \u062c\u0646\u0633 \u0627\u0644\u0625\u0646\u0633\u0627\u0646"},"sk":{"language":"sk","value":"jedin\u00fd
+        \u017eij\u00faci druh rodu Homo"},"th":{"language":"th","value":"\u0e0a\u0e37\u0e48\u0e2d\u0e40\u0e23\u0e35\u0e22\u0e01\u0e02\u0e2d\u0e07\u0e42\u0e2e\u0e42\u0e21\u0e40\u0e0b\u0e40\u0e1b\u0e35\u0e22\u0e19\u0e2a\u0e4c
+        \u0e2a\u0e1b\u0e35\u0e0a\u0e35\u0e2a\u0e4c\u0e43\u0e19\u0e2a\u0e01\u0e38\u0e25\u0e42\u0e2e\u0e42\u0e21"},"ml":{"language":"ml","value":"\u0d39\u0d4b\u0d2e\u0d4b
+        \u0d0e\u0d28\u0d4d\u0d28 \u0d1c\u0d46\u0d28\u0d41\u0d38\u0d3f\u0d7d \u0d07\u0d28\u0d4d\u0d28\u0d4d
+        \u0d1c\u0d40\u0d35\u0d3f\u0d1a\u0d4d\u0d1a\u0d3f\u0d30\u0d3f\u0d15\u0d4d\u0d15\u0d41\u0d28\u0d4d\u0d28
+        \u0d0f\u0d15 \u0d1c\u0d40\u0d35\u0d3f\u0d2f\u0d3e\u0d23\u0d4d \u0d2e\u0d28\u0d41\u0d37\u0d4d\u0d2f\u0d7b"},"bn":{"language":"bn","value":"\u09ae\u09be\u09a8\u09ac
+        \u09b8\u09ae\u09be\u099c\u09c7\u09b0 \u098f\u0995\u099c\u09a8 \u09b8\u09a6\u09b8\u09cd\u09af
+        \u09b9\u09bf\u09b8\u09c7\u09ac\u09c7 \u09ae\u09be\u09a8\u09c1\u09b7, \u09b9\u09cb\u09ae\u09cb
+        \u09b8\u09c7\u09aa\u09bf\u09af\u09bc\u09c7\u09a8\u09cd\u09b8\u09c7\u09b0 \u09b8\u09be\u09a7\u09be\u09b0\u09a3
+        \u09a8\u09be\u09ae"},"sq":{"language":"sq","value":"Njeriu si nj\u00eb an\u00ebtar
+        i shoq\u00ebris\u00eb njer\u00ebzore; Emri i zakonsh\u00ebm i Homo sapiens,
+        specie unike ekzistuese t\u00eb gjinis\u00eb Homo"},"el":{"language":"el","value":"\u03b5\u03af\u03b4\u03bf\u03c2
+        \u03c4\u03b7\u03c2 \u03bf\u03b9\u03ba\u03bf\u03b3\u03ad\u03bd\u03b5\u03b9\u03b1\u03c2
+        Hominidae, \u03bc\u03bf\u03bd\u03b1\u03b4\u03b9\u03ba\u03cc \u03b5\u03c0\u03b9\u03b6\u03ce\u03bd
+        \u03b5\u03af\u03b4\u03bf\u03c2 \u03c4\u03bf\u03c5 \u03b3\u03ad\u03bd\u03bf\u03c5\u03c2
+        Homo"},"be":{"language":"be","value":"\u0430\u0441\u043e\u0431\u0430, \u0447\u0430\u043b\u0430\u0432\u0435\u043a
+        \u044f\u043a \u0447\u0430\u0441\u0442\u043a\u0430 \u0441\u0443\u043f\u043e\u043b\u044c\u043d\u0430\u0441\u0446\u0456,
+        \u0442\u0430\u043a\u0441\u0430\u043c\u0430 \u0430\u0433\u0443\u043b\u044c\u043d\u0430\u044f
+        \u043d\u0430\u0437\u0432\u0430 \u0434\u043b\u044f \u0431\u0456\u044f\u043b\u0430\u0433\u0456\u0447\u043d\u0430\u0433\u0430
+        \u0432\u0456\u0434\u0443 Homo sapiens"},"ga":{"language":"ga","value":"Ainm
+        coitianta d'' Homo sapiens,speiceas uath\u00fail ar marthain den gh\u00e9ineas
+        Homo, \u00f3 suth go duine f\u00e1sta"}}},"Q6581097":{"type":"item","id":"Q6581097","labels":{"mk":{"language":"mk","value":"\u043c\u0430\u0448\u043a\u0438"},"fr":{"language":"fr","value":"masculin"},"sk":{"language":"sk","value":"mu\u017e"},"uk":{"language":"uk","value":"\u0447\u043e\u043b\u043e\u0432\u0456\u0447\u0430"},"id":{"language":"id","value":"Laki-laki"},"th":{"language":"th","value":"\u0e40\u0e1e\u0e28\u0e0a\u0e32\u0e22"},"vi":{"language":"vi","value":"nam"},"es":{"language":"es","value":"masculino"},"zh-hant":{"language":"zh-hant","value":"\u7537"},"bg":{"language":"bg","value":"\u043c\u044a\u0436\u043a\u0438"},"be":{"language":"be","value":"\u043c\u0443\u0436\u0447\u044b\u043d\u0441\u043a\u0456
+        \u043f\u043e\u043b"},"ast":{"language":"ast","value":"mascul\u00edn"},"ur":{"language":"ur","value":"\u0645\u0631\u062f"},"he":{"language":"he","value":"\u05d6\u05db\u05e8"},"el":{"language":"el","value":"\u03ac\u03bd\u03b4\u03c1\u03b1\u03c2"},"it":{"language":"it","value":"maschio"},"bn":{"language":"bn","value":"\u09aa\u09c1\u09b0\u09c1\u09b7"},"ko":{"language":"ko","value":"\ub0a8\uc131"},"eu":{"language":"eu","value":"gizonezko"},"pt":{"language":"pt","value":"masculino"},"ru":{"language":"ru","value":"\u043c\u0443\u0436\u0441\u043a\u043e\u0439
+        \u043f\u043e\u043b"},"fa":{"language":"fa","value":"\u0645\u0630\u06a9\u0631"},"pl":{"language":"pl","value":"m\u0119\u017cczyzna"},"hu":{"language":"hu","value":"f\u00e9rfi"},"nl":{"language":"nl","value":"mannelijk"},"de":{"language":"de","value":"m\u00e4nnlich"},"sv":{"language":"sv","value":"man"},"ar":{"language":"ar","value":"\u0630\u0643\u0631"},"en":{"language":"en","value":"male"},"sq":{"language":"sq","value":"mashkull"},"ga":{"language":"ga","value":"fireann"},"ml":{"language":"ml","value":"\u0d2a\u0d41\u0d30\u0d41\u0d37\u0d7b"}},"descriptions":{"ur":{"language":"ur","value":"\u0627\u0646\u0633\u0627\u0646\u06cc
+        \u062c\u0646\u0633"},"uk":{"language":"uk","value":"\u043b\u044e\u0434\u0438\u043d\u0430
+        \u0447\u043e\u043b\u043e\u0432\u0456\u0447\u043e\u0457 \u0441\u0442\u0430\u0442\u0456,
+        \u043c\u0443\u0436\u0447\u0438\u043d\u0430"},"id":{"language":"id","value":"jenis
+        kelamin makhluk hidup yang tidak dapat melahirkan, lawan kata dari \"perempuan\",
+        digunakan pada atribut \"jenis kelamin atau gender\" (P21). dapat digunakan
+        untuk manusia maupun makhluk hidup lainnya"},"th":{"language":"th","value":"\u0e43\u0e0a\u0e49\u0e01\u0e31\u0e1a\u0e40\u0e09\u0e1e\u0e32\u0e30
+        P21 (\u0e40\u0e1e\u0e28) \u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e41\u0e2a\u0e14\u0e07\u0e27\u0e48\u0e32\u0e21\u0e35\u0e40\u0e1e\u0e28\u0e40\u0e1b\u0e47\u0e19\u0e0a\u0e32\u0e22"},"vi":{"language":"vi","value":"gi\u1edbi
+        t\u00ednh con ng\u01b0\u1eddi, ch\u1ec9 \u0111\u01b0\u1ee3c s\u1eed d\u1ee5ng
+        cho thu\u1ed9c t\u00ednh P21"},"es":{"language":"es","value":"sexo o g\u00e9nero
+        humano"},"ga":{"language":"ga","value":"inscne an duine"},"hu":{"language":"hu","value":"nemi
+        identit\u00e1s, csak a nem (P21) tulajdons\u00e1ghoz haszn\u00e1land\u00f3
+        elem"},"zh-hant":{"language":"zh-hant","value":"\u4eba\u985e\u6027\u5225\uff0c\u53ea\u7528\u65bc\u5c6c\u6027P21"},"fr":{"language":"fr","value":"\u00e9l\u00e9ment
+        \u00e0 utiliser dans P21 (\u00ab sexe ou genre \u00bb) pour signifier que
+        la personne est de sexe masculin"},"bg":{"language":"bg","value":"\u0438\u0437\u043f\u043e\u043b\u0437\u0432\u0430
+        \u0441\u0435 \u0441\u0430\u043c\u043e \u043a\u0430\u0442\u043e \u0441\u0442\u043e\u0439\u043d\u043e\u0441\u0442
+        \u043d\u0430 \u0430\u0442\u0440\u0438\u0431\u0443\u0442\u0430 \u043f\u043e\u043b
+        (P21)"},"eu":{"language":"eu","value":"P21ean erabiltzeko pertsona gizonezkoa
+        dela adierazteko"},"ast":{"language":"ast","value":"humanu machu (usar cola
+        propied\u00e1 P21 sexu)"},"he":{"language":"he","value":"\u05dc\u05e9\u05d9\u05de\u05d5\u05e9
+        \u05e2\u05dd \u05de\u05d0\u05e4\u05d9\u05d9\u05df P21. \u05de\u05d9\u05df
+        \u05d6\u05db\u05e8 \u05e2\u05d1\u05d5\u05e8 \u05d0\u05d3\u05dd."},"el":{"language":"el","value":"\u03c0\u03c1\u03cc\u03c3\u03c9\u03c0\u03bf
+        \u03c0\u03bf\u03c5 \u03b5\u03af\u03bd\u03b1\u03b9 \u03ac\u03bd\u03b4\u03c1\u03b1\u03c2
+        (\u03c7\u03c1\u03ae\u03c3\u03b7 \u03bc\u03b5 \u03c4\u03bf Property:P21 \u03b3\u03b9\u03b1
+        \u03c4\u03bf \u03c6\u03cd\u03bb\u03bf)"},"it":{"language":"it","value":"essere
+        umano di sesso maschile (da usare con la propriet\u00e0:P21 \"sesso o genere\")"},"bn":{"language":"bn","value":"\u09ae\u09be\u09a8\u09c1\u09b7
+        \u09af\u09bf\u09a8\u09bf \u09aa\u09c1\u09b0\u09c1\u09b7"},"ko":{"language":"ko","value":"\uc778\uac04
+        \ub300\uc0c1\uc774 \ub0a8\uc131\uc784\uc744 \ub098\ud0c0\ub0b4\uae30 \uc704\ud574
+        \"\uc131\ubcc4 \ub610\ub294 \uc820\ub354\"(P21)\uc5d0\uc11c \uc0ac\uc6a9"},"be":{"language":"be","value":"\u0432\u044b\u043a\u0430\u0440\u044b\u0441\u0442\u043e\u045e\u0432\u0430\u0435\u0446\u0446\u0430
+        \u0432\u0430 \u045e\u043b\u0430\u0441\u0446\u0456\u0432\u0430\u0441\u0446\u0456
+        P21 (\u043f\u043e\u043b)"},"fa":{"language":"fa","value":"\u0628\u0631\u0627\u06cc
+        \u0627\u0646\u0633\u0627\u0646:\u0641\u0642\u0637 \u062f\u0631 \u062e\u0635\u0648\u0635\u06cc\u062a
+        \u06f2\u06f1 (\u062c\u0633\u0646\u06cc\u062a) \u0627\u0633\u062a\u0641\u0627\u062f\u0647
+        \u0645\u06cc\u200c\u0634\u0648\u062f \u062a\u0627 \u0645\u0634\u062e\u0635
+        \u0634\u0648\u062f \u0645\u0648\u0631\u062f \u0645\u0630\u06a9\u0631 \u0627\u0633\u062a."},"pt":{"language":"pt","value":"pessoa
+        que \u00e9 do sexo masculino (usar com a propriedade P21 para indicar o sexo
+        ou g\u00e9nero)"},"pl":{"language":"pl","value":"osoba p\u0142ci m\u0119skiej
+        (u\u017cywane z Property:P21 \u201ep\u0142e\u0107\u201d)"},"nl":{"language":"nl","value":"persoon
+        van het mannelijk geslacht, te gebruiken met P21 (sekse)"},"de":{"language":"de","value":"Mensch
+        mit m\u00e4nnlichem Geschlecht (Verwendung mit P21)"},"sv":{"language":"sv","value":"person
+        av manligt k\u00f6n; avsedd f\u00f6r \"P21\" (k\u00f6n)"},"ru":{"language":"ru","value":"\u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442\u0441\u044f
+        \u0432 \u0441\u0432\u043e\u0439\u0441\u0442\u0432\u0435 P21 (\u043f\u043e\u043b
+        \u0447\u0435\u043b\u043e\u0432\u0435\u043a\u0430)"},"ar":{"language":"ar","value":"\u0625\u0646\u0633\u0627\u0646
+        \u0630\u0643\u0631 (\u064a\u0633\u062a\u062e\u062f\u0645 \u0645\u0639 P21)"},"sq":{"language":"sq","value":"p\u00ebrdore
+        vet\u00ebm me Property:Sex (P21) p\u00ebr t\u00eb th\u00ebn\u00eb se subjekti
+        \u00ebsht\u00eb mashkull"},"ml":{"language":"ml","value":"\u0d2a\u0d41\u0d30\u0d41\u0d37\u0d7b
+        \u0d06\u0d2f\u0d41\u0d33\u0d4d\u0d33 \u0d35\u0d4d\u0d2f\u0d15\u0d4d\u0d24\u0d3f"},"en":{"language":"en","value":"to
+        be used in \"sex or gender\" (P21) to indicate that the human subject is a
+        male or \"semantic gender\" (P10339) to indicate that a word refers to a male
+        person"}}}},"success":1}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 09 Sep 2023 16:39:51 GMT
+      Server:
+      - mw2436.codfw.wmnet
+      Set-Cookie:
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
 version: 1

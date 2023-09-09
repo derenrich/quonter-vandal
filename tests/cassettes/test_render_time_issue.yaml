@@ -897,4 +897,867 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: null
+    headers: {}
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=compare&prop=user%7Cdiff%7Ctitle%7Crel%7Cids&format=json&fromrev=1959727458&torev=1959852276
+  response:
+    body:
+      string: '{"compare":{"fromid":192002,"fromrevid":1959727458,"fromns":0,"fromtitle":"Q194064","fromuser":"170.78.44.25","fromuserid":0,"toid":192002,"torevid":1959852276,"tons":0,"totitle":"Q194064","touser":"38.25.30.186","touserid":0,"prev":1948541871,"next":1959882396,"*":"<tr><td
+        colspan=\"2\" class=\"diff-lineno\">Property / <a title=\"Property:P19\" href=\"/wiki/Property:P19\">place
+        of birth</a></td><td colspan=\"2\" class=\"diff-lineno\">Property / <a title=\"Property:P19\"
+        href=\"/wiki/Property:P19\">place of birth</a></td></tr><tr><td class=\"diff-marker\"
+        data-marker=\"\u2212\"></td><td class=\"diff-deletedline\"><div><del class=\"diffchange
+        diffchange-inline\"><span><a title=\"Q1218\" href=\"/wiki/Q1218\">Jerusalem</a></span></del></div></td><td
+        class=\"diff-marker\" data-marker=\"+\"></td><td class=\"diff-addedline\"><div><ins
+        class=\"diffchange diffchange-inline\"><span><a title=\"Q646615\" href=\"/wiki/Q646615\">Gogogogo</a></span></ins></div></td></tr>"}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '392'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 09 Sep 2023 16:39:53 GMT
+      Server:
+      - mw2424.codfw.wmnet
+      Set-Cookie:
+      - WMF-Last-Access=09-Sep-2023;Path=/;HttpOnly;secure;Expires=Wed, 11 Oct 2023
+        12:00:00 GMT
+      - WMF-Last-Access-Global=09-Sep-2023;Path=/;Domain=.wikidata.org;HttpOnly;secure;Expires=Wed,
+        11 Oct 2023 12:00:00 GMT
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; Path=/; secure; Domain=.wikidata.org
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Cookie:
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; NetworkProbeLimit=0.001; WMF-Last-Access=09-Sep-2023;
+        WMF-Last-Access-Global=09-Sep-2023
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=query&prop=revisions&titles=Q194064&rvprop=timestamp%7Cuser%7Ccomment%7Ctags&rvstartid=1959852276&rvendid=1959727458&format=json
+  response:
+    body:
+      string: '{"batchcomplete":"","query":{"pages":{"192002":{"pageid":192002,"ns":0,"title":"Q194064","revisions":[{"user":"38.25.30.186","anon":"","timestamp":"2023-08-24T01:10:57Z","comment":"/*
+        wbsetclaim-update:2||1 */ [[Property:P19]]: [[Q646615]]","tags":["new editor
+        changing statement","mw-reverted","wikidata-ui"]},{"user":"170.78.44.25","anon":"","timestamp":"2023-08-23T21:24:37Z","comment":"/*
+        wbsetclaim-update:2||1 */ [[Property:P1559]]: BAUPAPA","tags":["new editor
+        changing statement","wikidata-ui"]}]}}}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Length:
+      - '508'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 09 Sep 2023 16:39:53 GMT
+      Server:
+      - mw2416.codfw.wmnet
+      Set-Cookie:
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      User-Agent:
+      - Quonter Vandal
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=P19%7CQ1218%7CQ646615&props=labels%7Cdescriptions&languages=en%7Cde%7Cfr%7Ces%7Cru%7Cit%7Cpt%7Cnl%7Car%7Cuk%7Cbn%7Csq%7Che%7Cko%7Cbg%7Csk%7Cvi%7Cel%7Csv%7Chu%7Cid%7Cast%7Cga%7Cpl%7Cth%7Cfa%7Cur%7Cmk%7Cbe%7Cml%7Ceu%7Czh-hant&format=json
+  response:
+    body:
+      string: '{"entities":{"P19":{"type":"property","datatype":"wikibase-item","id":"P19","labels":{"en":{"language":"en","value":"place
+        of birth"},"zh-hant":{"language":"zh-hant","value":"\u51fa\u751f\u5730"},"de":{"language":"de","value":"Geburtsort"},"it":{"language":"it","value":"luogo
+        di nascita"},"fr":{"language":"fr","value":"lieu de naissance"},"he":{"language":"he","value":"\u05de\u05e7\u05d5\u05dd
+        \u05dc\u05d9\u05d3\u05d4"},"es":{"language":"es","value":"lugar de nacimiento"},"ru":{"language":"ru","value":"\u043c\u0435\u0441\u0442\u043e
+        \u0440\u043e\u0436\u0434\u0435\u043d\u0438\u044f"},"hu":{"language":"hu","value":"sz\u00fclet\u00e9si
+        hely"},"nl":{"language":"nl","value":"geboorteplaats"},"el":{"language":"el","value":"\u03c4\u03cc\u03c0\u03bf\u03c2
+        \u03b3\u03ad\u03bd\u03bd\u03b7\u03c3\u03b7\u03c2"},"pl":{"language":"pl","value":"miejsce
+        urodzenia"},"pt":{"language":"pt","value":"local de nascimento"},"be":{"language":"be","value":"\u043c\u0435\u0441\u0446\u0430
+        \u043d\u0430\u0440\u0430\u0434\u0436\u044d\u043d\u043d\u044f"},"sv":{"language":"sv","value":"f\u00f6delseplats"},"fa":{"language":"fa","value":"\u0632\u0627\u062f\u06af\u0627\u0647"},"vi":{"language":"vi","value":"n\u01a1i
+        sinh"},"ko":{"language":"ko","value":"\ud0dc\uc5b4\ub09c \uacf3"},"uk":{"language":"uk","value":"\u043c\u0456\u0441\u0446\u0435
+        \u043d\u0430\u0440\u043e\u0434\u0436\u0435\u043d\u043d\u044f"},"th":{"language":"th","value":"\u0e2a\u0e16\u0e32\u0e19\u0e17\u0e35\u0e48\u0e40\u0e01\u0e34\u0e14"},"ar":{"language":"ar","value":"\u0645\u0643\u0627\u0646
+        \u0627\u0644\u0648\u0644\u0627\u062f\u0629"},"id":{"language":"id","value":"tempat
+        lahir"},"sk":{"language":"sk","value":"miesto narodenia"},"bn":{"language":"bn","value":"\u099c\u09a8\u09cd\u09ae\u09b8\u09cd\u09a5\u09be\u09a8"},"mk":{"language":"mk","value":"\u043c\u0435\u0441\u0442\u043e
+        \u043d\u0430 \u0440\u0430\u0453\u0430\u045a\u0435"},"eu":{"language":"eu","value":"jaiolekua"},"ga":{"language":"ga","value":"\u00e1it
+        bhreithe"},"ml":{"language":"ml","value":"\u0d1c\u0d28\u0d4d\u0d2e\u0d38\u0d4d\u0d25\u0d32\u0d02"},"bg":{"language":"bg","value":"\u043c\u044f\u0441\u0442\u043e
+        \u043d\u0430 \u0440\u0430\u0436\u0434\u0430\u043d\u0435"},"ast":{"language":"ast","value":"llugar
+        de nacimientu"},"sq":{"language":"sq","value":"vendi i lindjes"},"ur":{"language":"ur","value":"\u0645\u0642\u0627\u0645
+        \u067e\u06cc\u062f\u0627\u0626\u0634"}},"descriptions":{"fr":{"language":"fr","value":"ville
+        (ou autre localisation) o\u00f9 la personne est n\u00e9e"},"it":{"language":"it","value":"luogo
+        (il pi\u00f9 specifico: ad es. la citt\u00e0, in luogo del paese, o l''ospedale,
+        in luogo della citt\u00e0) in cui il soggetto \u00e8 nato"},"en":{"language":"en","value":"most
+        specific known (e.g. city instead of country, or hospital instead of city)
+        birth location of a person, animal or fictional character"},"de":{"language":"de","value":"Ort,
+        in dem eine Person, ein Tier oder ein fiktiver Charakter geboren wurde (so
+        genau wie bekannt, z. B. Stadt anstatt von Land oder Krankenhaus anstatt von
+        Stadt)"},"el":{"language":"el","value":"\u03bf \u03c0\u03b5\u03c1\u03b9\u03c3\u03c3\u03cc\u03c4\u03b5\u03c1\u03bf
+        \u03bb\u03b5\u03c0\u03c4\u03bf\u03bc\u03b5\u03c1\u03ce\u03c2 \u03b3\u03bd\u03c9\u03c3\u03c4\u03cc\u03c2
+        (\u03c0.\u03c7. \u03c0\u03cc\u03bb\u03b7 \u03b1\u03bd\u03c4\u03af \u03c7\u03ce\u03c1\u03b1,
+        \u03ae \u03bd\u03bf\u03c3\u03bf\u03ba\u03bf\u03bc\u03b5\u03af\u03bf \u03b1\u03bd\u03c4\u03af
+        \u03c0\u03cc\u03bb\u03b7\u03c2)"},"he":{"language":"he","value":"\u05de\u05e7\u05d5\u05dd
+        \u05dc\u05d9\u05d3\u05d4 \u05d4\u05de\u05d3\u05d5\u05d9\u05e7 \u05d1\u05d9\u05d5\u05ea\u05e8
+        (\u05e2\u05d3\u05d9\u05e3 \u05e2\u05d9\u05e8 \u05de\u05d0\u05e9\u05e8 \u05de\u05d3\u05d9\u05e0\u05d4
+        \u05d5\u05db\u05d3\u05d5\u05de\u05d4)"},"fa":{"language":"fa","value":"\u062c\u0627\u06cc\u06cc
+        \u06a9\u0647 \u0641\u0631\u062f \u0645\u062a\u0648\u0644\u062f \u0634\u062f\u0647
+        \u0627\u0633\u062a (\u0631\u06cc\u0632\u062a\u0631\u06cc\u0646 \u062c\u0627\u06cc
+        \u062f\u0631 \u062f\u0633\u062a\u0631\u0633 \u0631\u0627 \u0628\u0646\u0648\u06cc\u0633\u06cc\u062f
+        \u0645\u062b\u0644\u0627 \u0634\u0647\u0631 \u0628\u0647 \u062c\u0627\u06cc
+        \u06a9\u0634\u0648\u0631)"},"es":{"language":"es","value":"sitio m\u00e1s
+        espec\u00edfico conocido donde naci\u00f3 una persona, animal o personaje
+        ficticio"},"vi":{"language":"vi","value":"n\u01a1i sinh c\u1ee5 th\u1ec3 nh\u1ea5t
+        \u0111\u01b0\u1ee3c bi\u1ebft (v\u00ed d\u1ee5: ghi t\u00ean th\u00e0nh ph\u1ed1
+        thay v\u00ec t\u00ean qu\u1ed1c gia, t\u00ean b\u1ec7nh vi\u00ean thay v\u00ec
+        t\u00ean th\u00e0nh ph\u1ed1 v\u00e0o \u0111\u00e2y)"},"ko":{"language":"ko","value":"\ud56d\ubaa9
+        \uc8fc\uc81c\uac00 \ud0dc\uc5b4\ub09c \uc7a5\uc18c"},"sv":{"language":"sv","value":"den
+        f\u00f6rsamling eller mest specifika k\u00e4nda platsen (t.ex. stad i st\u00e4llet
+        f\u00f6r land)"},"pt":{"language":"pt","value":"local de nascimento da pessoa
+        (o mais espec\u00edfico poss\u00edvel)"},"pl":{"language":"pl","value":"najbardziej
+        dok\u0142adne (np. miasto, a nie kraj)"},"hu":{"language":"hu","value":"annak
+        a telep\u00fcl\u00e9snek a neve, ahol, vagy amelynek a k\u00f6zel\u00e9ben
+        az adott szem\u00e9ly sz\u00fcletett"},"ml":{"language":"ml","value":"\u0d1c\u0d28\u0d3f\u0d1a\u0d4d\u0d1a
+        \u0d38\u0d4d\u0d25\u0d32\u0d02"},"ru":{"language":"ru","value":"\u043d\u0430\u0438\u0431\u043e\u043b\u0435\u0435
+        \u0442\u043e\u0447\u043d\u043e\u0435 \u043c\u0435\u0441\u0442\u043e, \u0433\u0434\u0435
+        \u0441\u0443\u0431\u044a\u0435\u043a\u0442 \u0440\u043e\u0434\u0438\u043b\u0441\u044f
+        (\u043d\u0430\u043f\u0440\u0438\u043c\u0435\u0440, \u0433\u043e\u0440\u043e\u0434,
+        \u0430 \u043d\u0435 \u0441\u0442\u0440\u0430\u043d\u0430)"},"uk":{"language":"uk","value":"\u043d\u0430\u0439\u0442\u043e\u0447\u043d\u0456\u0448\u0435
+        \u043c\u0456\u0441\u0446\u0435, \u0434\u0435 \u0431\u0443\u0432 \u043d\u0430\u0440\u043e\u0434\u0436\u0435\u043d\u0438\u0439
+        \u0441\u0443\u0431''\u0454\u043a\u0442 (\u043d\u0430\u043f\u0440\u0438\u043a\u043b\u0430\u0434,
+        \u043c\u0456\u0441\u0442\u043e, \u0430 \u043d\u0435 \u043a\u0440\u0430\u0457\u043d\u0430)"},"nl":{"language":"nl","value":"de
+        meest specifieke bekende geboorteplaats van een persoon"},"eu":{"language":"eu","value":"Ezaguna
+        den lekurik zehatzena (adibidez: Estatua ez, baizik hiria)."},"ast":{"language":"ast","value":"lo
+        m\u00e1s concreto que se sepa (provincia meyor que pa\u00eds y hospital meyor
+        que ciud\u00e1)"},"bn":{"language":"bn","value":"\u099c\u09be\u09a8\u09be
+        \u09b8\u09ac\u099a\u09c7\u09af\u09bc\u09c7 \u09a8\u09bf\u09b0\u09cd\u09a6\u09bf\u09b7\u09cd\u099f
+        \u09b8\u09cd\u09a5\u09be\u09a8 (\u0989\u09a6\u09be\u0983 \u09a6\u09c7\u09b6\u09c7\u09b0
+        \u09aa\u09b0\u09bf\u09ac\u09b0\u09cd\u09a4\u09c7 \u099c\u09c7\u09b2\u09be,
+        \u09b6\u09b9\u09b0, \u0985\u09a5\u09ac\u09be \u09b6\u09b9\u09b0\u09c7\u09b0
+        \u09aa\u09b0\u09bf\u09ac\u09b0\u09cd\u09a4\u09c7 \u09b9\u09be\u09b8\u09aa\u09be\u09a4\u09be\u09b2)"},"zh-hant":{"language":"zh-hant","value":"\u4eba\u3001\u52d5\u7269\u6216\u865b\u64ec\u89d2\u8272\u7684\u5df2\u77e5\u6700\u8a73\u7d30\u8a95\u751f\u5730\u9ede"},"sq":{"language":"sq","value":"vendi
+        m\u00eb specifik i lindjes q\u00eb dim (psh qyteti n\u00eb vend t\u00eb shtetit,
+        ose sht\u00ebpia e lindjes n\u00eb vend t\u00eb qytetit)"},"ar":{"language":"ar","value":"\u0645\u0643\u0627\u0646
+        \u0648\u0644\u0627\u062f\u0629 \u0647\u0630\u0627 \u0627\u0644\u0634\u062e\u0635
+        (\u062d\u0627\u0648\u0644 \u0645\u0627 \u0623\u0645\u0643\u0646 \u062a\u062e\u0635\u064a\u0635
+        \u0627\u0644\u0645\u0643\u0627\u0646\u061b \u0645\u062b\u0644\u0627 \u0623\u0630\u0643\u0631
+        \u0627\u0644\u0645\u062f\u064a\u0646\u0629 \u0628\u062f\u0644\u0627 \u0645\u0646
+        \u0627\u0644\u0628\u0644\u062f \u0623\u0648 \u0627\u0644\u0645\u0633\u062a\u0634\u0641\u0649
+        \u0628\u062f\u0644\u0627 \u0645\u0646 \u0627\u0644\u0645\u062f\u064a\u0646\u0629)"},"id":{"language":"id","value":"lokasi
+        yang paling dikenal (misalnya kota alih-alih negara, atau rumah sakit alih-alih
+        kota) tempat kelahiran dari seseorang, hewan atau tokoh fiktif"},"sk":{"language":"sk","value":"\u010do
+        najpresnej\u0161ie ur\u010denie miesta narodenia osoby, fikt\u00edvnej postavy,
+        \u010di zviera\u0165a (to zneman\u00e1 rad\u0161ej uvies\u0165 mesto ako krajinu)"}}},"Q1218":{"type":"item","id":"Q1218","labels":{"sk":{"language":"sk","value":"Jeruzalem"},"mk":{"language":"mk","value":"\u0415\u0440\u0443\u0441\u0430\u043b\u0438\u043c"},"ur":{"language":"ur","value":"\u06cc\u0631\u0648\u0634\u0644\u0645"},"uk":{"language":"uk","value":"\u0404\u0440\u0443\u0441\u0430\u043b\u0438\u043c"},"es":{"language":"es","value":"Jerusal\u00e9n"},"ga":{"language":"ga","value":"Iar\u00fasail\u00e9im"},"nl":{"language":"nl","value":"Jeruzalem"},"ast":{"language":"ast","value":"Xerusal\u00e9n"},"bn":{"language":"bn","value":"\u099c\u09c7\u09b0\u09c1\u09b8\u09be\u09b2\u09c7\u09ae"},"pt":{"language":"pt","value":"Jerusal\u00e9m"},"ru":{"language":"ru","value":"\u0418\u0435\u0440\u0443\u0441\u0430\u043b\u0438\u043c"},"de":{"language":"de","value":"Jerusalem"},"ar":{"language":"ar","value":"\u0627\u0644\u0642\u062f\u0633"},"en":{"language":"en","value":"Jerusalem"},"ml":{"language":"ml","value":"\u0d1c\u0d46\u0d31\u0d41\u0d38\u0d32\u0d47\u0d02"},"fr":{"language":"fr","value":"J\u00e9rusalem"},"id":{"language":"id","value":"Yerusalem"},"vi":{"language":"vi","value":"Jerusalem"},"zh-hant":{"language":"zh-hant","value":"\u8036\u8def\u6492\u51b7"},"sv":{"language":"sv","value":"Jerusalem"},"bg":{"language":"bg","value":"\u0419\u0435\u0440\u0443\u0441\u0430\u043b\u0438\u043c"},"eu":{"language":"eu","value":"Jerusalem"},"it":{"language":"it","value":"Gerusalemme"},"he":{"language":"he","value":"\u05d9\u05e8\u05d5\u05e9\u05dc\u05d9\u05dd"},"fa":{"language":"fa","value":"\u0627\u0648\u0631\u0634\u0644\u06cc\u0645"},"hu":{"language":"hu","value":"Jeruzs\u00e1lem"},"ko":{"language":"ko","value":"\uc608\ub8e8\uc0b4\ub818"},"be":{"language":"be","value":"\u0406\u0435\u0440\u0443\u0441\u0430\u043b\u0456\u043c"},"pl":{"language":"pl","value":"Jerozolima"},"el":{"language":"el","value":"\u0399\u03b5\u03c1\u03bf\u03c5\u03c3\u03b1\u03bb\u03ae\u03bc"},"sq":{"language":"sq","value":"Jerusalemi"},"th":{"language":"th","value":"\u0e40\u0e22\u0e23\u0e39\u0e0b\u0e32\u0e40\u0e25\u0e21"}},"descriptions":{"pt":{"language":"pt","value":"cidade
+        na \u00c1sia Ocidental, reivindicada por Israel e pela Autoridade Palestina
+        como sua capital"},"fr":{"language":"fr","value":"ville du Proche-Orient,
+        sainte pour les trois religions abrahamiques"},"en":{"language":"en","value":"City
+        in the Middle East, holy to the three Abrahamic religions."},"it":{"language":"it","value":"citt\u00e0
+        del Vicino Oriente, sacra per le tre religioni abramitiche"},"bn":{"language":"bn","value":"\u09ae\u09a7\u09cd\u09af\u09aa\u09cd\u09b0\u09be\u099a\u09cd\u09af\u09c7\u09b0
+        \u09aa\u09ac\u09bf\u09a4\u09cd\u09b0 \u09b6\u09b9\u09b0, \u0987\u09b8\u09b0\u09be\u09af\u09bc\u09c7\u09b2\u09c7\u09b0
+        \u09a6\u09be\u09ac\u09c0\u0995\u09c3\u09a4 \u09b0\u09be\u099c\u09a7\u09be\u09a8\u09c0"},"uk":{"language":"uk","value":"\u0441\u0442\u043e\u043b\u0438\u0446\u044f
+        \u0442\u0430 \u043d\u0430\u0439\u0431\u0456\u043b\u044c\u0448\u0435 \u043c\u0456\u0441\u0442\u043e
+        \u0406\u0437\u0440\u0430\u0457\u043b\u044e"},"ru":{"language":"ru","value":"\u0433\u043e\u0440\u043e\u0434
+        \u043d\u0430 \u0411\u043b\u0438\u0436\u043d\u0435\u043c \u0412\u043e\u0441\u0442\u043e\u043a\u0435,
+        \u0446\u0435\u043d\u0442\u0440 \u0430\u0432\u0440\u0430\u0430\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0445
+        \u0440\u0435\u043b\u0438\u0433\u0438\u0439"},"fa":{"language":"fa","value":"\u067e\u0627\u06cc\u062a\u062e\u062a
+        \u0627\u062f\u0639\u0627\u06cc\u06cc \u0627\u0633\u0631\u0627\u0626\u06cc\u0644
+        \u0648 \u0641\u0644\u0633\u0637\u06cc\u0646"},"vi":{"language":"vi","value":"Th\u00e0nh
+        ph\u1ed1 \u1edf Trung \u0110\u00f4ng."},"he":{"language":"he","value":"\u05d1\u05d9\u05e8\u05ea
+        \u05d9\u05e9\u05e8\u05d0\u05dc"},"el":{"language":"el","value":"\u03c0\u03c1\u03c9\u03c4\u03b5\u03cd\u03bf\u03c5\u03c3\u03b1
+        \u03c4\u03bf\u03c5 \u0399\u03c3\u03c1\u03b1\u03ae\u03bb"},"es":{"language":"es","value":"ciudad
+        en el Mediterr\u00e1neo oriental, capital de Israel"},"pl":{"language":"pl","value":"miasto
+        w Palestynie i Izraelu, postulowana stolica obu tych pa\u0144stw"},"zh-hant":{"language":"zh-hant","value":"\u8056\u57ce"},"hu":{"language":"hu","value":"Izrael
+        \u00e9s Palesztina f\u0151v\u00e1rosa"},"nl":{"language":"nl","value":"stad
+        in Isra\u00ebl"},"de":{"language":"de","value":"Stadt in den jud\u00e4ischen
+        Bergen"},"sk":{"language":"sk","value":"mesto v Izraeli"},"sv":{"language":"sv","value":"Israels
+        de facto huvudstad som g\u00f6rs anspr\u00e5k p\u00e5 av b\u00e5de Israel
+        och Palestina"},"be":{"language":"be","value":"\u0433\u043e\u0440\u0430\u0434"},"id":{"language":"id","value":"kota
+        di Timur Tengah, kota suci bagi tiga agama Abrahamik"},"ar":{"language":"ar","value":"\u0623\u0643\u0628\u0631
+        \u0645\u062f\u0646 \u0641\u0644\u0633\u0637\u064a\u0646 \u0627\u0644\u062a\u0627\u0631\u064a\u062e\u064a\u0629
+        \u0645\u0633\u0627\u062d\u0629\u064b \u0648\u0633\u0643\u0627\u0646\u0627\u064b"},"ur":{"language":"ur","value":"\u0641\u0644\u0633\u0637\u06cc\u0646
+        \u0627\u0648\u0631 \u0627\u0633\u0631\u0627\u0626\u06cc\u0644 \u06a9\u0627
+        \u0627\u06cc\u06a9 \u0642\u062f\u06cc\u0645 \u0634\u06c1\u0631"},"ga":{"language":"ga","value":"cathair
+        in Iarthar na h\u00c1ise, \u00e9ilithe ag Gi\u00fadaigh agus Palaist\u00ednigh
+        araon, mar phr\u00edomhchathair"}}},"Q646615":{"type":"item","id":"Q646615","labels":{"fr":{"language":"fr","value":"Gogogogo"},"en":{"language":"en","value":"Gogogogo"},"nl":{"language":"nl","value":"Gogogogo"},"it":{"language":"it","value":"Gogogogo"},"de":{"language":"de","value":"Gogogogo"},"fa":{"language":"fa","value":"\u06af\u0648\u06af\u0648\u06af\u0648\u06af\u0648"}},"descriptions":{"fr":{"language":"fr","value":"ville
+        de Madagascar"},"en":{"language":"en","value":"commune in Madagascar"},"nl":{"language":"nl","value":"commune
+        in Madagascar"},"it":{"language":"it","value":"comune del Madagascar"}}}},"success":1}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 09 Sep 2023 16:39:53 GMT
+      Server:
+      - mw2450.codfw.wmnet
+      Set-Cookie:
+      - WMF-Last-Access=09-Sep-2023;Path=/;HttpOnly;secure;Expires=Wed, 11 Oct 2023
+        12:00:00 GMT
+      - WMF-Last-Access-Global=09-Sep-2023;Path=/;Domain=.wikidata.org;HttpOnly;secure;Expires=Wed,
+        11 Oct 2023 12:00:00 GMT
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; Path=/; secure; Domain=.wikidata.org
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      User-Agent:
+      - Quonter Vandal
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=query&prop=revisions&rvprop=content%7Cids&titles=Q194064&rvstartid=1959727458&format=json&rvslots=main&rvlimit=1
+  response:
+    body:
+      string: '{"continue":{"rvcontinue":"20230807050513|1948541871","continue":"||"},"query":{"pages":{"192002":{"pageid":192002,"ns":0,"title":"Q194064","revisions":[{"revid":1959727458,"parentid":1948541871,"slots":{"main":{"contentmodel":"wikibase-item","contentformat":"application/json","*":"{\"type\":\"item\",\"id\":\"Q194064\",\"labels\":{\"zh-hans\":{\"language\":\"zh-hans\",\"value\":\"\\u4ee5\\u897f\\u7ed3\"},\"zh-hant\":{\"language\":\"zh-hant\",\"value\":\"\\u4ee5\\u897f\\u7d50\"},\"zh-hk\":{\"language\":\"zh-hk\",\"value\":\"\\u4ee5\\u897f\\u7d50\"},\"zh-cn\":{\"language\":\"zh-cn\",\"value\":\"\\u4ee5\\u897f\\u7ed3\"},\"zh-sg\":{\"language\":\"zh-sg\",\"value\":\"\\u4ee5\\u897f\\u7ed3\"},\"zh-tw\":{\"language\":\"zh-tw\",\"value\":\"\\u4ee5\\u897f\\u7d50\"},\"pl\":{\"language\":\"pl\",\"value\":\"Ezechiel\"},\"eu\":{\"language\":\"eu\",\"value\":\"Ezekiel\"},\"fr\":{\"language\":\"fr\",\"value\":\"\\u00c9z\\u00e9chiel\"},\"he\":{\"language\":\"he\",\"value\":\"\\u05d9\\u05d7\\u05d6\\u05e7\\u05d0\\u05dc\"},\"ko\":{\"language\":\"ko\",\"value\":\"\\uc5d0\\uc81c\\ud0a4\\uc5d8\"},\"be\":{\"language\":\"be\",\"value\":\"\\u0415\\u0437\\u0435\\u043a\\u0456\\u0456\\u043b\\u044c\"},\"es\":{\"language\":\"es\",\"value\":\"Ezequiel\"},\"ta\":{\"language\":\"ta\",\"value\":\"\\u0b8e\\u0b9a\\u0bc7\\u0b95\\u0bcd\\u0b95\\u0bbf\\u0baf\\u0bc7\\u0bb2\\u0bcd\"},\"hu\":{\"language\":\"hu\",\"value\":\"Ez\\u00e9kiel
+        pr\\u00f3f\\u00e9ta\"},\"it\":{\"language\":\"it\",\"value\":\"Ezechiele\"},\"sw\":{\"language\":\"sw\",\"value\":\"Nabii
+        Ezekieli\"},\"de\":{\"language\":\"de\",\"value\":\"Ezechiel\"},\"id\":{\"language\":\"id\",\"value\":\"Yehezkiel\"},\"ja\":{\"language\":\"ja\",\"value\":\"\\u30a8\\u30bc\\u30ad\\u30a8\\u30eb\"},\"sv\":{\"language\":\"sv\",\"value\":\"Hesekiel\"},\"nl\":{\"language\":\"nl\",\"value\":\"Ezechi\\u00ebl\"},\"pt\":{\"language\":\"pt\",\"value\":\"Ezequiel\"},\"sk\":{\"language\":\"sk\",\"value\":\"Ezechiel\"},\"yi\":{\"language\":\"yi\",\"value\":\"\\u05d9\\u05d7\\u05d6\\u05e7\\u05d0\\u05dc\"},\"ru\":{\"language\":\"ru\",\"value\":\"\\u0415\\u0437\\u0435\\u043a\\u0438\\u044f\"},\"sr-el\":{\"language\":\"sr-el\",\"value\":\"Jezekilj\"},\"sr-ec\":{\"language\":\"sr-ec\",\"value\":\"\\u0408\\u0435\\u0437\\u0435\\u043a\\u0438\\u0459\"},\"en\":{\"language\":\"en\",\"value\":\"Ezekiel\"},\"ro\":{\"language\":\"ro\",\"value\":\"Ezechiel\"},\"ca\":{\"language\":\"ca\",\"value\":\"Ezequiel\"},\"fi\":{\"language\":\"fi\",\"value\":\"Hesekiel\"},\"uk\":{\"language\":\"uk\",\"value\":\"\\u0404\\u0437\\u0435\\u043a\\u0456\\u0457\\u043b\\u044c\"},\"cy\":{\"language\":\"cy\",\"value\":\"Eseciel\"},\"sl\":{\"language\":\"sl\",\"value\":\"Ezekiel\"},\"cs\":{\"language\":\"cs\",\"value\":\"Ezechiel\"},\"bg\":{\"language\":\"bg\",\"value\":\"\\u0415\\u0437\\u0435\\u043a\\u0438\\u043b\"},\"fa\":{\"language\":\"fa\",\"value\":\"\\u062d\\u0632\\u0642\\u06cc\\u0627\\u0644\"},\"ka\":{\"language\":\"ka\",\"value\":\"\\u10d4\\u10d6\\u10d4\\u10d9\\u10d8\\u10d4\\u10da\\u10d8\"},\"lt\":{\"language\":\"lt\",\"value\":\"Ezechielis\"},\"tl\":{\"language\":\"tl\",\"value\":\"Ezekiel\"},\"el\":{\"language\":\"el\",\"value\":\"\\u0399\\u03b5\\u03b6\\u03b5\\u03ba\\u03b9\\u03ae\\u03bb\"},\"fo\":{\"language\":\"fo\",\"value\":\"Ezekiel\"},\"zh\":{\"language\":\"zh\",\"value\":\"\\u4ee5\\u897f\\u7d50\"},\"sr\":{\"language\":\"sr\",\"value\":\"\\u0408\\u0435\\u0437\\u0435\\u043a\\u0438\\u0459\"},\"eo\":{\"language\":\"eo\",\"value\":\"Je\\u0125ezkelo\"},\"nb\":{\"language\":\"nb\",\"value\":\"Esekiel\"},\"ur\":{\"language\":\"ur\",\"value\":\"\\u062d\\u0632\\u0642\\u06cc
+        \\u0627\\u06cc\\u0644\"},\"la\":{\"language\":\"la\",\"value\":\"Ezechiel\"},\"hy\":{\"language\":\"hy\",\"value\":\"\\u0535\\u0566\\u0565\\u056f\\u056b\\u0561\"},\"ar\":{\"language\":\"ar\",\"value\":\"\\u062d\\u0632\\u0642\\u064a\\u0627\\u0644\"},\"ga\":{\"language\":\"ga\",\"value\":\"Eizic\\u00e9il\"},\"br\":{\"language\":\"br\",\"value\":\"Yehezkel\"},\"pt-br\":{\"language\":\"pt-br\",\"value\":\"Ezequiel\"},\"sco\":{\"language\":\"sco\",\"value\":\"Ezekiel\"},\"mg\":{\"language\":\"mg\",\"value\":\"Ezekiela\"},\"hr\":{\"language\":\"hr\",\"value\":\"Ezekijel\"},\"arz\":{\"language\":\"arz\",\"value\":\"\\u062d\\u0632\\u0642\\u064a\\u0627\\u0644\"},\"arc\":{\"language\":\"arc\",\"value\":\"\\u071a\\u0719\\u0729\\u071d\\u0710\\u071d\\u0720\"},\"tr\":{\"language\":\"tr\",\"value\":\"Hezekiel\"},\"bn\":{\"language\":\"bn\",\"value\":\"\\u09af\\u09bf\\u09b9\\u09bf\\u09b7\\u09cd\\u0995\\u09c7\\u09b2\"},\"kn\":{\"language\":\"kn\",\"value\":\"\\u0c8e\\u0c9c\\u0cc6\\u0c95\\u0cbf\\u0caf\\u0cb2\\u0ccd\"},\"da\":{\"language\":\"da\",\"value\":\"Ezekiel\"},\"mi\":{\"language\":\"mi\",\"value\":\"Ehekiera\"},\"mk\":{\"language\":\"mk\",\"value\":\"\\u0415\\u0437\\u0435\\u043a\\u0438\\u043b\"},\"gl\":{\"language\":\"gl\",\"value\":\"Ecequiel\"},\"nn\":{\"language\":\"nn\",\"value\":\"Esekiel\"},\"sq\":{\"language\":\"sq\",\"value\":\"Ezekiel\"},\"war\":{\"language\":\"war\",\"value\":\"Ezekiel\"}},\"descriptions\":{\"nl\":{\"language\":\"nl\",\"value\":\"profeet\"},\"de\":{\"language\":\"de\",\"value\":\"israelitischer
+        Prophet\"},\"en\":{\"language\":\"en\",\"value\":\"prophet in the Abrahamic
+        religions\"},\"it\":{\"language\":\"it\",\"value\":\"profeta biblico\"},\"he\":{\"language\":\"he\",\"value\":\"\\u05d3\\u05de\\u05d5\\u05ea
+        \\u05de\\u05e7\\u05e8\\u05d0\\u05d9\\u05ea. \\u05e0\\u05d1\\u05d9\\u05d0 \\u05e9\\u05d7\\u05d9
+        \\u05d1\\u05e1\\u05d5\\u05e3 \\u05ea\\u05e7\\u05d5\\u05e4\\u05ea \\u05d4\\u05d1\\u05d9\\u05ea
+        \\u05d4\\u05e8\\u05d0\\u05e9\\u05d5\\u05df \\u05d5\\u05dc\\u05d0\\u05d7\\u05e8
+        \\u05d7\\u05d5\\u05e8\\u05d1\\u05e0\\u05d5\"},\"pt\":{\"language\":\"pt\",\"value\":\"profeta
+        do Antigo Testamento\"},\"pt-br\":{\"language\":\"pt-br\",\"value\":\"personagem
+        b\\u00edblico\"},\"es\":{\"language\":\"es\",\"value\":\"personaje b\\u00edblico\"},\"fr\":{\"language\":\"fr\",\"value\":\"personnage
+        biblique\"},\"ru\":{\"language\":\"ru\",\"value\":\"\\u0426\\u0430\\u0440\\u0438
+        \\u0418\\u0443\\u0434\\u0435\\u0438\"},\"da\":{\"language\":\"da\",\"value\":\"bibelsk
+        profet\"},\"ta\":{\"language\":\"ta\",\"value\":\"\\u0b86\\u0baa\\u0bbf\\u0bb0\\u0b95\\u0bbe\\u0bae\\u0bbf\\u0baf
+        \\u0b9a\\u0bae\\u0b99\\u0bcd\\u0b95\\u0bb3\\u0bbf\\u0bb2\\u0bcd \\u0ba4\\u0bc0\\u0bb0\\u0bcd\\u0b95\\u0bcd\\u0b95\\u0ba4\\u0bb0\\u0bbf\\u0b9a\\u0bbf\"},\"eo\":{\"language\":\"eo\",\"value\":\"\\u0109efrolulo
+        en la hebrelingva Biblia Libro de Je\\u0125ezkelo\"},\"bg\":{\"language\":\"bg\",\"value\":\"\\u0435\\u0432\\u0440\\u0435\\u0439\\u0441\\u043a\\u0438
+        \\u043f\\u0440\\u043e\\u0440\\u043e\\u043a\"},\"ar\":{\"language\":\"ar\",\"value\":\"\\u0646\\u0628\\u064a
+        \\u0645\\u0628\\u062c\\u0651\\u0644 \\u0641\\u064a \\u0627\\u0644\\u064a\\u0647\\u0648\\u062f\\u064a\\u0629
+        \\u0648\\u0627\\u0644\\u0645\\u0633\\u064a\\u062d\\u064a\\u0629\"},\"hu\":{\"language\":\"hu\",\"value\":\"bibliai,
+        \\u00f3sz\\u00f6vets\\u00e9gi szem\\u00e9ly\"},\"mk\":{\"language\":\"mk\",\"value\":\"\\u043f\\u0440\\u043e\\u0440\\u043e\\u043a
+        \\u0432\\u043e \\u0430\\u0432\\u0440\\u0430\\u043c\\u0441\\u043a\\u0438\\u0442\\u0435
+        \\u0440\\u0435\\u043b\\u0438\\u0433\\u0438\\u0438\"},\"gl\":{\"language\":\"gl\",\"value\":\"personaxe
+        do Antigo Testamento\"},\"nb\":{\"language\":\"nb\",\"value\":\"bibelsk profet\"}},\"aliases\":{\"fr\":[{\"language\":\"fr\",\"value\":\"Ez\\u00e9chiel\"},{\"language\":\"fr\",\"value\":\"Ezechiel\"},{\"language\":\"fr\",\"value\":\"proph\\u00e8te
+        \\u00c9z\\u00e9chiel\"},{\"language\":\"fr\",\"value\":\"\\u00c9z\\u00e9quiel\"}],\"he\":[{\"language\":\"he\",\"value\":\"\\u05d9\\u05d7\\u05d6\\u05e7\\u05d0\\u05dc
+        \\u05d1\\u05df \\u05d1\\u05d5\\u05d6\\u05d9\"},{\"language\":\"he\",\"value\":\"\\u05d9\\u05d7\\u05d6\\u05e7\\u05d0\\u05dc
+        \\u05d4\\u05e0\\u05d1\\u05d9\\u05d0\"},{\"language\":\"he\",\"value\":\"\\u05d9\\u05b0\\u05d7\\u05b6\\u05d6\\u05b0\\u05e7\\u05b5\\u05d0\\u05dc\"}],\"ko\":[{\"language\":\"ko\",\"value\":\"\\uc5d0\\uc2a4\\uac94\"}],\"be\":[{\"language\":\"be\",\"value\":\"\\u0406\\u0435\\u0437\\u0435\\u043a\\u0456\\u0456\\u043b\\u044c\"}],\"es\":[{\"language\":\"es\",\"value\":\"Profeta
+        Ezequiel\"},{\"language\":\"es\",\"value\":\"Ezequiel ben Buzi\"}],\"it\":[{\"language\":\"it\",\"value\":\"Profeta
+        Ezechiele\"}],\"id\":[{\"language\":\"id\",\"value\":\"Nabi Yehezkiel\"}],\"sv\":[{\"language\":\"sv\",\"value\":\"Hezekiel\"},{\"language\":\"sv\",\"value\":\"Ezekiel\"}],\"pt\":[{\"language\":\"pt\",\"value\":\"Profeta
+        Ezequiel\"}],\"sr\":[{\"language\":\"sr\",\"value\":\"\\u0415\\u0437\\u0435\\u043a\\u0438\\u0459\"},{\"language\":\"sr\",\"value\":\"\\u041f\\u0440\\u043e\\u0440\\u043e\\u043a
+        \\u0408\\u0435\\u0437\\u0435\\u043a\\u0438\\u0458\\u0430\"}],\"ca\":[{\"language\":\"ca\",\"value\":\"Profeta
+        Ezequiel\"}],\"uk\":[{\"language\":\"uk\",\"value\":\"\\u0404\\u0437\\u0438\\u043a\\u0438\\u0457\\u043b\\u044c\"},{\"language\":\"uk\",\"value\":\"\\u0404\\u0437\\u0435\\u043a\\u0456\\u0457\\u043b\"},{\"language\":\"uk\",\"value\":\"\\u0404\\u0437\\u0435\\u043a\\u0438\\u0457\\u043b\"},{\"language\":\"uk\",\"value\":\"\\u0404\\u0437\\u0435\\u043a\\u0438\\u0457\\u043b\\u044c\"},{\"language\":\"uk\",\"value\":\"\\u0404\\u0437\\u0438\\u043a\\u0456\\u0457\\u043b\\u044c\"}],\"bg\":[{\"language\":\"bg\",\"value\":\"\\u0419\\u0435\\u0437\\u0435\\u043a\\u0438\\u043b\"}],\"fa\":[{\"language\":\"fa\",\"value\":\"\\u062d\\u0632\\u0642\\u06cc\\u0644\"}],\"ka\":[{\"language\":\"ka\",\"value\":\"\\u10d4\\u10d6\\u10d4\\u10d9\\u10d8\\u10d4\\u10da
+        \\u10ec\\u10d8\\u10dc\\u10d0\\u10e1\\u10ec\\u10d0\\u10e0\\u10db\\u10d4\\u10e2\\u10e7\\u10d5\\u10d4\\u10da\\u10d8\"}],\"tl\":[{\"language\":\"tl\",\"value\":\"Propeta
+        Esekiel\"},{\"language\":\"tl\",\"value\":\"Propeta Ezekiel\"},{\"language\":\"tl\",\"value\":\"San
+        Ezekiel\"},{\"language\":\"tl\",\"value\":\"Esekiel\"},{\"language\":\"tl\",\"value\":\"Propetang
+        Esekiel\"},{\"language\":\"tl\",\"value\":\"Propetang Ezekiel\"},{\"language\":\"tl\",\"value\":\"San
+        Esekiel\"}],\"ur\":[{\"language\":\"ur\",\"value\":\"\\u062d\\u0632\\u0642\\u06cc\\u0627\\u0644\"},{\"language\":\"ur\",\"value\":\"Ezekiel\"},{\"language\":\"ur\",\"value\":\"\\u062d\\u0632\\u0642\\u06cc\\u0644
+        \\u0639\\u0644\\u06cc\\u06c1 \\u0627\\u0644\\u0633\\u0644\\u0627\\u0645\"}],\"de\":[{\"language\":\"de\",\"value\":\"Hesekiel\"},{\"language\":\"de\",\"value\":\"Jechezkel\"}],\"eo\":[{\"language\":\"eo\",\"value\":\"Ezekielo\"},{\"language\":\"eo\",\"value\":\"Je\\u0125ezkel\"},{\"language\":\"eo\",\"value\":\"Ezekiel\"}],\"gl\":[{\"language\":\"gl\",\"value\":\"Ezequiel\"}]},\"claims\":{\"P21\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P21\",\"hash\":\"85ad4b1c7348f7a5aac521135040d74e91fb5939\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":6581097,\"id\":\"Q6581097\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"id\":\"q194064$13D7F396-11B4-4EF2-9A39-D46C1C0D5419\",\"rank\":\"normal\",\"references\":[{\"hash\":\"d5847b9b6032aa8b13dae3c2dfd9ed5d114d21b3\",\"snaks\":{\"P143\":[{\"snaktype\":\"value\",\"property\":\"P143\",\"hash\":\"5a343e7e758a4282a01316d3e959b6e653b767fc\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":11920,\"id\":\"Q11920\"},\"type\":\"wikibase-entityid\"}}]},\"snaks-order\":[\"P143\"]}]}],\"P373\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P373\",\"hash\":\"e364c95da6f6c9f290da40976d1134bcc4dbc56f\",\"datavalue\":{\"value\":\"Hezekiah\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"q194064$7CDBDE5B-5C22-4AD6-B6FD-23CC38DDDBBE\",\"rank\":\"normal\"}],\"P214\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P214\",\"hash\":\"7922fde021e802f1d5a6a9f7956f153b00b4904c\",\"datavalue\":{\"value\":\"149799338\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"q194064$83EDB67B-7711-4602-83E1-46B6A97440C6\",\"rank\":\"normal\",\"references\":[{\"hash\":\"d5847b9b6032aa8b13dae3c2dfd9ed5d114d21b3\",\"snaks\":{\"P143\":[{\"snaktype\":\"value\",\"property\":\"P143\",\"hash\":\"5a343e7e758a4282a01316d3e959b6e653b767fc\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":11920,\"id\":\"Q11920\"},\"type\":\"wikibase-entityid\"}}]},\"snaks-order\":[\"P143\"]},{\"hash\":\"9a24f7c0208b05d6be97077d855671d1dfdbc0dd\",\"snaks\":{\"P143\":[{\"snaktype\":\"value\",\"property\":\"P143\",\"hash\":\"d38375ffe6fe142663ff55cd783aa4df4301d83d\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":48183,\"id\":\"Q48183\"},\"type\":\"wikibase-entityid\"}}]},\"snaks-order\":[\"P143\"]},{\"hash\":\"d4bd87b862b12d99d26e86472d44f26858dee639\",\"snaks\":{\"P143\":[{\"snaktype\":\"value\",\"property\":\"P143\",\"hash\":\"f30cbd35620c4ea6d0633aaf0210a8916130469b\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":8447,\"id\":\"Q8447\"},\"type\":\"wikibase-entityid\"}}]},\"snaks-order\":[\"P143\"]}]}],\"P227\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P227\",\"hash\":\"92d2a11224bbc358dc6adedce046b155f35e5764\",\"datavalue\":{\"value\":\"118531611\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"q194064$88290B00-2FAF-4217-9B55-6555F107AB37\",\"rank\":\"normal\",\"references\":[{\"hash\":\"9a24f7c0208b05d6be97077d855671d1dfdbc0dd\",\"snaks\":{\"P143\":[{\"snaktype\":\"value\",\"property\":\"P143\",\"hash\":\"d38375ffe6fe142663ff55cd783aa4df4301d83d\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":48183,\"id\":\"Q48183\"},\"type\":\"wikibase-entityid\"}}]},\"snaks-order\":[\"P143\"]}]}],\"P910\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P910\",\"hash\":\"6cb4cbf7ee9933a88e32dc433b2052e220ef4d61\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":8432658,\"id\":\"Q8432658\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"id\":\"Q194064$0A66C96E-75E3-4F24-A8BD-19B31F44FC36\",\"rank\":\"normal\"}],\"P18\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P18\",\"hash\":\"2ce39f32a1253611d9a54c409d8c353e8e326e9b\",\"datavalue\":{\"value\":\"Ezekiel
+        by Michelangelo, restored - large.jpg\",\"type\":\"string\"}},\"type\":\"statement\",\"qualifiers\":{\"P2096\":[{\"snaktype\":\"value\",\"property\":\"P2096\",\"hash\":\"a804b9f6d6314f6a417a351f0f71a89301bf5ed2\",\"datavalue\":{\"value\":{\"text\":\"\\u041f\\u0440\\u043e\\u0440\\u043e\\u043a
+        \\u0415\\u0437\\u0435\\u043a\\u0438\\u043b \\u0438\\u0437\\u043e\\u0431\\u0440\\u0430\\u0437\\u0435\\u043d
+        \\u043e\\u0442 \\u041c\\u0438\\u043a\\u0435\\u043b\\u0430\\u043d\\u0434\\u0436\\u0435\\u043b\\u043e
+        \\u043d\\u0430 \\u0421\\u0438\\u043a\\u0441\\u0442\\u0438\\u043d\\u0441\\u043a\\u0430\\u0442\\u0430
+        \\u043a\\u0430\\u043f\\u0435\\u043b\\u0430,(\\u0444\\u0440\\u0435\\u0441\\u043a\\u0430
+        \\u043e\\u0442 XVI \\u0432\\u0435\\u043a)\",\"language\":\"bg\"},\"type\":\"monolingualtext\"}}]},\"qualifiers-order\":[\"P2096\"],\"id\":\"Q194064$C69531A5-8A89-494B-8AB1-4BC660B6B53C\",\"rank\":\"normal\",\"references\":[{\"hash\":\"288ab581e7d2d02995a26dfa8b091d96e78457fc\",\"snaks\":{\"P143\":[{\"snaktype\":\"value\",\"property\":\"P143\",\"hash\":\"6a164248fc96bfa583bbb495cb63ae6401ec203c\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":206855,\"id\":\"Q206855\"},\"type\":\"wikibase-entityid\"}}]},\"snaks-order\":[\"P143\"]}]},{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P18\",\"hash\":\"66a2926bd1b29f03143318428839ef0d3b8b50d1\",\"datavalue\":{\"value\":\"The
+        book of the prophet Ezekiel (IA ezekiel00davi).pdf\",\"type\":\"string\"}},\"type\":\"statement\",\"qualifiers\":{\"P2096\":[{\"snaktype\":\"value\",\"property\":\"P2096\",\"hash\":\"0f41a10e0129e27623adb71420df021ff405b4db\",\"datavalue\":{\"value\":{\"text\":\"Fresc
+        de Miquel \\u00c0ngel (Roma, Capella Sixtina)\",\"language\":\"ca\"},\"type\":\"monolingualtext\"}}]},\"qualifiers-order\":[\"P2096\"],\"id\":\"Q194064$6158e328-750d-4b09-8208-1c752fa528d3\",\"rank\":\"preferred\",\"references\":[{\"hash\":\"b3fd5e254143d8b52cd96cff43af9af5e3a82358\",\"snaks\":{\"P143\":[{\"snaktype\":\"value\",\"property\":\"P143\",\"hash\":\"f13c99a16441677ec69fcea23f221d866f1fc98f\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":199693,\"id\":\"Q199693\"},\"type\":\"wikibase-entityid\"}}]},\"snaks-order\":[\"P143\"]}]}],\"P1422\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P1422\",\"hash\":\"e6303b1dd8003f430a44fa29c1fa458e206e90fe\",\"datavalue\":{\"value\":\"4027\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"Q194064$BE08126A-68BA-46F6-AB4D-75C702EDAE4D\",\"rank\":\"normal\"}],\"P460\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P460\",\"hash\":\"b8f303b8d89c1f547c9c83d26c7e7980a0e2d0b5\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":332574,\"id\":\"Q332574\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"id\":\"Q194064$E3845173-6F1D-4F6C-A7FB-398C39D56552\",\"rank\":\"normal\"}],\"P31\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P31\",\"hash\":\"0a11e24c71fc4b1aab82a273d376a74d7fce7690\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":20643955,\"id\":\"Q20643955\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"id\":\"Q194064$0F94C437-65E0-4F4A-9BA9-6B1F4AFF0F83\",\"rank\":\"normal\"},{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P31\",\"hash\":\"a7649043848e3891d544a7fe7b7b73de54f53910\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":168827,\"id\":\"Q168827\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"id\":\"Q194064$435ca3ca-4bfd-bff2-e61d-0c7dbecb155d\",\"rank\":\"normal\"}],\"P1441\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P1441\",\"hash\":\"2c7a32c257afadea5934055b080624f626e6faa2\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":178390,\"id\":\"Q178390\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"id\":\"Q194064$df0d2dfd-4246-d335-8469-6f9fbbcad0bd\",\"rank\":\"normal\"}],\"P269\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P269\",\"hash\":\"3c5fd4ceaeaf8fa545b597d20c3009bf87e1728b\",\"datavalue\":{\"value\":\"027561992\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"Q194064$e6e6fcb8-4d65-744c-5baa-984e8593173c\",\"rank\":\"normal\"}],\"P244\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P244\",\"hash\":\"0fa5def20aca068e09ea43d24cc01316bc96de9c\",\"datavalue\":{\"value\":\"n86051235\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"Q194064$de12a7d1-4ce0-1b9c-85f3-5245d08c78a4\",\"rank\":\"normal\"}],\"P1343\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P1343\",\"hash\":\"62c309f8296338bd9647a7e758857137f3370310\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":2657718,\"id\":\"Q2657718\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"qualifiers\":{\"P478\":[{\"snaktype\":\"value\",\"property\":\"P478\",\"hash\":\"0cb10c03d7ed6b77297421fc9b82339df1350d48\",\"datavalue\":{\"value\":\"3\",\"type\":\"string\"}}],\"P304\":[{\"snaktype\":\"value\",\"property\":\"P304\",\"hash\":\"d4498a6f965dfad3ca2167692372d5eb2c7bb26f\",\"datavalue\":{\"value\":\"485\",\"type\":\"string\"}}]},\"qualifiers-order\":[\"P478\",\"P304\"],\"id\":\"Q194064$107536C7-F051-46B1-A341-395A2B6C4C89\",\"rank\":\"normal\",\"references\":[{\"hash\":\"8bc722e6797143f2ba971ee5fedaeb0a331268e6\",\"snaks\":{\"P143\":[{\"snaktype\":\"value\",\"property\":\"P143\",\"hash\":\"4b9ead388e47f64ea2ecb2b82c5d4f516003a8d5\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":1975217,\"id\":\"Q1975217\"},\"type\":\"wikibase-entityid\"}}]},\"snaks-order\":[\"P143\"]}]},{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P1343\",\"hash\":\"88389772f86dcd7d415ddd029f601412e5cc894a\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":602358,\"id\":\"Q602358\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"qualifiers\":{\"P805\":[{\"snaktype\":\"value\",\"property\":\"P805\",\"hash\":\"c8a4489494f94061afc9388654ff4615cfc19d15\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":24423709,\"id\":\"Q24423709\"},\"type\":\"wikibase-entityid\"}}]},\"qualifiers-order\":[\"P805\"],\"id\":\"Q194064$671fcf73-4e6b-da6f-e72a-d30881d3e765\",\"rank\":\"normal\"},{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P1343\",\"hash\":\"6bc15c6f82feca4f3b173c90209a416f99464cac\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":4086271,\"id\":\"Q4086271\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"qualifiers\":{\"P805\":[{\"snaktype\":\"value\",\"property\":\"P805\",\"hash\":\"17a36fe2c5f1fc5c409239a4f435ea792cdb5992\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":25294853,\"id\":\"Q25294853\"},\"type\":\"wikibase-entityid\"}}]},\"qualifiers-order\":[\"P805\"],\"id\":\"Q194064$d1687e4c-47a7-145a-425a-722f09c0a00e\",\"rank\":\"normal\"},{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P1343\",\"hash\":\"7d6f86cef085693a10b0e0663a0960f58d0e15e2\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":4173137,\"id\":\"Q4173137\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"qualifiers\":{\"P805\":[{\"snaktype\":\"value\",\"property\":\"P805\",\"hash\":\"a7e525a756b836ac8f6bcf54890c4247878c596a\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":24986853,\"id\":\"Q24986853\"},\"type\":\"wikibase-entityid\"}}]},\"qualifiers-order\":[\"P805\"],\"id\":\"Q194064$90a65c56-4ee2-243e-de84-028ed1693ead\",\"rank\":\"normal\"},{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P1343\",\"hash\":\"c1d49fc02e027f854e37d7a615de277a2129511e\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":1210353,\"id\":\"Q1210353\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"qualifiers\":{\"P805\":[{\"snaktype\":\"value\",\"property\":\"P805\",\"hash\":\"0e5e1ca963057cc6841b5354a8bd5299d7abffe1\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":29370518,\"id\":\"Q29370518\"},\"type\":\"wikibase-entityid\"}}]},\"qualifiers-order\":[\"P805\"],\"id\":\"Q194064$B938C0E8-4134-419F-9CDF-66E567B33833\",\"rank\":\"normal\"},{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P1343\",\"hash\":\"4cfd4eb1fe49d401455df557a7d9b1154f22a725\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":3181656,\"id\":\"Q3181656\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"qualifiers\":{\"P1810\":[{\"snaktype\":\"value\",\"property\":\"P1810\",\"hash\":\"09a2791b9cb5d403b75d225152eebf3505ca8338\",\"datavalue\":{\"value\":\"Ezekiel\",\"type\":\"string\"}}]},\"qualifiers-order\":[\"P1810\"],\"id\":\"Q194064$633ed5f3-413a-b59a-1006-15c0e721e091\",\"rank\":\"normal\"},{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P1343\",\"hash\":\"cc623969772776f2a8b109402b0ac5fa5c123233\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":19219752,\"id\":\"Q19219752\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"qualifiers\":{\"P805\":[{\"snaktype\":\"value\",\"property\":\"P805\",\"hash\":\"c84771017b09f7eb0f4f4adc1aa0d9a85a25ad9f\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":118236915,\"id\":\"Q118236915\"},\"type\":\"wikibase-entityid\"}}]},\"qualifiers-order\":[\"P805\"],\"id\":\"Q194064$8EAEF1F4-0777-4F02-8861-6791A5D97C8C\",\"rank\":\"normal\"},{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P1343\",\"hash\":\"42346dfe9209b7359c1f5db829a368b38d407797\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":19180675,\"id\":\"Q19180675\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"qualifiers\":{\"P805\":[{\"snaktype\":\"value\",\"property\":\"P805\",\"hash\":\"5b244a6d3b19290f15110c179961cef4a534859d\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":24730685,\"id\":\"Q24730685\"},\"type\":\"wikibase-entityid\"}}]},\"qualifiers-order\":[\"P805\"],\"id\":\"Q194064$0a85bf0f-4a55-0825-2234-55887a2140fa\",\"rank\":\"normal\"},{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P1343\",\"hash\":\"1e87e0f7d2db06ab0ef5ccabd7c6275641f36553\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":867541,\"id\":\"Q867541\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"qualifiers\":{\"P805\":[{\"snaktype\":\"value\",\"property\":\"P805\",\"hash\":\"fc9e1a797b468fea3c7af96301df5297efc9855e\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":84696396,\"id\":\"Q84696396\"},\"type\":\"wikibase-entityid\"}}]},\"qualifiers-order\":[\"P805\"],\"id\":\"Q194064$8E55D4C5-31A6-413C-8301-7A171556D204\",\"rank\":\"normal\"}],\"P20\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P20\",\"hash\":\"4947d7ba01a273e34a5896bf1a117818ac8ff7b6\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":5684,\"id\":\"Q5684\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"id\":\"Q194064$CA113BF0-FFA6-4CB9-999A-E222F03729A2\",\"rank\":\"normal\",\"references\":[{\"hash\":\"d5847b9b6032aa8b13dae3c2dfd9ed5d114d21b3\",\"snaks\":{\"P143\":[{\"snaktype\":\"value\",\"property\":\"P143\",\"hash\":\"5a343e7e758a4282a01316d3e959b6e653b767fc\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":11920,\"id\":\"Q11920\"},\"type\":\"wikibase-entityid\"}}]},\"snaks-order\":[\"P143\"]}]}],\"P3219\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P3219\",\"hash\":\"7548f05dccee1631064b52bcf3bf5ff0ac75df04\",\"datavalue\":{\"value\":\"ezechiel\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"Q194064$E7CF2A9D-B07C-46C5-BB4B-7E25BF05EB87\",\"rank\":\"normal\"}],\"P569\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P569\",\"hash\":\"60f98f6d57c27dcb7f116a157c7ba6b8b84db613\",\"datavalue\":{\"value\":{\"time\":\"-0622-00-00T00:00:00Z\",\"timezone\":0,\"before\":0,\"after\":0,\"precision\":9,\"calendarmodel\":\"http:\\/\\/www.wikidata.org\\/entity\\/Q1985786\"},\"type\":\"time\"}},\"type\":\"statement\",\"id\":\"Q194064$AD43B938-DBC6-47E0-9408-8E2C7E31248B\",\"rank\":\"normal\",\"references\":[{\"hash\":\"34f695a3da62a98ed540960b96c432a2d4e42ad3\",\"snaks\":{\"P854\":[{\"snaktype\":\"value\",\"property\":\"P854\",\"hash\":\"69c73f7f02951dea6b63869fd8a82633d7225151\",\"datavalue\":{\"value\":\"http:\\/\\/timeline.biblehistory.com\\/period\\/the-exile\",\"type\":\"string\"}}]},\"snaks-order\":[\"P854\"]}]}],\"P570\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P570\",\"hash\":\"6a881b62b6b7bbbfbfbe532c2cf6a6e31a4a91cc\",\"datavalue\":{\"value\":{\"time\":\"-0571-00-00T00:00:00Z\",\"timezone\":0,\"before\":0,\"after\":0,\"precision\":9,\"calendarmodel\":\"http:\\/\\/www.wikidata.org\\/entity\\/Q1985786\"},\"type\":\"time\"}},\"type\":\"statement\",\"id\":\"Q194064$DBB9641E-010A-4D61-A378-5DBB39BFAD9B\",\"rank\":\"normal\",\"references\":[{\"hash\":\"34f695a3da62a98ed540960b96c432a2d4e42ad3\",\"snaks\":{\"P854\":[{\"snaktype\":\"value\",\"property\":\"P854\",\"hash\":\"69c73f7f02951dea6b63869fd8a82633d7225151\",\"datavalue\":{\"value\":\"http:\\/\\/timeline.biblehistory.com\\/period\\/the-exile\",\"type\":\"string\"}}]},\"snaks-order\":[\"P854\"]}]}],\"P4212\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P4212\",\"hash\":\"b33e6ca566dadbd6ec8924c09708766932bcd4ca\",\"datavalue\":{\"value\":\"pcrtgv3YweZsij\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"Q194064$EEFDBC9C-D198-4072-9E94-36BFCBF95733\",\"rank\":\"normal\"}],\"P213\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P213\",\"hash\":\"332d83acbb37d22c42c9f629b4bf555b7cf0c230\",\"datavalue\":{\"value\":\"0000
+        0001 0069 6376\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"Q194064$D302E0C0-0B7E-45A1-8FFC-41E454C7294A\",\"rank\":\"normal\"}],\"P3241\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P3241\",\"hash\":\"8cb4e0cdcc80cd48d7a7f84b434c2ba0a8754d27\",\"datavalue\":{\"value\":\"05737b\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"Q194064$521B6A60-CA1D-48A1-B78F-7BF33028DFCB\",\"rank\":\"normal\"}],\"P2924\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P2924\",\"hash\":\"645050bff96919c3f28bf68ab99565b2f51120c8\",\"datavalue\":{\"value\":\"2000582\",\"type\":\"string\"}},\"type\":\"statement\",\"qualifiers\":{\"P1810\":[{\"snaktype\":\"value\",\"property\":\"P1810\",\"hash\":\"8843a294b8f7d25c2ab33d5b3aed2b634dd006e4\",\"datavalue\":{\"value\":\"\\u0418\\u0415\\u0417\\u0415\\u041a\\u0418\\u0418\\u041b\\u042c\",\"type\":\"string\"}}]},\"qualifiers-order\":[\"P1810\"],\"id\":\"Q194064$349EA365-F624-4BC0-B351-B492998D86E8\",\"rank\":\"normal\"}],\"P411\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P411\",\"hash\":\"7b090b727863225015a967c08f9e877c946ea35d\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":43115,\"id\":\"Q43115\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"id\":\"Q194064$2733fe4b-0ca9-4526-b022-dba9d03f6867\",\"rank\":\"normal\",\"references\":[{\"hash\":\"288ab581e7d2d02995a26dfa8b091d96e78457fc\",\"snaks\":{\"P143\":[{\"snaktype\":\"value\",\"property\":\"P143\",\"hash\":\"6a164248fc96bfa583bbb495cb63ae6401ec203c\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":206855,\"id\":\"Q206855\"},\"type\":\"wikibase-entityid\"}}]},\"snaks-order\":[\"P143\"]}]}],\"P2163\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P2163\",\"hash\":\"bb2733bcaa2a68f3d852ba8a1992c7081d2c218a\",\"datavalue\":{\"value\":\"203131\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"Q194064$AB1C41CD-D29C-4967-B4BB-37F159EFB42D\",\"rank\":\"normal\"}],\"P1417\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P1417\",\"hash\":\"c8456565158636535a1cf999e6b4684156eea3e0\",\"datavalue\":{\"value\":\"biography\\/Ezekiel-Hebrew-prophet\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"Q194064$2FC142B3-D706-4144-89E9-F6B5B2F24813\",\"rank\":\"normal\"},{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P1417\",\"hash\":\"1b8d9cee09dcc5745324b68e2e77d6b48a525119\",\"datavalue\":{\"value\":\"biography\\/Ezekiel-Jewish-dramatist\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"Q194064$1A68741C-8A6D-4613-B806-BBA0E1B7F5CA\",\"rank\":\"normal\"}],\"P1871\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P1871\",\"hash\":\"c38bd5e8db06d4bcfec5a5b4ec34c5aacd95c903\",\"datavalue\":{\"value\":\"cnp00394701\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"Q194064$A075870C-9103-4778-8397-A9278173F85D\",\"rank\":\"normal\"}],\"P841\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P841\",\"hash\":\"946eeb692b11968e3e51fbdf5cecd817a81634fd\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":2502,\"id\":\"Q2502\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"id\":\"Q194064$E8C199C0-77EB-45A7-AA55-CCE5E46B1352\",\"rank\":\"normal\",\"references\":[{\"hash\":\"75092b03f4eddabd10ece166009cd96409ba8c85\",\"snaks\":{\"P143\":[{\"snaktype\":\"value\",\"property\":\"P143\",\"hash\":\"5a343e7e758a4282a01316d3e959b6e653b767fc\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":11920,\"id\":\"Q11920\"},\"type\":\"wikibase-entityid\"}}],\"P4656\":[{\"snaktype\":\"value\",\"property\":\"P4656\",\"hash\":\"60fff9fe20e1e99057eb5fc9f2472dfe02e34cd1\",\"datavalue\":{\"value\":\"https:\\/\\/it.wikipedia.org\\/w\\/index.php?title=Ezechiele&oldid=99123198\",\"type\":\"string\"}}]},\"snaks-order\":[\"P143\",\"P4656\"]}]}],\"P6126\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P6126\",\"hash\":\"f613ea04614c84350538d565ff8890ef898e5915\",\"datavalue\":{\"value\":\"49200\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"Q194064$87D98295-10A3-498A-89B7-807286CC3430\",\"rank\":\"normal\",\"references\":[{\"hash\":\"8957895ddadbf55e56f98208fb6513df048b3a74\",\"snaks\":{\"P143\":[{\"snaktype\":\"value\",\"property\":\"P143\",\"hash\":\"5a343e7e758a4282a01316d3e959b6e653b767fc\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":11920,\"id\":\"Q11920\"},\"type\":\"wikibase-entityid\"}}],\"P4656\":[{\"snaktype\":\"value\",\"property\":\"P4656\",\"hash\":\"3018e6c3d020d14041169ce1818f64dd90b3e2d6\",\"datavalue\":{\"value\":\"https:\\/\\/it.wikipedia.org\\/w\\/index.php?title=Ezechiele&oldid=102323663\",\"type\":\"string\"}}]},\"snaks-order\":[\"P143\",\"P4656\"]}]}],\"P1559\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P1559\",\"hash\":\"b883a0b8c04d1ace8f5f2e69f006b7e0c07a4524\",\"datavalue\":{\"value\":{\"text\":\"BAUPAPA\",\"language\":\"hbo\"},\"type\":\"monolingualtext\"}},\"type\":\"statement\",\"id\":\"Q194064$d93f6981-45c0-10cc-c5cd-d1555a5d5139\",\"rank\":\"normal\",\"references\":[{\"hash\":\"910f87f3c463fd040d2e20b03df3544fe838f1a7\",\"snaks\":{\"P248\":[{\"snaktype\":\"value\",\"property\":\"P248\",\"hash\":\"08f6898d42b41923758f06615643e84e9040f200\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":178390,\"id\":\"Q178390\"},\"type\":\"wikibase-entityid\"}}]},\"snaks-order\":[\"P248\"]}]}],\"P1296\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P1296\",\"hash\":\"c2afd448ca8982d884b6c429a99ef81cc33c5fb9\",\"datavalue\":{\"value\":\"0025686\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"Q194064$99EDA018-0FB3-4CE7-AEAA-A55FB1704552\",\"rank\":\"normal\"}],\"P7859\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P7859\",\"hash\":\"0ddbe2a5e2b85ca063fa6e079c8423f73ec903f8\",\"datavalue\":{\"value\":\"lccn-n86051235\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"Q194064$B1B51F74-6C4B-43D6-A64C-7386619B9FD8\",\"rank\":\"normal\",\"references\":[{\"hash\":\"4617828f7029f31146c3053dde97381922bbb20d\",\"snaks\":{\"P214\":[{\"snaktype\":\"value\",\"property\":\"P214\",\"hash\":\"7922fde021e802f1d5a6a9f7956f153b00b4904c\",\"datavalue\":{\"value\":\"149799338\",\"type\":\"string\"}}]},\"snaks-order\":[\"P214\"]}]}],\"P800\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P800\",\"hash\":\"aecd06b12aea1f21b2f17c0957af2850f690b27c\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":178390,\"id\":\"Q178390\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"id\":\"Q194064$f3830865-46ff-b960-08e2-1ecdd7110966\",\"rank\":\"normal\"}],\"P1889\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P1889\",\"hash\":\"f9826c75a325c9896a31408a6f6a52ea15fc4471\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":244912,\"id\":\"Q244912\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"id\":\"Q194064$B5CFD792-7CC5-42A9-9069-5379C5FE1066\",\"rank\":\"normal\",\"references\":[{\"hash\":\"f0073dc379cd93e5aa8f9009c9e253954cc7e6cf\",\"snaks\":{\"P143\":[{\"snaktype\":\"value\",\"property\":\"P143\",\"hash\":\"f30cbd35620c4ea6d0633aaf0210a8916130469b\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":8447,\"id\":\"Q8447\"},\"type\":\"wikibase-entityid\"}}],\"P4656\":[{\"snaktype\":\"value\",\"property\":\"P4656\",\"hash\":\"ddc887a3760fe8cad24c574ed1b74c81788ea904\",\"datavalue\":{\"value\":\"https:\\/\\/fr.wikipedia.org\\/w\\/index.php?title=\\u00c9z\\u00e9chiel&oldid=169467477\",\"type\":\"string\"}}]},\"snaks-order\":[\"P143\",\"P4656\"]}]}],\"P8408\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P8408\",\"hash\":\"a18e5d4ab5fa085002515d9f600b3b419bdb48f4\",\"datavalue\":{\"value\":\"Ezekiel-BookOfBible\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"Q194064$4DE7F86B-6946-457C-BA93-BFD86823E74E\",\"rank\":\"normal\",\"references\":[{\"hash\":\"9a681f9dd95c90224547c404e11295f4f7dcf54e\",\"snaks\":{\"P248\":[{\"snaktype\":\"value\",\"property\":\"P248\",\"hash\":\"9d5780dddffa8746637a9929a936ab6b0f601e24\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":64139102,\"id\":\"Q64139102\"},\"type\":\"wikibase-entityid\"}}],\"P813\":[{\"snaktype\":\"value\",\"property\":\"P813\",\"hash\":\"622a5a27fa5b25e7e7984974e9db494cf8460990\",\"datavalue\":{\"value\":{\"time\":\"+2020-07-09T00:00:00Z\",\"timezone\":0,\"before\":0,\"after\":0,\"precision\":11,\"calendarmodel\":\"http:\\/\\/www.wikidata.org\\/entity\\/Q1985727\"},\"type\":\"time\"}}]},\"snaks-order\":[\"P248\",\"P813\"]}]}],\"P8080\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P8080\",\"hash\":\"56ce0427aae8253eb669165c880d0eabd0e410b3\",\"datavalue\":{\"value\":\"E\\/Ezechiel.html\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"Q194064$CB9C05CF-87EE-4B53-86F9-70A5C5E35025\",\"rank\":\"normal\"}],\"P19\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P19\",\"hash\":\"77f18901e563a9f6575fea52498f105869a985c4\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":1218,\"id\":\"Q1218\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"id\":\"Q194064$315b27c4-4db1-3928-b9a0-776e8a36da53\",\"rank\":\"normal\"}],\"P5063\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P5063\",\"hash\":\"32dde6c90af5c41d4459a8ee4f8a52e1e956ca36\",\"datavalue\":{\"value\":\"i95070\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"Q194064$8C28F558-828F-4F8A-83AA-CACCDB657846\",\"rank\":\"normal\"}],\"P691\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P691\",\"hash\":\"8b7c536c40ac3867905b5dac4ef873221f8ac2e4\",\"datavalue\":{\"value\":\"js2010615731\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"Q194064$EF80BC83-403E-425D-A3FA-80231460215E\",\"rank\":\"normal\",\"references\":[{\"hash\":\"30100fb949939ab4aeebdd8cc56b54b06ce86077\",\"snaks\":{\"P248\":[{\"snaktype\":\"value\",\"property\":\"P248\",\"hash\":\"80047f9d5b0d2daf06989e71bd5f4ba15b215fd6\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":13550863,\"id\":\"Q13550863\"},\"type\":\"wikibase-entityid\"}}],\"P813\":[{\"snaktype\":\"value\",\"property\":\"P813\",\"hash\":\"d6d46b944ee6e51b27df87603bd9cd5976324d46\",\"datavalue\":{\"value\":{\"time\":\"+2020-10-15T00:00:00Z\",\"timezone\":0,\"before\":0,\"after\":0,\"precision\":11,\"calendarmodel\":\"http:\\/\\/www.wikidata.org\\/entity\\/Q1985727\"},\"type\":\"time\"}}]},\"snaks-order\":[\"P248\",\"P813\"]}]}],\"P646\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P646\",\"hash\":\"9f8cb3ddeac6e994e6bd1d7e1a633b13ef16ec60\",\"datavalue\":{\"value\":\"\\/m\\/02pqx\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"Q194064$9E8C5C30-B617-4A3C-9B1B-2F7D89318C6F\",\"rank\":\"normal\"}],\"P8814\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P8814\",\"hash\":\"771fd28ca253ce7c7109dd9d31ca6b9dfd8205b8\",\"datavalue\":{\"value\":\"10984512-n\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"Q194064$8933412B-58FA-44A0-9CB7-0DC2FFC47255\",\"rank\":\"normal\"}],\"P106\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P106\",\"hash\":\"d026163f3967272c5c8b824a55a1f371450eef54\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":432386,\"id\":\"Q432386\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"id\":\"Q194064$30C1090F-2ECE-479A-A947-D4BEAF47F224\",\"rank\":\"normal\"},{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P106\",\"hash\":\"63c45092a644248adc666b6bb165154a1ec9daca\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":1349880,\"id\":\"Q1349880\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"id\":\"Q194064$89819471-48d8-09be-ba4f-540350971f85\",\"rank\":\"normal\"},{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P106\",\"hash\":\"3227da5c561faf242d77dcff2b2ceb6cb4ffa61c\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":482980,\"id\":\"Q482980\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"id\":\"Q194064$2de4a927-4357-ba9f-15b5-00ed69da02d7\",\"rank\":\"normal\"}],\"P7666\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P7666\",\"hash\":\"33a4571e2216c55a8e9bb7b7053c0e59db63a1f9\",\"datavalue\":{\"value\":\"ezechielis\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"Q194064$453B571D-9B82-44A6-8E37-F23ACB398A59\",\"rank\":\"normal\"}],\"P7902\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P7902\",\"hash\":\"439b10727673e7c117982a2a8d02ca83e1d809fe\",\"datavalue\":{\"value\":\"118531611\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"Q194064$44308D30-CFB7-4E83-9039-C1CD1420F0B9\",\"rank\":\"normal\"}],\"P8313\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P8313\",\"hash\":\"8f374ed1d867f900e95f6d218a8f66c292bb47fe\",\"datavalue\":{\"value\":\"Ezekiel\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"Q194064$56e91c7f-4d46-5aef-7797-d6eb93c5ae1a\",\"rank\":\"normal\"}],\"P735\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P735\",\"hash\":\"67a5e4ff289905d76198ff5d5dcbc5088adadef9\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":19271130,\"id\":\"Q19271130\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"qualifiers\":{\"P407\":[{\"snaktype\":\"value\",\"property\":\"P407\",\"hash\":\"daf1c4fcb58181b02dff9cc89deb084004ddae4b\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":1860,\"id\":\"Q1860\"},\"type\":\"wikibase-entityid\"}}]},\"qualifiers-order\":[\"P407\"],\"id\":\"Q194064$4687f825-499f-d9f4-3da2-5fae2f9f167f\",\"rank\":\"normal\"}],\"P39\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P39\",\"hash\":\"ae2df7406e848298a1f773f76b942806e6e3e46b\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":42857,\"id\":\"Q42857\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"qualifiers\":{\"P642\":[{\"snaktype\":\"value\",\"property\":\"P642\",\"hash\":\"2f94e22e7cdd1a391beb6e825e2366933252b6fa\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":9268,\"id\":\"Q9268\"},\"type\":\"wikibase-entityid\"}},{\"snaktype\":\"value\",\"property\":\"P642\",\"hash\":\"be93e18bfff913ea9d5cf5fdec71b13d9e21a3f6\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":5043,\"id\":\"Q5043\"},\"type\":\"wikibase-entityid\"}},{\"snaktype\":\"value\",\"property\":\"P642\",\"hash\":\"ea0033aa6e7705241640fe6b58cc9c22f68e0ae5\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":432,\"id\":\"Q432\"},\"type\":\"wikibase-entityid\"}}]},\"qualifiers-order\":[\"P642\"],\"id\":\"Q194064$8f567866-475e-6779-b119-b0e1f1520391\",\"rank\":\"normal\"}],\"P172\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P172\",\"hash\":\"5359ebe078f82a89959a089da7287e14b0d23689\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":7325,\"id\":\"Q7325\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"id\":\"Q194064$db0e4a4e-41d4-4281-4179-72d1e9f7b2ec\",\"rank\":\"normal\"}],\"P140\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P140\",\"hash\":\"da60885175be05178bbafe20f1ea5400ed3469fa\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":9268,\"id\":\"Q9268\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"id\":\"Q194064$9f72b39a-4693-b209-87fb-0651b6e5f033\",\"rank\":\"normal\",\"references\":[{\"hash\":\"365bbfe22fd18faae0f57b34850ee993dd808061\",\"snaks\":{\"P854\":[{\"snaktype\":\"value\",\"property\":\"P854\",\"hash\":\"1addaab9ff7328faa54137457d5441adde28f13a\",\"datavalue\":{\"value\":\"https:\\/\\/www.britannica.com\\/biography\\/Ezekiel-Hebrew-prophet\",\"type\":\"string\"}}]},\"snaks-order\":[\"P854\"]}]}],\"P1412\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P1412\",\"hash\":\"a99b0559a3abe84ba4d03220c2bcde397af7bee3\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":1982248,\"id\":\"Q1982248\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"id\":\"Q194064$de943c1f-4659-a862-92d1-6449a96be827\",\"rank\":\"normal\"},{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P1412\",\"hash\":\"5d5c61acfa151f5fd202727919e96c48a79ba1bd\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":28602,\"id\":\"Q28602\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"id\":\"Q194064$ae39acd5-43fc-da72-66c6-e64156734822\",\"rank\":\"normal\"}],\"P27\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P27\",\"hash\":\"476f5cdb19cdfa49dd4ecb414cdd36d202d69f38\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":48685,\"id\":\"Q48685\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"id\":\"Q194064$f70360af-46e6-1045-967a-52379024a494\",\"rank\":\"normal\"}],\"P793\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P793\",\"hash\":\"d9532a6754e5c8cd15c40d2fd4e741a954e41990\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":1682108,\"id\":\"Q1682108\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"id\":\"Q194064$d9178443-40cd-a6b3-58f8-e47d4cf63167\",\"rank\":\"normal\"}],\"P10242\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P10242\",\"hash\":\"e250bf5e61b8f63a68944d28114239fe52a689ca\",\"datavalue\":{\"value\":\"02085\\/eu_e_4765\\/e4765\",\"type\":\"string\"}},\"type\":\"statement\",\"qualifiers\":{\"P1932\":[{\"snaktype\":\"value\",\"property\":\"P1932\",\"hash\":\"1fc81f9ed4ec3a20b49a5d4e855ed0c2ee3bb51b\",\"datavalue\":{\"value\":\"Ezekiel\",\"type\":\"string\"}}]},\"qualifiers-order\":[\"P1932\"],\"id\":\"Q194064$98C3B025-57CF-4216-BF43-58E1BF35A074\",\"rank\":\"normal\"}],\"P7846\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P7846\",\"hash\":\"7b90c853f4821cd620f25db5c8f28613e45967df\",\"datavalue\":{\"value\":\"PRS3942Ezekiel\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"Q194064$c3ff6159-4bc5-c270-cca1-be0128a53b9d\",\"rank\":\"normal\"}],\"P9000\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P9000\",\"hash\":\"d5649399e02a5a897edca40f1136576e1a66f284\",\"datavalue\":{\"value\":\"Ezekiel\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"Q194064$8A9004D8-C6D9-4089-B083-159E9D24CB81\",\"rank\":\"normal\"}],\"P10553\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P10553\",\"hash\":\"bcf7f98b1e853a49a7c8afc581d685a8c4bae648\",\"datavalue\":{\"value\":\"079332226\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"Q194064$E5FDA627-6471-41EC-841C-9ED36BC3DAB6\",\"rank\":\"normal\"}],\"P4223\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P4223\",\"hash\":\"9d135d80561983c078aea872338cf28e6b4fa0cf\",\"datavalue\":{\"value\":\"ezechiele\",\"type\":\"string\"}},\"type\":\"statement\",\"qualifiers\":{\"P577\":[{\"snaktype\":\"value\",\"property\":\"P577\",\"hash\":\"bc61f6f80f347571e76e6427a376da17ad63826d\",\"datavalue\":{\"value\":{\"time\":\"+1932-01-01T00:00:00Z\",\"timezone\":0,\"before\":0,\"after\":0,\"precision\":9,\"calendarmodel\":\"http:\\/\\/www.wikidata.org\\/entity\\/Q1985727\"},\"type\":\"time\"}}],\"P2093\":[{\"snaktype\":\"value\",\"property\":\"P2093\",\"hash\":\"fc566fe1dcd825f4b1a3ae31d27a201ec43d3df1\",\"datavalue\":{\"value\":\"Leone
+        Tondelli, Alfredo Vitti\",\"type\":\"string\"}}],\"P1810\":[{\"snaktype\":\"value\",\"property\":\"P1810\",\"hash\":\"b3c3dce94c671b9bd750d0e3f32cb313c6c76092\",\"datavalue\":{\"value\":\"EZECHIELE\",\"type\":\"string\"}}]},\"qualifiers-order\":[\"P577\",\"P2093\",\"P1810\"],\"id\":\"Q194064$3C54FB54-8BC9-4812-8086-2F8AACDB7D23\",\"rank\":\"normal\",\"references\":[{\"hash\":\"812203d003cb6d980451bd4312ad4950bc2d615d\",\"snaks\":{\"P248\":[{\"snaktype\":\"value\",\"property\":\"P248\",\"hash\":\"34eeda6017137fe962f181714ee5f1ed649a7cc6\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":731361,\"id\":\"Q731361\"},\"type\":\"wikibase-entityid\"}}],\"P813\":[{\"snaktype\":\"value\",\"property\":\"P813\",\"hash\":\"75962c5ebda92508bd39e83289cb897fdcf218ad\",\"datavalue\":{\"value\":{\"time\":\"+2022-05-27T00:00:00Z\",\"timezone\":0,\"before\":0,\"after\":0,\"precision\":11,\"calendarmodel\":\"http:\\/\\/www.wikidata.org\\/entity\\/Q1985727\"},\"type\":\"time\"}}]},\"snaks-order\":[\"P248\",\"P813\"]}]}],\"P10799\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P10799\",\"hash\":\"f07567b3672b23aabe77f4d215c108094f98298a\",\"datavalue\":{\"value\":\"04\\/10\\/04-10-00--0600-ezechiel\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"Q194064$16DB408E-2ED5-43EE-A0A3-685AF7136B91\",\"rank\":\"normal\"}],\"P1317\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P1317\",\"hash\":\"c11700c0daf156f9cd95f939fe2fc80a0aa1a49c\",\"datavalue\":{\"value\":{\"time\":\"-0600-00-00T00:00:00Z\",\"timezone\":0,\"before\":0,\"after\":0,\"precision\":7,\"calendarmodel\":\"http:\\/\\/www.wikidata.org\\/entity\\/Q1985727\"},\"type\":\"time\"}},\"type\":\"statement\",\"id\":\"Q194064$205FA882-2A11-49A1-9961-374889354BA9\",\"rank\":\"normal\",\"references\":[{\"hash\":\"3ed750ca555803f4d1d0a61f3406c5b96432b556\",\"snaks\":{\"P248\":[{\"snaktype\":\"value\",\"property\":\"P248\",\"hash\":\"80047f9d5b0d2daf06989e71bd5f4ba15b215fd6\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":13550863,\"id\":\"Q13550863\"},\"type\":\"wikibase-entityid\"}}],\"P691\":[{\"snaktype\":\"value\",\"property\":\"P691\",\"hash\":\"8b7c536c40ac3867905b5dac4ef873221f8ac2e4\",\"datavalue\":{\"value\":\"js2010615731\",\"type\":\"string\"}}],\"P813\":[{\"snaktype\":\"value\",\"property\":\"P813\",\"hash\":\"4028e0e52e5897c425ca4d233306fe7ee0093fc9\",\"datavalue\":{\"value\":{\"time\":\"+2022-06-08T00:00:00Z\",\"timezone\":0,\"before\":0,\"after\":0,\"precision\":11,\"calendarmodel\":\"http:\\/\\/www.wikidata.org\\/entity\\/Q1985727\"},\"type\":\"time\"}}]},\"snaks-order\":[\"P248\",\"P691\",\"P813\"]}]}],\"P7305\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P7305\",\"hash\":\"e087acca134fe8b9c47f04032235a0853206a07d\",\"datavalue\":{\"value\":\"3899479\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"Q194064$6063f3f5-470a-7094-1aeb-c81811e1366a\",\"rank\":\"normal\"}],\"P8189\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P8189\",\"hash\":\"02c7331845adc3106bba6799076c29316f419a3f\",\"datavalue\":{\"value\":\"987007290882305171\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"Q194064$8882FB49-254C-43AF-8E89-7EC2E8C5956F\",\"rank\":\"normal\",\"references\":[{\"hash\":\"ecb7a39cf436eb1fba419853af168ef9f2ba1dab\",\"snaks\":{\"P248\":[{\"snaktype\":\"value\",\"property\":\"P248\",\"hash\":\"a03bb6ffe37be9554492f4eea5bd18afcb57df19\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":106509962,\"id\":\"Q106509962\"},\"type\":\"wikibase-entityid\"}}]},\"snaks-order\":[\"P248\"]}]}],\"P4342\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P4342\",\"hash\":\"3f752219873fef3cb870358e80161fae138cde20\",\"datavalue\":{\"value\":\"Esekiel\",\"type\":\"string\"}},\"type\":\"statement\",\"qualifiers\":{\"P1810\":[{\"snaktype\":\"value\",\"property\":\"P1810\",\"hash\":\"d27fe49cac5bdd2c3d6739806331b1c71e217e70\",\"datavalue\":{\"value\":\"Esekiel\",\"type\":\"string\"}}]},\"qualifiers-order\":[\"P1810\"],\"id\":\"Q194064$138AAB92-3670-4DAF-8F82-5313D0C27464\",\"rank\":\"normal\"}],\"P9495\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P9495\",\"hash\":\"302c535c4cb3f7422e6eb8d9a9f80fc244222104\",\"datavalue\":{\"value\":\"term\\/3abf390a-f407-4a6b-99bd-ec85ed852b45\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"Q194064$51FAB7BC-FE04-43B2-9A89-22C6FED30B05\",\"rank\":\"normal\"}],\"P9223\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P9223\",\"hash\":\"0fca5e9e3d957b638034051702c9853c91a097af\",\"datavalue\":{\"value\":\"df3dd57a-0195-4733-b62e-89360fe14618\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"Q194064$F0630DE7-C011-424F-82FA-EFBEEA4F483B\",\"rank\":\"normal\"}],\"P3348\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P3348\",\"hash\":\"f01b72996b47884300d70b1dea835ad8949572fa\",\"datavalue\":{\"value\":\"45809\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"Q194064$ABCF4403-77F1-4252-BBA2-7BFA8299A5BE\",\"rank\":\"normal\"}]},\"sitelinks\":{\"zhwiki\":{\"site\":\"zhwiki\",\"title\":\"\\u4ee5\\u897f\\u7d50\",\"badges\":[]},\"plwiki\":{\"site\":\"plwiki\",\"title\":\"Ezechiel\",\"badges\":[]},\"euwiki\":{\"site\":\"euwiki\",\"title\":\"Ezekiel\",\"badges\":[]},\"frwiki\":{\"site\":\"frwiki\",\"title\":\"\\u00c9z\\u00e9chiel\",\"badges\":[]},\"hewiki\":{\"site\":\"hewiki\",\"title\":\"\\u05d9\\u05d7\\u05d6\\u05e7\\u05d0\\u05dc\",\"badges\":[]},\"kowiki\":{\"site\":\"kowiki\",\"title\":\"\\uc5d0\\uc81c\\ud0a4\\uc5d8\",\"badges\":[]},\"bewiki\":{\"site\":\"bewiki\",\"title\":\"\\u0415\\u0437\\u0435\\u043a\\u0456\\u0456\\u043b\\u044c\",\"badges\":[]},\"eswiki\":{\"site\":\"eswiki\",\"title\":\"Ezequiel
+        (profeta)\",\"badges\":[]},\"tawiki\":{\"site\":\"tawiki\",\"title\":\"\\u0b8e\\u0b9a\\u0bc7\\u0b95\\u0bcd\\u0b95\\u0bbf\\u0baf\\u0bc7\\u0bb2\\u0bcd\",\"badges\":[]},\"huwiki\":{\"site\":\"huwiki\",\"title\":\"Ez\\u00e9kiel
+        pr\\u00f3f\\u00e9ta\",\"badges\":[]},\"itwiki\":{\"site\":\"itwiki\",\"title\":\"Ezechiele\",\"badges\":[]},\"swwiki\":{\"site\":\"swwiki\",\"title\":\"Nabii
+        Ezekieli\",\"badges\":[]},\"idwiki\":{\"site\":\"idwiki\",\"title\":\"Yehezkiel\",\"badges\":[]},\"jawiki\":{\"site\":\"jawiki\",\"title\":\"\\u30a8\\u30bc\\u30ad\\u30a8\\u30eb\",\"badges\":[]},\"svwiki\":{\"site\":\"svwiki\",\"title\":\"Hesekiel\",\"badges\":[]},\"nlwiki\":{\"site\":\"nlwiki\",\"title\":\"Ezechi\\u00ebl
+        (profeet)\",\"badges\":[]},\"ptwiki\":{\"site\":\"ptwiki\",\"title\":\"Ezequiel\",\"badges\":[]},\"skwiki\":{\"site\":\"skwiki\",\"title\":\"Ezechiel
+        (prorok)\",\"badges\":[]},\"ruwiki\":{\"site\":\"ruwiki\",\"title\":\"\\u0418\\u0435\\u0437\\u0435\\u043a\\u0438\\u0438\\u043b\\u044c\",\"badges\":[]},\"srwiki\":{\"site\":\"srwiki\",\"title\":\"\\u0408\\u0435\\u0437\\u0435\\u043a\\u0438\\u0459
+        (\\u043f\\u0440\\u043e\\u0440\\u043e\\u043a)\",\"badges\":[]},\"enwiki\":{\"site\":\"enwiki\",\"title\":\"Ezekiel\",\"badges\":[]},\"nowiki\":{\"site\":\"nowiki\",\"title\":\"Esekiel\",\"badges\":[]},\"rowiki\":{\"site\":\"rowiki\",\"title\":\"Ezechiel\",\"badges\":[]},\"cawiki\":{\"site\":\"cawiki\",\"title\":\"Ezequiel\",\"badges\":[]},\"fiwiki\":{\"site\":\"fiwiki\",\"title\":\"Hesekiel\",\"badges\":[]},\"cywiki\":{\"site\":\"cywiki\",\"title\":\"Eseciel\",\"badges\":[]},\"slwiki\":{\"site\":\"slwiki\",\"title\":\"Ezekiel\",\"badges\":[]},\"cswiki\":{\"site\":\"cswiki\",\"title\":\"Ezechiel\",\"badges\":[]},\"fawiki\":{\"site\":\"fawiki\",\"title\":\"\\u062d\\u0632\\u0642\\u06cc\\u0627\\u0644\",\"badges\":[]},\"kawiki\":{\"site\":\"kawiki\",\"title\":\"\\u10d4\\u10d6\\u10d4\\u10d9\\u10d8\\u10d4\\u10da\\u10d8\",\"badges\":[]},\"ltwiki\":{\"site\":\"ltwiki\",\"title\":\"Ezechielis\",\"badges\":[]},\"tlwiki\":{\"site\":\"tlwiki\",\"title\":\"Ezekiel\",\"badges\":[]},\"fowiki\":{\"site\":\"fowiki\",\"title\":\"Ezekiel\",\"badges\":[]},\"elwiki\":{\"site\":\"elwiki\",\"title\":\"\\u0399\\u03b5\\u03b6\\u03b5\\u03ba\\u03b9\\u03ae\\u03bb\",\"badges\":[]},\"lawiki\":{\"site\":\"lawiki\",\"title\":\"Ezechiel
+        (propheta)\",\"badges\":[]},\"enwikisource\":{\"site\":\"enwikisource\",\"title\":\"Author:Ezekiel\",\"badges\":[]},\"bgwiki\":{\"site\":\"bgwiki\",\"title\":\"\\u0419\\u0435\\u0437\\u0435\\u043a\\u0438\\u0438\\u043b\",\"badges\":[]},\"arwiki\":{\"site\":\"arwiki\",\"title\":\"\\u062d\\u0632\\u0642\\u064a\\u0627\\u0644\",\"badges\":[]},\"gawiki\":{\"site\":\"gawiki\",\"title\":\"Eizic\\u00e9il\",\"badges\":[]},\"brwiki\":{\"site\":\"brwiki\",\"title\":\"Yehezkel\",\"badges\":[]},\"yiwiki\":{\"site\":\"yiwiki\",\"title\":\"\\u05d9\\u05d7\\u05d6\\u05e7\\u05d0\\u05dc\",\"badges\":[]},\"itwikiquote\":{\"site\":\"itwikiquote\",\"title\":\"Ezechiele\",\"badges\":[]},\"ukwiki\":{\"site\":\"ukwiki\",\"title\":\"\\u0404\\u0437\\u0435\\u043a\\u0438\\u0457\\u043b\",\"badges\":[]},\"dewiki\":{\"site\":\"dewiki\",\"title\":\"Ezechiel\",\"badges\":[]},\"eowiki\":{\"site\":\"eowiki\",\"title\":\"Je\\u0125ezkelo\",\"badges\":[]},\"mgwiki\":{\"site\":\"mgwiki\",\"title\":\"Ezekiela\",\"badges\":[]},\"hrwiki\":{\"site\":\"hrwiki\",\"title\":\"Ezekijel\",\"badges\":[]},\"arzwiki\":{\"site\":\"arzwiki\",\"title\":\"\\u062d\\u0632\\u0642\\u064a\\u0627\\u0644\",\"badges\":[]},\"arcwiki\":{\"site\":\"arcwiki\",\"title\":\"\\u071a\\u0719\\u0729\\u071d\\u0710\\u071d\\u0720\",\"badges\":[]},\"hywiki\":{\"site\":\"hywiki\",\"title\":\"\\u0537\\u0566\\u0565\\u056f\\u056b\\u0565\\u056c\",\"badges\":[]},\"trwiki\":{\"site\":\"trwiki\",\"title\":\"Hezekiel\",\"badges\":[]},\"bnwiki\":{\"site\":\"bnwiki\",\"title\":\"\\u09af\\u09bf\\u09b9\\u09bf\\u09b7\\u09cd\\u0995\\u09c7\\u09b2\",\"badges\":[]},\"knwiki\":{\"site\":\"knwiki\",\"title\":\"\\u0c8e\\u0c9c\\u0cc6\\u0c95\\u0cbf\\u0caf\\u0cb2\\u0ccd\",\"badges\":[]},\"simplewiki\":{\"site\":\"simplewiki\",\"title\":\"Ezekiel\",\"badges\":[]},\"dawiki\":{\"site\":\"dawiki\",\"title\":\"Ezekiel\",\"badges\":[]},\"warwiki\":{\"site\":\"warwiki\",\"title\":\"Ezekiel\",\"badges\":[]},\"mkwiki\":{\"site\":\"mkwiki\",\"title\":\"\\u0415\\u0437\\u0435\\u043a\\u0438\\u043b\",\"badges\":[]},\"urwiki\":{\"site\":\"urwiki\",\"title\":\"\\u062d\\u0632\\u0642\\u06cc\\u0644\",\"badges\":[]}}}"}}}]}}}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 09 Sep 2023 16:39:53 GMT
+      Server:
+      - mw2403.codfw.wmnet
+      Set-Cookie:
+      - WMF-Last-Access=09-Sep-2023;Path=/;HttpOnly;secure;Expires=Wed, 11 Oct 2023
+        12:00:00 GMT
+      - WMF-Last-Access-Global=09-Sep-2023;Path=/;Domain=.wikidata.org;HttpOnly;secure;Expires=Wed,
+        11 Oct 2023 12:00:00 GMT
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; Path=/; secure; Domain=.wikidata.org
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Cookie:
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; NetworkProbeLimit=0.001; WMF-Last-Access=09-Sep-2023;
+        WMF-Last-Access-Global=09-Sep-2023
+      User-Agent:
+      - Quonter Vandal
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q1218%7CQ1349880%7CQ168827%7CQ19271130%7CQ20643955%7CQ432386%7CQ482980%7CQ48685%7CQ6581097%7CQ7325&props=labels%7Cdescriptions&languages=en%7Cde%7Cfr%7Ces%7Cru%7Cit%7Cpt%7Cnl%7Car%7Cuk%7Cbn%7Csq%7Che%7Cko%7Cbg%7Csk%7Cvi%7Cel%7Csv%7Chu%7Cid%7Cast%7Cga%7Cpl%7Cth%7Cfa%7Cur%7Cmk%7Cbe%7Cml%7Ceu%7Czh-hant&format=json
+  response:
+    body:
+      string: '{"entities":{"Q1218":{"type":"item","id":"Q1218","labels":{"sk":{"language":"sk","value":"Jeruzalem"},"mk":{"language":"mk","value":"\u0415\u0440\u0443\u0441\u0430\u043b\u0438\u043c"},"ur":{"language":"ur","value":"\u06cc\u0631\u0648\u0634\u0644\u0645"},"uk":{"language":"uk","value":"\u0404\u0440\u0443\u0441\u0430\u043b\u0438\u043c"},"es":{"language":"es","value":"Jerusal\u00e9n"},"ga":{"language":"ga","value":"Iar\u00fasail\u00e9im"},"nl":{"language":"nl","value":"Jeruzalem"},"ast":{"language":"ast","value":"Xerusal\u00e9n"},"bn":{"language":"bn","value":"\u099c\u09c7\u09b0\u09c1\u09b8\u09be\u09b2\u09c7\u09ae"},"pt":{"language":"pt","value":"Jerusal\u00e9m"},"ru":{"language":"ru","value":"\u0418\u0435\u0440\u0443\u0441\u0430\u043b\u0438\u043c"},"de":{"language":"de","value":"Jerusalem"},"ar":{"language":"ar","value":"\u0627\u0644\u0642\u062f\u0633"},"en":{"language":"en","value":"Jerusalem"},"ml":{"language":"ml","value":"\u0d1c\u0d46\u0d31\u0d41\u0d38\u0d32\u0d47\u0d02"},"fr":{"language":"fr","value":"J\u00e9rusalem"},"id":{"language":"id","value":"Yerusalem"},"vi":{"language":"vi","value":"Jerusalem"},"zh-hant":{"language":"zh-hant","value":"\u8036\u8def\u6492\u51b7"},"sv":{"language":"sv","value":"Jerusalem"},"bg":{"language":"bg","value":"\u0419\u0435\u0440\u0443\u0441\u0430\u043b\u0438\u043c"},"eu":{"language":"eu","value":"Jerusalem"},"it":{"language":"it","value":"Gerusalemme"},"he":{"language":"he","value":"\u05d9\u05e8\u05d5\u05e9\u05dc\u05d9\u05dd"},"fa":{"language":"fa","value":"\u0627\u0648\u0631\u0634\u0644\u06cc\u0645"},"hu":{"language":"hu","value":"Jeruzs\u00e1lem"},"ko":{"language":"ko","value":"\uc608\ub8e8\uc0b4\ub818"},"be":{"language":"be","value":"\u0406\u0435\u0440\u0443\u0441\u0430\u043b\u0456\u043c"},"pl":{"language":"pl","value":"Jerozolima"},"el":{"language":"el","value":"\u0399\u03b5\u03c1\u03bf\u03c5\u03c3\u03b1\u03bb\u03ae\u03bc"},"sq":{"language":"sq","value":"Jerusalemi"},"th":{"language":"th","value":"\u0e40\u0e22\u0e23\u0e39\u0e0b\u0e32\u0e40\u0e25\u0e21"}},"descriptions":{"pt":{"language":"pt","value":"cidade
+        na \u00c1sia Ocidental, reivindicada por Israel e pela Autoridade Palestina
+        como sua capital"},"fr":{"language":"fr","value":"ville du Proche-Orient,
+        sainte pour les trois religions abrahamiques"},"en":{"language":"en","value":"City
+        in the Middle East, holy to the three Abrahamic religions."},"it":{"language":"it","value":"citt\u00e0
+        del Vicino Oriente, sacra per le tre religioni abramitiche"},"bn":{"language":"bn","value":"\u09ae\u09a7\u09cd\u09af\u09aa\u09cd\u09b0\u09be\u099a\u09cd\u09af\u09c7\u09b0
+        \u09aa\u09ac\u09bf\u09a4\u09cd\u09b0 \u09b6\u09b9\u09b0, \u0987\u09b8\u09b0\u09be\u09af\u09bc\u09c7\u09b2\u09c7\u09b0
+        \u09a6\u09be\u09ac\u09c0\u0995\u09c3\u09a4 \u09b0\u09be\u099c\u09a7\u09be\u09a8\u09c0"},"uk":{"language":"uk","value":"\u0441\u0442\u043e\u043b\u0438\u0446\u044f
+        \u0442\u0430 \u043d\u0430\u0439\u0431\u0456\u043b\u044c\u0448\u0435 \u043c\u0456\u0441\u0442\u043e
+        \u0406\u0437\u0440\u0430\u0457\u043b\u044e"},"ru":{"language":"ru","value":"\u0433\u043e\u0440\u043e\u0434
+        \u043d\u0430 \u0411\u043b\u0438\u0436\u043d\u0435\u043c \u0412\u043e\u0441\u0442\u043e\u043a\u0435,
+        \u0446\u0435\u043d\u0442\u0440 \u0430\u0432\u0440\u0430\u0430\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0445
+        \u0440\u0435\u043b\u0438\u0433\u0438\u0439"},"fa":{"language":"fa","value":"\u067e\u0627\u06cc\u062a\u062e\u062a
+        \u0627\u062f\u0639\u0627\u06cc\u06cc \u0627\u0633\u0631\u0627\u0626\u06cc\u0644
+        \u0648 \u0641\u0644\u0633\u0637\u06cc\u0646"},"vi":{"language":"vi","value":"Th\u00e0nh
+        ph\u1ed1 \u1edf Trung \u0110\u00f4ng."},"he":{"language":"he","value":"\u05d1\u05d9\u05e8\u05ea
+        \u05d9\u05e9\u05e8\u05d0\u05dc"},"el":{"language":"el","value":"\u03c0\u03c1\u03c9\u03c4\u03b5\u03cd\u03bf\u03c5\u03c3\u03b1
+        \u03c4\u03bf\u03c5 \u0399\u03c3\u03c1\u03b1\u03ae\u03bb"},"es":{"language":"es","value":"ciudad
+        en el Mediterr\u00e1neo oriental, capital de Israel"},"pl":{"language":"pl","value":"miasto
+        w Palestynie i Izraelu, postulowana stolica obu tych pa\u0144stw"},"zh-hant":{"language":"zh-hant","value":"\u8056\u57ce"},"hu":{"language":"hu","value":"Izrael
+        \u00e9s Palesztina f\u0151v\u00e1rosa"},"nl":{"language":"nl","value":"stad
+        in Isra\u00ebl"},"de":{"language":"de","value":"Stadt in den jud\u00e4ischen
+        Bergen"},"sk":{"language":"sk","value":"mesto v Izraeli"},"sv":{"language":"sv","value":"Israels
+        de facto huvudstad som g\u00f6rs anspr\u00e5k p\u00e5 av b\u00e5de Israel
+        och Palestina"},"be":{"language":"be","value":"\u0433\u043e\u0440\u0430\u0434"},"id":{"language":"id","value":"kota
+        di Timur Tengah, kota suci bagi tiga agama Abrahamik"},"ar":{"language":"ar","value":"\u0623\u0643\u0628\u0631
+        \u0645\u062f\u0646 \u0641\u0644\u0633\u0637\u064a\u0646 \u0627\u0644\u062a\u0627\u0631\u064a\u062e\u064a\u0629
+        \u0645\u0633\u0627\u062d\u0629\u064b \u0648\u0633\u0643\u0627\u0646\u0627\u064b"},"ur":{"language":"ur","value":"\u0641\u0644\u0633\u0637\u06cc\u0646
+        \u0627\u0648\u0631 \u0627\u0633\u0631\u0627\u0626\u06cc\u0644 \u06a9\u0627
+        \u0627\u06cc\u06a9 \u0642\u062f\u06cc\u0645 \u0634\u06c1\u0631"},"ga":{"language":"ga","value":"cathair
+        in Iarthar na h\u00c1ise, \u00e9ilithe ag Gi\u00fadaigh agus Palaist\u00ednigh
+        araon, mar phr\u00edomhchathair"}}},"Q1349880":{"type":"item","id":"Q1349880","labels":{"pt":{"language":"pt","value":"taumaturgo"},"sk":{"language":"sk","value":"taumaturgos"},"ru":{"language":"ru","value":"\u0447\u0443\u0434\u043e\u0442\u0432\u043e\u0440\u0435\u0446"},"fr":{"language":"fr","value":"thaumaturge"},"en":{"language":"en","value":"thaumaturge"},"uk":{"language":"uk","value":"\u0447\u0443\u0434\u043e\u0442\u0432\u043e\u0440\u0435\u0446\u044c"},"it":{"language":"it","value":"taumaturgo"},"de":{"language":"de","value":"Thaumaturg"},"bg":{"language":"bg","value":"\u0427\u0443\u0434\u043e\u0442\u0432\u043e\u0440\u0435\u0446"},"nl":{"language":"nl","value":"thaumaturg"},"es":{"language":"es","value":"taumaturgo"},"be":{"language":"be","value":"\u0446\u0443\u0434\u0430\u0442\u0432\u043e\u0440\u0430\u0446"},"el":{"language":"el","value":"\u03b8\u03b1\u03c5\u03bc\u03b1\u03c4\u03bf\u03c5\u03c1\u03b3\u03cc\u03c2"},"eu":{"language":"eu","value":"taumaturgo"},"ast":{"language":"ast","value":"taumaturgu"},"pl":{"language":"pl","value":"taumaturg"},"sv":{"language":"sv","value":"underg\u00f6rare"},"he":{"language":"he","value":"\u05d1\u05e2\u05dc
+        \u05e0\u05e1"},"ar":{"language":"ar","value":"\u0635\u0627\u0646\u0639 \u0627\u0644\u0645\u0639\u062c\u0632\u0627\u062a"},"mk":{"language":"mk","value":"\u0447\u0443\u0434\u043e\u0442\u0432\u043e\u0440\u0435\u0446"},"ga":{"language":"ga","value":"m\u00edor\u00failteoir"}},"descriptions":{"ru":{"language":"ru","value":"\u044d\u043f\u0438\u0442\u0435\u0442
+        \u0441\u0432\u044f\u0442\u044b\u0445, \u043e\u0441\u043e\u0431\u0435\u043d\u043d\u043e
+        \u043f\u0440\u043e\u0441\u043b\u0430\u0432\u0438\u0432\u0448\u0438\u0445\u0441\u044f
+        \u0434\u0430\u0440\u043e\u043c \u0447\u0443\u0434\u043e\u0442\u0432\u043e\u0440\u0435\u043d\u0438\u044f
+        \u0438 \u0437\u0430\u0441\u0442\u0443\u043f\u043d\u0438\u0447\u0435\u0441\u0442\u0432\u0430
+        \u0432 \u043e\u0442\u0432\u0435\u0442 \u043d\u0430 \u043c\u043e\u043b\u0438\u0442\u0432\u0443
+        \u043a \u043d\u0438\u043c"},"en":{"language":"en","value":"occupation of a
+        miracle worker or saint"},"es":{"language":"es","value":"persona que har\u00eda
+        milagros"},"it":{"language":"it","value":"persona che compie miracoli"},"uk":{"language":"uk","value":"\u0435\u043f\u0456\u0442\u0435\u0442
+        \u0449\u043e\u0434\u043e \u0437\u0434\u0430\u0442\u043d\u043e\u0441\u0442\u0456
+        \u043b\u044e\u0434\u0438\u043d\u0438 \u0442\u0432\u043e\u0440\u0438\u0442\u0438
+        \u0434\u0438\u0432\u0430"},"eu":{"language":"eu","value":"mirariak egiten
+        dituen pertsona"},"pl":{"language":"pl","value":"\u015bwi\u0119ty czyni\u0105cy
+        cuda"},"nl":{"language":"nl","value":"iemand die suggereert wonderen te kunnen
+        laten plaatsvinden"},"sv":{"language":"sv","value":"yrke f\u00f6r person som
+        utf\u00f6r mirakler"},"fr":{"language":"fr","value":"saint faisant des miracles"},"mk":{"language":"mk","value":"\u043b\u0438\u0446\u0435
+        \u043a\u043e\u0435 \u043f\u0440\u0430\u0432\u0438 \u0447\u0443\u0434\u0430,
+        \u0447\u0435\u0441\u0442\u043e \u0441\u0432\u0435\u0442\u0435\u0446"}}},"Q168827":{"type":"item","id":"Q168827","labels":{"zh-hant":{"language":"zh-hant","value":"\u4f0a\u65af\u862d\u6559\u7684\u5148\u77e5"},"es":{"language":"es","value":"profeta
+        del islam"},"bn":{"language":"bn","value":"\u0987\u09b8\u09b2\u09be\u09ae\u09c7\u09b0
+        \u09a8\u09ac\u09bf \u0993 \u09b0\u09be\u09b8\u09c1\u09b2"},"sq":{"language":"sq","value":"T\u00eb
+        d\u00ebrguarit n\u00eb Islam"},"ar":{"language":"ar","value":"\u0627\u0644\u0646\u0628\u0648\u0629
+        \u0641\u064a \u0627\u0644\u0625\u0633\u0644\u0627\u0645"},"nl":{"language":"nl","value":"profeten
+        van de islam"},"pt":{"language":"pt","value":"Profetas do isl\u00e3o"},"ru":{"language":"ru","value":"\u043d\u0430\u0431\u0438"},"uk":{"language":"uk","value":"\u043f\u0440\u043e\u0440\u043e\u043a\u0438
+        \u0456\u0441\u043b\u0430\u043c\u0443"},"ko":{"language":"ko","value":"\uc774\uc2ac\ub78c\uc758
+        \uc608\uc5b8\uc790"},"fr":{"language":"fr","value":"proph\u00e8te de l''islam"},"he":{"language":"he","value":"\u05e0\u05d1\u05d9\u05d0\u05d9
+        \u05d4\u05d0\u05e1\u05dc\u05d0\u05dd"},"it":{"language":"it","value":"profeti
+        dell''Islam"},"id":{"language":"id","value":"Nabi Islam"},"de":{"language":"de","value":"Prophet
+        des Islam"},"ml":{"language":"ml","value":"\u0d07\u0d38\u0d4d\u0d32\u0d3e\u0d2e\u0d3f\u0d32\u0d46
+        \u0d2a\u0d4d\u0d30\u0d35\u0d3e\u0d1a\u0d15\u0d28\u0d4d\u0d2e\u0d3e\u0d7c"},"en":{"language":"en","value":"prophet
+        of Islam"},"th":{"language":"th","value":"\u0e19\u0e1a\u0e35"},"bg":{"language":"bg","value":"\u0418\u0441\u043b\u044f\u043c\u0441\u043a\u0438
+        \u043f\u0440\u043e\u0440\u043e\u0446\u0438"},"fa":{"language":"fa","value":"\u067e\u06cc\u0627\u0645\u0628\u0631\u0627\u0646
+        \u062f\u0631 \u0627\u0633\u0644\u0627\u0645"},"ur":{"language":"ur","value":"\u0627\u0633\u0644\u0627\u0645\u06cc
+        \u0646\u0628\u06cc"},"ast":{"language":"ast","value":"profeta del islam"},"be":{"language":"be","value":"\u043f\u0440\u0430\u0440\u043e\u043a\u0456
+        \u045e \u0456\u0441\u043b\u0430\u043c\u0435"},"el":{"language":"el","value":"\u03c0\u03c1\u03bf\u03c6\u03ae\u03c4\u03b5\u03c2
+        \u03c4\u03bf\u03c5 \u0399\u03c3\u03bb\u03ac\u03bc"},"pl":{"language":"pl","value":"prorocy
+        islamu"},"eu":{"language":"eu","value":"Islamaren profeta"},"vi":{"language":"vi","value":"Ti\u00ean
+        tri v\u00e0 s\u1ee9 gi\u1ea3 trong H\u1ed3i gi\u00e1o"},"sk":{"language":"sk","value":"Proroci
+        islamu"},"sv":{"language":"sv","value":"Islams profeter"}},"descriptions":{"id":{"language":"id","value":"laki-laki
+        yang diberi wahyu oleh Allah"},"ko":{"language":"ko","value":"\uc774\uc2ac\ub78c\uc758
+        \uc131\uc11c\uc778 \uafb8\ub974\uc548\uc5d0\uc11c\ub294 \uc54c\ub77c\uac00
+        \ubaa8\ub4e0 \ubbfc\uc871\uc5d0\uac8c \uc608\uc5b8\uc790\ub97c \ub0b4\ub824\ubcf4\ub0c8\ub2e4\uace0
+        \ud558\uace0 \uc788\uc73c\uba70, \ud558\ub514\uc4f0\uc5d0 \uc5b8\uae09\ub41c
+        \ubc14\uc5d0 \uc758\ud558\uba74 \uadf8 \uc608\uc5b8\uc790\uc758 \uc218\ub294
+        124,000\uba85\uc5d0 \uc774\ub978\ub2e4."},"ru":{"language":"ru","value":"\u043f\u0440\u043e\u0440\u043e\u043a
+        \u0432 \u0438\u0441\u043b\u0430\u043c\u0435"},"es":{"language":"es","value":"profetas
+        del islam"},"he":{"language":"he","value":"\u05d0\u05d3\u05dd \u05d4\u05de\u05ea\u05d5\u05d0\u05e8
+        \u05d1\u05e7\u05d5\u05e8\u05d0\u05df \u05db\u05de\u05d9 \u05e9\u05d7\u05d5\u05d5\u05d4
+        \u05d4\u05ea\u05d2\u05dc\u05d5\u05ea, \u05d1\u05e0\u05d5\u05e1\u05e3 \u05dc\u05e0\u05d1\u05d9\u05d0\u05d9\u05dd
+        \u05d4\u05de\u05d5\u05db\u05e8\u05d9\u05dd \u05d1\u05d9\u05d4\u05d3\u05d5\u05ea
+        \u05d5\u05d1\u05e0\u05e6\u05e8\u05d5\u05ea \u05d5\u05d3\u05de\u05d5\u05d9\u05d5\u05ea
+        \u05d0\u05d7\u05e8\u05d5\u05ea \u05d4\u05e0\u05d6\u05db\u05e8\u05d5\u05ea
+        \u05d1\u05ea\u05e0\"\u05da \u05d5\u05d1\u05d1\u05e8\u05d9\u05ea \u05d4\u05d7\u05d3\u05e9\u05d4"},"ast":{"language":"ast","value":"mensaxeru
+        d''Al\u00e1 nel islamismu"},"en":{"language":"en","value":"apostles who preach
+        the news of what comes from the revelation and Sharia"},"de":{"language":"de","value":"Von
+        Gott gesandte Personen"},"ar":{"language":"ar","value":"\u0627\u0644\u0627\u0641\u0631\u0627\u062f
+        \u0641\u064a \u0627\u0644\u0625\u0633\u0644\u0627\u0645 \u0627\u0644\u0630\u064a\u0646
+        \u064a\u0646\u0634\u0631\u0648\u0646 \u0631\u0633\u0627\u0644\u0629 \u0627\u0644\u0644\u0647
+        \u0639\u0644\u0649 \u0627\u0644\u0623\u0631\u0636 \u0648\u064a\u0643\u0648\u0646\u0648\u0646
+        \u0642\u062f\u0648\u0629 \u0645\u062b\u0627\u0644\u064a\u0629 \u0644\u0644\u0623\u062e\u0644\u0627\u0642"},"fr":{"language":"fr","value":"hommes
+        charg\u00e9s de transmettre le message de l''unicit\u00e9 divine et d''un
+        monoth\u00e9isme adamique pur"}}},"Q19271130":{"type":"item","id":"Q19271130","labels":{"en":{"language":"en","value":"Ezekiel"},"fr":{"language":"fr","value":"Ezekiel"},"it":{"language":"it","value":"Ezekiel"},"de":{"language":"de","value":"Ezekiel"},"es":{"language":"es","value":"Ezekiel"},"hu":{"language":"hu","value":"Ezekiel"},"nl":{"language":"nl","value":"Ezekiel"},"sv":{"language":"sv","value":"Ezekiel"},"pl":{"language":"pl","value":"Ezekiel"},"pt":{"language":"pt","value":"Ezekiel"},"sk":{"language":"sk","value":"Ezekiel"},"id":{"language":"id","value":"Ezekiel"},"ru":{"language":"ru","value":"\u042d\u0437\u0435\u043a\u0438\u043b"},"eu":{"language":"eu","value":"Ezekiel"},"he":{"language":"he","value":"\u05d9\u05d7\u05d6\u05e7\u05d0\u05dc"},"ar":{"language":"ar","value":"\u0625\u064a\u0632\u0643\u064a\u0644"},"ast":{"language":"ast","value":"Ezekiel"},"sq":{"language":"sq","value":"Ezekiel"}},"descriptions":{"en":{"language":"en","value":"male
+        given name"},"de":{"language":"de","value":"m\u00e4nnlicher Vorname"},"es":{"language":"es","value":"nombre
+        masculino"},"fr":{"language":"fr","value":"pr\u00e9nom masculin"},"nl":{"language":"nl","value":"mannelijke
+        voornaam"},"sv":{"language":"sv","value":"mansnamn"},"be":{"language":"be","value":"\u043c\u0443\u0436\u0447\u044b\u043d\u0441\u043a\u0430\u0435
+        \u0430\u0441\u0430\u0431\u0456\u0441\u0442\u0430\u0435 \u0456\u043c\u044f"},"el":{"language":"el","value":"\u03b1\u03bd\u03b4\u03c1\u03b9\u03ba\u03cc
+        \u03cc\u03bd\u03bf\u03bc\u03b1"},"fa":{"language":"fa","value":"\u0646\u0627\u0645
+        \u06a9\u0648\u0686\u06a9 \u0645\u0631\u062f\u0627\u0646\u0647"},"he":{"language":"he","value":"\u05e9\u05dd
+        \u05e4\u05e8\u05d8\u05d9 \u05d2\u05d1\u05e8\u05d9 (Ezekiel)"},"hu":{"language":"hu","value":"f\u00e9rfikeresztn\u00e9v"},"it":{"language":"it","value":"prenome
+        maschile"},"mk":{"language":"mk","value":"\u043c\u0430\u0448\u043a\u043e \u043b\u0438\u0447\u043d\u043e
+        \u0438\u043c\u0435"},"pl":{"language":"pl","value":"imi\u0119 m\u0119skie"},"ru":{"language":"ru","value":"\u043c\u0443\u0436\u0441\u043a\u043e\u0435
+        \u043b\u0438\u0447\u043d\u043e\u0435 \u0438\u043c\u044f - Ezekiel"},"ar":{"language":"ar","value":"\u0627\u0633\u0645
+        \u0645\u0630\u0643\u0631 \u0645\u0639\u0637\u0649"},"pt":{"language":"pt","value":"nome
+        pr\u00f3prio masculino"},"ast":{"language":"ast","value":"nome mascul\u00edn"},"uk":{"language":"uk","value":"\u0447\u043e\u043b\u043e\u0432\u0456\u0447\u0435
+        \u043e\u0441\u043e\u0431\u043e\u0432\u0435 \u0456\u043c\u2019\u044f"},"eu":{"language":"eu","value":"gizonezko
+        izena"},"sk":{"language":"sk","value":"mu\u017esk\u00e9 meno"},"ko":{"language":"ko","value":"\ub0a8\uc131\uc758
+        \uc774\ub984"},"id":{"language":"id","value":"nama pemberian maskulin"},"bn":{"language":"bn","value":"\u09aa\u09cd\u09b0\u09a6\u09a4\u09cd\u09a4
+        \u09aa\u09c1\u09b0\u09c1\u09b7 \u09a8\u09be\u09ae"},"zh-hant":{"language":"zh-hant","value":"\u7537\u6027\u4eba\u540d"},"sq":{"language":"sq","value":"em\u00ebr
+        mashkullor"},"bg":{"language":"bg","value":"\u043c\u044a\u0436\u043a\u043e
+        \u0441\u043e\u0431\u0441\u0442\u0432\u0435\u043d\u043e \u0438\u043c\u0435"},"th":{"language":"th","value":"\u0e0a\u0e37\u0e48\u0e2d\u0e1c\u0e39\u0e49\u0e0a\u0e32\u0e22"},"ur":{"language":"ur","value":"\u0645\u0631\u062f\u0627\u0646\u06c1
+        \u0630\u0627\u062a\u06cc \u0646\u0627\u0645"}}},"Q20643955":{"type":"item","id":"Q20643955","labels":{"en":{"language":"en","value":"human
+        biblical figure"},"ru":{"language":"ru","value":"\u0431\u0438\u0431\u043b\u0435\u0439\u0441\u043a\u0438\u0439
+        \u043f\u0435\u0440\u0441\u043e\u043d\u0430\u0436-\u0447\u0435\u043b\u043e\u0432\u0435\u043a"},"fr":{"language":"fr","value":"personnage
+        humain de la Bible"},"es":{"language":"es","value":"personaje humano b\u00edblico"},"de":{"language":"de","value":"menschliche
+        Bibelfigur"},"nl":{"language":"nl","value":"menselijk bijbels personage"},"fa":{"language":"fa","value":"\u0634\u062e\u0635\u06cc\u062a\u200c\u0647\u0627\u06cc
+        \u06a9\u062a\u0627\u0628 \u0645\u0642\u062f\u0633"},"el":{"language":"el","value":"\u03b1\u03bd\u03b8\u03c1\u03ce\u03c0\u03b9\u03bd\u03bf\u03c2
+        \u0392\u03b9\u03b2\u03bb\u03b9\u03ba\u03cc\u03c2 \u03c7\u03b1\u03c1\u03b1\u03ba\u03c4\u03ae\u03c1\u03b1\u03c2"},"pl":{"language":"pl","value":"ludzka
+        posta\u0107 biblijna"},"he":{"language":"he","value":"\u05d3\u05de\u05d5\u05ea
+        \u05de\u05e7\u05e8\u05d0\u05d9\u05ea \u05d0\u05e0\u05d5\u05e9\u05d9\u05ea"},"zh-hant":{"language":"zh-hant","value":"\u4eba\u985e\u8056\u7d93\u4eba\u7269"},"it":{"language":"it","value":"personaggio
+        umano della Bibbia"},"be":{"language":"be","value":"\u0431\u0456\u0431\u043b\u0435\u0439\u0441\u043a\u0430\u044f
+        \u0430\u0441\u043e\u0431\u0430"},"mk":{"language":"mk","value":"\u0431\u0438\u0431\u043b\u0438\u0441\u043a\u0430
+        \u0447\u043e\u0432\u0435\u0447\u043a\u0430 \u043b\u0438\u0447\u043d\u043e\u0441\u0442"},"ur":{"language":"ur","value":"\u0628\u0634\u0631
+        \u0628\u0627\u0626\u0628\u0644\u06cc \u0634\u062e\u0635\u06cc\u062a"},"uk":{"language":"uk","value":"\u0431\u0456\u0431\u043b\u0456\u0439\u043d\u0438\u0439
+        \u043f\u0435\u0440\u0441\u043e\u043d\u0430\u0436-\u043b\u044e\u0434\u0438\u043d\u0430"},"hu":{"language":"hu","value":"bibliai
+        emberi szerepl\u0151"},"pt":{"language":"pt","value":"personagem b\u00edblico
+        humano"},"sv":{"language":"sv","value":"m\u00e4nsklig biblisk gestalt"},"ar":{"language":"ar","value":"\u0634\u062e\u0635\u064a\u0629
+        \u0625\u0646\u062c\u064a\u0644\u064a\u0629 \u0628\u0634\u0631\u064a\u0629"},"ga":{"language":"ga","value":"duine
+        sa Bh\u00edobla"},"bn":{"language":"bn","value":"\u09ae\u09be\u09a8\u09ac
+        \u09ac\u09be\u0987\u09ac\u09c7\u09b2\u09c0\u09af\u09bc \u099a\u09b0\u09bf\u09a4\u09cd\u09b0"},"eu":{"language":"eu","value":"Bibliako
+        pertsonaia  gizakia"}},"descriptions":{"en":{"language":"en","value":"human
+        (as opposed to supernatural) character in the Old Testament/Hebrew Bible or
+        New Testament"},"fr":{"language":"fr","value":"personnage humain (par opposition
+        aux personnages surnaturels) de la Bible"},"de":{"language":"de","value":"menschliche
+        Figur im Alten Testament / Hebr\u00e4ische Bibel oder Neuen Testament"},"he":{"language":"he","value":"\u05e9\u05dd
+        \u05db\u05d5\u05dc\u05dc \u05dc\u05d0\u05e0\u05e9\u05d9\u05dd \u05d4\u05de\u05d5\u05d6\u05db\u05e8\u05d9\u05dd
+        \u05d1\u05de\u05e7\u05e8\u05d0"},"sv":{"language":"sv","value":"m\u00e4nsklig
+        person som omn\u00e4mns i bibeln"},"es":{"language":"es","value":"ser humano
+        (no sobrenatural) narrado en la Biblia"},"eu":{"language":"eu","value":"Biblian
+        aipatzen den pertsonaia eta gizakia den pertsonaia (gizakiak ez diren beste
+        pertsonaien aldean: jainko, aingeru, deabru...)"},"it":{"language":"it","value":"tipo
+        di personaggio biblico"},"uk":{"language":"uk","value":"\u043b\u044e\u0434\u0441\u044c\u043a\u0438\u0439
+        (\u0443 \u043f\u0440\u043e\u0442\u0438\u043b\u0435\u0436\u043d\u0456\u0441\u0442\u044c
+        \u043d\u0430\u0434\u043f\u0440\u0438\u0440\u043e\u0434\u043d\u043e\u043c\u0443)
+        \u043f\u0435\u0440\u0441\u043e\u043d\u0430\u0436 \u0443 \u0411\u0456\u0431\u043b\u0456\u0457"}}},"Q432386":{"type":"item","id":"Q432386","labels":{"es":{"language":"es","value":"predicador"},"de":{"language":"de","value":"Prediger"},"el":{"language":"el","value":"\u03b9\u03b5\u03c1\u03bf\u03ba\u03ae\u03c1\u03c5\u03ba\u03b1\u03c2"},"en":{"language":"en","value":"preacher"},"nl":{"language":"nl","value":"prediker"},"pl":{"language":"pl","value":"kaznodzieja"},"sv":{"language":"sv","value":"predikant"},"fr":{"language":"fr","value":"pr\u00e9dicateur"},"ru":{"language":"ru","value":"\u043f\u0440\u043e\u043f\u043e\u0432\u0435\u0434\u043d\u0438\u043a"},"it":{"language":"it","value":"predicatore"},"be":{"language":"be","value":"\u043f\u0440\u0430\u043f\u0430\u0432\u0435\u0434\u043d\u0456\u043a"},"hu":{"language":"hu","value":"pr\u00e9dik\u00e1tor"},"eu":{"language":"eu","value":"predikari"},"uk":{"language":"uk","value":"\u043f\u0440\u043e\u043f\u043e\u0432\u0456\u0434\u043d\u0438\u043a"},"ur":{"language":"ur","value":"\u0648\u0627\u0639\u0638"},"sk":{"language":"sk","value":"Kazate\u013e"},"ast":{"language":"ast","value":"predicador"},"pt":{"language":"pt","value":"pregador"},"id":{"language":"id","value":"pengkhotbah"},"he":{"language":"he","value":"\u05d3\u05e8\u05e9\u05df"},"zh-hant":{"language":"zh-hant","value":"\u50b3\u6559\u8005"},"ga":{"language":"ga","value":"seanm\u00f3ir\u00ed"},"ar":{"language":"ar","value":"\u062f\u0627\u0639\u064a\u0629"},"bn":{"language":"bn","value":"\u09aa\u09cd\u09b0\u099a\u09be\u09b0\u0995"},"fa":{"language":"fa","value":"\u0648\u0627\u0639\u0638
+        (\u062f\u06cc\u0646\u06cc)"}},"descriptions":{"nl":{"language":"nl","value":"woordverkondiger"},"en":{"language":"en","value":"person
+        who delivers sermons or gives homilies"},"es":{"language":"es","value":"persona
+        que pronuncia sermones y homil\u00edas, generalmente de contenido religioso"},"fr":{"language":"fr","value":"personne
+        qui pr\u00eache, qui annonce en chaire la parole de Dieu"},"ru":{"language":"ru","value":"\u0447\u0435\u043b\u043e\u0432\u0435\u043a,
+        \u0447\u0438\u0442\u0430\u044e\u0449\u0438\u0439 \u043f\u0440\u043e\u043f\u043e\u0432\u0435\u0434\u0438"},"de":{"language":"de","value":"Person,
+        die Predigten und Lesungen veranstaltet"},"be":{"language":"be","value":"\u0447\u0430\u043b\u0430\u0432\u0435\u043a,
+        \u044f\u043a\u0456 \u043f\u0440\u0430\u043f\u0430\u0432\u0435\u0434\u0432\u0430\u0435
+        \u0411\u043e\u0436\u0430\u0435 \u0421\u043b\u043e\u0432\u0430"},"eu":{"language":"eu","value":"sermoi
+        eta predikuak ematen dituena"},"pl":{"language":"pl","value":"duchowny zajmuj\u0105cy
+        si\u0119 wyg\u0142aszaniem kaza\u0144"},"id":{"language":"id","value":"orang
+        yang melakukan khotbah atau memberikan nasihat"},"sv":{"language":"sv","value":"personen
+        som h\u00e5ller en predikan"},"pt":{"language":"pt","value":"divulga\u00e7\u00e3o
+        de conte\u00fado da B\u00edblia crist\u00e3"},"ar":{"language":"ar","value":"\u0634\u062e\u0635
+        \u064a\u062f\u0639\u0648 \u0625\u0644\u0649 \u062f\u064a\u0646 \u0645\u062d\u062f\u062f
+        \u0623\u0648 \u0641\u0643\u0631\u0629 \u0645\u0639\u064a\u0646\u0629"},"bn":{"language":"bn","value":"\u09af\u09c7
+        \u09ac\u09cd\u09af\u0995\u09cd\u09a4\u09bf \u09a7\u09b0\u09cd\u09ae\u09cb\u09aa\u09a6\u09c7\u09b6
+        \u09aa\u09cd\u09b0\u09a6\u09be\u09a8 \u0995\u09b0\u09c7\u09a8"},"he":{"language":"he","value":"\u05d0\u05d3\u05dd
+        \u05d4\u05e0\u05d5\u05e9\u05d0 \u05d3\u05e8\u05e9\u05d5\u05ea \u05d1\u05e0\u05d5\u05e9\u05d0\u05d9\u05dd
+        \u05d3\u05ea\u05d9\u05d9\u05dd \u05d1\u05e4\u05e0\u05d9 \u05d0\u05e1\u05e4\u05ea
+        \u05d0\u05e0\u05e9\u05d9\u05dd"}}},"Q482980":{"type":"item","id":"Q482980","labels":{"zh-hant":{"language":"zh-hant","value":"\u4f5c\u8005"},"eu":{"language":"eu","value":"autore"},"pl":{"language":"pl","value":"autor"},"es":{"language":"es","value":"autor"},"sq":{"language":"sq","value":"autor"},"el":{"language":"el","value":"\u03b4\u03b7\u03bc\u03b9\u03bf\u03c5\u03c1\u03b3\u03cc\u03c2
+        \u03b3\u03c1\u03b1\u03c0\u03c4\u03ce\u03bd \u03ad\u03c1\u03b3\u03c9\u03bd"},"ar":{"language":"ar","value":"\u0645\u0624\u0644\u0641"},"nl":{"language":"nl","value":"auteur"},"sv":{"language":"sv","value":"f\u00f6rfattare"},"pt":{"language":"pt","value":"autor"},"ru":{"language":"ru","value":"\u0430\u0432\u0442\u043e\u0440"},"mk":{"language":"mk","value":"\u0430\u0432\u0442\u043e\u0440"},"uk":{"language":"uk","value":"\u0430\u0432\u0442\u043e\u0440"},"he":{"language":"he","value":"\u05de\u05d7\u05d1\u05e8"},"be":{"language":"be","value":"\u0430\u045e\u0442\u0430\u0440"},"it":{"language":"it","value":"autore"},"id":{"language":"id","value":"pengarang"},"de":{"language":"de","value":"Autor"},"en":{"language":"en","value":"author"},"sk":{"language":"sk","value":"autor"},"bg":{"language":"bg","value":"\u0410\u0432\u0442\u043e\u0440"},"fa":{"language":"fa","value":"\u067e\u062f\u06cc\u062f\u0622\u0648\u0631"},"fr":{"language":"fr","value":"auteur
+        ou autrice"},"ko":{"language":"ko","value":"\uc800\uc790"},"hu":{"language":"hu","value":"szerz\u0151"},"ga":{"language":"ga","value":"\u00fadar"},"ast":{"language":"ast","value":"autor"},"vi":{"language":"vi","value":"t\u00e1c
+        gi\u1ea3"},"bn":{"language":"bn","value":"\u09b2\u09c7\u0996\u0995"},"ur":{"language":"ur","value":"\u0645\u0635\u0646\u0641"},"ml":{"language":"ml","value":"\u0d30\u0d1a\u0d2f\u0d3f\u0d24\u0d3e\u0d35\u0d4d\u200c"},"th":{"language":"th","value":"\u0e1c\u0e39\u0e49\u0e41\u0e15\u0e48\u0e07"}},"descriptions":{"de":{"language":"de","value":"Verfasser
+        oder geistiger Urheber eines sprachlichen Werkes"},"fr":{"language":"fr","value":"personne
+        qui fait une cr\u00e9ation originale manifestant sa personnalit\u00e9 (pour
+        un sens plus pr\u00e9cis, voir Q36180)"},"it":{"language":"it","value":"creatore
+        di un''opera originale"},"en":{"language":"en","value":"creator of a linguistic
+        work"},"es":{"language":"es","value":"creador de una obra original"},"nl":{"language":"nl","value":"iemand
+        die een oorspronkelijk werk zegt of schrijft"},"ru":{"language":"ru","value":"\u0441\u043e\u0437\u0434\u0430\u0442\u0435\u043b\u044c
+        \u043f\u0440\u043e\u0438\u0437\u0432\u0435\u0434\u0435\u043d\u0438\u044f"},"mk":{"language":"mk","value":"\u0442\u0432\u043e\u0440\u0435\u0446
+        \u043d\u0430 \u043f\u0438\u0448\u0430\u043d\u0438 \u0434\u0435\u043b\u0430"},"el":{"language":"el","value":"\u03c7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03b5\u03af\u03c4\u03b1\u03b9
+        \u03c3\u03c7\u03b5\u03c4\u03b9\u03ba\u03ac \u03bc\u03b5 \u03b3\u03c1\u03b1\u03c0\u03c4\u03ac
+        \u03ad\u03c1\u03b3\u03b1, \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03c0\u03b5\u03c1\u03b9\u03b3\u03c1\u03ac\u03c8\u03b5\u03b9
+        \u03c4\u03bf\u03bd \u03b4\u03b7\u03bc\u03b9\u03bf\u03c5\u03c1\u03b3\u03cc
+        \u03c4\u03bf\u03c5\u03c2"},"pl":{"language":"pl","value":"tw\u00f3rca oryginalnego
+        dzie\u0142a"},"ast":{"language":"ast","value":"creador d''una obra orixinal"},"ko":{"language":"ko","value":"\uc608\uc220\uacfc
+        \ucde8\ubbf8\uc758 \ubd84\uc57c\uc5d0\uc11c \uc791\ud488\uc744 \ucc3d\uc791\ud558\ub294
+        \uc0ac\ub78c"},"eu":{"language":"eu","value":"lan baten sortzailea"},"id":{"language":"id","value":"pencipta
+        karya asli"},"bn":{"language":"bn","value":"\u098f\u0995\u099f\u09bf \u09ae\u09c2\u09b2
+        \u0995\u09be\u099c\u09c7\u09b0 \u09b8\u09cd\u09b0\u09b7\u09cd\u099f\u09be"},"sq":{"language":"sq","value":"krijues
+        i nj\u00eb pune origjinale t\u00eb folur ose t\u00eb shkruar"},"sv":{"language":"sv","value":"skapare
+        av skrivna verk"},"ar":{"language":"ar","value":"\u0645\u0646\u0634\u0626
+        \u0639\u0645\u0644 \u0623\u0635\u0644\u064a \u0623\u0648 \u0645\u0624\u0644\u0641
+        \u0641\u0643\u0631\u064a \u0644\u0639\u0645\u0644 \u0644\u063a\u0648\u064a"},"ur":{"language":"ur","value":"\u06a9\u0633\u06cc
+        \u0686\u06cc\u0632 \u06a9\u0627 \u062e\u0627\u0644\u0642 \u06cc\u0627 \u0648\u062c\u0648\u062f
+        \u0645\u06cc\u06ba \u0644\u0627\u0646\u06d2 \u0648\u0627\u0644\u0627"},"uk":{"language":"uk","value":"\u043b\u044e\u0434\u0438\u043d\u0430,
+        \u0449\u043e \u0441\u0442\u0432\u043e\u0440\u0438\u043b\u0430 \u043b\u0456\u043d\u0433\u0432\u0456\u0441\u0442\u0438\u0447\u043d\u0443
+        \u0440\u043e\u0431\u043e\u0442\u0443"},"pt":{"language":"pt","value":"criador
+        de um trabalho original"}}},"Q48685":{"type":"item","id":"Q48685","labels":{"eu":{"language":"eu","value":"Judeako
+        Erresuma"},"pl":{"language":"pl","value":"Kr\u00f3lestwo Judy"},"he":{"language":"he","value":"\u05de\u05de\u05dc\u05db\u05ea
+        \u05d9\u05d4\u05d5\u05d3\u05d4"},"be":{"language":"be","value":"\u0406\u0443\u0434\u0437\u0435\u0439\u0441\u043a\u0430\u0435
+        \u0446\u0430\u0440\u0441\u0442\u0432\u0430"},"fr":{"language":"fr","value":"royaume
+        de Juda"},"ko":{"language":"ko","value":"\uc720\ub2e4 \uc655\uad6d"},"it":{"language":"it","value":"Regno
+        di Giuda"},"id":{"language":"id","value":"Kerajaan Yehuda"},"de":{"language":"de","value":"Juda"},"vi":{"language":"vi","value":"V\u01b0\u01a1ng
+        qu\u1ed1c Judah"},"en":{"language":"en","value":"Judah"},"nl":{"language":"nl","value":"Koninkrijk
+        Juda"},"ar":{"language":"ar","value":"\u0645\u0645\u0644\u0643\u0629 \u064a\u0647\u0648\u0630\u0627"},"sv":{"language":"sv","value":"Juda
+        rike"},"pt":{"language":"pt","value":"Reino de Jud\u00e1"},"ru":{"language":"ru","value":"\u0418\u0443\u0434\u0435\u0439\u0441\u043a\u043e\u0435
+        \u0446\u0430\u0440\u0441\u0442\u0432\u043e"},"th":{"language":"th","value":"\u0e23\u0e32\u0e0a\u0e2d\u0e32\u0e13\u0e32\u0e08\u0e31\u0e01\u0e23\u0e22\u0e39\u0e14\u0e32\u0e2b\u0e4c"},"mk":{"language":"mk","value":"\u0408\u0443\u0434\u0435\u0458\u0441\u043a\u043e
+        \u0426\u0430\u0440\u0441\u0442\u0432\u043e"},"bg":{"language":"bg","value":"\u042e\u0434\u0435\u0439\u0441\u043a\u043e
+        \u0446\u0430\u0440\u0441\u0442\u0432\u043e"},"ur":{"language":"ur","value":"\u0645\u0645\u0644\u06a9\u062a
+        \u06cc\u06c1\u0648\u062f\u06c1"},"es":{"language":"es","value":"Jud\u00e1"},"hu":{"language":"hu","value":"J\u00fadai
+        Kir\u00e1lys\u00e1g"},"uk":{"language":"uk","value":"\u042e\u0434\u0435\u0439\u0441\u044c\u043a\u0435
+        \u0446\u0430\u0440\u0441\u0442\u0432\u043e"},"el":{"language":"el","value":"\u0392\u03b1\u03c3\u03af\u03bb\u03b5\u03b9\u03bf
+        \u03c4\u03bf\u03c5 \u0399\u03bf\u03cd\u03b4\u03b1"},"zh-hant":{"language":"zh-hant","value":"\u7336\u5927\u570b"},"fa":{"language":"fa","value":"\u067e\u0627\u062f\u0634\u0627\u0647\u06cc
+        \u06cc\u0647\u0648\u062f\u0627"},"ast":{"language":"ast","value":"Reinu de
+        Xud\u00e1"},"ga":{"language":"ga","value":"I\u00fad\u00e1"},"bn":{"language":"bn","value":"\u09af\u09bf\u09b9\u09c2\u09a6\u09be
+        \u09b0\u09be\u099c\u09cd\u09af"},"sq":{"language":"sq","value":"Mbret\u00ebria
+        e Jud\u00ebs"}},"descriptions":{"de":{"language":"de","value":"historischer
+        Staat"},"en":{"language":"en","value":"Southern Israelite kingdom, c. 930\u2013586
+        BCE"},"fr":{"language":"fr","value":"ancien pays"},"nl":{"language":"nl","value":"historisch
+        land"},"es":{"language":"es","value":"antiguo reino de Oriente Pr\u00f3ximo"},"he":{"language":"he","value":"\u05de\u05de\u05dc\u05db\u05d4
+        \u05e2\u05d1\u05e8\u05d9\u05ea \u05d1\u05ea\u05e7\u05d5\u05e4\u05ea \u05d4\u05d1\u05e8\u05d6\u05dc
+        \u05d4\u05e9\u05e0\u05d9\u05d4"},"it":{"language":"it","value":"regno israelitico,
+        esistito in Palestina dal 930 al 586 a.C."},"mk":{"language":"mk","value":"\u043f\u043e\u0440\u0430\u043d\u0435\u0448\u043d\u0430
+        \u0434\u0440\u0436\u0430\u0432\u0430"},"id":{"language":"id","value":"kerajaan
+        di Asia Barat"}}},"Q6581097":{"type":"item","id":"Q6581097","labels":{"mk":{"language":"mk","value":"\u043c\u0430\u0448\u043a\u0438"},"fr":{"language":"fr","value":"masculin"},"sk":{"language":"sk","value":"mu\u017e"},"uk":{"language":"uk","value":"\u0447\u043e\u043b\u043e\u0432\u0456\u0447\u0430"},"id":{"language":"id","value":"Laki-laki"},"th":{"language":"th","value":"\u0e40\u0e1e\u0e28\u0e0a\u0e32\u0e22"},"vi":{"language":"vi","value":"nam"},"es":{"language":"es","value":"masculino"},"zh-hant":{"language":"zh-hant","value":"\u7537"},"bg":{"language":"bg","value":"\u043c\u044a\u0436\u043a\u0438"},"be":{"language":"be","value":"\u043c\u0443\u0436\u0447\u044b\u043d\u0441\u043a\u0456
+        \u043f\u043e\u043b"},"ast":{"language":"ast","value":"mascul\u00edn"},"ur":{"language":"ur","value":"\u0645\u0631\u062f"},"he":{"language":"he","value":"\u05d6\u05db\u05e8"},"el":{"language":"el","value":"\u03ac\u03bd\u03b4\u03c1\u03b1\u03c2"},"it":{"language":"it","value":"maschio"},"bn":{"language":"bn","value":"\u09aa\u09c1\u09b0\u09c1\u09b7"},"ko":{"language":"ko","value":"\ub0a8\uc131"},"eu":{"language":"eu","value":"gizonezko"},"pt":{"language":"pt","value":"masculino"},"ru":{"language":"ru","value":"\u043c\u0443\u0436\u0441\u043a\u043e\u0439
+        \u043f\u043e\u043b"},"fa":{"language":"fa","value":"\u0645\u0630\u06a9\u0631"},"pl":{"language":"pl","value":"m\u0119\u017cczyzna"},"hu":{"language":"hu","value":"f\u00e9rfi"},"nl":{"language":"nl","value":"mannelijk"},"de":{"language":"de","value":"m\u00e4nnlich"},"sv":{"language":"sv","value":"man"},"ar":{"language":"ar","value":"\u0630\u0643\u0631"},"en":{"language":"en","value":"male"},"sq":{"language":"sq","value":"mashkull"},"ga":{"language":"ga","value":"fireann"},"ml":{"language":"ml","value":"\u0d2a\u0d41\u0d30\u0d41\u0d37\u0d7b"}},"descriptions":{"ur":{"language":"ur","value":"\u0627\u0646\u0633\u0627\u0646\u06cc
+        \u062c\u0646\u0633"},"uk":{"language":"uk","value":"\u043b\u044e\u0434\u0438\u043d\u0430
+        \u0447\u043e\u043b\u043e\u0432\u0456\u0447\u043e\u0457 \u0441\u0442\u0430\u0442\u0456,
+        \u043c\u0443\u0436\u0447\u0438\u043d\u0430"},"id":{"language":"id","value":"jenis
+        kelamin makhluk hidup yang tidak dapat melahirkan, lawan kata dari \"perempuan\",
+        digunakan pada atribut \"jenis kelamin atau gender\" (P21). dapat digunakan
+        untuk manusia maupun makhluk hidup lainnya"},"th":{"language":"th","value":"\u0e43\u0e0a\u0e49\u0e01\u0e31\u0e1a\u0e40\u0e09\u0e1e\u0e32\u0e30
+        P21 (\u0e40\u0e1e\u0e28) \u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e41\u0e2a\u0e14\u0e07\u0e27\u0e48\u0e32\u0e21\u0e35\u0e40\u0e1e\u0e28\u0e40\u0e1b\u0e47\u0e19\u0e0a\u0e32\u0e22"},"vi":{"language":"vi","value":"gi\u1edbi
+        t\u00ednh con ng\u01b0\u1eddi, ch\u1ec9 \u0111\u01b0\u1ee3c s\u1eed d\u1ee5ng
+        cho thu\u1ed9c t\u00ednh P21"},"es":{"language":"es","value":"sexo o g\u00e9nero
+        humano"},"ga":{"language":"ga","value":"inscne an duine"},"hu":{"language":"hu","value":"nemi
+        identit\u00e1s, csak a nem (P21) tulajdons\u00e1ghoz haszn\u00e1land\u00f3
+        elem"},"zh-hant":{"language":"zh-hant","value":"\u4eba\u985e\u6027\u5225\uff0c\u53ea\u7528\u65bc\u5c6c\u6027P21"},"fr":{"language":"fr","value":"\u00e9l\u00e9ment
+        \u00e0 utiliser dans P21 (\u00ab sexe ou genre \u00bb) pour signifier que
+        la personne est de sexe masculin"},"bg":{"language":"bg","value":"\u0438\u0437\u043f\u043e\u043b\u0437\u0432\u0430
+        \u0441\u0435 \u0441\u0430\u043c\u043e \u043a\u0430\u0442\u043e \u0441\u0442\u043e\u0439\u043d\u043e\u0441\u0442
+        \u043d\u0430 \u0430\u0442\u0440\u0438\u0431\u0443\u0442\u0430 \u043f\u043e\u043b
+        (P21)"},"eu":{"language":"eu","value":"P21ean erabiltzeko pertsona gizonezkoa
+        dela adierazteko"},"ast":{"language":"ast","value":"humanu machu (usar cola
+        propied\u00e1 P21 sexu)"},"he":{"language":"he","value":"\u05dc\u05e9\u05d9\u05de\u05d5\u05e9
+        \u05e2\u05dd \u05de\u05d0\u05e4\u05d9\u05d9\u05df P21. \u05de\u05d9\u05df
+        \u05d6\u05db\u05e8 \u05e2\u05d1\u05d5\u05e8 \u05d0\u05d3\u05dd."},"el":{"language":"el","value":"\u03c0\u03c1\u03cc\u03c3\u03c9\u03c0\u03bf
+        \u03c0\u03bf\u03c5 \u03b5\u03af\u03bd\u03b1\u03b9 \u03ac\u03bd\u03b4\u03c1\u03b1\u03c2
+        (\u03c7\u03c1\u03ae\u03c3\u03b7 \u03bc\u03b5 \u03c4\u03bf Property:P21 \u03b3\u03b9\u03b1
+        \u03c4\u03bf \u03c6\u03cd\u03bb\u03bf)"},"it":{"language":"it","value":"essere
+        umano di sesso maschile (da usare con la propriet\u00e0:P21 \"sesso o genere\")"},"bn":{"language":"bn","value":"\u09ae\u09be\u09a8\u09c1\u09b7
+        \u09af\u09bf\u09a8\u09bf \u09aa\u09c1\u09b0\u09c1\u09b7"},"ko":{"language":"ko","value":"\uc778\uac04
+        \ub300\uc0c1\uc774 \ub0a8\uc131\uc784\uc744 \ub098\ud0c0\ub0b4\uae30 \uc704\ud574
+        \"\uc131\ubcc4 \ub610\ub294 \uc820\ub354\"(P21)\uc5d0\uc11c \uc0ac\uc6a9"},"be":{"language":"be","value":"\u0432\u044b\u043a\u0430\u0440\u044b\u0441\u0442\u043e\u045e\u0432\u0430\u0435\u0446\u0446\u0430
+        \u0432\u0430 \u045e\u043b\u0430\u0441\u0446\u0456\u0432\u0430\u0441\u0446\u0456
+        P21 (\u043f\u043e\u043b)"},"fa":{"language":"fa","value":"\u0628\u0631\u0627\u06cc
+        \u0627\u0646\u0633\u0627\u0646:\u0641\u0642\u0637 \u062f\u0631 \u062e\u0635\u0648\u0635\u06cc\u062a
+        \u06f2\u06f1 (\u062c\u0633\u0646\u06cc\u062a) \u0627\u0633\u062a\u0641\u0627\u062f\u0647
+        \u0645\u06cc\u200c\u0634\u0648\u062f \u062a\u0627 \u0645\u0634\u062e\u0635
+        \u0634\u0648\u062f \u0645\u0648\u0631\u062f \u0645\u0630\u06a9\u0631 \u0627\u0633\u062a."},"pt":{"language":"pt","value":"pessoa
+        que \u00e9 do sexo masculino (usar com a propriedade P21 para indicar o sexo
+        ou g\u00e9nero)"},"pl":{"language":"pl","value":"osoba p\u0142ci m\u0119skiej
+        (u\u017cywane z Property:P21 \u201ep\u0142e\u0107\u201d)"},"nl":{"language":"nl","value":"persoon
+        van het mannelijk geslacht, te gebruiken met P21 (sekse)"},"de":{"language":"de","value":"Mensch
+        mit m\u00e4nnlichem Geschlecht (Verwendung mit P21)"},"sv":{"language":"sv","value":"person
+        av manligt k\u00f6n; avsedd f\u00f6r \"P21\" (k\u00f6n)"},"ru":{"language":"ru","value":"\u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442\u0441\u044f
+        \u0432 \u0441\u0432\u043e\u0439\u0441\u0442\u0432\u0435 P21 (\u043f\u043e\u043b
+        \u0447\u0435\u043b\u043e\u0432\u0435\u043a\u0430)"},"ar":{"language":"ar","value":"\u0625\u0646\u0633\u0627\u0646
+        \u0630\u0643\u0631 (\u064a\u0633\u062a\u062e\u062f\u0645 \u0645\u0639 P21)"},"sq":{"language":"sq","value":"p\u00ebrdore
+        vet\u00ebm me Property:Sex (P21) p\u00ebr t\u00eb th\u00ebn\u00eb se subjekti
+        \u00ebsht\u00eb mashkull"},"ml":{"language":"ml","value":"\u0d2a\u0d41\u0d30\u0d41\u0d37\u0d7b
+        \u0d06\u0d2f\u0d41\u0d33\u0d4d\u0d33 \u0d35\u0d4d\u0d2f\u0d15\u0d4d\u0d24\u0d3f"},"en":{"language":"en","value":"to
+        be used in \"sex or gender\" (P21) to indicate that the human subject is a
+        male or \"semantic gender\" (P10339) to indicate that a word refers to a male
+        person"}}},"Q7325":{"type":"item","id":"Q7325","labels":{"de":{"language":"de","value":"Juden"},"it":{"language":"it","value":"ebrei"},"fr":{"language":"fr","value":"Juifs"},"ar":{"language":"ar","value":"\u064a\u0647\u0648\u062f"},"be":{"language":"be","value":"\u044f\u045e\u0440\u044d\u0456"},"bg":{"language":"bg","value":"\u0435\u0432\u0440\u0435\u0438"},"bn":{"language":"bn","value":"\u0987\u09b9\u09c1\u09a6\u09bf"},"el":{"language":"el","value":"\u0395\u03b2\u03c1\u03b1\u03af\u03bf\u03b9"},"es":{"language":"es","value":"jud\u00edos"},"eu":{"language":"eu","value":"judu"},"fa":{"language":"fa","value":"\u06cc\u0647\u0648\u062f\u06cc"},"he":{"language":"he","value":"\u05d9\u05d4\u05d5\u05d3\u05d9\u05dd"},"hu":{"language":"hu","value":"zsid\u00f3k"},"id":{"language":"id","value":"Yahudi"},"ko":{"language":"ko","value":"\uc720\ub300\uc778"},"mk":{"language":"mk","value":"\u0415\u0432\u0440\u0435\u0438"},"nl":{"language":"nl","value":"Joden"},"pl":{"language":"pl","value":"\u017bydzi"},"pt":{"language":"pt","value":"judeu"},"ru":{"language":"ru","value":"\u0435\u0432\u0440\u0435\u0438"},"sk":{"language":"sk","value":"\u017didia"},"sv":{"language":"sv","value":"judar"},"th":{"language":"th","value":"\u0e0a\u0e32\u0e27\u0e22\u0e34\u0e27"},"uk":{"language":"uk","value":"\u0454\u0432\u0440\u0435\u0457"},"ur":{"language":"ur","value":"\u06cc\u06c1\u0648\u062f\u06cc"},"vi":{"language":"vi","value":"ng\u01b0\u1eddi
+        Do Th\u00e1i"},"zh-hant":{"language":"zh-hant","value":"\u7336\u592a\u4eba"},"ga":{"language":"ga","value":"na
+        Gi\u00fadaigh"},"ast":{"language":"ast","value":"pueblu xud\u00edu"},"ml":{"language":"ml","value":"\u0d1c\u0d42\u0d24\u0d7b"},"en":{"language":"en","value":"Jewish
+        people"},"sq":{"language":"sq","value":"\u00c7ifut\u00ebt"}},"descriptions":{"de":{"language":"de","value":"ethnisch-religi\u00f6se
+        Gruppe der Angeh\u00f6rigen der j\u00fcdischen Religion"},"fr":{"language":"fr","value":"peuple
+        li\u00e9 au juda\u00efsme"},"es":{"language":"es","value":"grupo \u00e9tnico
+        diverso con similitudes culturales de tipo religioso y ling\u00fc\u00edstico"},"ru":{"language":"ru","value":"\u043d\u0430\u0440\u043e\u0434
+        \u0441\u0435\u043c\u0438\u0442\u0441\u043a\u043e\u0433\u043e \u043f\u0440\u043e\u0438\u0441\u0445\u043e\u0436\u0434\u0435\u043d\u0438\u044f,
+        \u043e\u0441\u043d\u043e\u0432\u043d\u043e\u0435 \u043d\u0430\u0441\u0435\u043b\u0435\u043d\u0438\u0435
+        \u0418\u0437\u0440\u0430\u0438\u043b\u044f; \u0442\u0430\u043a\u0436\u0435
+        \u0437\u043d\u0430\u0447\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u0433\u0440\u0443\u043f\u043f\u044b
+        \u0435\u0432\u0440\u0435\u0435\u0432 \u043f\u0440\u043e\u0436\u0438\u0432\u0430\u044e\u0442
+        \u0432\u043e \u043c\u043d\u043e\u0433\u0438\u0445 \u0434\u0440\u0443\u0433\u0438\u0445
+        \u0441\u0442\u0440\u0430\u043d\u0430\u0445 \u043f\u043e \u0432\u0441\u0435\u043c\u0443
+        \u043c\u0438\u0440\u0443"},"en":{"language":"en","value":"ethnoreligious group
+        and nation from the Levant"},"it":{"language":"it","value":"gruppo etnoreligioso"},"pl":{"language":"pl","value":"nar\u00f3d
+        i grupa etniczno-religijna"},"mk":{"language":"mk","value":"\u043d\u0430\u0440\u043e\u0434
+        \u0438 \u0435\u0442\u043d\u043e\u0440\u0435\u043b\u0438\u0433\u0438\u043e\u0437\u043d\u0430
+        \u0433\u0440\u0443\u043f\u0430"},"nl":{"language":"nl","value":"aanhangers
+        van de joodse religie (joden) dan wel iemand met de joodse etniciteit (Joden)"},"uk":{"language":"uk","value":"\u043d\u0430\u0440\u043e\u0434
+        \u0441\u0435\u043c\u0456\u0442\u0441\u044c\u043a\u043e\u0433\u043e \u043f\u043e\u0445\u043e\u0434\u0436\u0435\u043d\u043d\u044f"},"he":{"language":"he","value":"\u05e2\u05dd
+        \u05de\u05de\u05d5\u05e6\u05d0 \u05e9\u05de\u05d9, \u05e7\u05d1\u05d5\u05e6\u05d4
+        \u05d0\u05ea\u05e0\u05d9\u05ea, \u05d3\u05ea\u05d9\u05ea \u05d5\u05dc\u05d0\u05d5\u05de\u05d9\u05ea
+        \u05e9\u05de\u05e7\u05d5\u05e8\u05d4 \u05d1\u05d7\u05dc\u05e7 \u05de\u05ea\u05d5\u05e9\u05d1\u05d9
+        \u05d0\u05e8\u05e5 \u05d9\u05e9\u05e8\u05d0\u05dc"},"sk":{"language":"sk","value":"semitsk\u00fd
+        n\u00e1rod, ktor\u00fd poch\u00e1dza z oblasti Bl\u00edzkeho v\u00fdchodu"},"sv":{"language":"sv","value":"etno-religi\u00f6s
+        grupp av m\u00e4nniskor"},"id":{"language":"id","value":"kelompok etnoreligius
+        dari Levant"},"bn":{"language":"bn","value":"\u098f\u0995\u099f\u09bf \u099c\u09be\u09a4\u09bf
+        \u09ac\u09be \u09a7\u09b0\u09cd\u09ae\u09c0\u09af\u09bc \u099c\u09a8\u0997\u09cb\u09b7\u09cd\u09a0\u09c0"},"el":{"language":"el","value":"\u03b5\u03b8\u03bd\u03bf\u03b8\u03c1\u03b7\u03c3\u03ba\u03b5\u03c5\u03c4\u03b9\u03ba\u03ae
+        \u03bf\u03bc\u03ac\u03b4\u03b1"},"ar":{"language":"ar","value":"\u0642\u0648\u0645\u064a\u0629
+        \u062f\u064a\u0646\u064a\u0629 \u064a\u062a\u0628\u0639\u0648\u0646 \u0627\u0644\u062f\u064a\u0627\u0646\u0629
+        \u0627\u0644\u064a\u0647\u0648\u062f\u064a\u0629"},"ko":{"language":"ko","value":"\uace0\ub300
+        \uadfc\ub3d9\uc758 \uc774\uc2a4\ub77c\uc5d8 \ubbfc\uc871\uc5d0\uac8c\uc11c
+        \uae30\uc6d0\ud55c \ubbfc\uc871\uc801, \uc885\uad50\uc801, \ubb38\ud654\uc801
+        \uc9d1\ub2e8."},"vi":{"language":"vi","value":"s\u1eafc t\u1ed9c t\u00f4n
+        gi\u00e1o"},"fa":{"language":"fa","value":"\u06cc\u06a9 \u06af\u0631\u0648\u0647
+        \u0642\u0648\u0645\u06cc-\u0645\u0630\u0647\u0628\u06cc"},"pt":{"language":"pt","value":"grupo
+        \u00e9tnico e religioso"}}}},"success":1}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '2'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 09 Sep 2023 16:39:53 GMT
+      Server:
+      - mw2328.codfw.wmnet
+      Set-Cookie:
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      User-Agent:
+      - Quonter Vandal /0.0 (https://qop.toolforge.org/)
+    method: GET
+    uri: https://en.wikipedia.org/w/api.php?action=query&prop=extracts%7Ccategories&cllimit=max&exchars=225&explaintext=true&exsectionformat=plain&titles=Ezekiel&format=json
+  response:
+    body:
+      string: '{"batchcomplete":"","query":{"pages":{"9911":{"pageid":9911,"ns":0,"title":"Ezekiel","extract":"Ezekiel
+        or Ezechiel (; Hebrew: \u05d9\u05b0\u05d7\u05b6\u05d6\u05b0\u05e7\u05b5\u05d0\u05dc
+        Y\u0259\u1e25ezq\u0113\u02bel [j\u0259.\u0127\u025bz\u02c8qe\u02d0l]; in the
+        Septuagint written in Koin\u0113 Greek: \u1f38\u03b5\u03b6\u03b5\u03ba\u03b9\u03ae\u03bb
+        Iezeki\u1e17l [i.\u025b.z\u025b.ki\u02c8el]) is the central protagonist of
+        the Book of Ezekiel in the Hebrew Bible.\nIn Judaism,...","categories":[{"ns":14,"title":"Category:6th-century
+        BC writers"},{"ns":14,"title":"Category:All articles needing additional references"},{"ns":14,"title":"Category:All
+        articles with unsourced statements"},{"ns":14,"title":"Category:Angelic visionaries"},{"ns":14,"title":"Category:Articles
+        containing Arabic-language text"},{"ns":14,"title":"Category:Articles containing
+        Hebrew-language text"},{"ns":14,"title":"Category:Articles containing Koin\u0113
+        Greek-language text"},{"ns":14,"title":"Category:Articles incorporating a
+        citation from the 1913 Catholic Encyclopedia with Wikisource reference"},{"ns":14,"title":"Category:Articles
+        needing additional references from January 2016"},{"ns":14,"title":"Category:Articles
+        with DTBIO identifiers"},{"ns":14,"title":"Category:Articles with FAST identifiers"},{"ns":14,"title":"Category:Articles
+        with GND identifiers"},{"ns":14,"title":"Category:Articles with ISNI identifiers"},{"ns":14,"title":"Category:Articles
+        with J9U identifiers"},{"ns":14,"title":"Category:Articles with LCCN identifiers"},{"ns":14,"title":"Category:Articles
+        with NKC identifiers"},{"ns":14,"title":"Category:Articles with NLG identifiers"},{"ns":14,"title":"Category:Articles
+        with SUDOC identifiers"},{"ns":14,"title":"Category:Articles with VIAF identifiers"},{"ns":14,"title":"Category:Articles
+        with short description"},{"ns":14,"title":"Category:Articles with unsourced
+        statements from September 2008"},{"ns":14,"title":"Category:Christian saints
+        from the Old Testament"},{"ns":14,"title":"Category:Commons category link
+        is on Wikidata"},{"ns":14,"title":"Category:Ezekiel"},{"ns":14,"title":"Category:Prophets
+        in Christianity"},{"ns":14,"title":"Category:Prophets in the Hebrew Bible"},{"ns":14,"title":"Category:Short
+        description matches Wikidata"},{"ns":14,"title":"Category:Tribe of Levi"}]}}},"limits":{"categories":500}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 09 Sep 2023 16:39:54 GMT
+      Server:
+      - mw2436.codfw.wmnet
+      Set-Cookie:
+      - WMF-Last-Access=09-Sep-2023;Path=/;HttpOnly;secure;Expires=Wed, 11 Oct 2023
+        12:00:00 GMT
+      - WMF-Last-Access-Global=09-Sep-2023;Path=/;Domain=.wikipedia.org;HttpOnly;secure;Expires=Wed,
+        11 Oct 2023 12:00:00 GMT
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; Path=/; secure; Domain=.wikipedia.org
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
 version: 1

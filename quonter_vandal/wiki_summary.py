@@ -19,7 +19,7 @@ def filter_category(category: str) -> bool:
         " dates", "CS1", " dates ", "ISNI", "LCCN", "VIAF", "WorldCat", "Artigos", " pages", "Canadian English",
         " bytes", "short description", "wayback", "All articles", "protected ", " articles", "American English",
         "infobox", "navigational boxes", "taxon ID", "missing", "indexed", "plantilla", "Wikipedia:", "Page ",
-        "Wikipédia:", "Article "
+        "Wikipédia:", "Article ", "cleanup from"
     ]
 
     for substring in banned_substrings:

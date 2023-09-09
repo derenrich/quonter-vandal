@@ -123,4 +123,128 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: null
+    headers: {}
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=compare&prop=user%7Cdiff%7Ctitle%7Crel%7Cids&format=json&fromrev=1419596909&torev=1942074306
+  response:
+    body:
+      string: '{"compare":{"fromid":30280499,"fromrevid":1419596909,"fromns":0,"fromtitle":"Q28587782","fromuser":"Cewbot","fromuserid":2692538,"toid":30280499,"torevid":1942074306,"tons":0,"totitle":"Q28587782","touser":"BrokenSegue","touserid":193966,"prev":1344759731,"next":1942074309,"*":"<tr><td
+        colspan=\"2\" class=\"diff-lineno\">label / en</td><td colspan=\"2\" class=\"diff-lineno\">label
+        / en</td></tr><tr><td class=\"diff-marker\" data-marker=\"\u2212\"></td><td
+        class=\"diff-deletedline\"><div>legal <del class=\"diffchange diffchange-inline\">challenge
+        </del>to <del class=\"diffchange diffchange-inline\">Executive Order 13769</del></div></td><td
+        class=\"diff-marker\" data-marker=\"+\"></td><td class=\"diff-addedline\"><div>legal
+        <ins class=\"diffchange diffchange-inline\">challenges </ins>to <ins class=\"diffchange
+        diffchange-inline\">the Trump travel ban</ins></div></td></tr>"}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '375'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 09 Sep 2023 16:39:13 GMT
+      Server:
+      - mw2300.codfw.wmnet
+      Set-Cookie:
+      - WMF-Last-Access=09-Sep-2023;Path=/;HttpOnly;secure;Expires=Wed, 11 Oct 2023
+        12:00:00 GMT
+      - WMF-Last-Access-Global=09-Sep-2023;Path=/;Domain=.wikidata.org;HttpOnly;secure;Expires=Wed,
+        11 Oct 2023 12:00:00 GMT
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; Path=/; secure; Domain=.wikidata.org
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Cookie:
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; NetworkProbeLimit=0.001; WMF-Last-Access=09-Sep-2023;
+        WMF-Last-Access-Global=09-Sep-2023
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=query&prop=revisions&titles=Q28587782&rvprop=timestamp%7Cuser%7Ccomment%7Ctags&rvstartid=1942074306&rvendid=1419596909&format=json
+  response:
+    body:
+      string: '{"batchcomplete":"","query":{"pages":{"30280499":{"pageid":30280499,"ns":0,"title":"Q28587782","revisions":[{"user":"BrokenSegue","timestamp":"2023-07-29T00:49:14Z","comment":"/*
+        wbsetlabel-set:1|en */ legal challenges to the Trump travel ban","tags":["wikidata-ui"]},{"user":"Cewbot","timestamp":"2021-05-12T19:04:43Z","comment":"/*
+        wbsetlabel-add:1|zh */ \u5bf9\u7279\u6717\u666e\u65c5\u884c\u7981\u4ee4\u7684\u6cd5\u5f8b\u6311\u6218,
+        [[User:Cewbot#Import labels/aliases|import label/alias]] from [[zh:\u7279\u6717\u666e\u65c5\u884c\u7981\u4ee4]]","tags":[]}]}}}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Length:
+      - '565'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 09 Sep 2023 16:39:13 GMT
+      Server:
+      - mw2402.codfw.wmnet
+      Set-Cookie:
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
 version: 1

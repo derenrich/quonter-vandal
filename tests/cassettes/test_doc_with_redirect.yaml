@@ -549,4 +549,476 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: null
+    headers: {}
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=compare&prop=user%7Cdiff%7Ctitle%7Crel%7Cids&format=json&fromrev=1956937163&torev=1956941492
+  response:
+    body:
+      string: '{"compare":{"fromid":116027220,"fromrevid":1956937163,"fromns":0,"fromtitle":"Q121653587","fromuser":"2001:2D8:303:DA05:0:0:1373:A0B0","fromuserid":0,"toid":116027220,"torevid":1956941492,"tons":0,"totitle":"Q121653587","touser":"2001:2D8:303:DA05:0:0:1373:A0B0","touserid":0,"prev":1956936787,"next":1956944625,"*":"<tr><td
+        colspan=\"2\" class=\"diff-lineno\">label / ko</td><td colspan=\"2\" class=\"diff-lineno\">label
+        / ko</td></tr><tr><td colspan=\"2\">\u00a0</td><td class=\"diff-marker\" data-marker=\"+\"></td><td
+        class=\"diff-addedline\"><div><ins class=\"diffchange diffchange-inline\">\ud0dc\uad11
+        \uc815\uc0b0\ucee8\ud2b8\ub9ac\ud074\ub7fd</ins></div></td></tr><tr><td colspan=\"2\"
+        class=\"diff-lineno\">Property / <a title=\"Property:P706\" href=\"/wiki/Property:P706\">located
+        in/on physical feature</a></td><td colspan=\"2\" class=\"diff-lineno\">Property
+        / <a title=\"Property:P706\" href=\"/wiki/Property:P706\">located in/on physical
+        feature</a></td></tr><tr><td class=\"diff-marker\" data-marker=\"\u2212\"></td><td
+        class=\"diff-deletedline\"><div><del class=\"diffchange diffchange-inline\"><span><a
+        title=\"Q32176708\" href=\"/wiki/Q32176708\" class=\"mw-redirect\">\u00d4ng
+        C\u1ed3n Island</a></span></del></div></td><td class=\"diff-marker\" data-marker=\"+\"></td><td
+        class=\"diff-addedline\"><div><ins class=\"diffchange diffchange-inline\"><span><a
+        title=\"Q2135026\" href=\"/wiki/Q2135026\">\u00d4ng C\u1ed3n Island</a></span></ins></div></td></tr>"}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '2'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '503'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 09 Sep 2023 16:39:51 GMT
+      Server:
+      - mw2436.codfw.wmnet
+      Set-Cookie:
+      - WMF-Last-Access=09-Sep-2023;Path=/;HttpOnly;secure;Expires=Wed, 11 Oct 2023
+        12:00:00 GMT
+      - WMF-Last-Access-Global=09-Sep-2023;Path=/;Domain=.wikidata.org;HttpOnly;secure;Expires=Wed,
+        11 Oct 2023 12:00:00 GMT
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; Path=/; secure; Domain=.wikidata.org
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Cookie:
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; NetworkProbeLimit=0.001; WMF-Last-Access=09-Sep-2023;
+        WMF-Last-Access-Global=09-Sep-2023
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=query&prop=revisions&titles=Q121653587&rvprop=timestamp%7Cuser%7Ccomment%7Ctags&rvstartid=1956941492&rvendid=1956937163&format=json
+  response:
+    body:
+      string: '{"batchcomplete":"","query":{"pages":{"116027220":{"pageid":116027220,"ns":0,"title":"Q121653587","revisions":[{"user":"2001:2D8:303:DA05:0:0:1373:A0B0","anon":"","timestamp":"2023-08-20T03:33:09Z","comment":"/*
+        wbsetlabel-add:1|ko */ \ud0dc\uad11 \uc815\uc0b0\ucee8\ud2b8\ub9ac\ud074\ub7fd","tags":["wikidata-ui"]},{"user":"2001:2D8:303:DA05:0:0:1373:A0B0","anon":"","timestamp":"2023-08-20T03:32:16Z","comment":"/*
+        wbsetclaim-update:2||1 */ [[Property:P706]]: [[Q2135026]]","tags":["new editor
+        changing statement","wikidata-ui"]},{"user":"2001:2D8:303:DA05:0:0:1373:A0B0","anon":"","timestamp":"2023-08-20T03:22:35Z","comment":"/*
+        wbsetclaim-create:2||1 */ [[Property:P856]]: http://www.jeongsancc.com.vn/","tags":["wikidata-ui"]}]}}}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Length:
+      - '737'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 09 Sep 2023 16:39:52 GMT
+      Server:
+      - mw2436.codfw.wmnet
+      Set-Cookie:
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      User-Agent:
+      - Quonter Vandal
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=query&prop=revisions&rvprop=content%7Cids&titles=Q121653587&rvstartid=1956937163&format=json&rvslots=main&rvlimit=1
+  response:
+    body:
+      string: '{"continue":{"rvcontinue":"20230820032137|1956936787","continue":"||"},"query":{"pages":{"116027220":{"pageid":116027220,"ns":0,"title":"Q121653587","revisions":[{"revid":1956937163,"parentid":1956936787,"slots":{"main":{"contentmodel":"wikibase-item","contentformat":"application/json","*":"{\"type\":\"item\",\"id\":\"Q121653587\",\"labels\":{\"en\":{\"language\":\"en\",\"value\":\"Taekwang
+        Jeongsan Country Club\"}},\"descriptions\":{\"en\":{\"language\":\"en\",\"value\":\"golf
+        club in Vietnam\"}},\"aliases\":[],\"claims\":{\"P31\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P31\",\"hash\":\"dd56d7f91c3a10afc806bce3ee1e26c8b929952e\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":2022036,\"id\":\"Q2022036\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"id\":\"Q121653587$3a8960e4-41f4-48a6-98ca-91864e0168cf\",\"rank\":\"normal\"}],\"P131\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P131\",\"hash\":\"5d0169a9852259a09a3c322fd94f385d7546865f\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":2049790,\"id\":\"Q2049790\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"id\":\"Q121653587$441f4ecb-4ece-e1cc-4a32-1c974ad399dd\",\"rank\":\"normal\"}],\"P706\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P706\",\"hash\":\"5b5abf27beecc457de8284bb2225bc752fe5a12f\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":32176708,\"id\":\"Q32176708\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"id\":\"Q121653587$a198b658-446a-76ae-e51e-211bd05a5e2c\",\"rank\":\"normal\"}],\"P17\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P17\",\"hash\":\"c40be02120fa6723ead45340635fe0835f073e90\",\"datavalue\":{\"value\":{\"entity-type\":\"item\",\"numeric-id\":881,\"id\":\"Q881\"},\"type\":\"wikibase-entityid\"}},\"type\":\"statement\",\"id\":\"Q121653587$68ec9347-4f67-1cbe-8c5a-3af17c16c0f1\",\"rank\":\"normal\"}],\"P856\":[{\"mainsnak\":{\"snaktype\":\"value\",\"property\":\"P856\",\"hash\":\"25b976a118884aeb83cfb29e6a1c207ae5ad632d\",\"datavalue\":{\"value\":\"http:\\/\\/www.jeongsancc.com.vn\\/\",\"type\":\"string\"}},\"type\":\"statement\",\"id\":\"Q121653587$da8564be-424a-64d1-35e7-0ba01d1bbfe8\",\"rank\":\"normal\"}]},\"sitelinks\":[]}"}}}]}}}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 09 Sep 2023 16:39:52 GMT
+      Server:
+      - mw2436.codfw.wmnet
+      Set-Cookie:
+      - WMF-Last-Access=09-Sep-2023;Path=/;HttpOnly;secure;Expires=Wed, 11 Oct 2023
+        12:00:00 GMT
+      - WMF-Last-Access-Global=09-Sep-2023;Path=/;Domain=.wikidata.org;HttpOnly;secure;Expires=Wed,
+        11 Oct 2023 12:00:00 GMT
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; Path=/; secure; Domain=.wikidata.org
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      User-Agent:
+      - Quonter Vandal
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=P706%7CQ2135026%7CQ32176708&props=labels%7Cdescriptions&languages=en%7Cde%7Cfr%7Ces%7Cru%7Cit%7Cpt%7Cnl%7Car%7Cuk%7Cbn%7Csq%7Che%7Cko%7Cbg%7Csk%7Cvi%7Cel%7Csv%7Chu%7Cid%7Cast%7Cga%7Cpl%7Cth%7Cfa%7Cur%7Cmk%7Cbe%7Cml%7Ceu%7Czh-hant&format=json
+  response:
+    body:
+      string: '{"entities":{"P706":{"type":"property","datatype":"wikibase-item","id":"P706","labels":{"en":{"language":"en","value":"located
+        in/on physical feature"},"nl":{"language":"nl","value":"gelegen in geografisch
+        gebied"},"de":{"language":"de","value":"liegt geographisch im Gebiet oder
+        Gew\u00e4sser"},"fr":{"language":"fr","value":"localisation g\u00e9ographique"},"es":{"language":"es","value":"situado
+        en la entidad geogr\u00e1fica"},"fa":{"language":"fa","value":"\u0645\u0648\u0642\u0639\u06cc\u062a"},"sv":{"language":"sv","value":"placerad
+        p\u00e5 landform"},"ru":{"language":"ru","value":"\u043d\u0430\u0445\u043e\u0434\u0438\u0442\u0441\u044f
+        \u0432 \u043f\u0440\u0435\u0434\u0435\u043b\u0430\u0445 \u043f\u0440\u0438\u0440\u043e\u0434\u043d\u043e-\u0433\u0435\u043e\u0433\u0440\u0430\u0444\u0438\u0447\u0435\u0441\u043a\u043e\u0433\u043e
+        \u043e\u0431\u044a\u0435\u043a\u0442\u0430"},"be":{"language":"be","value":"\u0437\u043d\u0430\u0445\u043e\u0434\u0437\u0456\u0446\u0446\u0430
+        \u045e \u043c\u0435\u0436\u0430\u0445 \u0433\u0435\u0430\u0433\u0440\u0430\u0444\u0456\u0447\u043d\u0430\u0433\u0430
+        \u0430\u0431''\u0435\u043a\u0442\u0430"},"pt":{"language":"pt","value":"localizado
+        na unidade geogr\u00e1fica"},"mk":{"language":"mk","value":"\u0441\u0435 \u043d\u0430\u043e\u0453\u0430
+        \u043d\u0430 \u043f\u043e\u0434\u0440\u0430\u0447\u0458\u0435\u0442\u043e
+        \u043d\u0430"},"he":{"language":"he","value":"\u05e0\u05de\u05e6\u05d0 \u05d1\u05de\u05d9\u05e7\u05d5\u05dd
+        \u05d4\u05d2\u05d0\u05d5\u05d2\u05e8\u05e4\u05d9"},"vi":{"language":"vi","value":"n\u1eb1m
+        tr\u00ean ho\u1eb7c trong \u0111\u1ecba m\u1ea1o"},"it":{"language":"it","value":"luogo
+        geografico"},"sk":{"language":"sk","value":"oblas\u0165"},"zh-hant":{"language":"zh-hant","value":"\u6240\u5728\u5730\u7406\u74b0\u5883"},"el":{"language":"el","value":"\u03b2\u03c1\u03af\u03c3\u03ba\u03b5\u03c4\u03b1\u03b9
+        \u03c3\u03c4\u03b7 \u03b3\u03b5\u03c9\u03b3\u03c1\u03b1\u03c6\u03b9\u03ba\u03ae
+        \u03c0\u03b5\u03c1\u03b9\u03bf\u03c7\u03ae"},"uk":{"language":"uk","value":"\u0443
+        \u043c\u0435\u0436\u0430\u0445 \u043f\u0440\u0438\u0440\u043e\u0434\u043d\u043e-\u0433\u0435\u043e\u0433\u0440\u0430\u0444\u0456\u0447\u043d\u043e\u0433\u043e
+        \u043e\u0431''\u0454\u043a\u0442\u0430"},"pl":{"language":"pl","value":"po\u0142o\u017cenie"},"hu":{"language":"hu","value":"f\u00f6ldfelsz\u00edni
+        elhelyezked\u00e9se"},"ar":{"language":"ar","value":"\u062a\u0642\u0639 \u0641\u064a
+        \u0645\u0646\u0637\u0642\u0629 \u062a\u0636\u0627\u0631\u064a\u0633"},"id":{"language":"id","value":"lokasi
+        pada bentang alam"},"bn":{"language":"bn","value":"\u09af\u09c7 \u09ad\u09c2\u0996\u09a3\u09cd\u09a1
+        \u09ac\u09c8\u09b6\u09bf\u09b7\u09cd\u099f\u09cd\u09af\u09c7\u09b0 \u0989\u09aa\u09b0
+        \u0985\u09ac\u09b8\u09cd\u09a5\u09bf\u09a4"},"ko":{"language":"ko","value":"\ub2e4\uc74c
+        \uc9c0\ud615\uc5d0 \uc704\uce58\ud568"},"ast":{"language":"ast","value":"asiti\u00e1u
+        na entid\u00e1 xeogr\u00e1fica"},"bg":{"language":"bg","value":"\u043c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435
+        \u0432 \u043f\u0440\u0438\u0440\u043e\u0434\u043d\u043e\u0433\u0435\u043e\u0433\u0440\u0430\u0444\u0441\u043a\u0430
+        \u043e\u0431\u043b\u0430\u0441\u0442"},"eu":{"language":"eu","value":"honako
+        entitate geografikoan kokatuta dago"},"ga":{"language":"ga","value":"suite
+        laistigh de/ar ghn\u00e9 fhisici\u00fail"},"th":{"language":"th","value":"\u0e17\u0e35\u0e48\u0e15\u0e31\u0e49\u0e07\u0e43\u0e19/\u0e1a\u0e19\u0e25\u0e31\u0e01\u0e29\u0e13\u0e30\u0e17\u0e32\u0e07\u0e01\u0e32\u0e22\u0e20\u0e32\u0e1e"}},"descriptions":{"en":{"language":"en","value":"located
+        on the specified (geo)physical feature. Should not be used when the value
+        is only political/administrative (P131) or a mountain range (P4552)."},"nl":{"language":"nl","value":"item
+        is gelegen in of op dit (niet-bestuurlijke) gebied, zoals een eiland, wateroppervlakte,
+        gebergte, bos, etc. Gebruik P131 voor bestuurlijke eenheid; P4552 voor gebergte"},"de":{"language":"de","value":"Gebiet,
+        in dem sich das Objekt befindet/das Ereignis stattfindet. F\u00fcr politische/administrative
+        Einheiten P131 verwenden."},"fr":{"language":"fr","value":"lieu g\u00e9ographique
+        o\u00f9 le sujet est situ\u00e9. Ne s\u2019applique pas aux valeurs qui correspondent
+        \u00e0 des zones territoriales officielles (P131) ou des cha\u00eenes de montagne
+        (P4552)"},"es":{"language":"es","value":"entidad geogr\u00e1fica donde se
+        sit\u00faa el elemento. No deber\u00eda utilizarse cuando el valor es s\u00f3lo
+        pol\u00edtico/administrativo (pueblo, ciudad, provincia, estado, pa\u00eds,
+        etc...)"},"sv":{"language":"sv","value":"p\u00e5 en \u00f6, kulle, grund etc.
+        Anv\u00e4nd P131 f\u00f6r administrativ indelning. Anv\u00e4nd P206 om den
+        ligger i vatten."},"ru":{"language":"ru","value":"\u043c\u0435\u0441\u0442\u043e
+        \u0440\u0430\u0441\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u043e \u043d\u0430
+        \u0442\u0435\u0440\u0440\u0438\u0442\u043e\u0440\u0438\u0438 \u043d\u0435\u043a\u043e\u0433\u043e
+        \u0432\u043e\u0434\u043e\u0451\u043c\u0430 \u0438\u043b\u0438 \u044d\u043b\u0435\u043c\u0435\u043d\u0442\u0430
+        \u043b\u0430\u043d\u0434\u0448\u0430\u0444\u0442\u0430 (\u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f
+        \u0441\u0432\u043e\u0439\u0441\u0442\u0432\u0430 \u043d\u0435 \u0434\u043e\u043b\u0436\u043d\u044b
+        \u0431\u044b\u0442\u044c \u0435\u0434\u0438\u043d\u0438\u0446\u0430\u043c\u0438
+        \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u0438\u0432\u043d\u043e-\u0442\u0435\u0440\u0440\u0438\u0442\u043e\u0440\u0438\u0430\u043b\u044c\u043d\u043e\u0433\u043e
+        \u0434\u0435\u043b\u0435\u043d\u0438\u044f)"},"be":{"language":"be","value":"\u043c\u0435\u0441\u0446\u0430
+        \u0440\u0430\u0437\u043c\u0435\u0448\u0447\u0430\u043d\u0430 \u043d\u0430
+        \u0442\u044d\u0440\u044b\u0442\u043e\u0440\u044b\u0456 \u043d\u044f\u043c\u0430
+        \u043a\u0430\u0433\u043e \u0432\u0430\u0434\u0430\u0451\u043c\u0430 \u0446\u0456
+        \u044d\u043b\u0435\u043c\u0435\u043d\u0442\u0430 \u043b\u0430\u043d\u0434\u0448\u0430\u0444\u0442\u0443
+        (\u0437\u043d\u0430\u0447\u044d\u043d\u043d\u0456 \u045e\u043b\u0430\u0441\u0446\u0456\u0432\u0430\u0441\u0446\u0456
+        \u043d\u0435 \u043f\u0430\u0432\u0456\u043d\u043d\u044b \u0431\u044b\u0446\u044c
+        \u0430\u0434\u0437\u0456\u043d\u043a\u0430\u043c\u0456 \u0430\u0434\u043c\u0456\u043d\u0456\u0441\u0442\u0440\u0430\u0446\u044b\u0439\u043d\u0430-\u0442\u044d\u0440\u044b\u0442\u0430\u0440\u044b\u044f\u043b\u044c\u043d\u0430\u0433\u0430
+        \u043f\u0430\u0434\u0437\u0435\u043b\u0443)"},"mk":{"language":"mk","value":"\u0441\u0435
+        \u043d\u0430\u043e\u0453\u0430 \u043d\u0430 \u0437\u0430\u0434\u0430\u0434\u0435\u043d
+        \u0437\u0435\u043c\u0458\u0438\u0448\u0442\u0435\u043d \u043e\u0431\u043b\u0438\u043a
+        \u0438\u043b\u0438 \u0432\u043e\u0434\u043d\u0430 \u043f\u043e\u0432\u0440\u0448\u0438\u043d\u0430
+        (\u043d\u0435 \u0442\u0440\u0435\u0431\u0430 \u0434\u0430 \u0441\u0435 \u043a\u043e\u0440\u0438\u0441\u0442\u0438
+        \u0437\u0430 \u043f\u043e\u043b\u0438\u0442\u0438\u0447\u043a\u0438/\u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u0438\u0432\u043d\u0438
+        \u0446\u0435\u043b\u0438\u043d\u0438 \u0438 \u043d\u0430\u0441\u0435\u043b\u0435\u043d\u0438
+        \u043c\u0435\u0441\u0442\u0430)"},"he":{"language":"he","value":"\u05d9\u05d7\u05d9\u05d3\u05d4
+        \u05d2\u05d0\u05d5\u05d2\u05e8\u05e4\u05d9\u05ea \u05d1\u05d5 \u05e0\u05de\u05e6\u05d0
+        \u05d4\u05d0\u05d5\u05d1\u05d9\u05d9\u05e7\u05d8"},"it":{"language":"it","value":"luogo
+        geografico in cui \u00e8 situato. Non dev''essere utilizzato nel caso il luogo
+        geografico corrisponda ad un entit\u00e0 amministrativa (utilizzare P131)
+        o ad una catena montuosa (utilizzare P4552)"},"el":{"language":"el","value":"\u03b3\u03b5\u03c9\u03b3\u03c1\u03b1\u03c6\u03b9\u03ba\u03ae
+        \u03c0\u03b5\u03c1\u03b9\u03bf\u03c7\u03ae \u03c0\u03bf\u03c5 \u03b2\u03c1\u03af\u03c3\u03ba\u03b5\u03c4\u03b1\u03b9
+        \u03c4\u03bf \u03b1\u03bd\u03c4\u03b9\u03ba\u03b5\u03af\u03bc\u03b5\u03bd\u03bf
+        \u03c0\u03c7 \u03c5\u03b4\u03ac\u03c4\u03b9\u03bd\u03bf \u03c3\u03ce\u03bc\u03b1,
+        \u03cc\u03c1\u03bf\u03c2, \u03c0\u03bf\u03c4\u03ac\u03bc\u03b9 \u03ba\u03c4\u03bb
+        \u039f\u03a7\u0399  \u03b3\u03b9\u03b1 \u03b4\u03b9\u03bf\u03b9\u03ba\u03b7\u03c4\u03b9\u03ba\u03ad\u03c2
+        \u03c0\u03b5\u03c1\u03b9\u03bf\u03c7\u03ad\u03c2 \u03c0\u03c7 \u03c7\u03ce\u03c1\u03b1
+        \u03b5\u03c0\u03b1\u03c1\u03c7\u03af\u03b1,\u03ba\u03c4\u03bb"},"uk":{"language":"uk","value":"\u0440\u043e\u0437\u0442\u0430\u0448\u043e\u0432\u0443\u0454\u0442\u044c\u0441\u044f
+        \u0432 \u043c\u0435\u0436\u0430\u0445 \u0433\u0435\u043e\u0437\u043e\u043d\u0438,
+        \u0440\u0435\u0433\u0456\u043e\u043d\u0443, \u043b\u0430\u043d\u0434\u0448\u0430\u0444\u0442\u0443;
+        \u043d\u0435 \u0441\u0442\u043e\u0441\u0443\u0454\u0442\u044c\u0441\u044f
+        \u0430\u0434\u043c\u0456\u043d\u0456\u0441\u0442\u0440\u0430\u0442\u0438\u0432\u043d\u0438\u0445
+        \u043e\u0434\u0438\u043d\u0438\u0446\u044c"},"pl":{"language":"pl","value":"wskazuje
+        na po\u0142o\u017cenie na okre\u015blonym obszarze l\u0105dowym lub wodnym.
+        Nie powinno by\u0107 u\u017cywane z warto\u015bciami b\u0119d\u0105cymi jednostkami
+        politycznymi lub administracyjnymi (prowincja, stan, pa\u0144stwo itp.)"},"fa":{"language":"fa","value":"\u0645\u0648\u0642\u0639\u06cc\u062a
+        \u06cc\u06a9 \u0634\u06cc \u06cc\u0627 \u0632\u0645\u06cc\u0646\u200c\u0686\u0647\u0631\u0647.
+        \u0628\u0631\u0627\u06cc \u062a\u0642\u0633\u06cc\u0645\u0627\u062a \u06a9\u0634\u0648\u0631\u06cc
+        \u0627\u0632 P131 \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0634\u0648\u062f"},"id":{"language":"id","value":"lokasi
+        pada bentang tanah atau perairan khusus. Jangan pergunakan jika nilainya merupakan
+        wilayah administrasi semisal provinsi, negara bagian, dsb."},"ko":{"language":"ko","value":"\ud56d\ubaa9
+        \uc8fc\uc81c\uac00 \uc788\ub294 \uc9c0\ud615\uc774\ub098 \ud574\ub2f9 \uc9c0\ud615\uc758
+        \uc9c0\ub9ac\uc801 \uc704\uce58 \uc774\ub984"},"hu":{"language":"hu","value":"T\u00e1jegys\u00e9g,
+        hegys\u00e9g, nemzeti park stb. f\u00f6ldrajzi elhelyezked\u00e9se az adott
+        elemnek. K\u00f6zigazgat\u00e1si egys\u00e9g megad\u00e1s\u00e1ra a P131-et
+        haszn\u00e1ld."},"ast":{"language":"ast","value":"forma del terr\u00e9n onde
+        ta asiti\u00e1u l''elementu. Nun tendr\u00eda d''utilizase cuando ye s\u00f3lo
+        un valor pol\u00edticu/alministrativu (pueblu, ciud\u00e1, provincia, est\u00e1u,
+        pa\u00eds, etc...)"},"pt":{"language":"pt","value":"localizado na entidade
+        geogr\u00e1fica especificada. N\u00e3o deve ser usado quando o valor \u00e9
+        somente pol\u00edtico/administrativo (P131) ou uma cadeia montanhosa (P4552)."},"eu":{"language":"eu","value":"Forma
+        geografiko jakin batean kokatua. Ez da erabili behar kasu hauetan: soilik
+        gune politiko/administratiboa denean  (P131) edo mendi-katea denean  (P4552)"},"ga":{"language":"ga","value":"ar
+        an ngn\u00e9 (geo)fhisici\u00fail shonraithe. N\u00edor cheart \u00e9 a \u00fas\u00e1id
+        nuair nach bhfuil ann ach luach polaiti\u00fail/riarach\u00e1in (P131) n\u00f3
+        raon sl\u00e9ibhe (P4552)"},"th":{"language":"th","value":"\u0e17\u0e35\u0e48\u0e15\u0e31\u0e49\u0e07\u0e1a\u0e19\u0e25\u0e31\u0e01\u0e29\u0e13\u0e30\u0e17\u0e32\u0e07\u0e01\u0e32\u0e22\u0e20\u0e32\u0e1e
+        (\u0e20\u0e39\u0e21\u0e34\u0e28\u0e32\u0e2a\u0e15\u0e23\u0e4c) \u0e17\u0e35\u0e48\u0e23\u0e30\u0e1a\u0e38
+        \u0e44\u0e21\u0e48\u0e04\u0e27\u0e23\u0e43\u0e0a\u0e49\u0e40\u0e21\u0e37\u0e48\u0e2d\u0e04\u0e48\u0e32\u0e40\u0e1b\u0e47\u0e19\u0e40\u0e1e\u0e35\u0e22\u0e07\u0e01\u0e32\u0e23\u0e40\u0e21\u0e37\u0e2d\u0e07/\u0e01\u0e32\u0e23\u0e1b\u0e01\u0e04\u0e23\u0e2d\u0e07
+        (P131) \u0e2b\u0e23\u0e37\u0e2d\u0e40\u0e17\u0e37\u0e2d\u0e01\u0e40\u0e02\u0e32
+        (P4552)"}}},"Q2135026":{"type":"item","id":"Q2135026","labels":{"nl":{"language":"nl","value":"\u00d4ng
+        C\u1ed3n"},"en":{"language":"en","value":"\u00d4ng C\u1ed3n Island"},"ko":{"language":"ko","value":"\uc639\uaf30\uc12c"}},"descriptions":{"en":{"language":"en","value":"island
+        in Vietnam"},"es":{"language":"es","value":"isla de Vietnam"},"de":{"language":"de","value":"Insel
+        in Vietnam"},"nl":{"language":"nl","value":"eiland in Vietnam"},"uk":{"language":"uk","value":"\u043e\u0441\u0442\u0440\u0456\u0432"},"ko":{"language":"ko","value":"\ubca0\ud2b8\ub0a8\uc758
+        \uc12c"}}},"Q32176708":{"redirects":{"from":"Q32176708","to":"Q2135026"},"type":"item","id":"Q2135026","labels":{"nl":{"language":"nl","value":"\u00d4ng
+        C\u1ed3n"},"en":{"language":"en","value":"\u00d4ng C\u1ed3n Island"},"ko":{"language":"ko","value":"\uc639\uaf30\uc12c"}},"descriptions":{"en":{"language":"en","value":"island
+        in Vietnam"},"es":{"language":"es","value":"isla de Vietnam"},"de":{"language":"de","value":"Insel
+        in Vietnam"},"nl":{"language":"nl","value":"eiland in Vietnam"},"uk":{"language":"uk","value":"\u043e\u0441\u0442\u0440\u0456\u0432"},"ko":{"language":"ko","value":"\ubca0\ud2b8\ub0a8\uc758
+        \uc12c"}}}},"success":1}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 09 Sep 2023 16:39:52 GMT
+      Server:
+      - mw2416.codfw.wmnet
+      Set-Cookie:
+      - WMF-Last-Access=09-Sep-2023;Path=/;HttpOnly;secure;Expires=Wed, 11 Oct 2023
+        12:00:00 GMT
+      - WMF-Last-Access-Global=09-Sep-2023;Path=/;Domain=.wikidata.org;HttpOnly;secure;Expires=Wed,
+        11 Oct 2023 12:00:00 GMT
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; Path=/; secure; Domain=.wikidata.org
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Cookie:
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; NetworkProbeLimit=0.001; WMF-Last-Access=09-Sep-2023;
+        WMF-Last-Access-Global=09-Sep-2023
+      User-Agent:
+      - Quonter Vandal
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q2022036%7CQ2049790%7CQ881&props=labels%7Cdescriptions&languages=en%7Cde%7Cfr%7Ces%7Cru%7Cit%7Cpt%7Cnl%7Car%7Cuk%7Cbn%7Csq%7Che%7Cko%7Cbg%7Csk%7Cvi%7Cel%7Csv%7Chu%7Cid%7Cast%7Cga%7Cpl%7Cth%7Cfa%7Cur%7Cmk%7Cbe%7Cml%7Ceu%7Czh-hant&format=json
+  response:
+    body:
+      string: '{"entities":{"Q2022036":{"type":"item","id":"Q2022036","labels":{"nl":{"language":"nl","value":"golfclub"},"en":{"language":"en","value":"golf
+        club"},"sv":{"language":"sv","value":"golfklubb"},"de":{"language":"de","value":"Golfclub"},"ru":{"language":"ru","value":"\u0433\u043e\u043b\u044c\u0444-\u043a\u043b\u0443\u0431"},"fr":{"language":"fr","value":"club
+        de golf"},"es":{"language":"es","value":"club de golf"},"ar":{"language":"ar","value":"\u0646\u0627\u062f\u064a
+        \u063a\u0648\u0644\u0641"},"it":{"language":"it","value":"golf club"},"hu":{"language":"hu","value":"golfklub"}},"descriptions":{"nl":{"language":"nl","value":"organisatie"},"en":{"language":"en","value":"club
+        organized to play golf"},"fr":{"language":"fr","value":"organisation de joueur
+        de Golf"},"de":{"language":"de","value":"Organisation"},"it":{"language":"it","value":"club
+        privato per la pratica del golf"},"es":{"language":"es","value":"club organizado
+        para jugar al golf"}}},"Q2049790":{"type":"item","id":"Q2049790","labels":{"nl":{"language":"nl","value":"\u0110\u1ea1i
+        Ph\u01b0\u1edbc"},"vi":{"language":"vi","value":"\u0110\u1ea1i Ph\u01b0\u1edbc"},"en":{"language":"en","value":"\u0110\u1ea1i
+        Ph\u01b0\u1edbc"},"ko":{"language":"ko","value":"\ub2e4\uc774\ud504\uc5b5"}},"descriptions":{"nl":{"language":"nl","value":"rurale
+        gemeente in Vietnam"},"el":{"language":"el","value":"\u03bf\u03b9\u03ba\u03b9\u03c3\u03bc\u03cc\u03c2
+        \u03c4o\u03c5 \u0392\u03b9\u03b5\u03c4\u03bd\u03ac\u03bc"},"de":{"language":"de","value":"Landgemeinde
+        in Vietnam"},"vi":{"language":"vi","value":"x\u00e3 thu\u1ed9c Nh\u01a1n Tr\u1ea1ch"},"ar":{"language":"ar","value":"\u062c\u0645\u0627\u0639\u0629
+        \u0642\u0631\u0648\u064a\u0629 \u0641\u064a \u0641\u064a\u062a\u0646\u0627\u0645"}}},"Q881":{"type":"item","id":"Q881","labels":{"el":{"language":"el","value":"\u0392\u03b9\u03b5\u03c4\u03bd\u03ac\u03bc"},"sk":{"language":"sk","value":"Vietnam"},"uk":{"language":"uk","value":"\u0412''\u0454\u0442\u043d\u0430\u043c"},"vi":{"language":"vi","value":"Vi\u1ec7t
+        Nam"},"mk":{"language":"mk","value":"\u0412\u0438\u0435\u0442\u043d\u0430\u043c"},"es":{"language":"es","value":"Vietnam"},"ga":{"language":"ga","value":"V\u00edtneam"},"nl":{"language":"nl","value":"Vietnam"},"bn":{"language":"bn","value":"\u09ad\u09bf\u09af\u09bc\u09c7\u09a4\u09a8\u09be\u09ae"},"sq":{"language":"sq","value":"Vietnami"},"pt":{"language":"pt","value":"Vietname"},"ru":{"language":"ru","value":"\u0412\u044c\u0435\u0442\u043d\u0430\u043c"},"th":{"language":"th","value":"\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e40\u0e27\u0e35\u0e22\u0e14\u0e19\u0e32\u0e21"},"de":{"language":"de","value":"Vietnam"},"ar":{"language":"ar","value":"\u0641\u064a\u062a\u0646\u0627\u0645"},"en":{"language":"en","value":"Vietnam"},"fr":{"language":"fr","value":"Vi\u00eat
+        Nam"},"zh-hant":{"language":"zh-hant","value":"\u8d8a\u5357"},"id":{"language":"id","value":"Vietnam"},"sv":{"language":"sv","value":"Vietnam"},"bg":{"language":"bg","value":"\u0412\u0438\u0435\u0442\u043d\u0430\u043c"},"be":{"language":"be","value":"\u0412\u2019\u0435\u0442\u043d\u0430\u043c"},"he":{"language":"he","value":"\u05d5\u05d9\u05d9\u05d8\u05e0\u05d0\u05dd"},"hu":{"language":"hu","value":"Vietn\u00e1m"},"it":{"language":"it","value":"Vietnam"},"eu":{"language":"eu","value":"Vietnam"},"fa":{"language":"fa","value":"\u0648\u06cc\u062a\u0646\u0627\u0645"},"pl":{"language":"pl","value":"Wietnam"},"ur":{"language":"ur","value":"\u0648\u06cc\u062a\u0646\u0627\u0645"},"ml":{"language":"ml","value":"\u0d35\u0d3f\u0d2f\u0d31\u0d4d\u0d31\u0d4d\u0d28\u0d3e\u0d02"},"ast":{"language":"ast","value":"Vietnam"},"ko":{"language":"ko","value":"\ubca0\ud2b8\ub0a8"}},"descriptions":{"sk":{"language":"sk","value":"\u0161t\u00e1t
+        v juhov\u00fdchodnej \u00c1zii"},"fr":{"language":"fr","value":"pays d\u2019Asie
+        du Sud-Est"},"it":{"language":"it","value":"stato del sud-est asiatico"},"bn":{"language":"bn","value":"\u098f\u09b6\u09bf\u09af\u09bc\u09be\u09b0
+        \u09b0\u09be\u09b7\u09cd\u099f\u09cd\u09b0"},"uk":{"language":"uk","value":"\u043a\u0440\u0430\u0457\u043d\u0430
+        \u0432 \u043f\u0456\u0432\u0434\u0435\u043d\u043d\u043e-\u0441\u0445\u0456\u0434\u043d\u0456\u0439
+        \u0410\u0437\u0456\u0457"},"id":{"language":"id","value":"negara di Asia Tenggara"},"pt":{"language":"pt","value":"pa\u00eds
+        da \u00c1sia"},"ru":{"language":"ru","value":"\u0433\u043e\u0441\u0443\u0434\u0430\u0440\u0441\u0442\u0432\u043e
+        \u0432 \u042e\u0433\u043e-\u0412\u043e\u0441\u0442\u043e\u0447\u043d\u043e\u0439
+        \u0410\u0437\u0438\u0438"},"fa":{"language":"fa","value":"\u06a9\u0634\u0648\u0631\u06cc
+        \u062f\u0631 \u062c\u0646\u0648\u0628\u200c\u0634\u0631\u0642\u06cc \u0642\u0627\u0631\u0647\u0654
+        \u0622\u0633\u06cc\u0627"},"vi":{"language":"vi","value":"m\u1ed9t qu\u1ed1c
+        gia \u1edf \u0110\u00f4ng Nam \u00c1"},"es":{"language":"es","value":"pa\u00eds
+        de Asia"},"pl":{"language":"pl","value":"pa\u0144stwo w Azji"},"zh-hant":{"language":"zh-hant","value":"\u6771\u5357\u4e9e\u570b\u5bb6"},"nl":{"language":"nl","value":"land
+        in Azi\u00eb"},"de":{"language":"de","value":"Staat in S\u00fcdostasien"},"ko":{"language":"ko","value":"\ub3d9\ub0a8\uc544\uc2dc\uc544\uc758
+        \uad6d\uac00"},"sv":{"language":"sv","value":"republik i Sydostasien"},"bg":{"language":"bg","value":"\u0434\u044a\u0440\u0436\u0430\u0432\u0430
+        \u0432 \u042e\u0433\u043e\u0438\u0437\u0442\u043e\u0447\u043d\u0430 \u0410\u0437\u0438\u044f"},"ar":{"language":"ar","value":"\u062f\u0648\u0644\u0629
+        \u0641\u064a \u062c\u0646\u0648\u0628 \u0634\u0631\u0642 \u0622\u0633\u064a\u0627"},"en":{"language":"en","value":"country
+        in Southeast Asia"},"he":{"language":"he","value":"\u05de\u05d3\u05d9\u05e0\u05d4
+        \u05d1\u05d0\u05e1\u05d9\u05d4"},"hu":{"language":"hu","value":"\u00e1llam
+        D\u00e9lkelet-\u00c1zsi\u00e1ban"},"el":{"language":"el","value":"\u03c7\u03ce\u03c1\u03b1
+        \u03c4\u03b7\u03c2 \u03bd\u03bf\u03c4\u03b9\u03bf\u03b1\u03bd\u03b1\u03c4\u03bf\u03bb\u03b9\u03ba\u03ae\u03c2
+        \u0391\u03c3\u03af\u03b1\u03c2"},"be":{"language":"be","value":"\u0434\u0437\u044f\u0440\u0436\u0430\u0432\u0430
+        \u045e \u041f\u0430\u045e\u0434\u043d\u0451\u0432\u0430-\u0423\u0441\u0445\u043e\u0434\u043d\u044f\u0439
+        \u0410\u0437\u0456\u0456"},"th":{"language":"th","value":"\u0e2a\u0e32\u0e18\u0e32\u0e23\u0e13\u0e23\u0e31\u0e10\u0e43\u0e19\u0e40\u0e2d\u0e40\u0e0a\u0e35\u0e22\u0e15\u0e30\u0e27\u0e31\u0e19\u0e2d\u0e2d\u0e01\u0e40\u0e09\u0e35\u0e22\u0e07\u0e43\u0e15\u0e49"},"ast":{"language":"ast","value":"est\u00e1u
+        d''Asia"}}}},"success":1}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 09 Sep 2023 16:39:52 GMT
+      Server:
+      - mw2300.codfw.wmnet
+      Set-Cookie:
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
 version: 1

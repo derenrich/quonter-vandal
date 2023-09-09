@@ -191,4 +191,196 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: null
+    headers: {}
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=compare&prop=user%7Cdiff%7Ctitle%7Crel%7Cids&format=json&fromrev=1946481281&torev=1946482672
+  response:
+    body:
+      string: '{"compare":{"fromid":115593402,"fromrevid":1946481281,"fromns":0,"fromtitle":"Q121167625","fromuser":"BrokenSegue","fromuserid":193966,"toid":115593402,"torevid":1946482672,"tons":0,"totitle":"Q121167625","touser":"BrokenSegue","touserid":193966,"next":1946483112,"*":"<tr><td
+        colspan=\"2\" class=\"diff-lineno\"></td><td colspan=\"2\" class=\"diff-lineno\">Property
+        / <a title=\"Property:P31\" href=\"/wiki/Property:P31\">instance of</a></td></tr><tr><td
+        colspan=\"2\">\u00a0</td><td class=\"diff-marker\" data-marker=\"+\"></td><td
+        class=\"diff-addedline\"><div><ins class=\"diffchange diffchange-inline\"><span><a
+        title=\"Q4830453\" href=\"/wiki/Q4830453\">business</a></span></ins></div></td></tr><tr><td
+        colspan=\"2\" class=\"diff-lineno\"></td><td colspan=\"2\" class=\"diff-lineno\">Property
+        / <a title=\"Property:P31\" href=\"/wiki/Property:P31\">instance of</a>: <a
+        title=\"Q4830453\" href=\"/wiki/Q4830453\">business</a> / rank</td></tr><tr><td
+        colspan=\"2\">\u00a0</td><td class=\"diff-marker\" data-marker=\"+\"></td><td
+        class=\"diff-addedline\"><div><ins class=\"diffchange diffchange-inline\"><span>Normal
+        rank</span></ins></div></td></tr><tr><td colspan=\"2\" class=\"diff-lineno\"></td><td
+        colspan=\"2\" class=\"diff-lineno\">Property / <a title=\"Property:P2088\"
+        href=\"/wiki/Property:P2088\">Crunchbase organization ID</a></td></tr><tr><td
+        colspan=\"2\">\u00a0</td><td class=\"diff-marker\" data-marker=\"+\"></td><td
+        class=\"diff-addedline\"><div><ins class=\"diffchange diffchange-inline\"><span><a
+        class=\"wb-external-id external\" href=\"https://www.crunchbase.com/organization/fennel-ai\"
+        rel=\"nofollow\">fennel-ai</a></span></ins></div></td></tr><tr><td colspan=\"2\"
+        class=\"diff-lineno\"></td><td colspan=\"2\" class=\"diff-lineno\">Property
+        / <a title=\"Property:P2088\" href=\"/wiki/Property:P2088\">Crunchbase organization
+        ID</a>: <a class=\"wb-external-id external\" href=\"https://www.crunchbase.com/organization/fennel-ai\"
+        rel=\"nofollow\">fennel-ai</a> / rank</td></tr><tr><td colspan=\"2\">\u00a0</td><td
+        class=\"diff-marker\" data-marker=\"+\"></td><td class=\"diff-addedline\"><div><ins
+        class=\"diffchange diffchange-inline\"><span>Normal rank</span></ins></div></td></tr><tr><td
+        colspan=\"2\" class=\"diff-lineno\"></td><td colspan=\"2\" class=\"diff-lineno\">Property
+        / <a title=\"Property:P856\" href=\"/wiki/Property:P856\">official website</a></td></tr><tr><td
+        colspan=\"2\">\u00a0</td><td class=\"diff-marker\" data-marker=\"+\"></td><td
+        class=\"diff-addedline\"><div><ins class=\"diffchange diffchange-inline\"><span><a
+        rel=\"nofollow\" class=\"external free\" href=\"https://fennel.ai/\">https://fennel.ai/</a></span></ins></div></td></tr><tr><td
+        colspan=\"2\" class=\"diff-lineno\"></td><td colspan=\"2\" class=\"diff-lineno\">Property
+        / <a title=\"Property:P856\" href=\"/wiki/Property:P856\">official website</a>:
+        <a rel=\"nofollow\" class=\"external free\" href=\"https://fennel.ai/\">https://fennel.ai/</a>
+        / rank</td></tr><tr><td colspan=\"2\">\u00a0</td><td class=\"diff-marker\"
+        data-marker=\"+\"></td><td class=\"diff-addedline\"><div><ins class=\"diffchange
+        diffchange-inline\"><span>Normal rank</span></ins></div></td></tr><tr><td
+        colspan=\"2\" class=\"diff-lineno\"></td><td colspan=\"2\" class=\"diff-lineno\">Property
+        / <a title=\"Property:P4264\" href=\"/wiki/Property:P4264\">LinkedIn organization
+        ID</a></td></tr><tr><td colspan=\"2\">\u00a0</td><td class=\"diff-marker\"
+        data-marker=\"+\"></td><td class=\"diff-addedline\"><div><ins class=\"diffchange
+        diffchange-inline\"><span><a class=\"wb-external-id external\" href=\"https://www.linkedin.com/company/fennel-ai/\"
+        rel=\"nofollow\">fennel-ai</a></span></ins></div></td></tr><tr><td colspan=\"2\"
+        class=\"diff-lineno\"></td><td colspan=\"2\" class=\"diff-lineno\">Property
+        / <a title=\"Property:P4264\" href=\"/wiki/Property:P4264\">LinkedIn organization
+        ID</a>: <a class=\"wb-external-id external\" href=\"https://www.linkedin.com/company/fennel-ai/\"
+        rel=\"nofollow\">fennel-ai</a> / rank</td></tr><tr><td colspan=\"2\">\u00a0</td><td
+        class=\"diff-marker\" data-marker=\"+\"></td><td class=\"diff-addedline\"><div><ins
+        class=\"diffchange diffchange-inline\"><span>Normal rank</span></ins></div></td></tr><tr><td
+        colspan=\"2\" class=\"diff-lineno\"></td><td colspan=\"2\" class=\"diff-lineno\">Property
+        / <a title=\"Property:P2037\" href=\"/wiki/Property:P2037\">GitHub username</a></td></tr><tr><td
+        colspan=\"2\">\u00a0</td><td class=\"diff-marker\" data-marker=\"+\"></td><td
+        class=\"diff-addedline\"><div><ins class=\"diffchange diffchange-inline\"><span><a
+        class=\"wb-external-id external\" href=\"https://github.com/fennel-ai\" rel=\"nofollow\">fennel-ai</a></span></ins></div></td></tr><tr><td
+        colspan=\"2\" class=\"diff-lineno\"></td><td colspan=\"2\" class=\"diff-lineno\">Property
+        / <a title=\"Property:P2037\" href=\"/wiki/Property:P2037\">GitHub username</a>:
+        <a class=\"wb-external-id external\" href=\"https://github.com/fennel-ai\"
+        rel=\"nofollow\">fennel-ai</a> / rank</td></tr><tr><td colspan=\"2\">\u00a0</td><td
+        class=\"diff-marker\" data-marker=\"+\"></td><td class=\"diff-addedline\"><div><ins
+        class=\"diffchange diffchange-inline\"><span>Normal rank</span></ins></div></td></tr><tr><td
+        colspan=\"2\" class=\"diff-lineno\"></td><td colspan=\"2\" class=\"diff-lineno\">Property
+        / <a title=\"Property:P3276\" href=\"/wiki/Property:P3276\">Wellfound ID</a></td></tr><tr><td
+        colspan=\"2\">\u00a0</td><td class=\"diff-marker\" data-marker=\"+\"></td><td
+        class=\"diff-addedline\"><div><ins class=\"diffchange diffchange-inline\"><span><a
+        class=\"wb-external-id external\" href=\"https://wellfound.com/fennel-1\"
+        rel=\"nofollow\">fennel-1</a></span></ins></div></td></tr><tr><td colspan=\"2\"
+        class=\"diff-lineno\"></td><td colspan=\"2\" class=\"diff-lineno\">Property
+        / <a title=\"Property:P3276\" href=\"/wiki/Property:P3276\">Wellfound ID</a>:
+        <a class=\"wb-external-id external\" href=\"https://wellfound.com/fennel-1\"
+        rel=\"nofollow\">fennel-1</a> / rank</td></tr><tr><td colspan=\"2\">\u00a0</td><td
+        class=\"diff-marker\" data-marker=\"+\"></td><td class=\"diff-addedline\"><div><ins
+        class=\"diffchange diffchange-inline\"><span>Normal rank</span></ins></div></td></tr>"}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '683'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 09 Sep 2023 16:39:15 GMT
+      Server:
+      - mw2292.codfw.wmnet
+      Set-Cookie:
+      - WMF-Last-Access=09-Sep-2023;Path=/;HttpOnly;secure;Expires=Wed, 11 Oct 2023
+        12:00:00 GMT
+      - WMF-Last-Access-Global=09-Sep-2023;Path=/;Domain=.wikidata.org;HttpOnly;secure;Expires=Wed,
+        11 Oct 2023 12:00:00 GMT
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; Path=/; secure; Domain=.wikidata.org
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Cookie:
+      - GeoIP=US:CA:Sunnyvale:37.40:-122.00:v4; NetworkProbeLimit=0.001; WMF-Last-Access=09-Sep-2023;
+        WMF-Last-Access-Global=09-Sep-2023
+    method: GET
+    uri: https://www.wikidata.org/w/api.php?action=query&prop=revisions&titles=Q121167625&rvprop=timestamp%7Cuser%7Ccomment%7Ctags&rvstartid=1946482672&rvendid=1946481281&format=json
+  response:
+    body:
+      string: '{"batchcomplete":"","query":{"pages":{"115593402":{"pageid":115593402,"ns":0,"title":"Q121167625","revisions":[{"user":"BrokenSegue","timestamp":"2023-08-04T20:09:55Z","comment":"/*
+        wbsetclaim-create:2||1 */ [[Property:P3276]]: fennel-1","tags":["wikidata-ui"]},{"user":"BrokenSegue","timestamp":"2023-08-04T20:09:31Z","comment":"/*
+        wbsetclaim-create:2||1 */ [[Property:P2037]]: fennel-ai","tags":["wikidata-ui"]},{"user":"BrokenSegue","timestamp":"2023-08-04T20:09:09Z","comment":"/*
+        wbsetclaim-create:2||1 */ [[Property:P4264]]: fennel-ai","tags":["wikidata-ui"]},{"user":"BrokenSegue","timestamp":"2023-08-04T20:07:54Z","comment":"/*
+        wbsetclaim-create:2||1 */ [[Property:P856]]: https://fennel.ai/","tags":["wikidata-ui"]},{"user":"BrokenSegue","timestamp":"2023-08-04T20:07:46Z","comment":"/*
+        wbsetclaim-create:2||1 */ [[Property:P2088]]: fennel-ai","tags":["wikidata-ui"]},{"user":"BrokenSegue","timestamp":"2023-08-04T20:07:39Z","comment":"/*
+        wbsetclaim-create:2||1 */ [[Property:P31]]: [[Q4830453]]","tags":["wikidata-ui"]},{"user":"BrokenSegue","timestamp":"2023-08-04T20:07:31Z","comment":"/*
+        wbeditentity-create:2|en */ Fennel, software company","tags":["wikidata-ui"]}]}}}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Content-Disposition:
+      - inline; filename=api-result.json
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '336'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 09 Sep 2023 16:39:15 GMT
+      Server:
+      - mw2300.codfw.wmnet
+      Set-Cookie:
+      - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
+      Vary:
+      - Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie
+      nel:
+      - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
+        0.0}'
+      report-to:
+      - '{ "group": "wm_nel", "max_age": 604800, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0"
+        }] }'
+      server-timing:
+      - cache;desc="pass", host;desc="cp4037"
+      strict-transport-security:
+      - max-age=106384710; includeSubDomains; preload
+      x-cache:
+      - cp4037 miss, cp4037 pass
+      x-cache-status:
+      - pass
+      x-client-ip:
+      - 98.47.144.232
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+    status:
+      code: 200
+      message: OK
 version: 1
