@@ -1,6 +1,7 @@
 import asyncio
 from typing import List
 from quonter_vandal.classifier import Classifier
+from quonter_vandal.diff import Change, SitelinkChangeStatement
 from quonter_vandal.revision_stream import StreamEvent, StreamConfig, event_loop
 from quonter_vandal.diff_grouper import DiffGrouper
 from quonter_vandal.document_maker import DocumentMaker
@@ -44,6 +45,18 @@ if TOOLFORGE_MODE:
         return fetcher.fetch_vandalous(10, page_num * 10)
 
 
+async def maybe_make_document(dm: DocumentMaker, oldid: int, newid: int):
+    qid_pid_info, prior_data, diff, summary = await dm.make_document_data(oldid, newid)
+    if len(diff.changes) == 1:
+        # check if it's only sitelink changes (those are boring)
+        change: Change = diff.changes[0]
+        if type(change.field) == SitelinkChangeStatement:
+            return None
+    doc = await dm.make_document_from_data(oldid, newid,
+                                           qid_pid_info, prior_data, diff, summary)
+    return doc
+
+
 def start_service():
     mw_session = mwapi.AsyncSession('https://www.wikidata.org',
                                     user_agent='Quonter Vandal')
@@ -63,10 +76,10 @@ def start_service():
         oldid = edits[0].rev_old
         newid = edits[-1].rev_new
         if oldid and newid:
-            res = dm.make_document(oldid, newid)
+            res = maybe_make_document(dm, oldid, newid)
             doc = await res
             if doc:
-                classification = None  # await classifier.classify(doc)
+                classification = await classifier.classify(doc)
                 if logger:
                     if len(doc) > 4096:
                         print("===TOO LONG", len(doc))

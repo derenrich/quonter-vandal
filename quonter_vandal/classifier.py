@@ -5,10 +5,10 @@ from typing import Optional
 import openai
 from aiolimiter import AsyncLimiter
 
-MODEL = "ft:gpt-3.5-turbo-0613:personal::7rFQlteL"
+MODEL = "ft:gpt-3.5-turbo-0613:personal::7wldgc8B"
 
-SYSTEM_PROMPT = """
-You are a Wikidata administrator in the year 2023. You will be shown a Wikidata item and an edit to that item. You should decide whether the edit should be reverted then output a rationale for your decision and your decision in YAML format.
+SYSTEM_PROMPT = """You are a Wikidata administrator in the year 2023. You will be shown a Wikidata item and an edit to that item.
+You should decide whether the edit should be reverted then output a rationale for your decision and your decision in YAML format.
 """
 
 
