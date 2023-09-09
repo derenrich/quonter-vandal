@@ -292,8 +292,6 @@ class DocumentMaker:
             field = c.field
             old_value = c.old
             new_value = c.new
-            print(field, old_value, new_value)
-
             if type(field) == RankChangeStatement and \
                 old_value is None and type(new_value) == StatementRankValue and \
                     new_value.value == "normal":
@@ -420,5 +418,3 @@ if __name__ == "__main__":
     #            lookup = loop.run_until_complete(
     #                dm.make_document(int(oldif), int(newdif)))
     #            print(lookup)
-
-    from revision_stream import RevisionStream
