@@ -62,3 +62,19 @@ async def test_render_time_issue():
     doc = await dm.make_document(oldid, newid)
 
     assert doc is not None
+
+
+@pytest.mark.vcr()
+@pytest.mark.asyncio
+async def test_render_remove_reference():
+    # https://www.wikidata.org/w/index.php?title=Q5203589&diff=1970797296&oldid=1904654376
+    oldid = 1904654376
+    newid = 1970797296
+    mw_session = mwapi.AsyncSession('https://www.wikidata.org',
+                                    user_agent='Quonter Vandal')
+    session = aiohttp.ClientSession()
+    dm = DocumentMaker(mw_session, session)
+    doc = await dm.make_document(oldid, newid)
+
+    assert doc is not None
+    assert "Reference of instance of for human" in doc

@@ -268,8 +268,8 @@ class DocumentMaker:
                     StatementNumberValue(val) | StatementRankValue(val) | StatementMusicValue(val) | StatementSpecialValue(val):
                 return f"{val}"
             case ReferenceValue(statements):
-                " / ".join([self._statement_to_document(state, qid_map)
-                           for state in statements])
+                return " / ".join([self._statement_to_document(state, qid_map)
+                                   for state in statements])
             case _:
                 raise Exception(f"Unknown statement value: {value}")
 
@@ -292,6 +292,7 @@ class DocumentMaker:
             field = c.field
             old_value = c.old
             new_value = c.new
+            print(field, old_value, new_value)
 
             if type(field) == RankChangeStatement and \
                 old_value is None and type(new_value) == StatementRankValue and \
@@ -308,8 +309,10 @@ class DocumentMaker:
             if old_value:
                 old_doc = self._statement_value_to_string(old_value, qid_map)
             new_doc = None
+
             if new_value:
                 new_doc = self._statement_value_to_string(new_value, qid_map)
+
             if old_doc and new_doc:
                 docs.append(f"{field_doc}: '{old_doc}' changed to '{new_doc}'")
             elif old_doc:
