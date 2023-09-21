@@ -14,6 +14,7 @@ import time
 from importlib.resources import files
 import os
 from jinja2 import Template
+from contextlib import asynccontextmanager
 from quonter_vandal.results_logger import ResultsLogger, LogLine, ResultsFetcher
 
 TOOLFORGE_MODE = os.environ.get('TOOLFORGE', '0') == '1'
@@ -31,6 +32,23 @@ async def maybe_make_document(dm: DocumentMaker, oldid: int, newid: int):
     return doc
 
 
+loop = asyncio.get_event_loop()
+context = {}
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    if TOOLFORGE_MODE:
+        fetcher = ResultsFetcher.create_fetcher(loop)
+        logger = ResultsLogger.create_logger(loop)
+        context['fetcher'] = fetcher
+        context['logger'] = logger
+    yield
+    if TOOLFORGE_MODE:
+        del context['fetcher']
+        del context['logger']
+
+
 def start_service():
     mw_session = mwapi.AsyncSession('https://www.wikidata.org',
                                     user_agent='Quonter Vandal')
@@ -38,16 +56,9 @@ def start_service():
     dm = DocumentMaker(mw_session, session)
     classifier = Classifier()
 
-    loop = asyncio.get_event_loop()
     config = StreamConfig(logFeatures=True)
 
-    logger: ResultsLogger | None
-    fetcher: ResultsFetcher | None
-    if TOOLFORGE_MODE:
-        fetcher = loop.run_until_complete(ResultsFetcher.create_fetcher(loop))
-        logger = loop.run_until_complete(ResultsLogger.create_logger(loop))
-
-    app = FastAPI()
+    app = FastAPI(lifespan=lifespan)
 
     @app.get("/", response_class=HTMLResponse)
     async def handle_root():
@@ -67,6 +78,8 @@ def start_service():
 
     async def handle_edit_group(edits: List[StreamEvent]):
         assert len(edits) > 0
+        logger: ResultsLogger | None = context['logger']
+
         oldid = edits[0].rev_old
         newid = edits[-1].rev_new
         if oldid and newid:
@@ -105,7 +118,8 @@ def start_service():
     if TOOLFORGE_MODE:
         @app.get("/results/{page_num}")
         async def handle_results(page_num: int) -> List[LogLine]:
-            if fetcher:
+            if context['fetcher']:
+                fetcher: ResultsFetcher = context['fetcher']
                 return await fetcher.fetch_vandalous(10, page_num * 10)
             raise Exception("No fetcher enabled")
 
