@@ -39,8 +39,8 @@ context = {}
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     if TOOLFORGE_MODE:
-        fetcher = ResultsFetcher.create_fetcher(loop)
-        logger = ResultsLogger.create_logger(loop)
+        fetcher = await ResultsFetcher.create_fetcher(loop)
+        logger = await ResultsLogger.create_logger(loop)
         context['fetcher'] = fetcher
         context['logger'] = logger
     yield
