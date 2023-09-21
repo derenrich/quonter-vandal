@@ -119,6 +119,7 @@ def start_service():
         @app.get("/results/{page_num}")
         async def handle_results(page_num: int) -> List[LogLine]:
             if context['fetcher']:
+                print('fetching!')
                 fetcher: ResultsFetcher = context['fetcher']
                 return await fetcher.fetch_vandalous(10, page_num * 10)
             raise Exception("No fetcher enabled")

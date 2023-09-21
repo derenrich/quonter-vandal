@@ -36,7 +36,8 @@ def build_mysql_args(loop):
         "charset": "utf8mb4",
         "host": 'tools.db.svc.eqiad.wmflabs',
         "db": DB_NAME,
-        "loop": loop
+        "loop": loop,
+        "autocommit": True
     }
 
 
@@ -56,7 +57,7 @@ class ResultsLogger:
         async with self._pool.acquire() as conn:
             cursor: aiomysql.Cursor
             async with conn.cursor() as cursor:
-                cursor.execute(
+                await cursor.execute(
                     """
                     INSERT INTO results (document, oldrevid, currevid, prediction, data, label)
                     VALUES (%s, %s, %s, %s, %s, %s)
@@ -64,7 +65,7 @@ class ResultsLogger:
                     (log_line.document, log_line.oldrevid,
                      log_line.currevid, log_line.prediction_doc, log_line.data, log_line.label)
                 )
-            conn.commit()
+            await conn.commit()
 
 
 class ResultsFetcher:
