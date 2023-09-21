@@ -38,12 +38,6 @@ async def handle_considering():
 async def handle_time():
     return {"time": time.time()}
 
-if TOOLFORGE_MODE:
-    @app.get("/results/{page_num}")
-    async def handle_results(page_num: int):
-        fetcher = ResultsFetcher()
-        return fetcher.fetch_vandalous(10, page_num * 10)
-
 
 async def maybe_make_document(dm: DocumentMaker, oldid: int, newid: int):
     qid_pid_info, prior_data, diff, summary = await dm.make_document_data(oldid, newid)
@@ -64,12 +58,12 @@ def start_service():
     dm = DocumentMaker(mw_session, session)
     classifier = Classifier()
 
-    logger = None
-    if TOOLFORGE_MODE:
-        logger = ResultsLogger()
-
     loop = asyncio.get_event_loop()
     config = StreamConfig(logFeatures=True)
+
+    logger: ResultsLogger | None
+    if TOOLFORGE_MODE:
+        logger = loop.run_until_complete(ResultsLogger.create_logger(loop))
 
     async def handle_edit_group(edits: List[StreamEvent]):
         assert len(edits) > 0
@@ -89,10 +83,10 @@ def start_service():
                             classification.revert) if classification.revert is not None else ""
                         log = LogLine(doc, oldid, newid,
                                       classification.doc, label, "")
-                        logger.log(log)
+                        await logger.log(log)
                     else:
                         log = LogLine(doc, oldid, newid, "", "", "")
-                        logger.log(log)
+                        await logger.log(log)
                 else:
                     print(doc, "--->", classification)
 
@@ -107,6 +101,13 @@ def start_service():
         return {
             "groups": await grouper.status()
         }
+
+    if TOOLFORGE_MODE:
+        fetcher = loop.run_until_complete(ResultsFetcher.create_fetcher(loop))
+
+        @app.get("/results/{page_num}")
+        async def handle_results(page_num: int) -> List[LogLine]:
+            return await fetcher.fetch_vandalous(10, page_num * 10)
 
     diff_stream = event_loop(config, handle_diff)
 
