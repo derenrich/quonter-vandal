@@ -17,26 +17,6 @@ from jinja2 import Template
 from quonter_vandal.results_logger import ResultsLogger, LogLine, ResultsFetcher
 
 TOOLFORGE_MODE = os.environ.get('TOOLFORGE', '0') == '1'
-app = FastAPI()
-
-
-@app.get("/", response_class=HTMLResponse)
-async def handle_root():
-    html_template = Template(
-        files("quonter_vandal").joinpath("index.html").read_text())
-    return HTMLResponse(html_template.render())
-
-
-@app.get("/considering", response_class=HTMLResponse)
-async def handle_considering():
-    html_template = Template(
-        files("quonter_vandal").joinpath("considering.html").read_text())
-    return HTMLResponse(html_template.render())
-
-
-@app.get("/time")
-async def handle_time():
-    return {"time": time.time()}
 
 
 async def maybe_make_document(dm: DocumentMaker, oldid: int, newid: int):
@@ -62,8 +42,28 @@ def start_service():
     config = StreamConfig(logFeatures=True)
 
     logger: ResultsLogger | None
+    fetcher: ResultsFetcher | None
     if TOOLFORGE_MODE:
+        fetcher = loop.run_until_complete(ResultsFetcher.create_fetcher(loop))
         logger = loop.run_until_complete(ResultsLogger.create_logger(loop))
+
+    app = FastAPI()
+
+    @app.get("/", response_class=HTMLResponse)
+    async def handle_root():
+        html_template = Template(
+            files("quonter_vandal").joinpath("index.html").read_text())
+        return HTMLResponse(html_template.render())
+
+    @app.get("/considering", response_class=HTMLResponse)
+    async def handle_considering():
+        html_template = Template(
+            files("quonter_vandal").joinpath("considering.html").read_text())
+        return HTMLResponse(html_template.render())
+
+    @app.get("/time")
+    async def handle_time():
+        return {"time": time.time()}
 
     async def handle_edit_group(edits: List[StreamEvent]):
         assert len(edits) > 0
@@ -103,15 +103,16 @@ def start_service():
         }
 
     if TOOLFORGE_MODE:
-        fetcher = loop.run_until_complete(ResultsFetcher.create_fetcher(loop))
-
         @app.get("/results/{page_num}")
         async def handle_results(page_num: int) -> List[LogLine]:
-            return await fetcher.fetch_vandalous(10, page_num * 10)
+            if fetcher:
+                return await fetcher.fetch_vandalous(10, page_num * 10)
+            raise Exception("No fetcher enabled")
 
     diff_stream = event_loop(config, handle_diff)
 
     diff_stream_task = loop.create_task(diff_stream)
+    return app
 
 
-start_service()
+app = start_service()
