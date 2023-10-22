@@ -46,7 +46,7 @@ class ResultsLogger:
     @classmethod
     async def create_logger(cls, loop) -> Self:
         kw = build_mysql_args(loop)
-        pool = await aiomysql.create_pool(**kw)
+        pool = await aiomysql.create_pool(**kw)  # type: ignore
         return cls(pool)
 
     def __init__(self, mysql_pool: aiomysql.Pool):
@@ -65,7 +65,8 @@ class ResultsLogger:
                     (log_line.document, log_line.oldrevid,
                      log_line.currevid, log_line.prediction_doc, log_line.data, log_line.label)
                 )
-            await conn.commit()
+            if conn:
+                await conn.commit()
 
 
 class ResultsFetcher:
@@ -75,7 +76,7 @@ class ResultsFetcher:
     @classmethod
     async def create_fetcher(cls, loop) -> Self:
         kw = build_mysql_args(loop)
-        pool = await aiomysql.create_pool(**kw)
+        pool = await aiomysql.create_pool(**kw)  # type: ignore
         return cls(pool)
 
     async def fetch_vandalous(self, limit: int, offset: int) -> List[LogLine]:
