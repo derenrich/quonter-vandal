@@ -30,7 +30,7 @@
                 let curid = edit.currevid;
                 let rationale = edit.prediction_doc;
 
-                iframe.src = `https://www.wikidata.org/w/index.php?diff=${curid}&oldid=${oldid}`;
+                iframe.src = `/diff/${oldid}/${curid}`;
                 iframe.width = 1000;
                 iframe.height = 700;
 

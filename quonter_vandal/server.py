@@ -76,6 +76,26 @@ def start_service():
     async def handle_time():
         return {"time": time.time()}
 
+    @app.get("/diff/{oldid}/{newid}", response_class=HTMLResponse)
+    async def fetch_diff(oldid: int, newid: int):
+        html_template = Template(
+            files("quonter_vandal").joinpath("diff.html").read_text())
+        res = await session.get(
+            f"https://www.wikidata.org/w/api.php?action=compare&prop=user|diff|title|rel|ids|timestamp|comment&fromrev={oldid}&torev={newid}&format=json")
+        diff_json = await res.json()
+        totitle = diff_json['compare']['totitle']
+        res = await session.get(
+            f"https://www.wikidata.org/w/api.php?action=wbformatentities&ids={totitle}&format=json")
+        format_json = await res.json()
+        title_html = format_json['wbformatentities'][totitle]
+        diff_html = diff_json['compare']['*']
+        out = {
+            "title_html": title_html,
+            "diff_html": diff_html,
+            "from_rev": diff_json['compare']['fromrevid'],
+        }
+        return HTMLResponse(html_template.render(**out))
+
     async def handle_edit_group(edits: List[StreamEvent]):
         assert len(edits) > 0
         logger: ResultsLogger | None = context['logger']
