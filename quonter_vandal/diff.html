@@ -39,7 +39,9 @@
         // iterate over anchors and prepend "https://www.wikidata.org/" to href
         for (let anchor of diffAnchors) {
             let href = anchor.getAttribute("href");
-            anchor.setAttribute("href", `https://www.wikidata.org${href}`);
+            if (!href.startsWith("//")) {
+                anchor.setAttribute("href", `https://www.wikidata.org${href}`);
+            }
         }
     });
 </script>
