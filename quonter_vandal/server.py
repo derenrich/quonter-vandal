@@ -93,6 +93,8 @@ def start_service():
             "title_html": title_html,
             "diff_html": diff_html,
             "from_rev": diff_json['compare']['fromrevid'],
+            "to_rev": diff_json['compare']['torevid'],
+            "qid": diff_json['compare']['totitle'],
         }
         return HTMLResponse(html_template.render(**out))
 
