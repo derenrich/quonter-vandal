@@ -2,6 +2,9 @@
 <html>
 
 <head>
+    <link rel="stylesheet"
+        href="https://www.wikidata.org/w/load.php?modules=mediawiki.legacy.shared|mediawiki.diff.styles|wikibase.common&only=styles">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +19,9 @@
         }
     </script>
     <script>
+        let params = new URLSearchParams(window.location.search);
+        let page = parseInt(params.get("page") || "0");
+
         function renderVandalism(edits) {
             let vandalismDiv = $("div#vandalism");
             let blocks = [];
@@ -24,6 +30,8 @@
                 let iframe = document.createElement("iframe");
                 let header = document.createElement("h2");
                 let doc = document.createElement("pre");
+                let hr = document.createElement("hr");
+                hr.className = "h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"
                 header.innerText = `Predicted Vandalous Edit`;
                 header.className = "text-2xl";
                 let oldid = edit.oldrevid;
@@ -40,15 +48,20 @@
                 div.append(header);
                 div.append(doc);
                 div.append(iframe);
+                div.append(hr);
                 blocks.push(div);
             }
             vandalismDiv.prepend(blocks);
+            if (page > 0) {
+                vandalismDiv.append(`<a class="font-medium" href="/?page=${page - 1}">Previous</a>`);
+            }
+            vandalismDiv.append(`<a class="font-medium" href="/?page=${page + 1}">Next</a>`);
         }
 
-        let params = new URLSearchParams(window.location.search);
-        let page = params.get("page") || "1";
-        $.getJSON(`/results/${page}`, renderVandalism);
-
+        $(document).ready(function () {
+            console.log("init!");
+            $.getJSON(`/results/${page}`, renderVandalism);
+        });
     </script>
 </head>
 
@@ -58,7 +71,7 @@
             Quonter Vandal
         </h1>
     </div>
-    <div class="flex justify-center">
+    <div id="main" class="flex justify-center">
         <div id="vandalism">
 
         </div>

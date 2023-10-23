@@ -4,6 +4,7 @@
     <title>Diff</title>
     <link rel="stylesheet"
         href="https://www.wikidata.org/w/load.php?modules=mediawiki.legacy.shared|mediawiki.diff.styles|wikibase.common&only=styles">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -29,5 +30,16 @@
         <iframe src="https://www.wikidata.org/w/index.php?oldid={{ from_rev }}" width="100%" height="1000px"></iframe>
     </div>
 </body>
+
+<script>
+    $(document).ready(function () {
+        let diffAnchors = $("table.diff a");
+        // iterate over anchors and prepend "https://www.wikidata.org/" to href
+        for (let anchor of diffAnchors) {
+            let href = anchor.getAttribute("href");
+            anchor.setAttribute("href", `https://www.wikidata.org${href}`);
+        }
+    });
+</script>
 
 </html>
