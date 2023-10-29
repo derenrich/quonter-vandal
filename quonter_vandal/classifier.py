@@ -4,12 +4,21 @@ import yaml
 from typing import Optional
 import openai
 from aiolimiter import AsyncLimiter
+from datetime import date
 
 MODEL = "ft:gpt-3.5-turbo-0613:personal::7wldgc8B"
 
-SYSTEM_PROMPT = """You are a Wikidata administrator in the year 2023. You will be shown a Wikidata item and an edit to that item.
-You should decide whether the edit should be reverted then output a rationale for your decision and your decision in YAML format.
+SYSTEM_PROMPT_TEMPLATE = """You are a Wikidata administrator in {}. You will be shown a Wikidata item and an edit to that item.
+You should decide whether the edit should be reverted and then output a rationale for your decision and your decision in YAML format.
 """
+
+
+def make_system_prompt():
+    # get current month and year
+    month = date.today().strftime("%B")
+    year = date.today().strftime("%Y")
+    today = f"{month} {year}"
+    return SYSTEM_PROMPT_TEMPLATE.format(today)
 
 
 @dataclass
@@ -33,7 +42,7 @@ class Classifier:
                 completion = await openai.ChatCompletion.acreate(
                     model=MODEL,
                     messages=[
-                        {"role": "system", "content": SYSTEM_PROMPT},
+                        {"role": "system", "content": make_system_prompt()},
                         {"role": "user", "content": doc},
                     ]
                 )
