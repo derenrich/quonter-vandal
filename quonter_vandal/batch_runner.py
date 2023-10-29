@@ -40,8 +40,7 @@ if __name__ == "__main__":
     # OUTFILE = "diffs_with_docs_vandalous.pkl"
     # dat = pickle.load(open(INFILE, "rb"))
 
-    df = pd.read_csv("edits2.csv")
-    print(len(df))
+    df = pd.read_csv("edits3.csv")
 
     changes = []
     out = []
@@ -66,5 +65,5 @@ if __name__ == "__main__":
     #        endif = group[-1]['torevid']
     #        doc = changes.append((startid, endif))
 
-    OUTFILE = "hand_annotated_docs.2.pkl"
+    OUTFILE = "hand_annotated_docs.3.pkl"
     main(changes, OUTFILE, responses=out)
