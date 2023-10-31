@@ -7,6 +7,7 @@ from quonter_vandal.diff_grouper import Timestamped
 from quonter_vandal.sse_client import EventSource
 import time
 import json
+import traceback
 
 
 @dataclass
@@ -76,7 +77,7 @@ class AsyncRetryingSseClient:
         try:
             n = await anext(self._client_iter)
             return n
-        except (ConnectionError, asyncio.TimeoutError, client_exceptions.ClientPayloadError, OSError):
+        except (ConnectionError, asyncio.TimeoutError, client_exceptions.ClientPayloadError, OSError, ValueError):
             print("iteration fail; reconnect")
             await asyncio.sleep(2)
             await self.client.__aexit__(None, None, None)
@@ -97,14 +98,28 @@ def filter_event(event_json) -> bool:
 
 
 async def event_loop(config: StreamConfig, callback: Callable[[StreamEvent, bool], Awaitable[Any]]) -> None:
-    print("starting event loop for revision stream")
-    t = time.time()
-    client = AsyncRetryingSseClient()
-    async for event in client:
-        event_json = json.loads(event.data)
-        stream_event = StreamEvent.from_json(event_json)
-        if filter_event(event_json):
-            await callback(stream_event, stream_event.patrolled)
+
+    while True:
+        try:
+            print("starting event loop for revision stream")
+            client = AsyncRetryingSseClient()
+            async for event in client:
+                event_json = json.loads(event.data)
+                stream_event = StreamEvent.from_json(event_json)
+                if filter_event(event_json):
+                    try:
+                        await callback(stream_event, stream_event.patrolled)
+                    except:
+                        # print stacktrace
+                        print("revision stream callback failed")
+                        traceback.print_exc()
+
+        except asyncio.CancelledError:
+            print("cancelled revision stream")
+            raise
+        except:
+            print("failed to fetch from revision stream")
+            traceback.print_exc()
 
 
 async def printer(x, filtered):
